@@ -37,5 +37,10 @@ namespace Yurt
             frm.Show();
             this.Hide();
         }
+
+        private void AnaGiris_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
