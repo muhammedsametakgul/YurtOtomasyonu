@@ -140,6 +140,11 @@ namespace Yurt
         {
             System.Diagnostics.Process.Start("calc.exe");
         }
+
+        private void öğrenciÖdemeAlToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 
