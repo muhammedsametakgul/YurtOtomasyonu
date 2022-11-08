@@ -40,6 +40,12 @@
     <Reference Include="DevExpress.Utils.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v21.2.Core.Desktop, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -61,6 +67,60 @@
     <Compile Include="AnaGiris.Designer.cs">
       <DependentUpon>AnaGiris.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBolumDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBolumDuzenle.Designer.cs">
+      <DependentUpon>FrmBolumDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBolumEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBolumEkle.Designer.cs">
+      <DependentUpon>FrmBolumEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGiderDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGiderDuzenle.Designer.cs">
+      <DependentUpon>FrmGiderDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGiderler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGiderler.Designer.cs">
+      <DependentUpon>FrmGiderler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGiderlerListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGiderlerListesi.Designer.cs">
+      <DependentUpon>FrmGiderlerListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGiderListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGiderListesi.Designer.cs">
+      <DependentUpon>FrmGiderListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOgrenciBorcListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOgrenciBorcListesi.Designer.cs">
+      <DependentUpon>FrmOgrenciBorcListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOgrenciDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOgrenciDuzenle.Designer.cs">
+      <DependentUpon>FrmOgrenciDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOgrenciEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOgrenciEkle.Designer.cs">
+      <DependentUpon>FrmOgrenciEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +132,12 @@
     </Compile>
     <Compile Include="FrmAdminGiris.Designer.cs">
       <DependentUpon>FrmAdminGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOgrenciListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOgrenciListesi.Designer.cs">
+      <DependentUpon>FrmOgrenciListesi.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPersonel.cs">
       <SubType>Form</SubType>
@@ -103,8 +169,41 @@
     <EmbeddedResource Include="AnaGiris.resx">
       <DependentUpon>AnaGiris.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmBolumDuzenle.resx">
+      <DependentUpon>FrmBolumDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBolumEkle.resx">
+      <DependentUpon>FrmBolumEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGiderDuzenle.resx">
+      <DependentUpon>FrmGiderDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGiderler.resx">
+      <DependentUpon>FrmGiderler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGiderlerListesi.resx">
+      <DependentUpon>FrmGiderlerListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGiderListesi.resx">
+      <DependentUpon>FrmGiderListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOgrenciBorcListesi.resx">
+      <DependentUpon>FrmOgrenciBorcListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOgrenciDuzenle.resx">
+      <DependentUpon>FrmOgrenciDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOgrenciEkle.resx">
+      <DependentUpon>FrmOgrenciEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdmin.resx">
+      <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAdminGiris.resx">
       <DependentUpon>FrmAdminGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOgrenciListesi.resx">
+      <DependentUpon>FrmOgrenciListesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPersonelGiris.resx">
       <DependentUpon>FrmPersonelGiris.cs</DependentUpon>

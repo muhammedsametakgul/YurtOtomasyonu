@@ -52,6 +52,7 @@
             this.TxtSifre.Name = "TxtSifre";
             this.TxtSifre.Size = new System.Drawing.Size(210, 34);
             this.TxtSifre.TabIndex = 8;
+            this.TxtSifre.Text = "mehmet123";
             // 
             // TxtKullaniciAd
             // 
@@ -60,6 +61,7 @@
             this.TxtKullaniciAd.Name = "TxtKullaniciAd";
             this.TxtKullaniciAd.Size = new System.Drawing.Size(210, 34);
             this.TxtKullaniciAd.TabIndex = 7;
+            this.TxtKullaniciAd.Text = "12121212123";
             // 
             // label2
             // 
