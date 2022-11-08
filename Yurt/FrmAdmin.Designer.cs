@@ -256,13 +256,13 @@
             // gelirSilToolStripMenuItem
             // 
             this.gelirSilToolStripMenuItem.Name = "gelirSilToolStripMenuItem";
-            this.gelirSilToolStripMenuItem.Size = new System.Drawing.Size(219, 32);
+            this.gelirSilToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
             this.gelirSilToolStripMenuItem.Text = "Gelir Sil";
             // 
             // gelirGüncelleToolStripMenuItem
             // 
             this.gelirGüncelleToolStripMenuItem.Name = "gelirGüncelleToolStripMenuItem";
-            this.gelirGüncelleToolStripMenuItem.Size = new System.Drawing.Size(219, 32);
+            this.gelirGüncelleToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
             this.gelirGüncelleToolStripMenuItem.Text = "Gelir Güncelle";
             // 
             // gelirListesiToolStripMenuItem
@@ -276,6 +276,7 @@
             this.öğrenciÖdemeAlToolStripMenuItem.Name = "öğrenciÖdemeAlToolStripMenuItem";
             this.öğrenciÖdemeAlToolStripMenuItem.Size = new System.Drawing.Size(259, 32);
             this.öğrenciÖdemeAlToolStripMenuItem.Text = "Öğrenci Ödeme Al";
+            this.öğrenciÖdemeAlToolStripMenuItem.Click += new System.EventHandler(this.öğrenciÖdemeAlToolStripMenuItem_Click);
             // 
             // istatistiklerToolStripMenuItem
             // 
