@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,19 +11,19 @@ using System.Data.SqlClient;
 
 namespace Yurt
 {
-    public partial class FrmOgrenciBorcListesi : Form
+    public partial class FrmGelirListesi : Form
     {
-        public FrmOgrenciBorcListesi()
+        public FrmGelirListesi()
         {
             InitializeComponent();
         }
         Sql sql = new Sql();
-        private void FrmOgrenciBorcListesi_Load(object sender, EventArgs e)
+        private void FrmGelirListesi_Load(object sender, EventArgs e)
         {
-            SqlDataAdapter da = new SqlDataAdapter("Select * From Borclar", sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Gelir",sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
-            dataGridView1.DataSource = dt;
+            dataGridView1.DataSource= dt;
         }
     }
 }

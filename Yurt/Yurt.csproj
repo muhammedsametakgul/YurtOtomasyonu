@@ -67,149 +67,228 @@
     <Compile Include="AnaGiris.Designer.cs">
       <DependentUpon>AnaGiris.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmBolumDuzenle.cs">
+    <Compile Include="Bolum\FrmBolumDuzenle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmBolumDuzenle.Designer.cs">
+    <Compile Include="Bolum\FrmBolumDuzenle.Designer.cs">
       <DependentUpon>FrmBolumDuzenle.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmBolumEkle.cs">
+    <Compile Include="Bolum\FrmBolumEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmBolumEkle.Designer.cs">
+    <Compile Include="Bolum\FrmBolumEkle.Designer.cs">
       <DependentUpon>FrmBolumEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmGiderDuzenle.cs">
+    <Compile Include="Gelir\FrmGelirListesi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmGiderDuzenle.Designer.cs">
+    <Compile Include="Gelir\FrmGelirListesi.Designer.cs">
+      <DependentUpon>FrmGelirListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gider\FrmGiderDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gider\FrmGiderDuzenle.Designer.cs">
       <DependentUpon>FrmGiderDuzenle.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmGiderler.cs">
+    <Compile Include="Gider\FrmGiderler.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmGiderler.Designer.cs">
+    <Compile Include="Gider\FrmGiderler.Designer.cs">
       <DependentUpon>FrmGiderler.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmGiderlerListesi.cs">
+    <Compile Include="Gider\FrmGiderlerListesi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmGiderlerListesi.Designer.cs">
+    <Compile Include="Gider\FrmGiderlerListesi.Designer.cs">
       <DependentUpon>FrmGiderlerListesi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmGiderListesi.cs">
+    <Compile Include="Gider\FrmGiderListesi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmGiderListesi.Designer.cs">
+    <Compile Include="Gider\FrmGiderListesi.Designer.cs">
       <DependentUpon>FrmGiderListesi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmOgrenciBorcListesi.cs">
+    <Compile Include="Izin\FrmIzinGoster.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmOgrenciBorcListesi.Designer.cs">
+    <Compile Include="Izin\FrmIzinGoster.Designer.cs">
+      <DependentUpon>FrmIzinGoster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Odeme\FrmOgrenciBorcListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Odeme\FrmOgrenciBorcListesi.Designer.cs">
       <DependentUpon>FrmOgrenciBorcListesi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmOgrenciDuzenle.cs">
+    <Compile Include="Ogrenci\FrmOgrenciDuzenle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmOgrenciDuzenle.Designer.cs">
+    <Compile Include="Ogrenci\FrmOgrenciDuzenle.Designer.cs">
       <DependentUpon>FrmOgrenciDuzenle.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmOgrenciEkle.cs">
+    <Compile Include="Ogrenci\FrmOgrenciEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmOgrenciEkle.Designer.cs">
+    <Compile Include="Ogrenci\FrmOgrenciEkle.Designer.cs">
       <DependentUpon>FrmOgrenciEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAdmin.cs">
+    <Compile Include="Admin\FrmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAdmin.Designer.cs">
+    <Compile Include="Admin\FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAdminGiris.cs">
+    <Compile Include="Admin\FrmAdminGiris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAdminGiris.Designer.cs">
+    <Compile Include="Admin\FrmAdminGiris.Designer.cs">
       <DependentUpon>FrmAdminGiris.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmOgrenciListesi.cs">
+    <Compile Include="Ogrenci\FrmOgrenciListesi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmOgrenciListesi.Designer.cs">
+    <Compile Include="Ogrenci\FrmOgrenciListesi.Designer.cs">
       <DependentUpon>FrmOgrenciListesi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPersonel.cs">
+    <Compile Include="Gelir\FrmOgrenciOdemeAl.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPersonel.Designer.cs">
+    <Compile Include="Gelir\FrmOgrenciOdemeAl.Designer.cs">
+      <DependentUpon>FrmOgrenciOdemeAl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\FrmPersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\FrmPersonel.Designer.cs">
       <DependentUpon>FrmPersonel.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPersonelGiris.cs">
+    <Compile Include="Personel\FrmPersonelGiris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPersonelGiris.Designer.cs">
+    <Compile Include="Personel\FrmPersonelGiris.Designer.cs">
       <DependentUpon>FrmPersonelGiris.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmYemekhaneGorevli.cs">
+    <Compile Include="Personel\FrmYemekhaneGorevli.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmYemekhaneGorevli.Designer.cs">
+    <Compile Include="Personel\FrmYemekhaneGorevli.Designer.cs">
       <DependentUpon>FrmYemekhaneGorevli.cs</DependentUpon>
     </Compile>
-    <Compile Include="OgrenciGiris.cs">
+    <Compile Include="YoneticiIslemleri\FrmPersonelDuzenle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OgrenciGiris.Designer.cs">
-      <DependentUpon>OgrenciGiris.cs</DependentUpon>
+    <Compile Include="YoneticiIslemleri\FrmPersonelDuzenle.Designer.cs">
+      <DependentUpon>FrmPersonelDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiIslemleri\FrmPersonelEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticiIslemleri\FrmPersonelEkle.Designer.cs">
+      <DependentUpon>FrmPersonelEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiIslemleri\FrmPersonelListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticiIslemleri\FrmPersonelListesi.Designer.cs">
+      <DependentUpon>FrmPersonelListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiIslemleri\FrmYoneticiKodDogrulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticiIslemleri\FrmYoneticiKodDogrulama.Designer.cs">
+      <DependentUpon>FrmYoneticiKodDogrulama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YoneticiIslemleri\FrmYoneticiSifreİslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticiIslemleri\FrmYoneticiSifreİslemleri.Designer.cs">
+      <DependentUpon>FrmYoneticiSifreİslemleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Izin\OgrenciIzinEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izin\OgrenciIzinEkle.Designer.cs">
+      <DependentUpon>OgrenciIzinEkle.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomKod.cs" />
     <Compile Include="Sql.cs" />
+    <Compile Include="YoneticiIslemleri\YoneticiSifreGuncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticiIslemleri\YoneticiSifreGuncelle.Designer.cs">
+      <DependentUpon>YoneticiSifreGuncelle.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AnaGiris.resx">
       <DependentUpon>AnaGiris.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmBolumDuzenle.resx">
+    <EmbeddedResource Include="Bolum\FrmBolumDuzenle.resx">
       <DependentUpon>FrmBolumDuzenle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmBolumEkle.resx">
+    <EmbeddedResource Include="Bolum\FrmBolumEkle.resx">
       <DependentUpon>FrmBolumEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmGiderDuzenle.resx">
+    <EmbeddedResource Include="Gelir\FrmGelirListesi.resx">
+      <DependentUpon>FrmGelirListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gider\FrmGiderDuzenle.resx">
       <DependentUpon>FrmGiderDuzenle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmGiderler.resx">
+    <EmbeddedResource Include="Gider\FrmGiderler.resx">
       <DependentUpon>FrmGiderler.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmGiderlerListesi.resx">
+    <EmbeddedResource Include="Gider\FrmGiderlerListesi.resx">
       <DependentUpon>FrmGiderlerListesi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmGiderListesi.resx">
+    <EmbeddedResource Include="Gider\FrmGiderListesi.resx">
       <DependentUpon>FrmGiderListesi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmOgrenciBorcListesi.resx">
+    <EmbeddedResource Include="Izin\FrmIzinGoster.resx">
+      <DependentUpon>FrmIzinGoster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Odeme\FrmOgrenciBorcListesi.resx">
       <DependentUpon>FrmOgrenciBorcListesi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmOgrenciDuzenle.resx">
+    <EmbeddedResource Include="Ogrenci\FrmOgrenciDuzenle.resx">
       <DependentUpon>FrmOgrenciDuzenle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmOgrenciEkle.resx">
+    <EmbeddedResource Include="Ogrenci\FrmOgrenciEkle.resx">
       <DependentUpon>FrmOgrenciEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAdmin.resx">
+    <EmbeddedResource Include="Admin\FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAdminGiris.resx">
+    <EmbeddedResource Include="Admin\FrmAdminGiris.resx">
       <DependentUpon>FrmAdminGiris.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmOgrenciListesi.resx">
+    <EmbeddedResource Include="Ogrenci\FrmOgrenciListesi.resx">
       <DependentUpon>FrmOgrenciListesi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPersonelGiris.resx">
+    <EmbeddedResource Include="Gelir\FrmOgrenciOdemeAl.resx">
+      <DependentUpon>FrmOgrenciOdemeAl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\FrmPersonelGiris.resx">
       <DependentUpon>FrmPersonelGiris.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OgrenciGiris.resx">
-      <DependentUpon>OgrenciGiris.cs</DependentUpon>
+    <EmbeddedResource Include="YoneticiIslemleri\FrmPersonelDuzenle.resx">
+      <DependentUpon>FrmPersonelDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoneticiIslemleri\FrmPersonelEkle.resx">
+      <DependentUpon>FrmPersonelEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoneticiIslemleri\FrmPersonelListesi.resx">
+      <DependentUpon>FrmPersonelListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoneticiIslemleri\FrmYoneticiKodDogrulama.resx">
+      <DependentUpon>FrmYoneticiKodDogrulama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoneticiIslemleri\FrmYoneticiSifreİslemleri.resx">
+      <DependentUpon>FrmYoneticiSifreİslemleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izin\OgrenciIzinEkle.resx">
+      <DependentUpon>OgrenciIzinEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -220,6 +299,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="YoneticiIslemleri\YoneticiSifreGuncelle.resx">
+      <DependentUpon>YoneticiSifreGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -233,5 +315,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

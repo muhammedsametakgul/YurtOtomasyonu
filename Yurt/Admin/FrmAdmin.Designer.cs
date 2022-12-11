@@ -36,6 +36,10 @@
             this.öğrenciDüzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.öğrenciSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.öğrenciGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.izinİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.öğrenciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.izinEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.izinGösterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bölümlerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bölümEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bölümGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,10 +63,10 @@
             this.giderİstatistikleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yöneticiİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.şifreİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yöneticiŞifreİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.personelGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kısayollarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hesapMakinesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tarayıcıAçToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,6 +74,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.personelListesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -82,6 +87,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.öğrencilerToolStripMenuItem,
+            this.izinİşlemleriToolStripMenuItem,
             this.bölümlerToolStripMenuItem,
             this.öğrenciBorçlarıToolStripMenuItem,
             this.giderlerToolStripMenuItem,
@@ -141,6 +147,37 @@
             this.öğrenciGüncelleToolStripMenuItem.Size = new System.Drawing.Size(247, 32);
             this.öğrenciGüncelleToolStripMenuItem.Text = "Öğrenci Güncelle";
             this.öğrenciGüncelleToolStripMenuItem.Click += new System.EventHandler(this.öğrenciGüncelleToolStripMenuItem_Click);
+            // 
+            // izinİşlemleriToolStripMenuItem
+            // 
+            this.izinİşlemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.öğrenciToolStripMenuItem});
+            this.izinİşlemleriToolStripMenuItem.Name = "izinİşlemleriToolStripMenuItem";
+            this.izinİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(133, 32);
+            this.izinİşlemleriToolStripMenuItem.Text = "İzin İşlemleri";
+            // 
+            // öğrenciToolStripMenuItem
+            // 
+            this.öğrenciToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.izinEkleToolStripMenuItem,
+            this.izinGösterToolStripMenuItem});
+            this.öğrenciToolStripMenuItem.Name = "öğrenciToolStripMenuItem";
+            this.öğrenciToolStripMenuItem.Size = new System.Drawing.Size(167, 32);
+            this.öğrenciToolStripMenuItem.Text = "Öğrenci";
+            // 
+            // izinEkleToolStripMenuItem
+            // 
+            this.izinEkleToolStripMenuItem.Name = "izinEkleToolStripMenuItem";
+            this.izinEkleToolStripMenuItem.Size = new System.Drawing.Size(191, 32);
+            this.izinEkleToolStripMenuItem.Text = "İzin Ekle";
+            this.izinEkleToolStripMenuItem.Click += new System.EventHandler(this.izinEkleToolStripMenuItem_Click_1);
+            // 
+            // izinGösterToolStripMenuItem
+            // 
+            this.izinGösterToolStripMenuItem.Name = "izinGösterToolStripMenuItem";
+            this.izinGösterToolStripMenuItem.Size = new System.Drawing.Size(191, 32);
+            this.izinGösterToolStripMenuItem.Text = "İzin Göster";
+            this.izinGösterToolStripMenuItem.Click += new System.EventHandler(this.izinGösterToolStripMenuItem_Click);
             // 
             // bölümlerToolStripMenuItem
             // 
@@ -256,13 +293,13 @@
             // gelirSilToolStripMenuItem
             // 
             this.gelirSilToolStripMenuItem.Name = "gelirSilToolStripMenuItem";
-            this.gelirSilToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
+            this.gelirSilToolStripMenuItem.Size = new System.Drawing.Size(219, 32);
             this.gelirSilToolStripMenuItem.Text = "Gelir Sil";
             // 
             // gelirGüncelleToolStripMenuItem
             // 
             this.gelirGüncelleToolStripMenuItem.Name = "gelirGüncelleToolStripMenuItem";
-            this.gelirGüncelleToolStripMenuItem.Size = new System.Drawing.Size(224, 32);
+            this.gelirGüncelleToolStripMenuItem.Size = new System.Drawing.Size(219, 32);
             this.gelirGüncelleToolStripMenuItem.Text = "Gelir Güncelle";
             // 
             // gelirListesiToolStripMenuItem
@@ -270,6 +307,7 @@
             this.gelirListesiToolStripMenuItem.Name = "gelirListesiToolStripMenuItem";
             this.gelirListesiToolStripMenuItem.Size = new System.Drawing.Size(259, 32);
             this.gelirListesiToolStripMenuItem.Text = "Gelir Listesi";
+            this.gelirListesiToolStripMenuItem.Click += new System.EventHandler(this.gelirListesiToolStripMenuItem_Click);
             // 
             // öğrenciÖdemeAlToolStripMenuItem
             // 
@@ -310,16 +348,25 @@
             // 
             // şifreİşlemleriToolStripMenuItem
             // 
+            this.şifreİşlemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.yöneticiŞifreİşlemleriToolStripMenuItem});
             this.şifreİşlemleriToolStripMenuItem.Name = "şifreİşlemleriToolStripMenuItem";
             this.şifreİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(248, 32);
             this.şifreİşlemleriToolStripMenuItem.Text = "Şifre İşlemleri";
+            // 
+            // yöneticiŞifreİşlemleriToolStripMenuItem
+            // 
+            this.yöneticiŞifreİşlemleriToolStripMenuItem.Name = "yöneticiŞifreİşlemleriToolStripMenuItem";
+            this.yöneticiŞifreİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(287, 32);
+            this.yöneticiŞifreİşlemleriToolStripMenuItem.Text = "Yönetici Şifre İşlemleri";
+            this.yöneticiŞifreİşlemleriToolStripMenuItem.Click += new System.EventHandler(this.yöneticiŞifreİşlemleriToolStripMenuItem_Click);
             // 
             // personelİşlemleriToolStripMenuItem
             // 
             this.personelİşlemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.personelEkleToolStripMenuItem,
             this.personelSilToolStripMenuItem,
-            this.personelGüncelleToolStripMenuItem});
+            this.personelListesiToolStripMenuItem});
             this.personelİşlemleriToolStripMenuItem.Name = "personelİşlemleriToolStripMenuItem";
             this.personelİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(248, 32);
             this.personelİşlemleriToolStripMenuItem.Text = "Personel İşlemleri";
@@ -329,18 +376,14 @@
             this.personelEkleToolStripMenuItem.Name = "personelEkleToolStripMenuItem";
             this.personelEkleToolStripMenuItem.Size = new System.Drawing.Size(251, 32);
             this.personelEkleToolStripMenuItem.Text = "Personel Ekle";
+            this.personelEkleToolStripMenuItem.Click += new System.EventHandler(this.personelEkleToolStripMenuItem_Click);
             // 
             // personelSilToolStripMenuItem
             // 
             this.personelSilToolStripMenuItem.Name = "personelSilToolStripMenuItem";
-            this.personelSilToolStripMenuItem.Size = new System.Drawing.Size(251, 32);
-            this.personelSilToolStripMenuItem.Text = "Personel Sil";
-            // 
-            // personelGüncelleToolStripMenuItem
-            // 
-            this.personelGüncelleToolStripMenuItem.Name = "personelGüncelleToolStripMenuItem";
-            this.personelGüncelleToolStripMenuItem.Size = new System.Drawing.Size(251, 32);
-            this.personelGüncelleToolStripMenuItem.Text = "Personel Güncelle";
+            this.personelSilToolStripMenuItem.Size = new System.Drawing.Size(280, 32);
+            this.personelSilToolStripMenuItem.Text = "Personel Güncelle/Sil";
+            this.personelSilToolStripMenuItem.Click += new System.EventHandler(this.personelSilToolStripMenuItem_Click);
             // 
             // kısayollarToolStripMenuItem
             // 
@@ -393,7 +436,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox3
             // 
@@ -405,6 +447,13 @@
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // personelListesiToolStripMenuItem
+            // 
+            this.personelListesiToolStripMenuItem.Name = "personelListesiToolStripMenuItem";
+            this.personelListesiToolStripMenuItem.Size = new System.Drawing.Size(280, 32);
+            this.personelListesiToolStripMenuItem.Text = "Personel Listesi";
+            this.personelListesiToolStripMenuItem.Click += new System.EventHandler(this.personelListesiToolStripMenuItem_Click);
             // 
             // FrmAdmin
             // 
@@ -463,7 +512,6 @@
         private System.Windows.Forms.ToolStripMenuItem personelİşlemleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personelEkleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personelSilToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem personelGüncelleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kısayollarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hesapMakinesiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tarayıcıAçToolStripMenuItem;
@@ -472,5 +520,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ToolStripMenuItem izinİşlemleriToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem öğrenciToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem izinEkleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem izinGösterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem yöneticiŞifreİşlemleriToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem personelListesiToolStripMenuItem;
     }
 }

@@ -36,18 +36,18 @@ namespace Yurt
          
             //tıklanan butona göre hangi araçları visible yapacağımıza karar veriyoruz
             TxtAd.Visible = a;
-            TxtSoyad.Visible = a;
+           
             MskDogum.Visible = a;
             MskTc.Visible = a;
             CmbBolum.Visible = a;
-            TxtSifre.Visible = a;
+         
             TxtMail.Visible = a;
             MskTel.Visible = a;
             CmbOda.Visible = a;
             label1.Visible = a;
             label2.Visible = a;
             label3.Visible = a;
-            label4.Visible = a;
+           
             label5.Visible = a;
             label6.Visible = a;
             label7.Visible = a;
@@ -81,18 +81,20 @@ namespace Yurt
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int secilen = dataGridView1.SelectedCells[0].RowIndex;
-            
-            
-            TxtAd.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
-            TxtSoyad.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
-            MskDogum.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
-            MskTc.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
-            CmbBolum.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
-            TxtSifre.Text = dataGridView1.Rows[secilen].Cells[6].Value.ToString();
-            TxtMail.Text = dataGridView1.Rows[secilen].Cells[7].Value.ToString();
-            MskTel.Text = dataGridView1.Rows[secilen].Cells[8].Value.ToString();
-            CmbOda.Text = dataGridView1.Rows[secilen].Cells[9].Value.ToString();
+
             label10.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+            TxtAd.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
+            MskDogum.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
+            MskTc.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
+            CmbBolum.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
+            TxtMail.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
+            MskTel.Text = dataGridView1.Rows[secilen].Cells[6].Value.ToString();
+            CmbOda.Text = dataGridView1.Rows[secilen].Cells[7].Value.ToString();
+            rchAdres.Text = dataGridView1.Rows[secilen].Cells[8].Value.ToString();
+            MskVeliTel.Text = dataGridView1.Rows[secilen].Cells[9].Value.ToString();
+
+
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -113,18 +115,20 @@ namespace Yurt
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("Update Ogrenci set OgrenciAd=@p1,OgrenciSoyad=@p2,OgrenciDogum=@p3" +
-                ",OgrenciTc=@p4,OgrenciBolum=@p5,OgrenciSifre=@p6,OgrenciMail=@p7,OgrenciTelefon= @p8,OgrenciOdaNo=@p9 where " +
-                "Ogrenciid=@p10 ",sql.Baglan());
+            SqlCommand komut = new SqlCommand("Update Ogrenci set OgrenciAd=@p1,OgrenciDogum=@p2" +
+                ",OgrenciTc=@p3,OgrenciBolum=@p4,OgrenciMail=@p5,OgrenciTelefon= @p6,VeliTel=@p7,OgrenciOdaNo=@p8 ,OgrenciAdres=@p9 " +
+                "where Ogrenciid=@p10 ",sql.Baglan());
             komut.Parameters.AddWithValue("@p1",TxtAd.Text);
-            komut.Parameters.AddWithValue("@p2",TxtSoyad.Text);
-            komut.Parameters.AddWithValue("@p3",MskDogum.Text);
-            komut.Parameters.AddWithValue("@p4",MskTc.Text);
-            komut.Parameters.AddWithValue("@p5",CmbBolum.Text);
-            komut.Parameters.AddWithValue("@p6",TxtSifre.Text);
-            komut.Parameters.AddWithValue("@p7",TxtMail.Text);
-            komut.Parameters.AddWithValue("@p8",MskTel.Text);
-            komut.Parameters.AddWithValue("@p9",CmbOda.Text);
+         
+            komut.Parameters.AddWithValue("@p2",MskDogum.Text);
+            komut.Parameters.AddWithValue("@p3",MskTc.Text);
+            komut.Parameters.AddWithValue("@p4",CmbBolum.Text);
+        
+            komut.Parameters.AddWithValue("@p5",TxtMail.Text);
+            komut.Parameters.AddWithValue("@p6",MskTel.Text);
+            komut.Parameters.AddWithValue("@p8",CmbOda.Text);
+            komut.Parameters.AddWithValue("@p9",rchAdres.Text);
+            komut.Parameters.AddWithValue("@p7",MskVeliTel.Text);
             komut.Parameters.AddWithValue("@p10",label10.Text);
             komut.ExecuteNonQuery();
             MessageBox.Show("Başarıyla Güncellendi");
@@ -137,6 +141,11 @@ namespace Yurt
         }
 
         private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
         {
 
         }

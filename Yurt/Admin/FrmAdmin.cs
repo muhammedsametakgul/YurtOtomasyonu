@@ -10,11 +10,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using DevExpress.XtraEditors.ViewInfo;
+using Yurt.YoneticiIslemleri;
 
 namespace Yurt
 {
     public partial class FrmAdmin : Form
     {
+        FrmYoneticiSifreİslemleri frmYonetici;
+        FrmPersonelEkle frmPersonelEkle;
+        FrmPersonelDuzenle frmPersonelDuzenle;
+        FrmPersonelListesi frmPersonelListesi;
         public FrmAdmin()
         {
             InitializeComponent();
@@ -130,11 +135,7 @@ namespace Yurt
             System.Diagnostics.Process.Start("EXCEL.EXE");
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("WINWORD.EXE");
-
-        }
+        
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
@@ -143,7 +144,87 @@ namespace Yurt
 
         private void öğrenciÖdemeAlToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            FrmOgrenciOdemeAl frm = new FrmOgrenciOdemeAl();
+            frm.Show();
+        }
 
+        private void gelirListesiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmGelirListesi frm = new FrmGelirListesi();
+            frm.Show();
+        }
+
+        private void izinEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OgrenciIzinEkle frm = new OgrenciIzinEkle();
+            frm.Show();
+        }
+
+        private void izinDüzenleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void izinEkleToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            OgrenciIzinEkle frm = new OgrenciIzinEkle();
+            frm.Show();
+        }
+
+        private void izinGösterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmIzinGoster frm = new FrmIzinGoster();
+            frm.Show();
+        }
+
+        private void yöneticiŞifreİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+             if (frmYonetici == null || frmYonetici.IsDisposed)
+             { frmYonetici=new FrmYoneticiSifreİslemleri(); frmYonetici.Show(); }//Form2 kapatılmış ise gösteriyor
+             else
+             {
+                frmYonetici.Visible = true;//Hide ile gizlemenin etkisini kaldırıyor
+             if (frmYonetici.Created) //Form oluşturulmuş ise sadece aktif ediyor
+                    frmYonetici.Activate();
+             }
+        }
+
+        private void personelEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmPersonelEkle == null || frmPersonelEkle.IsDisposed)
+            { frmPersonelEkle = new FrmPersonelEkle(); frmPersonelEkle.Show(); }//Form2 kapatılmış ise gösteriyor
+            else
+            {
+                frmPersonelEkle.Visible = true;//Hide ile gizlemenin etkisini kaldırıyor
+                if (frmPersonelEkle.Created) //Form oluşturulmuş ise sadece aktif ediyor
+                    frmPersonelEkle.Activate();
+            }
+
+        }
+
+        private void personelSilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmPersonelDuzenle == null || frmPersonelDuzenle.IsDisposed)
+            { frmPersonelDuzenle = new FrmPersonelDuzenle(); frmPersonelDuzenle.Show(); }//Form2 kapatılmış ise gösteriyor
+            else
+            {
+                frmPersonelDuzenle.Visible = true;//Hide ile gizlemenin etkisini kaldırıyor
+                if (frmPersonelDuzenle.Created) //Form oluşturulmuş ise sadece aktif ediyor
+                    frmPersonelDuzenle.Activate();
+            }
+        }
+
+        private void personelListesiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmPersonelListesi == null || frmPersonelListesi.IsDisposed)
+            { frmPersonelListesi = new FrmPersonelListesi(); frmPersonelListesi.Show(); }//Form2 kapatılmış ise gösteriyor
+            else
+            {
+                frmPersonelListesi.Visible = true;//Hide ile gizlemenin etkisini kaldırıyor
+                if (frmPersonelListesi.Created) //Form oluşturulmuş ise sadece aktif ediyor
+                    frmPersonelListesi.Activate();
+            }
         }
     }
     }

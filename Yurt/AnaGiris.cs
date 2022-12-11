@@ -17,12 +17,7 @@ namespace Yurt
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            OgrenciGiris frm = new OgrenciGiris();
-            frm.Show();
-            this.Hide();
-        }
+       
 
         private void button2_Click(object sender, EventArgs e)
         {

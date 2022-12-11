@@ -21,7 +21,7 @@ namespace Yurt
         private void BtnEkle_Click(object sender, EventArgs e)
         {
             SqlCommand komut = new SqlCommand("Update Giderler set Elektrik=@p1,Dogalgaz=@p2,Internet=@p3,Gida=@p4," +
-                "Personel=@p5,Su=@p6,Diger=@p7,GiderAy=@p8",sql.Baglan());
+                "Personel=@p5,Su=@p6,Diger=@p7,GiderAy=@p8 where Odemeid=@p9",sql.Baglan());
             komut.Parameters.AddWithValue("@p1",MskElektrik.Text);
             komut.Parameters.AddWithValue("@p2", MskDogalgaz.Text);
             komut.Parameters.AddWithValue("@p3", MskInternet.Text);
@@ -30,16 +30,24 @@ namespace Yurt
             komut.Parameters.AddWithValue("@p6", MskSu.Text);
             komut.Parameters.AddWithValue("@p7", MskDiger.Text);
             komut.Parameters.AddWithValue("@p8", MskTarih.Text);
+            komut.Parameters.AddWithValue("@p9",lblid.Text);
+
             komut.ExecuteNonQuery();
 
             MessageBox.Show("Başarıyla güncellendi");
+            //Güncellendikten sonra tabloyu güncelliyor
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Giderler", sql.Baglan());
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+
             sql.Baglan().Close();
 
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            //iki kere tıklanınca tablodaki verileri textboxlara çekiyor
             int secilen = dataGridView1.SelectedCells[0].RowIndex;
             lblid.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
             MskElektrik.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
@@ -70,5 +78,9 @@ namespace Yurt
             da.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+
+        
     }
+
+  
 }
