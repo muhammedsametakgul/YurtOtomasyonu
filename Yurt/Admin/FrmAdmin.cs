@@ -11,6 +11,9 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using DevExpress.XtraEditors.ViewInfo;
 using Yurt.YoneticiIslemleri;
+using Yurt.Gelir;
+using Yurt.Personel;
+using Yurt.Ogrenci;
 
 namespace Yurt
 {
@@ -20,6 +23,7 @@ namespace Yurt
         FrmPersonelEkle frmPersonelEkle;
         FrmPersonelDuzenle frmPersonelDuzenle;
         FrmPersonelListesi frmPersonelListesi;
+        FrmOgrenciIzinDuzenle frmIzinDuzenle;
         public FrmAdmin()
         {
             InitializeComponent();
@@ -43,8 +47,7 @@ namespace Yurt
 
         private void öğrenciSilToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmOgrenciDuzenle frm = new FrmOgrenciDuzenle();
-            frm.b = true;
+            FrmOgrenciSil frm= new FrmOgrenciSil();
             frm.Show();
             
         }
@@ -57,7 +60,7 @@ namespace Yurt
         private void öğrenciGüncelleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmOgrenciDuzenle frm = new FrmOgrenciDuzenle();
-            frm.a = true;
+            
             frm.Show();
         }
 
@@ -70,7 +73,7 @@ namespace Yurt
         private void bölümSilToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmBolumDuzenle frm = new FrmBolumDuzenle();
-            frm.b = true;
+            
             frm.Show();
         }
 
@@ -98,7 +101,7 @@ namespace Yurt
 
         private void giderEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmGiderler frm = new FrmGiderler();
+            FrmGiderEkle frm = new FrmGiderEkle();
             frm.Show();
         }
 
@@ -125,23 +128,7 @@ namespace Yurt
             System.Diagnostics.Process.Start("https://www.google.com.tr/?hl=tr");
         }
 
-        private void hesapMakinesiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("Calc.exe");
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("EXCEL.EXE");
-        }
-
-        
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("calc.exe");
-        }
-
+       
         private void öğrenciÖdemeAlToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmOgrenciOdemeAl frm = new FrmOgrenciOdemeAl();
@@ -173,7 +160,7 @@ namespace Yurt
 
         private void izinGösterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmIzinGoster frm = new FrmIzinGoster();
+            FrmOgrenciIzinGoster frm = new FrmOgrenciIzinGoster();
             frm.Show();
         }
 
@@ -225,6 +212,58 @@ namespace Yurt
                 if (frmPersonelListesi.Created) //Form oluşturulmuş ise sadece aktif ediyor
                     frmPersonelListesi.Activate();
             }
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void izinDüzenleToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            if (frmIzinDuzenle == null || frmIzinDuzenle.IsDisposed)
+            { frmIzinDuzenle = new FrmOgrenciIzinDuzenle(); frmIzinDuzenle.Show(); }//Form2 kapatılmış ise gösteriyor
+            else
+            {
+                frmIzinDuzenle.Visible = true;//Hide ile gizlemenin etkisini kaldırıyor
+                if (frmIzinDuzenle.Created) //Form oluşturulmuş ise sadece aktif ediyor
+                    frmIzinDuzenle.Activate();
+            }
+        }
+
+        private void gelirEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmGelirEkle frm = new FrmGelirEkle();
+            frm.Show();
+        }
+
+
+        private void gelirDüzenleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmGelirDuzenle frm = new FrmGelirDuzenle();
+            frm.Show();
+        }
+
+        private void personelŞifreİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPersonelSifreİslemleri frm = new FrmPersonelSifreİslemleri();
+            frm.Show();
+        }
+        //public string ad;
+        private void FrmAdmin_Load(object sender, EventArgs e)
+        {
+           // label1.Text = ad;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Merhaba Yakup");
+            
+        }
+
+        private void izinEkleToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }

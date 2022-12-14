@@ -1,6 +1,6 @@
 ﻿namespace Yurt
 {
-    partial class FrmGiderler
+    partial class FrmGiderEkle
     {
         /// <summary>
         /// Required designer variable.
@@ -210,10 +210,11 @@
             this.label8.TabIndex = 15;
             this.label8.Text = "Tarih:";
             // 
-            // FrmGiderler
+            // FrmGiderEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(584, 764);
             this.Controls.Add(this.MskTarih);
             this.Controls.Add(this.label8);
@@ -233,8 +234,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Name = "FrmGiderler";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Name = "FrmGiderEkle";
             this.Text = "FrmGiderler";
             this.ResumeLayout(false);
             this.PerformLayout();

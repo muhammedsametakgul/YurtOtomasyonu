@@ -1,6 +1,6 @@
 ﻿namespace Yurt
 {
-    partial class FrmIzinGoster
+    partial class FrmOgrenciIzinGoster
     {
         /// <summary>
         /// Required designer variable.
@@ -75,16 +75,18 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Ara:";
             // 
-            // FrmIzinGoster
+            // FrmOgrenciIzinGoster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(933, 515);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.TxtAra);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "FrmIzinGoster";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FrmOgrenciIzinGoster";
             this.Text = "FrmIzinGoster";
             this.Load += new System.EventHandler(this.FrmIzinGoster_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

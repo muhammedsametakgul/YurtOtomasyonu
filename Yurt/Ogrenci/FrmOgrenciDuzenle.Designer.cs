@@ -39,7 +39,6 @@
             this.CmbOda = new System.Windows.Forms.ComboBox();
             this.MskTel = new System.Windows.Forms.MaskedTextBox();
             this.TxtMail = new System.Windows.Forms.TextBox();
-            this.CmbBolum = new System.Windows.Forms.ComboBox();
             this.MskTc = new System.Windows.Forms.MaskedTextBox();
             this.MskDogum = new System.Windows.Forms.MaskedTextBox();
             this.TxtAd = new System.Windows.Forms.TextBox();
@@ -48,8 +47,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.rchAdres = new System.Windows.Forms.RichTextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblVeliTel = new System.Windows.Forms.Label();
             this.MskVeliTel = new System.Windows.Forms.MaskedTextBox();
+            this.txtBolum = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +71,6 @@
             this.label7.Size = new System.Drawing.Size(57, 16);
             this.label7.TabIndex = 36;
             this.label7.Text = "Oda No:";
-            this.label7.Visible = false;
             // 
             // label8
             // 
@@ -81,7 +80,6 @@
             this.label8.Size = new System.Drawing.Size(117, 16);
             this.label8.TabIndex = 35;
             this.label8.Text = "Telefon Numarası:";
-            this.label8.Visible = false;
             // 
             // label9
             // 
@@ -91,7 +89,6 @@
             this.label9.Size = new System.Drawing.Size(35, 16);
             this.label9.TabIndex = 34;
             this.label9.Text = "Mail:";
-            this.label9.Visible = false;
             // 
             // label5
             // 
@@ -101,7 +98,6 @@
             this.label5.Size = new System.Drawing.Size(48, 16);
             this.label5.TabIndex = 32;
             this.label5.Text = "Bölüm:";
-            this.label5.Visible = false;
             // 
             // label6
             // 
@@ -111,7 +107,6 @@
             this.label6.Size = new System.Drawing.Size(78, 16);
             this.label6.TabIndex = 31;
             this.label6.Text = "Öğrenci TC:";
-            this.label6.Visible = false;
             // 
             // label3
             // 
@@ -121,7 +116,6 @@
             this.label3.Size = new System.Drawing.Size(91, 16);
             this.label3.TabIndex = 30;
             this.label3.Text = "Doğum Tarihi:";
-            this.label3.Visible = false;
             // 
             // label1
             // 
@@ -131,7 +125,6 @@
             this.label1.Size = new System.Drawing.Size(77, 16);
             this.label1.TabIndex = 28;
             this.label1.Text = "Öğrenci Ad:";
-            this.label1.Visible = false;
             // 
             // CmbOda
             // 
@@ -141,7 +134,6 @@
             this.CmbOda.Name = "CmbOda";
             this.CmbOda.Size = new System.Drawing.Size(230, 24);
             this.CmbOda.TabIndex = 27;
-            this.CmbOda.Visible = false;
             // 
             // MskTel
             // 
@@ -151,7 +143,6 @@
             this.MskTel.Name = "MskTel";
             this.MskTel.Size = new System.Drawing.Size(230, 22);
             this.MskTel.TabIndex = 26;
-            this.MskTel.Visible = false;
             // 
             // TxtMail
             // 
@@ -160,17 +151,6 @@
             this.TxtMail.Name = "TxtMail";
             this.TxtMail.Size = new System.Drawing.Size(230, 22);
             this.TxtMail.TabIndex = 25;
-            this.TxtMail.Visible = false;
-            // 
-            // CmbBolum
-            // 
-            this.CmbBolum.FormattingEnabled = true;
-            this.CmbBolum.Location = new System.Drawing.Point(157, 180);
-            this.CmbBolum.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.CmbBolum.Name = "CmbBolum";
-            this.CmbBolum.Size = new System.Drawing.Size(230, 24);
-            this.CmbBolum.TabIndex = 24;
-            this.CmbBolum.Visible = false;
             // 
             // MskTc
             // 
@@ -181,7 +161,6 @@
             this.MskTc.Size = new System.Drawing.Size(230, 22);
             this.MskTc.TabIndex = 23;
             this.MskTc.ValidatingType = typeof(int);
-            this.MskTc.Visible = false;
             // 
             // MskDogum
             // 
@@ -192,7 +171,6 @@
             this.MskDogum.Size = new System.Drawing.Size(230, 22);
             this.MskDogum.TabIndex = 22;
             this.MskDogum.ValidatingType = typeof(System.DateTime);
-            this.MskDogum.Visible = false;
             // 
             // TxtAd
             // 
@@ -201,7 +179,6 @@
             this.TxtAd.Name = "TxtAd";
             this.TxtAd.Size = new System.Drawing.Size(230, 22);
             this.TxtAd.TabIndex = 20;
-            this.TxtAd.Visible = false;
             // 
             // BtnGuncelle
             // 
@@ -221,9 +198,9 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(795, 553);
+            this.dataGridView1.Size = new System.Drawing.Size(929, 553);
             this.dataGridView1.TabIndex = 40;
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label10
             // 
@@ -233,6 +210,7 @@
             this.label10.Size = new System.Drawing.Size(14, 16);
             this.label10.TabIndex = 41;
             this.label10.Text = "1";
+            this.label10.Visible = false;
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label2
@@ -243,7 +221,6 @@
             this.label2.Size = new System.Drawing.Size(46, 16);
             this.label2.TabIndex = 42;
             this.label2.Text = "Adres:";
-            this.label2.Visible = false;
             // 
             // rchAdres
             // 
@@ -253,14 +230,14 @@
             this.rchAdres.TabIndex = 43;
             this.rchAdres.Text = "";
             // 
-            // label4
+            // lblVeliTel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 313);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 16);
-            this.label4.TabIndex = 45;
-            this.label4.Text = "Veli Telefon Numarası:";
+            this.lblVeliTel.AutoSize = true;
+            this.lblVeliTel.Location = new System.Drawing.Point(6, 313);
+            this.lblVeliTel.Name = "lblVeliTel";
+            this.lblVeliTel.Size = new System.Drawing.Size(143, 16);
+            this.lblVeliTel.TabIndex = 45;
+            this.lblVeliTel.Text = "Veli Telefon Numarası:";
             // 
             // MskVeliTel
             // 
@@ -271,12 +248,21 @@
             this.MskVeliTel.Size = new System.Drawing.Size(230, 22);
             this.MskVeliTel.TabIndex = 44;
             // 
+            // txtBolum
+            // 
+            this.txtBolum.Location = new System.Drawing.Point(157, 177);
+            this.txtBolum.Name = "txtBolum";
+            this.txtBolum.Size = new System.Drawing.Size(230, 22);
+            this.txtBolum.TabIndex = 46;
+            // 
             // FrmOgrenciDuzenle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1232, 752);
-            this.Controls.Add(this.label4);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1344, 754);
+            this.Controls.Add(this.txtBolum);
+            this.Controls.Add(this.lblVeliTel);
             this.Controls.Add(this.MskVeliTel);
             this.Controls.Add(this.rchAdres);
             this.Controls.Add(this.label2);
@@ -294,10 +280,10 @@
             this.Controls.Add(this.CmbOda);
             this.Controls.Add(this.MskTel);
             this.Controls.Add(this.TxtMail);
-            this.Controls.Add(this.CmbBolum);
             this.Controls.Add(this.MskTc);
             this.Controls.Add(this.MskDogum);
             this.Controls.Add(this.TxtAd);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmOgrenciDuzenle";
             this.Text = "FrmOgrenciDuzenle";
             this.Load += new System.EventHandler(this.FrmOgrenciDuzenle_Load);
@@ -319,7 +305,6 @@
         private System.Windows.Forms.ComboBox CmbOda;
         private System.Windows.Forms.MaskedTextBox MskTel;
         private System.Windows.Forms.TextBox TxtMail;
-        private System.Windows.Forms.ComboBox CmbBolum;
         private System.Windows.Forms.MaskedTextBox MskTc;
         private System.Windows.Forms.MaskedTextBox MskDogum;
         private System.Windows.Forms.TextBox TxtAd;
@@ -328,7 +313,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox rchAdres;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblVeliTel;
         private System.Windows.Forms.MaskedTextBox MskVeliTel;
+        private System.Windows.Forms.TextBox txtBolum;
     }
 }

@@ -210,6 +210,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1008, 724);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dataGridView1);
@@ -228,6 +229,7 @@
             this.Controls.Add(this.MskTc);
             this.Controls.Add(this.TxtAd);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "OgrenciIzinEkle";
             this.Text = "OgrenciIzinEkle";
             this.Load += new System.EventHandler(this.OgrenciIzinEkle_Load);

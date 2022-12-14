@@ -40,11 +40,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.MskTc = new System.Windows.Forms.MaskedTextBox();
-            this.MskOdemeTarih = new System.Windows.Forms.MaskedTextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblMail = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.TxtArama = new System.Windows.Forms.TextBox();
+            this.dtOdeme = new System.Windows.Forms.DateTimePicker();
+            this.lblTel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,10 +155,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(525, 524);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 16);
+            this.label6.Size = new System.Drawing.Size(68, 16);
             this.label6.TabIndex = 12;
-            this.label6.Text = "label6";
-            this.label6.Visible = false;
+            this.label6.Text = "kalabborc";
             // 
             // MskTc
             // 
@@ -170,25 +170,14 @@
             this.MskTc.ValidatingType = typeof(int);
             this.MskTc.Visible = false;
             // 
-            // MskOdemeTarih
+            // lblMail
             // 
-            this.MskOdemeTarih.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.MskOdemeTarih.Location = new System.Drawing.Point(221, 544);
-            this.MskOdemeTarih.Mask = "00/00/0000";
-            this.MskOdemeTarih.Name = "MskOdemeTarih";
-            this.MskOdemeTarih.Size = new System.Drawing.Size(198, 34);
-            this.MskOdemeTarih.TabIndex = 14;
-            this.MskOdemeTarih.ValidatingType = typeof(System.DateTime);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(525, 575);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 16);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "label7";
-            this.label7.Visible = false;
+            this.lblMail.AutoSize = true;
+            this.lblMail.Location = new System.Drawing.Point(525, 575);
+            this.lblMail.Name = "lblMail";
+            this.lblMail.Size = new System.Drawing.Size(44, 16);
+            this.lblMail.TabIndex = 15;
+            this.lblMail.Text = "label7";
             // 
             // label8
             // 
@@ -219,16 +208,34 @@
             this.TxtArama.TabIndex = 19;
             this.TxtArama.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // dtOdeme
+            // 
+            this.dtOdeme.Location = new System.Drawing.Point(221, 550);
+            this.dtOdeme.Name = "dtOdeme";
+            this.dtOdeme.Size = new System.Drawing.Size(200, 22);
+            this.dtOdeme.TabIndex = 20;
+            // 
+            // lblTel
+            // 
+            this.lblTel.AutoSize = true;
+            this.lblTel.Location = new System.Drawing.Point(768, 56);
+            this.lblTel.Name = "lblTel";
+            this.lblTel.Size = new System.Drawing.Size(27, 16);
+            this.lblTel.TabIndex = 21;
+            this.lblTel.Text = "Tel";
+            // 
             // FrmOgrenciOdemeAl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1136, 595);
+            this.Controls.Add(this.lblTel);
+            this.Controls.Add(this.dtOdeme);
             this.Controls.Add(this.TxtArama);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.MskOdemeTarih);
+            this.Controls.Add(this.lblMail);
             this.Controls.Add(this.MskTc);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -241,6 +248,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmOgrenciOdemeAl";
             this.Text = "FrmOgrenciOdemeAl";
             this.Load += new System.EventHandler(this.FrmOgrenciOdemeAl_Load);
@@ -264,10 +272,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox MskTc;
-        private System.Windows.Forms.MaskedTextBox MskOdemeTarih;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblMail;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox TxtArama;
+        private System.Windows.Forms.DateTimePicker dtOdeme;
+        private System.Windows.Forms.Label lblTel;
     }
 }

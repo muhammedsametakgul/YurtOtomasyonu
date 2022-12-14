@@ -41,13 +41,13 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1097, 448);
+            this.dataGridView1.Size = new System.Drawing.Size(1347, 448);
             this.dataGridView1.TabIndex = 0;
             // 
             // TxtAdAra
             // 
             this.TxtAdAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtAdAra.Location = new System.Drawing.Point(272, 545);
+            this.TxtAdAra.Location = new System.Drawing.Point(452, 548);
             this.TxtAdAra.Name = "TxtAdAra";
             this.TxtAdAra.Size = new System.Drawing.Size(333, 38);
             this.TxtAdAra.TabIndex = 1;
@@ -56,7 +56,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(390, 500);
+            this.label1.Location = new System.Drawing.Point(570, 503);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 16);
             this.label1.TabIndex = 3;
@@ -66,11 +66,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(857, 620);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1348, 620);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtAdAra);
             this.Controls.Add(this.dataGridView1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "FrmPersonelListesi";
             this.Text = "FrmPersonelListesi";

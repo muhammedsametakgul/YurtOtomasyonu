@@ -44,12 +44,20 @@ namespace Yurt
             komut1.ExecuteNonQuery();
 
 
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Borclar1", sql.Baglan());
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+
+
             //gelirler tablosuna ekleme
-            SqlCommand komut2 = new SqlCommand("insert into Gelir (OdemeTarih,OdemeMiktar,Odeyen) values(@o1,@o2,@o3)", sql.Baglan());
+            SqlCommand komut2 = new SqlCommand("insert into Gelir (OdemeTarih,OdemeMiktar,Odeyen,OdeyenTelefon,OdeyenMail) values(@o1,@o2,@o3,@o4,@o5)", sql.Baglan());
             string ad = TxtAd.Text;
-            komut2.Parameters.AddWithValue("@o1", MskOdemeTarih.Text);
+            komut2.Parameters.AddWithValue("@o1", dtOdeme.Text);
             komut2.Parameters.AddWithValue("@o2", TxtOdenen.Text);
             komut2.Parameters.AddWithValue("@o3", ad);
+            komut2.Parameters.AddWithValue("@o4",lblTel.Text);
+            komut2.Parameters.AddWithValue("@o5",lblMail.Text);
             komut2.ExecuteNonQuery();
 
             MailMessage mailmesaji = new MailMessage();
@@ -60,10 +68,10 @@ namespace Yurt
             istemci.Port = 587;
             istemci.Host = "smtp.gmail.com";
             istemci.EnableSsl = true;
-            mailmesaji.To.Add(label7.Text);
+            mailmesaji.To.Add(lblMail.Text);
             mailmesaji.From = new MailAddress("denememaili232323@gmail.com");
             mailmesaji.Subject = "Ödeme Makbuz";
-            mailmesaji.Body = "Merhaba Sayın" + " " + TxtAd.Text + ". \n "+MskOdemeTarih.Text+" tarihinde "+TxtOdenen.Text+
+            mailmesaji.Body = "Merhaba Sayın" + " " + TxtAd.Text + ". \n "+dtOdeme.Text+" tarihinde "+TxtOdenen.Text+
                 " tutarında borç ödediniz."+"Kalan Borcunuz: "+ label6.Text+" \n Yurt Yönetimi";
             istemci.Send(mailmesaji);
             
@@ -81,25 +89,27 @@ namespace Yurt
             TxtAd.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
 
             label6.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
-            label7.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
+            lblMail.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
+            lblTel.Text= dataGridView1.Rows[secilen].Cells[4].Value.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
 
-            string arancakKisi = TxtArama.Text;
+          
 
-            SqlDataAdapter adaptor = new SqlDataAdapter("select * from Borclar1 where OgrenciAd LIKE '%" + arancakKisi + "%'", sql.Baglan()) ;
-            DataTable dt = new DataTable();
-            adaptor.Fill(dt);
-            dataGridView1.DataSource = dt;
-            sql.Baglan().Close();
+            
 
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            string arancakKisi = TxtArama.Text;
+            SqlDataAdapter adaptor = new SqlDataAdapter("select * from Borclar1 where OgrenciAd LIKE '%" + arancakKisi + "%'", sql.Baglan());
+            DataTable dt = new DataTable();
+            adaptor.Fill(dt);
+            dataGridView1.DataSource = dt;
+            sql.Baglan().Close();
         }
     }
 }

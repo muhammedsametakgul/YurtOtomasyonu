@@ -10,7 +10,22 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 
 namespace Yurt
-{
+{   
+    enum aylar 
+    {   Ocak=1,
+        Şubat,
+        Mart,
+        Nisan,
+        Mayıs,
+        Haziran,
+        Temmuz,
+        Ağustos,
+        Eylül,
+        Ekim,
+        Kasım,
+        Aralık
+
+    }
     public partial class FrmGelirListesi : Form
     {
         public FrmGelirListesi()
@@ -24,6 +39,26 @@ namespace Yurt
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource= dt;
+        }
+
+        private void txtAra_TextChanged(object sender, EventArgs e)
+        {
+            string ara = txtAra.Text;
+            SqlDataAdapter da = new SqlDataAdapter("select * from Gelir where Odeyen LIKE '%" + ara + "%'", sql.Baglan());
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+
+        private void txtTarih_TextChanged(object sender, EventArgs e)
+        {
+            string ara = txtTarih.Text;
+
+            SqlDataAdapter da = new SqlDataAdapter("select * from Gelir where OdemeTarih LIKE '%" + ara + "%'", sql.Baglan());
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
     }
 }

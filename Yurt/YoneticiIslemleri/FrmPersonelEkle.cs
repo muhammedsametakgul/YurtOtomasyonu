@@ -25,11 +25,13 @@ namespace Yurt.YoneticiIslemleri
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("insert into Personeller (PersonelTc,PersonelAdSoyad,PersonelDepartman,PersonelSifre) values(@p1,@p2,@p3,@p4)",sql.Baglan());
+            SqlCommand komut = new SqlCommand("insert into Personeller (PersonelTc,PersonelAdSoyad,PersonelDepartman,PersonelSifre,PersonelTelefon,PersonelAdres) values(@p1,@p2,@p3,@p4,@p5,@p6)",sql.Baglan());
             komut.Parameters.AddWithValue("@p1",MskTc.Text);
             komut.Parameters.AddWithValue("@p2",TxtAd.Text);
             komut.Parameters.AddWithValue("@p3",CmbDep.Text);
             komut.Parameters.AddWithValue("@p4",TxtSifre.Text);
+            komut.Parameters.AddWithValue("@p5",TxtTel.Text);
+            komut.Parameters.AddWithValue("@p6",TxtAdres.Text);
             komut.ExecuteNonQuery();
             MessageBox.Show("Başarıyla eklendi");
             sql.Baglan().Close();

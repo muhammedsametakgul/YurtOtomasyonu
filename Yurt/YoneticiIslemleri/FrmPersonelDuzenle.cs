@@ -45,6 +45,8 @@ namespace Yurt.YoneticiIslemleri
             TxtAd.Text= dataGridView1.Rows[secilen].Cells[2].Value.ToString();
             CmbDep.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
             TxtSifre.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
+            TxtTel.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
+            TxtAdres.Text = dataGridView1.Rows[secilen].Cells[6].Value.ToString();
 
         }
 
@@ -60,12 +62,15 @@ namespace Yurt.YoneticiIslemleri
         private void button1_Click(object sender, EventArgs e)
         {
             SqlCommand komut = new SqlCommand("Update Personeller set  PersonelTc=@p1,PersonelAdSoyad=@p2," +
-                "PersonelDepartman=@p3,PersonelSifre=@p4 where Personelid=@p5",sql.Baglan());
+                "PersonelDepartman=@p3,PersonelSifre=@p4 ,PersonelTelefon=@p5,PersonelAdres=@p6 where Personelid=@p7",sql.Baglan());
             komut.Parameters.AddWithValue("@p1",MskTc.Text);
             komut.Parameters.AddWithValue("@p2",TxtAd.Text);
             komut.Parameters.AddWithValue("@p3",CmbDep.Text);
             komut.Parameters.AddWithValue("@p4",TxtSifre.Text);
-            komut.Parameters.AddWithValue("@p5",label6.Text);
+            komut.Parameters.AddWithValue("@p5",TxtTel.Text);
+            komut.Parameters.AddWithValue("@p6",TxtAdres.Text);
+            komut.Parameters.AddWithValue("@p7",label6.Text);
+
           
 
             komut.ExecuteNonQuery();
@@ -86,9 +91,16 @@ namespace Yurt.YoneticiIslemleri
             MskTc.Text = "";
             CmbDep.Text= "";
             TxtSifre.Text="";
+            TxtTel.Text = "";
+            TxtAdres.Text = "";
             Goster();
 
             sql.Baglan().Close();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

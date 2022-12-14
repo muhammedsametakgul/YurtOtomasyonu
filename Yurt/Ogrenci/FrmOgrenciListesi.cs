@@ -21,11 +21,21 @@ namespace Yurt
         private void FrmOgrenciListesi_Load(object sender, EventArgs e)
         {
             dataGridView1.Visible = true;
+           
             SqlDataAdapter da = new SqlDataAdapter("Select * From Ogrenci", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
 
+        }
+
+        private void txtAra_TextChanged(object sender, EventArgs e)
+        {
+            string ara = txtAra.Text;
+            SqlDataAdapter da = new SqlDataAdapter("select * from Ogrenci where OgrenciAd LIKE '%" + ara + "%'", sql.Baglan());
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
     }
 }

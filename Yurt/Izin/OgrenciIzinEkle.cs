@@ -28,40 +28,17 @@ namespace Yurt
             da.Fill(dt);
             dataGridView1.DataSource = dt;
             
-
-          
-
-            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
            
            
-            //Seçilen tarihler arası gün farkı bulma
-            DateTime baslangic = DateBas.Value;
-            DateTime bitis = DateBit.Value;
-
-            TimeSpan zaman = bitis.Subtract(baslangic);
-             gun = Convert.ToInt32(zaman.TotalDays);
-            //Öğrencinin kalan izin sayısını çekme
-            SqlCommand komut3 = new SqlCommand("Select * From IzınHakkı  where OgrenciTc='" + MskTc.Text + "'", sql.Baglan());
-            SqlDataReader dr=komut3.ExecuteReader();
-            while (dr.Read())
-            {
-                label8.Text = dr[2].ToString();
-
-                
-
-            }
-            if (gun > Convert.ToInt32(label8.Text))
-            {
-                MessageBox.Show("İzin Hakkınız yeterli Değildir");
-            }
-            else
-            {
+          
+      
+            
                 SqlCommand komut = new SqlCommand("insert into OgrenciIzin (OgrenciTc,OgrenciAdSoyad,Sebep,Baslangic,Bitis,OgrenciTel" +
-                ",VeliTel) values(@p1,@p2,@p3,@p4,@p5,@p6,@p7)", sql.Baglan());
+               ",VeliTel) values(@p1,@p2,@p3,@p4,@p5,@p6,@p7)", sql.Baglan());
                 komut.Parameters.AddWithValue("@p1", MskTc.Text);
                 komut.Parameters.AddWithValue("@p2", TxtAd.Text);
                 komut.Parameters.AddWithValue("@p3", TxtSebep.Text);
@@ -70,20 +47,15 @@ namespace Yurt
                 komut.Parameters.AddWithValue("@p6", MskOgrenciTel.Text);
                 komut.Parameters.AddWithValue("@p7", MskVeliTel.Text);
                 komut.ExecuteNonQuery();
-                //Öğrencinin elde kalan izin hakkı
-                yeni_gun = Convert.ToInt32(label8.Text) - gun;
-                //Tabloda yeni izin hakkını güncelleme
-                SqlCommand komut2 = new SqlCommand("Update IzınHakkı set Izin=@i1 where OgrenciTc=@i2", sql.Baglan());
-                komut2.Parameters.AddWithValue("@i1", yeni_gun);
-                komut2.Parameters.AddWithValue("@i2", MskTc.Text);
-                komut2.ExecuteNonQuery();
+                MessageBox.Show("Başarıyl eklendi");
              
-                sql.Baglan().Close();
-                MessageBox.Show(gecici_gun.ToString());
+              
+            sql.Baglan().Close();
+      
               
                 
 
-            }
+            
            
 
             

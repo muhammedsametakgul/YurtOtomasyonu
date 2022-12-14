@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace Yurt
 {
-    public partial class FrmIzinGoster : Form
+    public partial class FrmOgrenciIzinGoster : Form
     {
-        public FrmIzinGoster()
+        public FrmOgrenciIzinGoster()
         {
             InitializeComponent();
         }

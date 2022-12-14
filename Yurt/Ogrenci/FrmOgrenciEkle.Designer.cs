@@ -31,7 +31,6 @@
             this.TxtAd = new System.Windows.Forms.TextBox();
             this.MskDogum = new System.Windows.Forms.MaskedTextBox();
             this.MskTc = new System.Windows.Forms.MaskedTextBox();
-            this.CmbBolum = new System.Windows.Forms.ComboBox();
             this.TxtMail = new System.Windows.Forms.TextBox();
             this.MskTel = new System.Windows.Forms.MaskedTextBox();
             this.CmbOda = new System.Windows.Forms.ComboBox();
@@ -47,6 +46,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.MskVeliTel = new System.Windows.Forms.MaskedTextBox();
+            this.txtBolum = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // TxtAd
@@ -76,15 +76,6 @@
             this.MskTc.Size = new System.Drawing.Size(344, 30);
             this.MskTc.TabIndex = 3;
             this.MskTc.ValidatingType = typeof(int);
-            // 
-            // CmbBolum
-            // 
-            this.CmbBolum.FormattingEnabled = true;
-            this.CmbBolum.Location = new System.Drawing.Point(243, 213);
-            this.CmbBolum.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.CmbBolum.Name = "CmbBolum";
-            this.CmbBolum.Size = new System.Drawing.Size(344, 33);
-            this.CmbBolum.TabIndex = 4;
             // 
             // TxtMail
             // 
@@ -222,11 +213,20 @@
             this.MskVeliTel.Size = new System.Drawing.Size(344, 30);
             this.MskVeliTel.TabIndex = 21;
             // 
+            // txtBolum
+            // 
+            this.txtBolum.Location = new System.Drawing.Point(243, 221);
+            this.txtBolum.Name = "txtBolum";
+            this.txtBolum.Size = new System.Drawing.Size(344, 30);
+            this.txtBolum.TabIndex = 23;
+            // 
             // FrmOgrenciEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1002, 815);
+            this.Controls.Add(this.txtBolum);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.MskVeliTel);
             this.Controls.Add(this.label2);
@@ -242,11 +242,11 @@
             this.Controls.Add(this.CmbOda);
             this.Controls.Add(this.MskTel);
             this.Controls.Add(this.TxtMail);
-            this.Controls.Add(this.CmbBolum);
             this.Controls.Add(this.MskTc);
             this.Controls.Add(this.MskDogum);
             this.Controls.Add(this.TxtAd);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmOgrenciEkle";
             this.Text = "Form1";
@@ -261,7 +261,6 @@
         private System.Windows.Forms.TextBox TxtAd;
         private System.Windows.Forms.MaskedTextBox MskDogum;
         private System.Windows.Forms.MaskedTextBox MskTc;
-        private System.Windows.Forms.ComboBox CmbBolum;
         private System.Windows.Forms.TextBox TxtMail;
         private System.Windows.Forms.MaskedTextBox MskTel;
         private System.Windows.Forms.ComboBox CmbOda;
@@ -277,5 +276,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox MskVeliTel;
+        private System.Windows.Forms.TextBox txtBolum;
     }
 }

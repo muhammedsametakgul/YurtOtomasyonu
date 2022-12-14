@@ -258,6 +258,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1477, 572);
             this.Controls.Add(this.MskTarih);
             this.Controls.Add(this.label8);
@@ -278,6 +279,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmGiderDuzenle";
             this.Text = "FrmGiderDuzenle";
             this.Load += new System.EventHandler(this.FrmGiderDuzenle_Load);

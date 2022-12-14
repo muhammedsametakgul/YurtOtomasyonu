@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AnaGiris.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,24 @@
     <Compile Include="Bolum\FrmBolumEkle.Designer.cs">
       <DependentUpon>FrmBolumEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gelir\FrmGelirDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gelir\FrmGelirDuzenle.Designer.cs">
+      <DependentUpon>FrmGelirDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gelir\FrmGelirEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gelir\FrmGelirEkle.Designer.cs">
+      <DependentUpon>FrmGelirEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Izin\FrmOgrenciIzinDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izin\FrmOgrenciIzinDuzenle.Designer.cs">
+      <DependentUpon>FrmOgrenciIzinDuzenle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gelir\FrmGelirListesi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,11 +115,11 @@
     <Compile Include="Gider\FrmGiderDuzenle.Designer.cs">
       <DependentUpon>FrmGiderDuzenle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gider\FrmGiderler.cs">
+    <Compile Include="Gider\FrmGiderEkle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gider\FrmGiderler.Designer.cs">
-      <DependentUpon>FrmGiderler.cs</DependentUpon>
+    <Compile Include="Gider\FrmGiderEkle.Designer.cs">
+      <DependentUpon>FrmGiderEkle.cs</DependentUpon>
     </Compile>
     <Compile Include="Gider\FrmGiderlerListesi.cs">
       <SubType>Form</SubType>
@@ -109,11 +133,11 @@
     <Compile Include="Gider\FrmGiderListesi.Designer.cs">
       <DependentUpon>FrmGiderListesi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Izin\FrmIzinGoster.cs">
+    <Compile Include="Izin\FrmOgrenciIzinGoster.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Izin\FrmIzinGoster.Designer.cs">
-      <DependentUpon>FrmIzinGoster.cs</DependentUpon>
+    <Compile Include="Izin\FrmOgrenciIzinGoster.Designer.cs">
+      <DependentUpon>FrmOgrenciIzinGoster.cs</DependentUpon>
     </Compile>
     <Compile Include="Odeme\FrmOgrenciBorcListesi.cs">
       <SubType>Form</SubType>
@@ -157,6 +181,12 @@
     <Compile Include="Gelir\FrmOgrenciOdemeAl.Designer.cs">
       <DependentUpon>FrmOgrenciOdemeAl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ogrenci\FrmOgrenciSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ogrenci\FrmOgrenciSil.Designer.cs">
+      <DependentUpon>FrmOgrenciSil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personel\FrmPersonel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +204,12 @@
     </Compile>
     <Compile Include="Personel\FrmYemekhaneGorevli.Designer.cs">
       <DependentUpon>FrmYemekhaneGorevli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\FrmPersonelSifreİslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\FrmPersonelSifreİslemleri.Designer.cs">
+      <DependentUpon>FrmPersonelSifreİslemleri.cs</DependentUpon>
     </Compile>
     <Compile Include="YoneticiIslemleri\FrmPersonelDuzenle.cs">
       <SubType>Form</SubType>
@@ -221,6 +257,9 @@
     <Compile Include="YoneticiIslemleri\YoneticiSifreGuncelle.Designer.cs">
       <DependentUpon>YoneticiSifreGuncelle.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AnaGiris.resx">
       <DependentUpon>AnaGiris.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,14 +269,23 @@
     <EmbeddedResource Include="Bolum\FrmBolumEkle.resx">
       <DependentUpon>FrmBolumEkle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gelir\FrmGelirDuzenle.resx">
+      <DependentUpon>FrmGelirDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gelir\FrmGelirEkle.resx">
+      <DependentUpon>FrmGelirEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izin\FrmOgrenciIzinDuzenle.resx">
+      <DependentUpon>FrmOgrenciIzinDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gelir\FrmGelirListesi.resx">
       <DependentUpon>FrmGelirListesi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gider\FrmGiderDuzenle.resx">
       <DependentUpon>FrmGiderDuzenle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gider\FrmGiderler.resx">
-      <DependentUpon>FrmGiderler.cs</DependentUpon>
+    <EmbeddedResource Include="Gider\FrmGiderEkle.resx">
+      <DependentUpon>FrmGiderEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gider\FrmGiderlerListesi.resx">
       <DependentUpon>FrmGiderlerListesi.cs</DependentUpon>
@@ -245,8 +293,8 @@
     <EmbeddedResource Include="Gider\FrmGiderListesi.resx">
       <DependentUpon>FrmGiderListesi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Izin\FrmIzinGoster.resx">
-      <DependentUpon>FrmIzinGoster.cs</DependentUpon>
+    <EmbeddedResource Include="Izin\FrmOgrenciIzinGoster.resx">
+      <DependentUpon>FrmOgrenciIzinGoster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Odeme\FrmOgrenciBorcListesi.resx">
       <DependentUpon>FrmOgrenciBorcListesi.cs</DependentUpon>
@@ -269,8 +317,14 @@
     <EmbeddedResource Include="Gelir\FrmOgrenciOdemeAl.resx">
       <DependentUpon>FrmOgrenciOdemeAl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ogrenci\FrmOgrenciSil.resx">
+      <DependentUpon>FrmOgrenciSil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Personel\FrmPersonelGiris.resx">
       <DependentUpon>FrmPersonelGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\FrmPersonelSifreİslemleri.resx">
+      <DependentUpon>FrmPersonelSifreİslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YoneticiIslemleri\FrmPersonelDuzenle.resx">
       <DependentUpon>FrmPersonelDuzenle.cs</DependentUpon>
