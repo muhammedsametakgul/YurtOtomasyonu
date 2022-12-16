@@ -28,7 +28,7 @@ namespace Yurt.YoneticiIslemleri
 
                 SqlCommand komut = new SqlCommand("Update Admin set YoneticiSifre=@p1 where  YoneticiTc=@p2", sql.Baglan());
                 komut.Parameters.AddWithValue("@p1", TxtSifre.Text);
-                komut.Parameters.AddWithValue("@p2",MskTc.Text);
+                komut.Parameters.AddWithValue("@p2",MskTcSifreGuncelleme.Text);
                 komut.ExecuteNonQuery();
                 MessageBox.Show("Başarıyla güncellendi");
                 sql.Baglan().Close();
@@ -41,10 +41,11 @@ namespace Yurt.YoneticiIslemleri
                 TxtSifre2.Text = "";
             }
         }
-
+       // public string tc_sifre_guncelleme;
         private void YoneticiSifreGuncelle_Load(object sender, EventArgs e)
         {
-            label3.Text = tc_sifre;
+            ///MskTcSifreGuncelleme.Text = tc_sifre_guncelleme;
+           
         }
     }
 }

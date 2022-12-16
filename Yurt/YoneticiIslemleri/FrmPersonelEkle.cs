@@ -23,7 +23,7 @@ namespace Yurt.YoneticiIslemleri
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnEkle_Click(object sender, EventArgs e)
         {
             SqlCommand komut = new SqlCommand("insert into Personeller (PersonelTc,PersonelAdSoyad,PersonelDepartman,PersonelSifre,PersonelTelefon,PersonelAdres) values(@p1,@p2,@p3,@p4,@p5,@p6)",sql.Baglan());
             komut.Parameters.AddWithValue("@p1",MskTc.Text);

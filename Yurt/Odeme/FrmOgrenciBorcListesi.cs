@@ -26,5 +26,14 @@ namespace Yurt
             da.Fill(dt);
             dataGridView1.DataSource = dt;
         }
+
+        private void TxtAra_TextChanged(object sender, EventArgs e)
+        {
+            string ara = TxtAra.Text;
+            SqlDataAdapter da = new SqlDataAdapter("select * from OgrenciIzin where OgrenciAdSoyad LIKE '%" + ara + "%'", sql.Baglan());
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
     }
 }

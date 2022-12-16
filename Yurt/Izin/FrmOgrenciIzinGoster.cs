@@ -34,7 +34,8 @@ namespace Yurt
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+   
+        private void TxtAra_TextChanged(object sender, EventArgs e)
         {
             string ara = TxtAra.Text;
             SqlDataAdapter da = new SqlDataAdapter("select * from OgrenciIzin where OgrenciAdSoyad LIKE '%" + ara + "%'", sql.Baglan());

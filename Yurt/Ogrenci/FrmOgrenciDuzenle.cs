@@ -23,7 +23,7 @@ namespace Yurt
         private void FrmOgrenciDuzenle_Load(object sender, EventArgs e)
         {
             
-                SqlDataAdapter da = new SqlDataAdapter("Select * From Ogrenci", sql.Baglan());
+                SqlDataAdapter da = new SqlDataAdapter("Select OgrenciAd as Ad,OgrenciTc as TC , OgrenciBolum as Bölüm,OgrenciMail as Mail,OgrenciTelefon as Telefon,OgrenciOdaNo as Oda  From Ogrenci", sql.Baglan());
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
@@ -60,10 +60,14 @@ namespace Yurt
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("Delete Ogrenci  where OgrenciTc =@p1",sql.Baglan());
-            komut.Parameters.AddWithValue("@p1",MskTc.Text);
-            komut.ExecuteNonQuery();
-            MessageBox.Show("Başarıyla silindi!");
+            DialogResult dr = new DialogResult();
+            dr = MessageBox.Show("Uyarı", "Silmek istediğinize emin misiniz?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dr == DialogResult.Yes)
+            {
+                SqlCommand komut = new SqlCommand("Delete Ogrenci  where OgrenciTc =@p1", sql.Baglan());
+                komut.Parameters.AddWithValue("@p1", MskTc.Text);
+                komut.ExecuteNonQuery();
+            }
             SqlDataAdapter da = new SqlDataAdapter("Select * From Ogrenci", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -75,13 +79,16 @@ namespace Yurt
           
         }
 
+        //Öğrenci Güncelleme İşlemi Yapılıyor
         private void button2_Click(object sender, EventArgs e)
         {
             string bolum=txtBolum.Text.Trim();
             SqlCommand komut = new SqlCommand("Update Ogrenci set OgrenciAd=@p1,OgrenciDogum=@p2" +
-                ",OgrenciTc=@p3,OgrenciBolum=@p4,OgrenciMail=@p5,OgrenciTelefon= @p6,VeliTel=@p7,OgrenciOdaNo=@p8 ,OgrenciAdres=@p9 " +
-                "where Ogrenciid=@p10 ",sql.Baglan());
-            komut.Parameters.AddWithValue("@p1",TxtAd.Text);
+                ",OgrenciTc=@p3,OgrenciBolum=@p4,OgrenciMail=@p5,OgrenciTelefon= @p6,VeliTel=@p7,OgrenciOdaNo=@p8 ,OgrenciAdres=@p9 ,VeliAd=@p10," +
+                "VeliYakinlik =@p11,Il=@p12,Ilce=@p13" +
+                " where Ogrenciid=@p14 ",sql.Baglan());
+
+            komut.Parameters.AddWithValue("@p1",TxtAd.Text.ToUpper());
             komut.Parameters.AddWithValue("@p2",MskDogum.Text);
             komut.Parameters.AddWithValue("@p3",MskTc.Text);
             komut.Parameters.AddWithValue("@p4",bolum);
@@ -90,15 +97,20 @@ namespace Yurt
             komut.Parameters.AddWithValue("@p8",CmbOda.Text);
             komut.Parameters.AddWithValue("@p9",rchAdres.Text);
             komut.Parameters.AddWithValue("@p7",MskVeliTel.Text);
-            komut.Parameters.AddWithValue("@p10",label10.Text);
+            komut.Parameters.AddWithValue("@p10",txtVeliAd.Text.ToUpper());
+           // komut.Parameters.AddWithValue("@p11",txtVeliSoyad.Text);
+            komut.Parameters.AddWithValue("@p11",cmbYakin.Text);
+            komut.Parameters.AddWithValue("@p12",txtIl.Text.ToUpper());
+            komut.Parameters.AddWithValue("@p13",txtIlce.Text.ToUpper());
+            komut.Parameters.AddWithValue("@p14",label10.Text);
             komut.ExecuteNonQuery();
             MessageBox.Show("Başarıyla Güncellendi");
-            SqlDataAdapter da = new SqlDataAdapter("Select * From Ogrenci", sql.Baglan());
+
+            SqlDataAdapter da = new SqlDataAdapter("Select OgrenciAd as Ad,OgrenciTc as TC , OgrenciBolum as Bölüm,OgrenciMail as Mail,OgrenciTelefon as Telefon,OgrenciOdaNo as Oda  From Ogrenci", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
 
-            
             sql.Baglan().Close();
         }
 
@@ -116,17 +128,57 @@ namespace Yurt
         {
 
             int secilen = dataGridView1.SelectedCells[0].RowIndex;
+            
+           // SqlDataAdapter da = new SqlDataAdapter("Select OgrenciAd,OgrenciTc,OgrenciBolum,OgrenciMail,OgrenciTelefon,OgrenciOdaNo From Ogrenci", sql.Baglan());
 
-            label10.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
-            TxtAd.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
-            MskDogum.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
-            MskTc.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
-            txtBolum.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
-            TxtMail.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
-            MskTel.Text = dataGridView1.Rows[secilen].Cells[6].Value.ToString();
-            CmbOda.Text = dataGridView1.Rows[secilen].Cells[7].Value.ToString();
-            rchAdres.Text = dataGridView1.Rows[secilen].Cells[8].Value.ToString();
-            MskVeliTel.Text = dataGridView1.Rows[secilen].Cells[9].Value.ToString();
+            TxtAd.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+            MskTc.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
+            txtBolum.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
+            TxtMail.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
+            MskTel.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
+            CmbOda.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
+
+            SqlCommand komut = new SqlCommand("Select * from Ogrenci where OgrenciTc=@p1",sql.Baglan());
+            komut.Parameters.AddWithValue("@p1",MskTc.Text);
+            SqlDataReader dr= komut.ExecuteReader();
+            while (dr.Read())
+            {
+                label10.Text = dr[0].ToString();
+                MskDogum.Text = dr[3].ToString();
+                rchAdres.Text = dr[12].ToString();
+                MskVeliTel.Text = dr[8].ToString();
+                txtVeliAd.Text = dr[9].ToString();
+                //txtVeliSoyad.Text = dr[10].ToString();
+                cmbYakin.Text = dr[10].ToString();
+                txtIl.Text = dr[12].ToString();
+                txtIlce.Text = dr[13].ToString();
+            }
+            
+        }
+
+
+        //Arama textbox'a her bir harf girildiğinde sqlden sorgu yapılarak kişiye dinamik olarak sonuçlar getirilecek
+        private void txtArama_TextChanged(object sender, EventArgs e)
+        {
+
+            string ara = txtArama.Text;
+            SqlDataAdapter da = new SqlDataAdapter("select * from Ogrenci where OgrenciAd LIKE '%" + ara + "%'", sql.Baglan());
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DialogResult dr = new DialogResult();
+            dr = MessageBox.Show("Uyarı","Silmek istediğinize emin misiniz?",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            if(dr == DialogResult.Yes)
+            {
+                SqlCommand komut = new SqlCommand("Delete Ogrenci  where OgrenciTc =@p1", sql.Baglan());
+                komut.Parameters.AddWithValue("@p1", MskTc.Text);
+                komut.ExecuteNonQuery();
+            }
+            
         }
     }
 }

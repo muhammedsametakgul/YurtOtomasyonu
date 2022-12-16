@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOgrenciSil));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtAra = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
             this.lblid = new System.Windows.Forms.Label();
+            this.picYes = new System.Windows.Forms.PictureBox();
+            this.lblOdaNo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picYes)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -67,15 +71,15 @@
             this.label1.Text = "Ad ile arama:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // btnSil
             // 
-            this.button1.Location = new System.Drawing.Point(649, 519);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 30);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Sil";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSil.Location = new System.Drawing.Point(610, 519);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(135, 30);
+            this.btnSil.TabIndex = 3;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblid
             // 
@@ -87,14 +91,35 @@
             this.lblid.Text = "id";
             this.lblid.Visible = false;
             // 
+            // picYes
+            // 
+            this.picYes.Image = ((System.Drawing.Image)(resources.GetObject("picYes.Image")));
+            this.picYes.Location = new System.Drawing.Point(490, 519);
+            this.picYes.Name = "picYes";
+            this.picYes.Size = new System.Drawing.Size(30, 30);
+            this.picYes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picYes.TabIndex = 5;
+            this.picYes.TabStop = false;
+            // 
+            // lblOdaNo
+            // 
+            this.lblOdaNo.AutoSize = true;
+            this.lblOdaNo.Location = new System.Drawing.Point(35, 484);
+            this.lblOdaNo.Name = "lblOdaNo";
+            this.lblOdaNo.Size = new System.Drawing.Size(65, 16);
+            this.lblOdaNo.TabIndex = 6;
+            this.lblOdaNo.Text = "lblOdaNo";
+            // 
             // FrmOgrenciSil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1447, 636);
+            this.Controls.Add(this.lblOdaNo);
+            this.Controls.Add(this.picYes);
             this.Controls.Add(this.lblid);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSil);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtAra);
             this.Controls.Add(this.dataGridView1);
@@ -103,6 +128,7 @@
             this.Text = "FrmOgrenciSil";
             this.Load += new System.EventHandler(this.FrmOgrenciSil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picYes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,7 +139,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtAra;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Label lblid;
+        private System.Windows.Forms.PictureBox picYes;
+        private System.Windows.Forms.Label lblOdaNo;
     }
 }

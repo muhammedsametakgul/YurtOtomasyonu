@@ -103,7 +103,7 @@
             this.txtOdeyen.Location = new System.Drawing.Point(276, 75);
             this.txtOdeyen.Name = "txtOdeyen";
             this.txtOdeyen.Size = new System.Drawing.Size(343, 30);
-            this.txtOdeyen.TabIndex = 5;
+            this.txtOdeyen.TabIndex = 1;
             // 
             // txtOdenen
             // 
@@ -111,7 +111,7 @@
             this.txtOdenen.Location = new System.Drawing.Point(276, 160);
             this.txtOdenen.Name = "txtOdenen";
             this.txtOdenen.Size = new System.Drawing.Size(343, 30);
-            this.txtOdenen.TabIndex = 6;
+            this.txtOdenen.TabIndex = 2;
             // 
             // label3
             // 
@@ -130,7 +130,7 @@
             this.mskTel.Mask = "(999) 000-0000";
             this.mskTel.Name = "mskTel";
             this.mskTel.Size = new System.Drawing.Size(343, 34);
-            this.mskTel.TabIndex = 9;
+            this.mskTel.TabIndex = 4;
             // 
             // txtEmail
             // 
@@ -138,7 +138,7 @@
             this.txtEmail.Location = new System.Drawing.Point(276, 414);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(343, 34);
-            this.txtEmail.TabIndex = 10;
+            this.txtEmail.TabIndex = 5;
             // 
             // btnEkle
             // 
@@ -156,7 +156,7 @@
             this.txtFirma.Location = new System.Drawing.Point(276, 518);
             this.txtFirma.Name = "txtFirma";
             this.txtFirma.Size = new System.Drawing.Size(343, 30);
-            this.txtFirma.TabIndex = 13;
+            this.txtFirma.TabIndex = 6;
             // 
             // lblFirma
             // 
@@ -208,11 +208,12 @@
             this.mskTarih.Mask = "00/00/0000";
             this.mskTarih.Name = "mskTarih";
             this.mskTarih.Size = new System.Drawing.Size(343, 34);
-            this.mskTarih.TabIndex = 17;
+            this.mskTarih.TabIndex = 3;
             this.mskTarih.ValidatingType = typeof(System.DateTime);
             // 
             // FrmGelirEkle
             // 
+            this.AcceptButton = this.btnEkle;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;

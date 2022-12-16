@@ -91,7 +91,7 @@
             this.txtFirma.Location = new System.Drawing.Point(251, 511);
             this.txtFirma.Name = "txtFirma";
             this.txtFirma.Size = new System.Drawing.Size(343, 30);
-            this.txtFirma.TabIndex = 30;
+            this.txtFirma.TabIndex = 6;
             // 
             // lblFirma
             // 
@@ -119,7 +119,7 @@
             this.txtEmail.Location = new System.Drawing.Point(251, 407);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(343, 34);
-            this.txtEmail.TabIndex = 27;
+            this.txtEmail.TabIndex = 5;
             // 
             // mskTel
             // 
@@ -128,7 +128,7 @@
             this.mskTel.Mask = "(999) 000-0000";
             this.mskTel.Name = "mskTel";
             this.mskTel.Size = new System.Drawing.Size(343, 34);
-            this.mskTel.TabIndex = 26;
+            this.mskTel.TabIndex = 4;
             // 
             // label3
             // 
@@ -146,7 +146,7 @@
             this.dtTarih.Location = new System.Drawing.Point(251, 235);
             this.dtTarih.Name = "dtTarih";
             this.dtTarih.Size = new System.Drawing.Size(343, 34);
-            this.dtTarih.TabIndex = 24;
+            this.dtTarih.TabIndex = 3;
             // 
             // txtOdenen
             // 
@@ -154,7 +154,7 @@
             this.txtOdenen.Location = new System.Drawing.Point(251, 153);
             this.txtOdenen.Name = "txtOdenen";
             this.txtOdenen.Size = new System.Drawing.Size(343, 30);
-            this.txtOdenen.TabIndex = 23;
+            this.txtOdenen.TabIndex = 2;
             // 
             // txtOdeyen
             // 
@@ -231,7 +231,7 @@
             this.txtOdeyenKisi.Location = new System.Drawing.Point(251, 89);
             this.txtOdeyenKisi.Name = "txtOdeyenKisi";
             this.txtOdeyenKisi.Size = new System.Drawing.Size(343, 30);
-            this.txtOdeyenKisi.TabIndex = 36;
+            this.txtOdeyenKisi.TabIndex = 1;
             // 
             // label4
             // 
@@ -255,6 +255,7 @@
             // 
             // FrmGelirDuzenle
             // 
+            this.AcceptButton = this.btnEkle;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;

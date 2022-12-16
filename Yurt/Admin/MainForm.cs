@@ -11,6 +11,7 @@ using Yurt.Gelir;
 using Yurt.Ogrenci;
 using Yurt.Personel;
 using Yurt.YoneticiIslemleri;
+using System.Data.SqlClient;
 
 namespace Yurt.Admin
 {
@@ -23,8 +24,11 @@ namespace Yurt.Admin
 
         private void btnCikis_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            FrmAdminGiris frm = new FrmAdminGiris();
+            frm.Show();
+            this.Hide();
         }
+        Sql sql = new Sql();
         public void loadform(object Form)
         {
             if (this.mainpanel.Controls.Count > 0)
@@ -50,12 +54,19 @@ namespace Yurt.Admin
         {
             Application.Exit();
         }
-
+        public string tc_main;
         private void MainForm_Load(object sender, EventArgs e)
         {
-            WindowState = FormWindowState.Maximized;
+           // WindowState = FormWindowState.Maximized;
+           
+            
+            tc_main = lblTc.Text;
+            timer1.Start();
+
         }
 
+
+        
         private void aToolStripMenuItem_Click(object sender, EventArgs e)
         {
             loadform(new FrmOgrenciEkle());
@@ -193,5 +204,46 @@ namespace Yurt.Admin
         {
             Application.Exit();
         }
+
+        private void btnProfilDuzenle_Click(object sender, EventArgs e)
+        {
+            loadform(new FrmProfilDuzenleAdmin());
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
+    
 }

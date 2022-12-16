@@ -68,5 +68,22 @@ namespace Yurt
             }
 
         }
+
+        private void txtArama_TextChanged(object sender, EventArgs e)
+        {
+            string ara = txtArama.Text;
+            SqlDataAdapter da = new SqlDataAdapter("select * from OgrenciIzin where OgrenciAdSoyad LIKE '%" + ara + "%'", sql.Baglan());
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+
+            //string ara = txtArama.Text;
+          //SqlDataAdapter da = new SqlDataAdapter("select * from OgrenciIzin where OgrenciAdSoyad LIKE '%" + ara + " %'", sql.Baglan());
+
+            //DataTable dt = new DataTable();
+            //da.Fill(dt);
+            //dataGridView1.DataSource = dt;
+
+        }
     }
 }

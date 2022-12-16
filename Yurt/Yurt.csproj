@@ -85,6 +85,12 @@
     <Compile Include="Bolum\FrmBolumEkle.Designer.cs">
       <DependentUpon>FrmBolumEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Profil\FrmProfilDuzenleAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profil\FrmProfilDuzenleAdmin.Designer.cs">
+      <DependentUpon>FrmProfilDuzenleAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gelir\FrmGelirDuzenle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +275,9 @@
     <EmbeddedResource Include="Bolum\FrmBolumEkle.resx">
       <DependentUpon>FrmBolumEkle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Profil\FrmProfilDuzenleAdmin.resx">
+      <DependentUpon>FrmProfilDuzenleAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gelir\FrmGelirDuzenle.resx">
       <DependentUpon>FrmGelirDuzenle.cs</DependentUpon>
     </EmbeddedResource>
@@ -326,6 +335,7 @@
     <EmbeddedResource Include="Personel\FrmPersonelSifreİslemleri.resx">
       <DependentUpon>FrmPersonelSifreİslemleri.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="YoneticiIslemleri\FrmPersonelDuzenle.resx">
       <DependentUpon>FrmPersonelDuzenle.cs</DependentUpon>
     </EmbeddedResource>

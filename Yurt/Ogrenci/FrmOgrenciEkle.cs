@@ -42,46 +42,63 @@ namespace Yurt
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Öğrenci Eklemek
-            string bolum=txtBolum.Text.Trim();
-            SqlCommand komut = new SqlCommand("insert into Ogrenci (OgrenciAd,OgrenciDogum,OgrenciTc,OgrenciBolum," +
-                "OgrenciMail,OgrenciTelefon,OgrenciOdaNo,OgrenciAdres,VeliTel) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9)",sql.Baglan());
+            DialogResult dialogResult= DialogResult.OK;
+            dialogResult = MessageBox.Show("Uyarı","Eklemek istediğinize emin misiniz?",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if(dialogResult == DialogResult.Yes)
+            {
+                try
+                {
+                    //Öğrenci Eklemek
+                    string bolum = txtBolum.Text.Trim().ToUpper();
+                    SqlCommand komut = new SqlCommand("insert into Ogrenci (OgrenciAd,OgrenciDogum,OgrenciTc,OgrenciBolum," +
+                        "OgrenciMail,OgrenciTelefon,OgrenciOdaNo,OgrenciAdres,VeliTel,VeliAd,VeliYakinlik,Il,Ilce) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13)", sql.Baglan());
 
-            komut.Parameters.AddWithValue("@p1",TxtAd.Text);
-          
-            komut.Parameters.AddWithValue("@p2", MskDogum.Text);
-            komut.Parameters.AddWithValue("@p3", MskTc.Text);
-            komut.Parameters.AddWithValue("@p4", bolum);
-     
-            komut.Parameters.AddWithValue("@p5", TxtMail.Text);
-            komut.Parameters.AddWithValue("@p6", MskTel.Text);
-            komut.Parameters.AddWithValue("@p7", CmbOda.Text);
-            komut.Parameters.AddWithValue("@p8", rchAdres.Text) ;
-            komut.Parameters.AddWithValue("@p9",MskVeliTel.Text);
-            komut.ExecuteNonQuery();
-
-
-            //Odadaki aktif kalan kişi sayısını arttırmak
-            SqlCommand komut2 = new SqlCommand("Update Odalar set OdaAktif =OdaAktif+1 where OdaNo=@h1",sql.Baglan());
-            komut2.Parameters.AddWithValue("@h1",CmbOda.Text);
-            komut2.ExecuteNonQuery();
-            MessageBox.Show("Öğrenci Eklendi");
-            
-            SqlCommand komut3= new SqlCommand("insert into Borclar1 (OgrenciTc,OgrenciAd,OgrenciMail,OgrenciTel) " +
-                "values (@b1,@b2,@b3,@b4)",sql.Baglan());
-            komut3.Parameters.AddWithValue("@b1",MskTc.Text);
-            komut3.Parameters.AddWithValue("@b2",TxtAd.Text);
-           
-            komut3.Parameters.AddWithValue("b3",TxtMail.Text);
-            komut3.Parameters.AddWithValue("@b4", MskTel.Text);
-            komut3.ExecuteNonQuery();
+                    komut.Parameters.AddWithValue("@p1", TxtAd.Text.ToUpper()); 
+                    komut.Parameters.AddWithValue("@p2", MskDogum.Text);
+                    komut.Parameters.AddWithValue("@p3", MskTc.Text);
+                    komut.Parameters.AddWithValue("@p4", bolum);
+                    komut.Parameters.AddWithValue("@p5", TxtMail.Text);
+                    komut.Parameters.AddWithValue("@p6", MskTel.Text);
+                    komut.Parameters.AddWithValue("@p7", CmbOda.Text);
+                    komut.Parameters.AddWithValue("@p8", rchAdres.Text);
+                    komut.Parameters.AddWithValue("@p9", MskVeliTel.Text);
+                    komut.Parameters.AddWithValue("@p10", txtVeliAd.Text.ToUpper());
+                    komut.Parameters.AddWithValue("@p11", cmbYakin.Text);
+                    komut.Parameters.AddWithValue("@p12", txtIl.Text.ToUpper());
+                    komut.Parameters.AddWithValue("@p13", txtIlce.Text.ToUpper());
+                    komut.ExecuteNonQuery();
 
 
-         
+                    //Odadaki aktif kalan kişi sayısını arttırmak
+                    SqlCommand komut2 = new SqlCommand("Update Odalar set OdaAktif =OdaAktif+1 where OdaNo=@h1", sql.Baglan());
+                    komut2.Parameters.AddWithValue("@h1", CmbOda.Text);
+                    komut2.ExecuteNonQuery();
+                    MessageBox.Show("Öğrenci Eklendi");
 
-            sql.Baglan().Close();
-            
-            this.Close();
+                    SqlCommand komut3 = new SqlCommand("insert into Borclar1 (OgrenciTc,OgrenciAd,OgrenciMail,OgrenciTel) " +
+                        "values (@b1,@b2,@b3,@b4)", sql.Baglan());
+                    komut3.Parameters.AddWithValue("@b1", MskTc.Text);
+                    komut3.Parameters.AddWithValue("@b2", TxtAd.Text);
+
+                    komut3.Parameters.AddWithValue("b3", TxtMail.Text);
+                    komut3.Parameters.AddWithValue("@b4", MskTel.Text);
+                    komut3.ExecuteNonQuery();
+
+
+
+
+                    sql.Baglan().Close();
+
+
+                }
+                catch (Exception exp)
+                {
+                    DialogResult d = new DialogResult();
+                    d = MessageBox.Show("Uyarı", "Öğrenci Eklenemedi.Veritabanlı sıkıntı olabilir bekleyiniz...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+            }
 
 
 
@@ -96,6 +113,30 @@ namespace Yurt
         private void MskTel_EnabledChanged(object sender, EventArgs e)
         {
             label9.Visible = true;
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            txtBolum.Text = "";
+            txtDogum.Text = "";
+            txtIl.Text = "";
+            lblIlce.Text = "";
+            txtVeliAd.Text = "";
+            
+            TxtAd.Text = "";
+            TxtMail.Text = "";
+            MskDogum.Text = "";
+            cmbYakin.Text = "";
+            CmbOda.Text = "";
+            txtVeliAd.Text = "";
+            //txtVeliSoyad.Text = "";
+            MskVeliTel.Text = "";
+
         }
     }
 }

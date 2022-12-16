@@ -41,6 +41,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.checkboxSifreGoster = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -153,11 +154,23 @@
             this.panel2.Size = new System.Drawing.Size(926, 44);
             this.panel2.TabIndex = 13;
             // 
+            // checkboxSifreGoster
+            // 
+            this.checkboxSifreGoster.AutoSize = true;
+            this.checkboxSifreGoster.Location = new System.Drawing.Point(733, 335);
+            this.checkboxSifreGoster.Name = "checkboxSifreGoster";
+            this.checkboxSifreGoster.Size = new System.Drawing.Size(109, 20);
+            this.checkboxSifreGoster.TabIndex = 14;
+            this.checkboxSifreGoster.Text = "Şifreyi Göster";
+            this.checkboxSifreGoster.UseVisualStyleBackColor = true;
+            this.checkboxSifreGoster.CheckedChanged += new System.EventHandler(this.checkboxSifreGoster_CheckedChanged);
+            // 
             // FrmAdminGiris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 643);
+            this.Controls.Add(this.checkboxSifreGoster);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -168,6 +181,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmAdminGiris";
             this.Text = "Admin Giriş";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmAdminGiris_FormClosed);
             this.Load += new System.EventHandler(this.FrmAdminGiris_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -182,7 +196,6 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox TxtSifre;
-        private System.Windows.Forms.TextBox TxtKullaniciAd;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -191,6 +204,8 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblSaat;
         private System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.TextBox TxtKullaniciAd;
+        private System.Windows.Forms.CheckBox checkboxSifreGoster;
         //private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

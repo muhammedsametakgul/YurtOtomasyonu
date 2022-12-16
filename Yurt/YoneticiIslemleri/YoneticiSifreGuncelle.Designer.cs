@@ -35,7 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.MskTc = new System.Windows.Forms.MaskedTextBox();
+            this.MskTcSifreGuncelleme = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // TxtSifre
@@ -92,6 +92,7 @@
             this.label3.Size = new System.Drawing.Size(44, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "label3";
+            this.label3.Visible = false;
             // 
             // label4
             // 
@@ -103,22 +104,22 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "TC:";
             // 
-            // MskTc
+            // MskTcSifreGuncelleme
             // 
-            this.MskTc.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.MskTc.Location = new System.Drawing.Point(272, 65);
-            this.MskTc.Mask = "00000000000";
-            this.MskTc.Name = "MskTc";
-            this.MskTc.Size = new System.Drawing.Size(232, 41);
-            this.MskTc.TabIndex = 8;
-            this.MskTc.ValidatingType = typeof(int);
+            this.MskTcSifreGuncelleme.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.MskTcSifreGuncelleme.Location = new System.Drawing.Point(272, 65);
+            this.MskTcSifreGuncelleme.Mask = "00000000000";
+            this.MskTcSifreGuncelleme.Name = "MskTcSifreGuncelleme";
+            this.MskTcSifreGuncelleme.Size = new System.Drawing.Size(232, 41);
+            this.MskTcSifreGuncelleme.TabIndex = 8;
+            this.MskTcSifreGuncelleme.ValidatingType = typeof(int);
             // 
             // YoneticiSifreGuncelle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 392);
-            this.Controls.Add(this.MskTc);
+            this.Controls.Add(this.MskTcSifreGuncelleme);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
@@ -143,6 +144,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox MskTc;
+        public System.Windows.Forms.MaskedTextBox MskTcSifreGuncelleme;
     }
 }

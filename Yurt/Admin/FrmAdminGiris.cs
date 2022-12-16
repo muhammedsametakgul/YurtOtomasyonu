@@ -31,8 +31,11 @@ namespace Yurt
             {
                 Admin.MainForm frm=new Admin.MainForm();
                 frm.lblName.Text = dr[1].ToString();
+                frm.lblTc.Text = dr[3].ToString();
                 //frm.ad = dr[1].ToString();
                 frm.Show();
+                //FrmAdmin a = new FrmAdmin();
+                //a.Show();
                 this.Hide();
                 
 
@@ -50,6 +53,7 @@ namespace Yurt
         private void FrmAdminGiris_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            TxtSifre.UseSystemPasswordChar = true;
            
         }
 
@@ -58,6 +62,21 @@ namespace Yurt
             lblSaat.Text = DateTime.Now.ToLongTimeString();
         }
 
-        
+        private void checkboxSifreGoster_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkboxSifreGoster.Checked)
+            {
+                TxtSifre.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                TxtSifre.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void FrmAdminGiris_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

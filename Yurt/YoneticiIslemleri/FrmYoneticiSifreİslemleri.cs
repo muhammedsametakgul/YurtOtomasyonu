@@ -31,19 +31,23 @@ namespace Yurt
         {
             SqlCommand komut = new SqlCommand("Select * From Admin where YoneticiTc =@p1",sql.Baglan());
             komut.Parameters.AddWithValue("@p1",MskTC.Text);
-            
+            FrmYoneticiKodDogrulama frm = new FrmYoneticiKodDogrulama();
+
+            //YoneticiSifreGuncelle frm2 = new YoneticiSifreGuncelle();
+            //frm2.tc_sifre_guncelleme = MskTC.Text;
+            //frm.label2.Text=MskTC.Text;
+
             SqlDataReader dr=komut.ExecuteReader();
             if (dr.Read())
             {
                 
                 
-                FrmYoneticiKodDogrulama frm=new FrmYoneticiKodDogrulama();
-                
-                YoneticiSifreGuncelle frm2 = new YoneticiSifreGuncelle();
+              
                
                 
                 email = dr[5].ToString();
                 ad = dr[1].ToString();
+               frm.tc_kod=MskTC.Text;
                
                 
                 MailMessage mailmesaji = new MailMessage();
@@ -62,11 +66,19 @@ namespace Yurt
                 istemci.Send(mailmesaji);
 
                 MessageBox.Show("Mail gönderildi");
-                frm2.tc_sifre = MskTC.Text;
-                frm.Show();
+               
                 this.Close();
+              
+               
+                frm.Show();
+               
             }
             sql.Baglan().Close();
+        }
+
+        private void FrmYoneticiSifreİslemleri_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
