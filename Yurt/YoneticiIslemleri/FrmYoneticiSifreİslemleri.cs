@@ -70,7 +70,7 @@ namespace Yurt
                 this.Close();
               
                
-                frm.Show();
+                frm.ShowDialog();
                
             }
             sql.Baglan().Close();

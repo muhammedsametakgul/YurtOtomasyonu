@@ -18,7 +18,7 @@ namespace Yurt
             InitializeComponent();
         }
         Sql sql = new Sql();
-      
+       
         private void button1_Click(object sender, EventArgs e)
         {
             SqlCommand komut = new SqlCommand("Select * From Admin Where YoneticiTc=@p1 and YoneticiSifre =@p2",sql.Baglan());

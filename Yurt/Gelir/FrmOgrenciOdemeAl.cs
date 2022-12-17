@@ -104,15 +104,17 @@ namespace Yurt
             sql.Baglan().Close();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int secilen = dataGridView1.SelectedCells[0].RowIndex;
-            MskTc.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
-            TxtAd.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
 
-            label6.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
-            lblMail.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
-            lblTel.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+                int secilen = dataGridView1.SelectedCells[0].RowIndex;
+                MskTc.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+                TxtAd.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
+
+                label6.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
+                lblMail.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
+                lblTel.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
+            }
         }
     }
-}
+

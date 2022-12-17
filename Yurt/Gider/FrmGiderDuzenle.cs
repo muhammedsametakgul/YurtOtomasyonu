@@ -45,7 +45,17 @@ namespace Yurt
 
         }
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        
+
+        private void FrmGiderDuzenle_Load(object sender, EventArgs e)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Giderler", sql.Baglan());
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //iki kere tıklanınca tablodaki verileri textboxlara çekiyor
             int secilen = dataGridView1.SelectedCells[0].RowIndex;
@@ -59,27 +69,6 @@ namespace Yurt
             MskDiger.Text = dataGridView1.Rows[secilen].Cells[7].Value.ToString();
             MskTarih.Text = dataGridView1.Rows[secilen].Cells[8].Value.ToString();
         }
-
-        private void BtnSil_Click(object sender, EventArgs e)
-        {
-          
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void FrmGiderDuzenle_Load(object sender, EventArgs e)
-        {
-            SqlDataAdapter da = new SqlDataAdapter("Select * From Giderler", sql.Baglan());
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
-        }
-
-        
     }
 
   

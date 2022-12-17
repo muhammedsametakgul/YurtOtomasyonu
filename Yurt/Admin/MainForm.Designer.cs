@@ -57,6 +57,7 @@
             this.personelİzinİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izinVerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.izinGösterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.izinDüzenleSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelŞifreİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gelirİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gelirEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -72,6 +73,8 @@
             this.mainpanel = new System.Windows.Forms.Panel();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.sidePanel1 = new DevExpress.XtraEditors.SidePanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblSayi = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMain)).BeginInit();
             this.panel2.SuspendLayout();
@@ -82,6 +85,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.RosyBrown;
+            this.panel1.Controls.Add(this.lblSayi);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnProfilDuzenle);
             this.panel1.Controls.Add(this.lblTc);
             this.panel1.Controls.Add(this.lblName);
@@ -180,7 +185,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(-166, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1850, 23);
+            this.panel3.Size = new System.Drawing.Size(1850, 25);
             this.panel3.TabIndex = 1;
             // 
             // menuStrip1
@@ -194,9 +199,9 @@
             this.gelirİşlemleriToolStripMenuItem,
             this.giderİşlemleriToolStripMenuItem,
             this.yöneticiİşlemleriToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 23);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 25);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1684, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1684, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -316,7 +321,8 @@
             // 
             this.personelİzinİşlemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.izinVerToolStripMenuItem1,
-            this.izinGösterToolStripMenuItem});
+            this.izinGösterToolStripMenuItem,
+            this.izinDüzenleSilToolStripMenuItem});
             this.personelİzinİşlemleriToolStripMenuItem.Name = "personelİzinİşlemleriToolStripMenuItem";
             this.personelİzinİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(263, 26);
             this.personelİzinİşlemleriToolStripMenuItem.Text = "Personel İzin İşlemleri";
@@ -324,16 +330,23 @@
             // izinVerToolStripMenuItem1
             // 
             this.izinVerToolStripMenuItem1.Name = "izinVerToolStripMenuItem1";
-            this.izinVerToolStripMenuItem1.Size = new System.Drawing.Size(182, 26);
+            this.izinVerToolStripMenuItem1.Size = new System.Drawing.Size(195, 26);
             this.izinVerToolStripMenuItem1.Text = "İzin Ver";
             this.izinVerToolStripMenuItem1.Click += new System.EventHandler(this.izinVerToolStripMenuItem1_Click);
             // 
             // izinGösterToolStripMenuItem
             // 
             this.izinGösterToolStripMenuItem.Name = "izinGösterToolStripMenuItem";
-            this.izinGösterToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
+            this.izinGösterToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
             this.izinGösterToolStripMenuItem.Text = "İzinleri Listele";
             this.izinGösterToolStripMenuItem.Click += new System.EventHandler(this.izinGösterToolStripMenuItem_Click);
+            // 
+            // izinDüzenleSilToolStripMenuItem
+            // 
+            this.izinDüzenleSilToolStripMenuItem.Name = "izinDüzenleSilToolStripMenuItem";
+            this.izinDüzenleSilToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
+            this.izinDüzenleSilToolStripMenuItem.Text = "İzin Düzenle/Sil";
+            this.izinDüzenleSilToolStripMenuItem.Click += new System.EventHandler(this.izinDüzenleSilToolStripMenuItem_Click);
             // 
             // personelŞifreİşlemleriToolStripMenuItem
             // 
@@ -454,6 +467,27 @@
             this.sidePanel1.TabIndex = 2;
             this.sidePanel1.Text = "sidePanel1";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 320);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(151, 26);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Öğrenci Sayısı:";
+            // 
+            // lblSayi
+            // 
+            this.lblSayi.AutoSize = true;
+            this.lblSayi.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSayi.Location = new System.Drawing.Point(44, 364);
+            this.lblSayi.Name = "lblSayi";
+            this.lblSayi.Size = new System.Drawing.Size(94, 35);
+            this.lblSayi.TabIndex = 9;
+            this.lblSayi.Text = "label3";
+            this.lblSayi.Click += new System.EventHandler(this.lblSayi_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -528,5 +562,8 @@
         private DevExpress.XtraEditors.SidePanel sidePanel1;
         private System.Windows.Forms.Button btnProfilDuzenle;
         private System.Windows.Forms.Panel mainpanel;
+        private System.Windows.Forms.ToolStripMenuItem izinDüzenleSilToolStripMenuItem;
+        private System.Windows.Forms.Label lblSayi;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -56,8 +56,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtVeliAd = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lblIlce = new System.Windows.Forms.Label();
-            this.txtIlce = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.txtIl = new System.Windows.Forms.TextBox();
             this.btnTemizle = new System.Windows.Forms.Button();
@@ -96,7 +94,7 @@
             // 
             // TxtMail
             // 
-            this.TxtMail.Location = new System.Drawing.Point(152, 406);
+            this.TxtMail.Location = new System.Drawing.Point(152, 345);
             this.TxtMail.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.TxtMail.Name = "TxtMail";
             this.TxtMail.Size = new System.Drawing.Size(395, 30);
@@ -104,7 +102,7 @@
             // 
             // MskTel
             // 
-            this.MskTel.Location = new System.Drawing.Point(152, 458);
+            this.MskTel.Location = new System.Drawing.Point(152, 397);
             this.MskTel.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.MskTel.Mask = "(999) 000-0000";
             this.MskTel.Name = "MskTel";
@@ -176,7 +174,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(27, 465);
+            this.label8.Location = new System.Drawing.Point(27, 404);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 20);
             this.label8.TabIndex = 16;
@@ -186,7 +184,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(54, 413);
+            this.label9.Location = new System.Drawing.Point(54, 352);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 20);
             this.label9.TabIndex = 15;
@@ -204,7 +202,7 @@
             // 
             // rchAdres
             // 
-            this.rchAdres.Location = new System.Drawing.Point(152, 171);
+            this.rchAdres.Location = new System.Drawing.Point(152, 110);
             this.rchAdres.Name = "rchAdres";
             this.rchAdres.Size = new System.Drawing.Size(395, 196);
             this.rchAdres.TabIndex = 11;
@@ -214,7 +212,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(40, 178);
+            this.label2.Location = new System.Drawing.Point(40, 117);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 20);
             this.label2.TabIndex = 20;
@@ -350,8 +348,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.lblIlce);
-            this.groupBox3.Controls.Add(this.txtIlce);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.txtIl);
             this.groupBox3.Controls.Add(this.label2);
@@ -362,28 +358,10 @@
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Location = new System.Drawing.Point(600, 16);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(584, 528);
+            this.groupBox3.Size = new System.Drawing.Size(584, 483);
             this.groupBox3.TabIndex = 26;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "İletişim Bilgileri";
-            // 
-            // lblIlce
-            // 
-            this.lblIlce.AutoSize = true;
-            this.lblIlce.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblIlce.Location = new System.Drawing.Point(59, 108);
-            this.lblIlce.Name = "lblIlce";
-            this.lblIlce.Size = new System.Drawing.Size(45, 20);
-            this.lblIlce.TabIndex = 29;
-            this.lblIlce.Text = "İlçe:";
-            // 
-            // txtIlce
-            // 
-            this.txtIlce.Location = new System.Drawing.Point(152, 101);
-            this.txtIlce.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txtIlce.Name = "txtIlce";
-            this.txtIlce.Size = new System.Drawing.Size(344, 30);
-            this.txtIlce.TabIndex = 10;
             // 
             // label14
             // 
@@ -470,8 +448,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txtDogum;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label lblIlce;
-        private System.Windows.Forms.TextBox txtIlce;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtIl;
         private System.Windows.Forms.Button btnTemizle;

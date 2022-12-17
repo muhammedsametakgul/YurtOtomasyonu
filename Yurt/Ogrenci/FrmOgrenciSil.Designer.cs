@@ -36,6 +36,9 @@
             this.lblid = new System.Windows.Forms.Label();
             this.picYes = new System.Windows.Forms.PictureBox();
             this.lblOdaNo = new System.Windows.Forms.Label();
+            this.lblTc = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblAd = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picYes)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +52,8 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1451, 421);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+//            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txtAra
             // 
@@ -73,7 +77,7 @@
             // 
             // btnSil
             // 
-            this.btnSil.Location = new System.Drawing.Point(610, 519);
+            this.btnSil.Location = new System.Drawing.Point(757, 522);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(135, 30);
             this.btnSil.TabIndex = 3;
@@ -84,7 +88,7 @@
             // lblid
             // 
             this.lblid.AutoSize = true;
-            this.lblid.Location = new System.Drawing.Point(931, 467);
+            this.lblid.Location = new System.Drawing.Point(1095, 467);
             this.lblid.Name = "lblid";
             this.lblid.Size = new System.Drawing.Size(18, 16);
             this.lblid.TabIndex = 4;
@@ -109,6 +113,37 @@
             this.lblOdaNo.Size = new System.Drawing.Size(65, 16);
             this.lblOdaNo.TabIndex = 6;
             this.lblOdaNo.Text = "lblOdaNo";
+            this.lblOdaNo.Visible = false;
+            // 
+            // lblTc
+            // 
+            this.lblTc.AutoSize = true;
+            this.lblTc.Location = new System.Drawing.Point(38, 585);
+            this.lblTc.Name = "lblTc";
+            this.lblTc.Size = new System.Drawing.Size(23, 16);
+            this.lblTc.TabIndex = 7;
+            this.lblTc.Text = "Tc";
+            this.lblTc.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(610, 471);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(207, 29);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Silmek İstediğiniz:";
+            // 
+            // lblAd
+            // 
+            this.lblAd.AutoSize = true;
+            this.lblAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAd.Location = new System.Drawing.Point(823, 468);
+            this.lblAd.Name = "lblAd";
+            this.lblAd.Size = new System.Drawing.Size(98, 32);
+            this.lblAd.TabIndex = 9;
+            this.lblAd.Text = "label3";
             // 
             // FrmOgrenciSil
             // 
@@ -116,6 +151,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1447, 636);
+            this.Controls.Add(this.lblAd);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblTc);
             this.Controls.Add(this.lblOdaNo);
             this.Controls.Add(this.picYes);
             this.Controls.Add(this.lblid);
@@ -143,5 +181,8 @@
         private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.PictureBox picYes;
         private System.Windows.Forms.Label lblOdaNo;
+        private System.Windows.Forms.Label lblTc;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblAd;
     }
 }

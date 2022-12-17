@@ -85,6 +85,18 @@
     <Compile Include="Bolum\FrmBolumEkle.Designer.cs">
       <DependentUpon>FrmBolumEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Personel\FrmPersonelIzinDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\FrmPersonelIzinDuzenle.Designer.cs">
+      <DependentUpon>FrmPersonelIzinDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personel\FrmPersonelIzinVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personel\FrmPersonelIzinVer.Designer.cs">
+      <DependentUpon>FrmPersonelIzinVer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Profil\FrmProfilDuzenleAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +286,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bolum\FrmBolumEkle.resx">
       <DependentUpon>FrmBolumEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\FrmPersonelIzinDuzenle.resx">
+      <DependentUpon>FrmPersonelIzinDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personel\FrmPersonelIzinVer.resx">
+      <DependentUpon>FrmPersonelIzinVer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profil\FrmProfilDuzenleAdmin.resx">
       <DependentUpon>FrmProfilDuzenleAdmin.cs</DependentUpon>

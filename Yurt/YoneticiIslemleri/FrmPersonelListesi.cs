@@ -23,7 +23,7 @@ namespace Yurt.YoneticiIslemleri
         private void TxtAdAra_TextChanged(object sender, EventArgs e)
         {
             //dinamik olarak arıyor
-            SqlDataAdapter da = new SqlDataAdapter("select * from Personeller where PersonelAdSoyad LIKE '%" + TxtAdAra.Text + "%'", sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("select * from Personel where PersonelAdSoyad LIKE '%" + TxtAdAra.Text + "%'", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -33,7 +33,7 @@ namespace Yurt.YoneticiIslemleri
 
         private void FrmPersonelListesi_Load(object sender, EventArgs e)
         {
-            SqlDataAdapter da = new SqlDataAdapter("Select * From Personeller",sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Personel",sql.Baglan());
             DataTable d = new DataTable();
             da.Fill(d);
             dataGridView1.DataSource = d;

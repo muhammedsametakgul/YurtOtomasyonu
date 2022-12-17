@@ -36,32 +36,7 @@ namespace Yurt.Gelir
             dataGridView1.DataSource = dt;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int secilen = dataGridView1.SelectedCells[0].RowIndex;
-            lblid.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
-             txtOdeyenKisi.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
-            mskTel.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
-            txtEmail.Text= dataGridView1.Rows[secilen].Cells[3].Value.ToString();
-            dtTarih.Text= dataGridView1.Rows[secilen].Cells[4].Value.ToString();
-            txtOdenen.Text= dataGridView1.Rows[secilen].Cells[5].Value.ToString();
-            SqlCommand komut1 = new SqlCommand("Select * From Gelir",sql.Baglan());
-            rbFirma.Checked = false;
-            rbBireysel.Checked = false;
-            txtFirma.Visible = true;
-            lblFirma.Visible = true;
-            SqlDataReader dr = komut1.ExecuteReader();
-            if (dr.Read())
-            {
-                if (dr["FirmaAdi"] != null)
-                {
-                   
-                    txtFirma.Text = dataGridView1.Rows[secilen].Cells[6].Value.ToString();
-                }
-               
-            }
-        }
-
+        
         private void rbFirma_CheckedChanged(object sender, EventArgs e)
         {
             txtFirma.Visible = true; lblFirma.Visible = true;
@@ -89,6 +64,33 @@ namespace Yurt.Gelir
             Goster();
             sql.Baglan().Close();
             
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridView1.SelectedCells[0].RowIndex;
+            lblid.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+            txtOdeyenKisi.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
+            mskTel.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
+            txtEmail.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
+            dtTarih.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
+            txtOdenen.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
+            SqlCommand komut1 = new SqlCommand("Select * From Gelir", sql.Baglan());
+            rbFirma.Checked = false;
+            rbBireysel.Checked = false;
+            txtFirma.Visible = true;
+            lblFirma.Visible = true;
+            SqlDataReader dr = komut1.ExecuteReader();
+            if (dr.Read())
+            {
+                if (dr["FirmaAdi"] != null)
+                {
+
+                    txtFirma.Text = dataGridView1.Rows[secilen].Cells[6].Value.ToString();
+                }
+
+            }
+
         }
     }
 }

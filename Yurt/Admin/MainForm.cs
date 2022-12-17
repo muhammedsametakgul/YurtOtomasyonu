@@ -43,6 +43,7 @@ namespace Yurt.Admin
             this.mainpanel.Controls.Add(f);
             this.mainpanel.Tag = f;
             f.Show();
+           
         }
 
         private void izinGösterToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,9 +58,15 @@ namespace Yurt.Admin
         public string tc_main;
         private void MainForm_Load(object sender, EventArgs e)
         {
-           // WindowState = FormWindowState.Maximized;
-           
-            
+            // WindowState = FormWindowState.Maximized;
+
+            SqlCommand komut = new SqlCommand("Select Count(*) from Ogrenci ",sql.Baglan());
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                lblSayi.Text = dr[0].ToString();
+            }
+
             tc_main = lblTc.Text;
             timer1.Start();
 
@@ -136,7 +143,7 @@ namespace Yurt.Admin
 
         private void izinVerToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            loadform(new FrmPersonelIzinVer());
         }
 
         private void personelŞifreİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
@@ -243,6 +250,16 @@ namespace Yurt.Admin
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void izinDüzenleSilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new FrmPersonelIzinDuzenle());
+        }
+
+        private void lblSayi_Click(object sender, EventArgs e)
+        {
+
         }
     }
     
