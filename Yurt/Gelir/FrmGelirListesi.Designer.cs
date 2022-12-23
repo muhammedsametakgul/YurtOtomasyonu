@@ -43,9 +43,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1120, 543);
+            this.dataGridView1.Size = new System.Drawing.Size(1223, 543);
             this.dataGridView1.TabIndex = 0;
-//            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -90,7 +89,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1120, 702);
+            this.ClientSize = new System.Drawing.Size(1427, 702);
             this.Controls.Add(this.txtTarih);
             this.Controls.Add(this.txtAraTarih);
             this.Controls.Add(this.label1);

@@ -18,6 +18,7 @@ namespace Yurt
             InitializeComponent();
         }
         Sql sql = new Sql();
+    
        
         
         private void FrmOgrenciDuzenle_Load(object sender, EventArgs e)
@@ -28,6 +29,7 @@ namespace Yurt
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
                 sql.Baglan().Close();
+            
 
          
             //Boş odaları gösterme
@@ -171,6 +173,54 @@ namespace Yurt
               
                 txtDogum.Text = dr[13].ToString();
                 #endregion
+            }
+        }
+
+        private void MskDogum_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
+        }
+
+        private void MskTc_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
+        }
+
+        private void MskVeliTel_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
+        }
+
+        private void MskTel_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
             }
         }
     }

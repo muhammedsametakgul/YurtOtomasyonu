@@ -69,6 +69,103 @@ namespace Yurt
             MskDiger.Text = dataGridView1.Rows[secilen].Cells[7].Value.ToString();
             MskTarih.Text = dataGridView1.Rows[secilen].Cells[8].Value.ToString();
         }
+
+        private void MskTarih_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
+        }
+
+        private void MskElektrik_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
+        }
+
+        private void MskDogalgaz_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
+        }
+
+        private void MskInternet_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
+        }
+
+        private void MskGida_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
+        }
+
+        
+        private void MskPersonel_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
+        }
+
+        private void MskSu_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
+        }
+
+        private void MskDiger_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
+        }
     }
 
   

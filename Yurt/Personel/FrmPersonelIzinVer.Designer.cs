@@ -39,24 +39,28 @@
             this.lblBas = new System.Windows.Forms.Label();
             this.lblBit = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.rbPersonel = new System.Windows.Forms.RadioButton();
+            this.rbMemur = new System.Windows.Forms.RadioButton();
+            this.dgvGoster = new System.Windows.Forms.DataGridView();
             this.btnEkle = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGoster)).BeginInit();
             this.SuspendLayout();
             // 
             // txtAdSoyad
             // 
+            this.txtAdSoyad.Enabled = false;
             this.txtAdSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAdSoyad.Location = new System.Drawing.Point(174, 103);
+            this.txtAdSoyad.Location = new System.Drawing.Point(175, 157);
             this.txtAdSoyad.Name = "txtAdSoyad";
             this.txtAdSoyad.Size = new System.Drawing.Size(330, 34);
             this.txtAdSoyad.TabIndex = 0;
             // 
             // mskTc
             // 
+            this.mskTc.Enabled = false;
             this.mskTc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mskTc.Location = new System.Drawing.Point(174, 32);
+            this.mskTc.Location = new System.Drawing.Point(175, 86);
             this.mskTc.Mask = "00000000000";
             this.mskTc.Name = "mskTc";
             this.mskTc.Size = new System.Drawing.Size(330, 34);
@@ -66,7 +70,7 @@
             // txtSebep
             // 
             this.txtSebep.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSebep.Location = new System.Drawing.Point(174, 174);
+            this.txtSebep.Location = new System.Drawing.Point(175, 228);
             this.txtSebep.Multiline = true;
             this.txtSebep.Name = "txtSebep";
             this.txtSebep.Size = new System.Drawing.Size(330, 140);
@@ -75,7 +79,7 @@
             // dtBas
             // 
             this.dtBas.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtBas.Location = new System.Drawing.Point(174, 335);
+            this.dtBas.Location = new System.Drawing.Point(175, 389);
             this.dtBas.Name = "dtBas";
             this.dtBas.Size = new System.Drawing.Size(330, 34);
             this.dtBas.TabIndex = 5;
@@ -83,7 +87,7 @@
             // dtBit
             // 
             this.dtBit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtBit.Location = new System.Drawing.Point(174, 406);
+            this.dtBit.Location = new System.Drawing.Point(175, 460);
             this.dtBit.Name = "dtBit";
             this.dtBit.Size = new System.Drawing.Size(330, 34);
             this.dtBit.TabIndex = 6;
@@ -92,7 +96,7 @@
             // 
             this.lblTc.AutoSize = true;
             this.lblTc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTc.Location = new System.Drawing.Point(96, 37);
+            this.lblTc.Location = new System.Drawing.Point(97, 91);
             this.lblTc.Name = "lblTc";
             this.lblTc.Size = new System.Drawing.Size(52, 29);
             this.lblTc.TabIndex = 7;
@@ -102,7 +106,7 @@
             // 
             this.lblAdSoyad.AutoSize = true;
             this.lblAdSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAdSoyad.Location = new System.Drawing.Point(24, 110);
+            this.lblAdSoyad.Location = new System.Drawing.Point(25, 164);
             this.lblAdSoyad.Name = "lblAdSoyad";
             this.lblAdSoyad.Size = new System.Drawing.Size(124, 29);
             this.lblAdSoyad.TabIndex = 8;
@@ -112,7 +116,7 @@
             // 
             this.lblSebep.AutoSize = true;
             this.lblSebep.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSebep.Location = new System.Drawing.Point(57, 183);
+            this.lblSebep.Location = new System.Drawing.Point(58, 237);
             this.lblSebep.Name = "lblSebep";
             this.lblSebep.Size = new System.Drawing.Size(91, 29);
             this.lblSebep.TabIndex = 11;
@@ -122,7 +126,7 @@
             // 
             this.lblBas.AutoSize = true;
             this.lblBas.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBas.Location = new System.Drawing.Point(24, 346);
+            this.lblBas.Location = new System.Drawing.Point(25, 400);
             this.lblBas.Name = "lblBas";
             this.lblBas.Size = new System.Drawing.Size(124, 29);
             this.lblBas.TabIndex = 12;
@@ -132,7 +136,7 @@
             // 
             this.lblBit.AutoSize = true;
             this.lblBit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBit.Location = new System.Drawing.Point(83, 419);
+            this.lblBit.Location = new System.Drawing.Point(84, 473);
             this.lblBit.Name = "lblBit";
             this.lblBit.Size = new System.Drawing.Size(65, 29);
             this.lblBit.TabIndex = 13;
@@ -140,7 +144,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.rbPersonel);
+            this.groupBox1.Controls.Add(this.rbMemur);
+            this.groupBox1.Controls.Add(this.dgvGoster);
             this.groupBox1.Controls.Add(this.btnEkle);
             this.groupBox1.Controls.Add(this.lblTc);
             this.groupBox1.Controls.Add(this.lblBit);
@@ -159,20 +165,46 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personel İzin";
             // 
-            // dataGridView1
+            // rbPersonel
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(530, 21);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(361, 536);
-            this.dataGridView1.TabIndex = 15;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.rbPersonel.AutoSize = true;
+            this.rbPersonel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rbPersonel.Location = new System.Drawing.Point(347, 36);
+            this.rbPersonel.Name = "rbPersonel";
+            this.rbPersonel.Size = new System.Drawing.Size(102, 26);
+            this.rbPersonel.TabIndex = 17;
+            this.rbPersonel.TabStop = true;
+            this.rbPersonel.Text = "Personel";
+            this.rbPersonel.UseVisualStyleBackColor = true;
+            this.rbPersonel.CheckedChanged += new System.EventHandler(this.rbPersonel_CheckedChanged);
+            // 
+            // rbMemur
+            // 
+            this.rbMemur.AutoSize = true;
+            this.rbMemur.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rbMemur.Location = new System.Drawing.Point(175, 36);
+            this.rbMemur.Name = "rbMemur";
+            this.rbMemur.Size = new System.Drawing.Size(85, 26);
+            this.rbMemur.TabIndex = 16;
+            this.rbMemur.TabStop = true;
+            this.rbMemur.Text = "Memur";
+            this.rbMemur.UseVisualStyleBackColor = true;
+            this.rbMemur.CheckedChanged += new System.EventHandler(this.rbMemur_CheckedChanged);
+            // 
+            // dgvGoster
+            // 
+            this.dgvGoster.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGoster.Location = new System.Drawing.Point(530, 21);
+            this.dgvGoster.Name = "dgvGoster";
+            this.dgvGoster.RowHeadersWidth = 51;
+            this.dgvGoster.RowTemplate.Height = 24;
+            this.dgvGoster.Size = new System.Drawing.Size(361, 536);
+            this.dgvGoster.TabIndex = 15;
+            this.dgvGoster.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(174, 472);
+            this.btnEkle.Location = new System.Drawing.Point(175, 526);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(117, 31);
             this.btnEkle.TabIndex = 14;
@@ -193,7 +225,7 @@
             this.Load += new System.EventHandler(this.FrmPersonelIzinVer_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGoster)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -212,6 +244,8 @@
         private System.Windows.Forms.Label lblBit;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnEkle;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvGoster;
+        private System.Windows.Forms.RadioButton rbPersonel;
+        private System.Windows.Forms.RadioButton rbMemur;
     }
 }

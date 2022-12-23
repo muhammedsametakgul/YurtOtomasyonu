@@ -105,11 +105,11 @@
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(251, 574);
+            this.btnEkle.Location = new System.Drawing.Point(291, 574);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(240, 42);
             this.btnEkle.TabIndex = 28;
-            this.btnEkle.Text = "Ekle";
+            this.btnEkle.Text = "Güncelle";
             this.btnEkle.UseVisualStyleBackColor = true;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
@@ -129,6 +129,7 @@
             this.mskTel.Name = "mskTel";
             this.mskTel.Size = new System.Drawing.Size(343, 34);
             this.mskTel.TabIndex = 4;
+            this.mskTel.Click += new System.EventHandler(this.mskTel_Click);
             // 
             // label3
             // 
@@ -216,15 +217,21 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(646, 62);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(611, 554);
+            this.dataGridView1.Size = new System.Drawing.Size(893, 554);
             this.dataGridView1.TabIndex = 34;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-//            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txtOdeyenKisi
             // 
@@ -248,7 +255,7 @@
             // 
             this.lblid.AutoSize = true;
             this.lblid.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblid.Location = new System.Drawing.Point(387, 28);
+            this.lblid.Location = new System.Drawing.Point(286, 23);
             this.lblid.Name = "lblid";
             this.lblid.Size = new System.Drawing.Size(104, 29);
             this.lblid.TabIndex = 37;
@@ -260,7 +267,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1343, 688);
+            this.ClientSize = new System.Drawing.Size(1551, 688);
             this.Controls.Add(this.lblid);
             this.Controls.Add(this.txtOdeyenKisi);
             this.Controls.Add(this.label4);

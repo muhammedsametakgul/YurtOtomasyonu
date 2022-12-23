@@ -30,7 +30,7 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnKodGonder = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -53,16 +53,16 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Kod:";
             // 
-            // button1
+            // btnKodGonder
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(300, 165);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 52);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Doğrula";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnKodGonder.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKodGonder.Location = new System.Drawing.Point(300, 165);
+            this.btnKodGonder.Name = "btnKodGonder";
+            this.btnKodGonder.Size = new System.Drawing.Size(175, 52);
+            this.btnKodGonder.TabIndex = 2;
+            this.btnKodGonder.Text = "Doğrula";
+            this.btnKodGonder.UseVisualStyleBackColor = true;
+            this.btnKodGonder.Click += new System.EventHandler(this.button1_Click);
             // 
             // linkLabel1
             // 
@@ -92,7 +92,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnKodGonder);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Name = "FrmYoneticiKodDogrulama";
@@ -107,7 +107,7 @@
 
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnKodGonder;
         private System.Windows.Forms.LinkLabel linkLabel1;
         public System.Windows.Forms.Label label2;
     }

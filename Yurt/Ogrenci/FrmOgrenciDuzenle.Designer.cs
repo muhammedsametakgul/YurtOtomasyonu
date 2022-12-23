@@ -193,6 +193,7 @@
             this.MskTel.Name = "MskTel";
             this.MskTel.Size = new System.Drawing.Size(395, 22);
             this.MskTel.TabIndex = 14;
+            this.MskTel.Click += new System.EventHandler(this.MskTel_Click);
             // 
             // label8
             // 
@@ -285,6 +286,7 @@
             this.MskVeliTel.Name = "MskVeliTel";
             this.MskVeliTel.Size = new System.Drawing.Size(344, 22);
             this.MskVeliTel.TabIndex = 9;
+            this.MskVeliTel.Click += new System.EventHandler(this.MskVeliTel_Click);
             // 
             // groupBox1
             // 
@@ -397,6 +399,7 @@
             this.MskDogum.Size = new System.Drawing.Size(344, 22);
             this.MskDogum.TabIndex = 2;
             this.MskDogum.ValidatingType = typeof(System.DateTime);
+            this.MskDogum.Click += new System.EventHandler(this.MskDogum_Click);
             // 
             // label15
             // 
@@ -417,6 +420,7 @@
             this.MskTc.Size = new System.Drawing.Size(344, 22);
             this.MskTc.TabIndex = 3;
             this.MskTc.ValidatingType = typeof(int);
+            this.MskTc.Click += new System.EventHandler(this.MskTc_Click);
             // 
             // txtArama
             // 

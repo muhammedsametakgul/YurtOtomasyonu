@@ -42,7 +42,7 @@ namespace Yurt.YoneticiIslemleri
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             //dinamik olarak arıyor
-            SqlDataAdapter da = new SqlDataAdapter("select * from Personel where PersonelAdSoyad LIKE '%" + textBox1.Text + "%'", sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("select * from Personel where PersonelAdSoyad LIKE '%" + txtAra.Text + "%'", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -51,15 +51,15 @@ namespace Yurt.YoneticiIslemleri
         private void button1_Click(object sender, EventArgs e)
         {
             SqlCommand komut = new SqlCommand("Update Personel set  PersonelTc=@p1,PersonelAdSoyad=@p2," +
-                "PersonelDepartman=@p3,PersonelTelefon=@p4,PersonelMail=@p5,PersonelSifre=@p6 ,PersonelAdres=@p7 where Personelid=@p8", sql.Baglan());
+                "PersonelDepartman=@p3,PersonelTelefon=@p4,PersonelMail=@p5,PersonelAdres=@p6 where Personelid=@p7", sql.Baglan());
             komut.Parameters.AddWithValue("@p1",MskTc.Text);
-            komut.Parameters.AddWithValue("@p2",TxtAd.Text);
+            komut.Parameters.AddWithValue("@p2",TxtAd.Text.ToUpper());
             komut.Parameters.AddWithValue("@p3",CmbDep.Text);
             komut.Parameters.AddWithValue("@p4",mskTel.Text);
             komut.Parameters.AddWithValue("@p5",txtMail.Text);
-            komut.Parameters.AddWithValue("@p6",TxtSifre.Text);
-            komut.Parameters.AddWithValue("@p7",TxtAdres.Text);
-            komut.Parameters.AddWithValue("@p8",label6.Text);
+           
+            komut.Parameters.AddWithValue("@p6",TxtAdres.Text);
+            komut.Parameters.AddWithValue("@p7",label6.Text);
 
           
 
@@ -80,7 +80,7 @@ namespace Yurt.YoneticiIslemleri
             TxtAd.Text = "";
             MskTc.Text = "";
             CmbDep.Text= "";
-            TxtSifre.Text="";
+      
             mskTel.Text = "";
             TxtAdres.Text = "";
             txtMail.Text = "";
@@ -104,9 +104,61 @@ namespace Yurt.YoneticiIslemleri
 
             mskTel.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
             txtMail.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
-            TxtSifre.Text = dataGridView1.Rows[secilen].Cells[7].Value.ToString();
+         
 
             TxtAdres.Text = dataGridView1.Rows[secilen].Cells[6].Value.ToString();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int secilen = dataGridView1.SelectedCells[0].RowIndex;
+            label6.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+            MskTc.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
+            TxtAd.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
+            CmbDep.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
+            mskDogum.Text = dataGridView1.Rows[secilen].Cells[7].Value.ToString();  
+            mskTel.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
+            txtMail.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
+
+
+            TxtAdres.Text = dataGridView1.Rows[secilen].Cells[6].Value.ToString();
+        }
+
+        private void MskTc_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
+
+        }
+
+        private void mskDogum_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
+        }
+
+        private void mskTel_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
         }
     }
 }

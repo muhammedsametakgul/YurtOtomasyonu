@@ -133,6 +133,7 @@
             this.MskElektrik.Name = "MskElektrik";
             this.MskElektrik.Size = new System.Drawing.Size(267, 34);
             this.MskElektrik.TabIndex = 7;
+            this.MskElektrik.Click += new System.EventHandler(this.MskElektrik_Click);
             // 
             // MskDogalgaz
             // 
@@ -141,6 +142,7 @@
             this.MskDogalgaz.Name = "MskDogalgaz";
             this.MskDogalgaz.Size = new System.Drawing.Size(267, 34);
             this.MskDogalgaz.TabIndex = 8;
+            this.MskDogalgaz.Click += new System.EventHandler(this.MskDogalgaz_Click);
             // 
             // MskInternet
             // 
@@ -149,6 +151,7 @@
             this.MskInternet.Name = "MskInternet";
             this.MskInternet.Size = new System.Drawing.Size(267, 34);
             this.MskInternet.TabIndex = 9;
+            this.MskInternet.Click += new System.EventHandler(this.MskInternet_Click);
             // 
             // MskGida
             // 
@@ -157,6 +160,7 @@
             this.MskGida.Name = "MskGida";
             this.MskGida.Size = new System.Drawing.Size(267, 34);
             this.MskGida.TabIndex = 10;
+            this.MskGida.Click += new System.EventHandler(this.MskGida_Click);
             // 
             // MskPersonel
             // 
@@ -165,6 +169,7 @@
             this.MskPersonel.Name = "MskPersonel";
             this.MskPersonel.Size = new System.Drawing.Size(267, 34);
             this.MskPersonel.TabIndex = 11;
+            this.MskPersonel.Click += new System.EventHandler(this.MskPersonel_Click);
             // 
             // MskSu
             // 
@@ -173,6 +178,7 @@
             this.MskSu.Name = "MskSu";
             this.MskSu.Size = new System.Drawing.Size(267, 34);
             this.MskSu.TabIndex = 12;
+            this.MskSu.Click += new System.EventHandler(this.MskSu_Click);
             // 
             // MskDiger
             // 
@@ -181,6 +187,7 @@
             this.MskDiger.Name = "MskDiger";
             this.MskDiger.Size = new System.Drawing.Size(267, 34);
             this.MskDiger.TabIndex = 13;
+            this.MskDiger.Click += new System.EventHandler(this.MskDiger_Click);
             // 
             // BtnEkle
             // 
@@ -200,6 +207,7 @@
             this.MskTarih.Size = new System.Drawing.Size(267, 34);
             this.MskTarih.TabIndex = 16;
             this.MskTarih.ValidatingType = typeof(System.DateTime);
+            this.MskTarih.Click += new System.EventHandler(this.MskTarih_Click);
             // 
             // label8
             // 

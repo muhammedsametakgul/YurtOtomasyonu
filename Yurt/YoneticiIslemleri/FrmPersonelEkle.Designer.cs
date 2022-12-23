@@ -35,16 +35,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnEkle = new System.Windows.Forms.Button();
-            this.TxtSifre = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.TxtAdres = new System.Windows.Forms.RichTextBox();
             this.gbPersonelEkle = new System.Windows.Forms.GroupBox();
+            this.mskDogum = new System.Windows.Forms.MaskedTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.mskTel = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtMail = new System.Windows.Forms.TextBox();
-            this.mskTel = new System.Windows.Forms.MaskedTextBox();
             this.gbPersonelEkle.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(104, 34);
+            this.label1.Location = new System.Drawing.Point(189, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 32);
             this.label1.TabIndex = 0;
@@ -62,7 +62,7 @@
             // TxtAd
             // 
             this.TxtAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtAd.Location = new System.Drawing.Point(190, 89);
+            this.TxtAd.Location = new System.Drawing.Point(292, 100);
             this.TxtAd.Name = "TxtAd";
             this.TxtAd.Size = new System.Drawing.Size(382, 38);
             this.TxtAd.TabIndex = 2;
@@ -71,12 +71,13 @@
             // MskTc
             // 
             this.MskTc.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.MskTc.Location = new System.Drawing.Point(190, 28);
+            this.MskTc.Location = new System.Drawing.Point(292, 25);
             this.MskTc.Mask = "00000000000";
             this.MskTc.Name = "MskTc";
             this.MskTc.Size = new System.Drawing.Size(382, 38);
             this.MskTc.TabIndex = 1;
             this.MskTc.ValidatingType = typeof(int);
+            this.MskTc.Click += new System.EventHandler(this.MskTc_Click);
             // 
             // CmbDep
             // 
@@ -86,7 +87,7 @@
             "Yemekhane",
             "Kat Görevlisi",
             "Güvenlik"});
-            this.CmbDep.Location = new System.Drawing.Point(190, 161);
+            this.CmbDep.Location = new System.Drawing.Point(292, 175);
             this.CmbDep.Name = "CmbDep";
             this.CmbDep.Size = new System.Drawing.Size(382, 39);
             this.CmbDep.TabIndex = 3;
@@ -95,7 +96,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(16, 95);
+            this.label2.Location = new System.Drawing.Point(101, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 32);
             this.label2.TabIndex = 5;
@@ -105,7 +106,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(1, 161);
+            this.label3.Location = new System.Drawing.Point(86, 184);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(162, 32);
             this.label3.TabIndex = 6;
@@ -113,31 +114,13 @@
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(34, 446);
+            this.btnEkle.Location = new System.Drawing.Point(148, 431);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(172, 38);
             this.btnEkle.TabIndex = 8;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click_1);
-            // 
-            // TxtSifre
-            // 
-            this.TxtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtSifre.Location = new System.Drawing.Point(190, 235);
-            this.TxtSifre.Name = "TxtSifre";
-            this.TxtSifre.Size = new System.Drawing.Size(382, 38);
-            this.TxtSifre.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(67, 235);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 32);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Şifre:";
             // 
             // label5
             // 
@@ -169,20 +152,42 @@
             // 
             // gbPersonelEkle
             // 
+            this.gbPersonelEkle.Controls.Add(this.mskDogum);
+            this.gbPersonelEkle.Controls.Add(this.label4);
             this.gbPersonelEkle.Controls.Add(this.label1);
             this.gbPersonelEkle.Controls.Add(this.TxtAd);
             this.gbPersonelEkle.Controls.Add(this.MskTc);
             this.gbPersonelEkle.Controls.Add(this.CmbDep);
-            this.gbPersonelEkle.Controls.Add(this.TxtSifre);
             this.gbPersonelEkle.Controls.Add(this.label2);
-            this.gbPersonelEkle.Controls.Add(this.label4);
             this.gbPersonelEkle.Controls.Add(this.label3);
             this.gbPersonelEkle.Location = new System.Drawing.Point(12, 26);
             this.gbPersonelEkle.Name = "gbPersonelEkle";
-            this.gbPersonelEkle.Size = new System.Drawing.Size(598, 364);
+            this.gbPersonelEkle.Size = new System.Drawing.Size(719, 374);
             this.gbPersonelEkle.TabIndex = 12;
             this.gbPersonelEkle.TabStop = false;
             this.gbPersonelEkle.Text = "Personel";
+            // 
+            // mskDogum
+            // 
+            this.mskDogum.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mskDogum.Location = new System.Drawing.Point(292, 251);
+            this.mskDogum.Mask = "00/00/0000";
+            this.mskDogum.Name = "mskDogum";
+            this.mskDogum.Size = new System.Drawing.Size(382, 38);
+            this.mskDogum.TabIndex = 8;
+            this.mskDogum.ValidatingType = typeof(System.DateTime);
+            this.mskDogum.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskDogum_MaskInputRejected);
+            this.mskDogum.Click += new System.EventHandler(this.mskDogum_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(56, 257);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(192, 32);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Doğum Tarihi:";
             // 
             // groupBox1
             // 
@@ -192,12 +197,22 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.TxtAdres);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Location = new System.Drawing.Point(616, 26);
+            this.groupBox1.Location = new System.Drawing.Point(737, 26);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(551, 374);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "İletişim Bilgileri";
+            // 
+            // mskTel
+            // 
+            this.mskTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mskTel.Location = new System.Drawing.Point(141, 93);
+            this.mskTel.Mask = "(999) 000-0000";
+            this.mskTel.Name = "mskTel";
+            this.mskTel.Size = new System.Drawing.Size(382, 38);
+            this.mskTel.TabIndex = 14;
+            this.mskTel.Click += new System.EventHandler(this.mskTel_Click);
             // 
             // label7
             // 
@@ -217,27 +232,19 @@
             this.txtMail.Size = new System.Drawing.Size(382, 38);
             this.txtMail.TabIndex = 12;
             // 
-            // mskTel
-            // 
-            this.mskTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mskTel.Location = new System.Drawing.Point(141, 93);
-            this.mskTel.Mask = "(999) 000-0000";
-            this.mskTel.Name = "mskTel";
-            this.mskTel.Size = new System.Drawing.Size(382, 38);
-            this.mskTel.TabIndex = 14;
-            // 
             // FrmPersonelEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1179, 775);
+            this.ClientSize = new System.Drawing.Size(1504, 775);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.gbPersonelEkle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPersonelEkle";
             this.Text = "FrmPersonelEkle";
+            this.Load += new System.EventHandler(this.FrmPersonelEkle_Load);
             this.gbPersonelEkle.ResumeLayout(false);
             this.gbPersonelEkle.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -255,8 +262,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnEkle;
-        private System.Windows.Forms.TextBox TxtSifre;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RichTextBox TxtAdres;
@@ -265,5 +270,7 @@
         private System.Windows.Forms.MaskedTextBox mskTel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtMail;
+        private System.Windows.Forms.MaskedTextBox mskDogum;
+        private System.Windows.Forms.Label label4;
     }
 }

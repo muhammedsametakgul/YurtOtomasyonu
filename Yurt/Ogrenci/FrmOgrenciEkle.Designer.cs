@@ -41,7 +41,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEkle = new System.Windows.Forms.Button();
             this.rchAdres = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -81,6 +81,7 @@
             this.MskDogum.Size = new System.Drawing.Size(344, 30);
             this.MskDogum.TabIndex = 1;
             this.MskDogum.ValidatingType = typeof(System.DateTime);
+            this.MskDogum.Click += new System.EventHandler(this.MskDogum_Click);
             // 
             // MskTc
             // 
@@ -91,6 +92,7 @@
             this.MskTc.Size = new System.Drawing.Size(344, 30);
             this.MskTc.TabIndex = 2;
             this.MskTc.ValidatingType = typeof(int);
+            this.MskTc.Click += new System.EventHandler(this.MskTc_Click);
             // 
             // TxtMail
             // 
@@ -109,7 +111,6 @@
             this.MskTel.Size = new System.Drawing.Size(395, 30);
             this.MskTel.TabIndex = 13;
             this.MskTel.Click += new System.EventHandler(this.MskTel_Click);
-            this.MskTel.EnabledChanged += new System.EventHandler(this.MskTel_EnabledChanged);
             // 
             // CmbOda
             // 
@@ -190,15 +191,15 @@
             this.label9.TabIndex = 15;
             this.label9.Text = "Mail:";
             // 
-            // button1
+            // btnEkle
             // 
-            this.button1.Location = new System.Drawing.Point(663, 657);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 41);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Ekle";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnEkle.Location = new System.Drawing.Point(663, 657);
+            this.btnEkle.Name = "btnEkle";
+            this.btnEkle.Size = new System.Drawing.Size(131, 41);
+            this.btnEkle.TabIndex = 18;
+            this.btnEkle.Text = "Ekle";
+            this.btnEkle.UseVisualStyleBackColor = true;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click_1);
             // 
             // rchAdres
             // 
@@ -236,6 +237,7 @@
             this.MskVeliTel.Name = "MskVeliTel";
             this.MskVeliTel.Size = new System.Drawing.Size(344, 30);
             this.MskVeliTel.TabIndex = 8;
+            this.MskVeliTel.Click += new System.EventHandler(this.MskVeliTel_Click);
             // 
             // txtBolum
             // 
@@ -281,7 +283,6 @@
             this.label13.Size = new System.Drawing.Size(123, 20);
             this.label13.TabIndex = 24;
             this.label13.Text = "Doğduğu Yer:";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // groupBox2
             // 
@@ -401,7 +402,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnEkle);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -433,7 +434,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.RichTextBox rchAdres;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;

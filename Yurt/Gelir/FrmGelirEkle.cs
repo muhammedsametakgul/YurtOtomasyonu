@@ -54,5 +54,29 @@ namespace Yurt.Gelir
             sql.Baglan().Close();
             
         }
+
+        private void mskTarih_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
+        }
+
+        private void mskTel_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
+        }
     }
 }

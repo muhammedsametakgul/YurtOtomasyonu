@@ -131,6 +131,7 @@
             this.mskTel.Name = "mskTel";
             this.mskTel.Size = new System.Drawing.Size(343, 34);
             this.mskTel.TabIndex = 4;
+            this.mskTel.Click += new System.EventHandler(this.mskTel_Click);
             // 
             // txtEmail
             // 
@@ -210,6 +211,7 @@
             this.mskTarih.Size = new System.Drawing.Size(343, 34);
             this.mskTarih.TabIndex = 3;
             this.mskTarih.ValidatingType = typeof(System.DateTime);
+            this.mskTarih.Click += new System.EventHandler(this.mskTarih_Click);
             // 
             // FrmGelirEkle
             // 

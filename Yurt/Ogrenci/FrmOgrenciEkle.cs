@@ -31,13 +31,33 @@ namespace Yurt
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+      
 
-            #region Öğrenci Ekleme
+      
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            txtBolum.Clear();
+            txtDogum.Text = "";
+            txtIl.Text = "";
+            txtDogum.Text = "";
+            txtVeliAd.Text = "";
+            TxtAd.Text = "";
+            TxtMail.Text = "";
+            MskDogum.Text = "";
+            cmbYakin.Text = "";
+            CmbOda.Text = "";
+            txtVeliAd.Text = "";
+          
+            MskVeliTel.Text = "";
+
+        }
+
+        private void btnEkle_Click_1(object sender, EventArgs e)
+        {
             DialogResult dialogResult = DialogResult.OK;
-            dialogResult = MessageBox.Show("Uyarı","Eklemek istediğinize emin misiniz?",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-            if(dialogResult == DialogResult.Yes)
+            dialogResult = MessageBox.Show("Uyarı", "Eklemek istediğinize emin misiniz?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
             {
                 try
                 {
@@ -46,7 +66,7 @@ namespace Yurt
                     SqlCommand komut = new SqlCommand("insert into Ogrenci (OgrenciAd,OgrenciDogum,OgrenciTc,OgrenciBolum," +
                         "OgrenciMail,OgrenciTelefon,OgrenciOdaNo,OgrenciAdres,VeliTel,VeliAd,VeliYakinlik,IlIlce,Dogduguyer) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9,@p10,@p11,@p12,@p13)", sql.Baglan());
 
-                    komut.Parameters.AddWithValue("@p1", TxtAd.Text.ToUpper()); 
+                    komut.Parameters.AddWithValue("@p1", TxtAd.Text.ToUpper());
                     komut.Parameters.AddWithValue("@p2", MskDogum.Text);
                     komut.Parameters.AddWithValue("@p3", MskTc.Text);
                     komut.Parameters.AddWithValue("@p4", bolum);
@@ -90,47 +110,57 @@ namespace Yurt
                     d = MessageBox.Show("Uyarı", "Öğrenci Eklenemedi.Veritabanlı sıkıntı olabilir bekleyiniz...", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
-                
+
 
             }
-            #endregion
+        }
 
+        private void MskDogum_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
 
+                textBox.Select(0, 0);
 
+            }
+        }
 
+        private void MskTc_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
+        }
+
+        private void MskVeliTel_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
         }
 
         private void MskTel_Click(object sender, EventArgs e)
         {
-            label9.Visible = true;
-        }
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
 
-        private void MskTel_EnabledChanged(object sender, EventArgs e)
-        {
-            label9.Visible = true;
-        }
+                textBox.Select(0, 0);
 
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTemizle_Click(object sender, EventArgs e)
-        {
-            txtBolum.Clear();
-            txtDogum.Text = "";
-            txtIl.Text = "";
-            txtDogum.Text = "";
-            txtVeliAd.Text = "";
-            TxtAd.Text = "";
-            TxtMail.Text = "";
-            MskDogum.Text = "";
-            cmbYakin.Text = "";
-            CmbOda.Text = "";
-            txtVeliAd.Text = "";
-          
-            MskVeliTel.Text = "";
-
+            }
         }
     }
 }

@@ -47,12 +47,12 @@ namespace Yurt
             if (kod_disaridan_gelen == kod_iceriden)
             {
 
-                YoneticiSifreGuncelle frm = new YoneticiSifreGuncelle();
+                FrmYoneticiSifreGuncelle frm = new FrmYoneticiSifreGuncelle();
                 frm.Show();
                 this.Close();
                 text_tc = label2.Text;
                 MessageBox.Show(text_tc);
-                YoneticiSifreGuncelle frm2 = new YoneticiSifreGuncelle();
+                FrmYoneticiSifreGuncelle frm2 = new FrmYoneticiSifreGuncelle();
                 //frm2.tc_sifre_guncelleme = text_tc;
             }
         }

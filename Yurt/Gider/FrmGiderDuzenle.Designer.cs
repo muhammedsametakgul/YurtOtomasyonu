@@ -71,6 +71,7 @@
             this.MskDiger.Name = "MskDiger";
             this.MskDiger.Size = new System.Drawing.Size(267, 34);
             this.MskDiger.TabIndex = 8;
+            this.MskDiger.Click += new System.EventHandler(this.MskDiger_Click);
             // 
             // MskSu
             // 
@@ -80,6 +81,7 @@
             this.MskSu.Name = "MskSu";
             this.MskSu.Size = new System.Drawing.Size(267, 34);
             this.MskSu.TabIndex = 7;
+            this.MskSu.Click += new System.EventHandler(this.MskSu_Click);
             // 
             // MskPersonel
             // 
@@ -89,6 +91,7 @@
             this.MskPersonel.Name = "MskPersonel";
             this.MskPersonel.Size = new System.Drawing.Size(267, 34);
             this.MskPersonel.TabIndex = 6;
+            this.MskPersonel.Click += new System.EventHandler(this.MskPersonel_Click);
             // 
             // MskGida
             // 
@@ -98,6 +101,7 @@
             this.MskGida.Name = "MskGida";
             this.MskGida.Size = new System.Drawing.Size(267, 34);
             this.MskGida.TabIndex = 5;
+            this.MskGida.Click += new System.EventHandler(this.MskGida_Click);
             // 
             // MskInternet
             // 
@@ -107,6 +111,7 @@
             this.MskInternet.Name = "MskInternet";
             this.MskInternet.Size = new System.Drawing.Size(267, 34);
             this.MskInternet.TabIndex = 4;
+            this.MskInternet.Click += new System.EventHandler(this.MskInternet_Click);
             // 
             // MskDogalgaz
             // 
@@ -117,6 +122,7 @@
             this.MskDogalgaz.Size = new System.Drawing.Size(267, 34);
             this.MskDogalgaz.TabIndex = 3;
             this.MskDogalgaz.ValidatingType = typeof(int);
+            this.MskDogalgaz.Click += new System.EventHandler(this.MskDogalgaz_Click);
             // 
             // MskElektrik
             // 
@@ -127,6 +133,7 @@
             this.MskElektrik.Size = new System.Drawing.Size(267, 34);
             this.MskElektrik.TabIndex = 2;
             this.MskElektrik.ValidatingType = typeof(int);
+            this.MskElektrik.Click += new System.EventHandler(this.MskElektrik_Click);
             // 
             // label7
             // 
@@ -222,7 +229,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(900, 475);
             this.dataGridView1.TabIndex = 30;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-//            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // lblid
             // 
@@ -243,6 +249,7 @@
             this.MskTarih.Size = new System.Drawing.Size(267, 34);
             this.MskTarih.TabIndex = 1;
             this.MskTarih.ValidatingType = typeof(System.DateTime);
+            this.MskTarih.Click += new System.EventHandler(this.MskTarih_Click);
             // 
             // label8
             // 

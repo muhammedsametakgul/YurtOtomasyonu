@@ -75,7 +75,8 @@ namespace Yurt.Gelir
             txtEmail.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
             dtTarih.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
             txtOdenen.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
-            SqlCommand komut1 = new SqlCommand("Select * From Gelir", sql.Baglan());
+            SqlCommand komut1 = new SqlCommand("Select * From Gelir Where Odemeid=@p1", sql.Baglan());
+            komut1.Parameters.AddWithValue("@p1",lblid.Text);
             rbFirma.Checked = false;
             rbBireysel.Checked = false;
             txtFirma.Visible = true;
@@ -83,14 +84,35 @@ namespace Yurt.Gelir
             SqlDataReader dr = komut1.ExecuteReader();
             if (dr.Read())
             {
-                if (dr["FirmaAdi"] != null)
+                if (dr[6].ToString() != "Bireysel")
                 {
-
+                    txtFirma.Visible = true;
+                    lblFirma.Visible = true;
+                    rbFirma.Checked = true;
                     txtFirma.Text = dataGridView1.Rows[secilen].Cells[6].Value.ToString();
+                   
+                }
+                else
+                {
+                    rbBireysel.Checked = true;
+                    txtFirma.Visible = false;
+                    lblFirma.Visible = false;
                 }
 
             }
 
+        }
+
+        private void mskTel_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
         }
     }
 }
