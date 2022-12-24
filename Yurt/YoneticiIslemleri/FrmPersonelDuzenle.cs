@@ -23,7 +23,7 @@ namespace Yurt.YoneticiIslemleri
         //datagridviewi güncel tutuyor
         public void Goster()
         {
-            SqlDataAdapter da = new SqlDataAdapter("Select * From Personel", sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("Select PersonelTc,PersonelAdSoyad,PersonelDepartman,PersonelTelefon,PersonelMail,PersonelAdres,PersonelDogumTarihi From Personel", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
            
@@ -42,7 +42,7 @@ namespace Yurt.YoneticiIslemleri
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             //dinamik olarak arıyor
-            SqlDataAdapter da = new SqlDataAdapter("select * from Personel where PersonelAdSoyad LIKE '%" + txtAra.Text + "%'", sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("select  PersonelTc,PersonelAdSoyad,PersonelDepartman,PersonelTelefon,PersonelMail,PersonelAdres,PersonelDogumTarihi from Personel where PersonelAdSoyad LIKE '%" + txtAra.Text + "%'", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -59,7 +59,8 @@ namespace Yurt.YoneticiIslemleri
             komut.Parameters.AddWithValue("@p5",txtMail.Text);
            
             komut.Parameters.AddWithValue("@p6",TxtAdres.Text);
-            komut.Parameters.AddWithValue("@p7",label6.Text);
+           
+            komut.Parameters.AddWithValue("@p7",lblid.Text);
 
           
 
@@ -80,7 +81,8 @@ namespace Yurt.YoneticiIslemleri
             TxtAd.Text = "";
             MskTc.Text = "";
             CmbDep.Text= "";
-      
+            
+            mskDogum.Text = "";
             mskTel.Text = "";
             TxtAdres.Text = "";
             txtMail.Text = "";
@@ -97,68 +99,54 @@ namespace Yurt.YoneticiIslemleri
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int secilen = dataGridView1.SelectedCells[0].RowIndex;
-            label6.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
-            MskTc.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
-            TxtAd.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
-            CmbDep.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
+          
+            MskTc.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+            TxtAd.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
+            CmbDep.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
 
-            mskTel.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
-            txtMail.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
+            mskTel.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
+            txtMail.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
          
 
-            TxtAdres.Text = dataGridView1.Rows[secilen].Cells[6].Value.ToString();
+            TxtAdres.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
+            mskDogum.Text = dataGridView1.Rows[secilen].Cells[6].Value.ToString();
+
+            SqlCommand komut = new SqlCommand("Select Personelid From Personel Where PersonelTc=@p1",sql.Baglan());
+            komut.Parameters.AddWithValue("@p1", MskTc.Text);
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                lblid.Text = dr[0].ToString();
+            }
+           
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int secilen = dataGridView1.SelectedCells[0].RowIndex;
-            label6.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
-            MskTc.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
-            TxtAd.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
-            CmbDep.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
-            mskDogum.Text = dataGridView1.Rows[secilen].Cells[7].Value.ToString();  
-            mskTel.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
-            txtMail.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
+
+            MskTc.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+            TxtAd.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
+            CmbDep.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
+
+            mskTel.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
+            txtMail.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
 
 
-            TxtAdres.Text = dataGridView1.Rows[secilen].Cells[6].Value.ToString();
-        }
+            TxtAdres.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
+            mskDogum.Text = dataGridView1.Rows[secilen].Cells[6].Value.ToString();
 
-        private void MskTc_Click(object sender, EventArgs e)
-        {
-            MaskedTextBox textBox = sender as MaskedTextBox;
-            textBox.Focus();
-            if (textBox != null)
+            SqlCommand komut = new SqlCommand("Select Personelid From Personel Where PersonelTc=@p1", sql.Baglan());
+            komut.Parameters.AddWithValue("@p1",MskTc.Text);
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
             {
-
-                textBox.Select(0, 0);
-
-            }
-
-        }
-
-        private void mskDogum_Click(object sender, EventArgs e)
-        {
-            MaskedTextBox textBox = sender as MaskedTextBox;
-            textBox.Focus();
-            if (textBox != null)
-            {
-
-                textBox.Select(0, 0);
-
+                lblid.Text = dr[0].ToString();
             }
         }
 
-        private void mskTel_Click(object sender, EventArgs e)
-        {
-            MaskedTextBox textBox = sender as MaskedTextBox;
-            textBox.Focus();
-            if (textBox != null)
-            {
-
-                textBox.Select(0, 0);
-
-            }
+     
+       
         }
     }
-}
+

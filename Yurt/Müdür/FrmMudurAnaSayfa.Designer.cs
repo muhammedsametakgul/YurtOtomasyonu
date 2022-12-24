@@ -67,10 +67,12 @@
             this.gelirDüzenleSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gelirListesiGösterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.öğrenciÖdemeAlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yurtÜcretiBelirlemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giderİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giderEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giderGüncelleSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giderListesiGösterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.memurPersonelMaaşToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yöneticiİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yöneticiŞifreGüncellemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yöneticiEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -406,7 +408,8 @@
             this.gelirEkleToolStripMenuItem,
             this.gelirDüzenleSilToolStripMenuItem,
             this.gelirListesiGösterToolStripMenuItem,
-            this.öğrenciÖdemeAlToolStripMenuItem});
+            this.öğrenciÖdemeAlToolStripMenuItem,
+            this.yurtÜcretiBelirlemeToolStripMenuItem});
             this.gelirİşlemleriToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.gelirİşlemleriToolStripMenuItem.Name = "gelirİşlemleriToolStripMenuItem";
             this.gelirİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
@@ -416,37 +419,45 @@
             // gelirEkleToolStripMenuItem
             // 
             this.gelirEkleToolStripMenuItem.Name = "gelirEkleToolStripMenuItem";
-            this.gelirEkleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gelirEkleToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
             this.gelirEkleToolStripMenuItem.Text = "Gelir Ekle";
             this.gelirEkleToolStripMenuItem.Click += new System.EventHandler(this.gelirEkleToolStripMenuItem_Click);
             // 
             // gelirDüzenleSilToolStripMenuItem
             // 
             this.gelirDüzenleSilToolStripMenuItem.Name = "gelirDüzenleSilToolStripMenuItem";
-            this.gelirDüzenleSilToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gelirDüzenleSilToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
             this.gelirDüzenleSilToolStripMenuItem.Text = "Gelir Düzenle/Sil";
             this.gelirDüzenleSilToolStripMenuItem.Click += new System.EventHandler(this.gelirDüzenleSilToolStripMenuItem_Click);
             // 
             // gelirListesiGösterToolStripMenuItem
             // 
             this.gelirListesiGösterToolStripMenuItem.Name = "gelirListesiGösterToolStripMenuItem";
-            this.gelirListesiGösterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.gelirListesiGösterToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
             this.gelirListesiGösterToolStripMenuItem.Text = "Gelir Listesi Göster";
             this.gelirListesiGösterToolStripMenuItem.Click += new System.EventHandler(this.gelirListesiGösterToolStripMenuItem_Click);
             // 
             // öğrenciÖdemeAlToolStripMenuItem
             // 
             this.öğrenciÖdemeAlToolStripMenuItem.Name = "öğrenciÖdemeAlToolStripMenuItem";
-            this.öğrenciÖdemeAlToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.öğrenciÖdemeAlToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
             this.öğrenciÖdemeAlToolStripMenuItem.Text = "Öğrenci Ödeme Al";
             this.öğrenciÖdemeAlToolStripMenuItem.Click += new System.EventHandler(this.öğrenciÖdemeAlToolStripMenuItem_Click);
+            // 
+            // yurtÜcretiBelirlemeToolStripMenuItem
+            // 
+            this.yurtÜcretiBelirlemeToolStripMenuItem.Name = "yurtÜcretiBelirlemeToolStripMenuItem";
+            this.yurtÜcretiBelirlemeToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
+            this.yurtÜcretiBelirlemeToolStripMenuItem.Text = "Yurt Ücreti Belirleme";
+            this.yurtÜcretiBelirlemeToolStripMenuItem.Click += new System.EventHandler(this.yurtÜcretiBelirlemeToolStripMenuItem_Click);
             // 
             // giderİşlemleriToolStripMenuItem
             // 
             this.giderİşlemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.giderEkleToolStripMenuItem,
             this.giderGüncelleSilToolStripMenuItem,
-            this.giderListesiGösterToolStripMenuItem});
+            this.giderListesiGösterToolStripMenuItem,
+            this.memurPersonelMaaşToolStripMenuItem});
             this.giderİşlemleriToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.giderİşlemleriToolStripMenuItem.Name = "giderİşlemleriToolStripMenuItem";
             this.giderİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
@@ -455,23 +466,30 @@
             // giderEkleToolStripMenuItem
             // 
             this.giderEkleToolStripMenuItem.Name = "giderEkleToolStripMenuItem";
-            this.giderEkleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.giderEkleToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.giderEkleToolStripMenuItem.Text = "Gider Ekle";
             this.giderEkleToolStripMenuItem.Click += new System.EventHandler(this.giderEkleToolStripMenuItem_Click);
             // 
             // giderGüncelleSilToolStripMenuItem
             // 
             this.giderGüncelleSilToolStripMenuItem.Name = "giderGüncelleSilToolStripMenuItem";
-            this.giderGüncelleSilToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.giderGüncelleSilToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.giderGüncelleSilToolStripMenuItem.Text = "Gider Güncelle/Sil";
             this.giderGüncelleSilToolStripMenuItem.Click += new System.EventHandler(this.giderGüncelleSilToolStripMenuItem_Click);
             // 
             // giderListesiGösterToolStripMenuItem
             // 
             this.giderListesiGösterToolStripMenuItem.Name = "giderListesiGösterToolStripMenuItem";
-            this.giderListesiGösterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.giderListesiGösterToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.giderListesiGösterToolStripMenuItem.Text = "Gider Listesi Göster";
             this.giderListesiGösterToolStripMenuItem.Click += new System.EventHandler(this.giderListesiGösterToolStripMenuItem_Click);
+            // 
+            // memurPersonelMaaşToolStripMenuItem
+            // 
+            this.memurPersonelMaaşToolStripMenuItem.Name = "memurPersonelMaaşToolStripMenuItem";
+            this.memurPersonelMaaşToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+            this.memurPersonelMaaşToolStripMenuItem.Text = "Memur/Personel Maaş";
+            this.memurPersonelMaaşToolStripMenuItem.Click += new System.EventHandler(this.memurPersonelMaaşToolStripMenuItem_Click);
             // 
             // yöneticiİşlemleriToolStripMenuItem
             // 
@@ -614,9 +632,9 @@
             // 
             this.btnSikayetGoruntule.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.btnSikayetGoruntule.Image = ((System.Drawing.Image)(resources.GetObject("btnSikayetGoruntule.Image")));
-            this.btnSikayetGoruntule.Location = new System.Drawing.Point(-2, 825);
+            this.btnSikayetGoruntule.Location = new System.Drawing.Point(13, 779);
             this.btnSikayetGoruntule.Name = "btnSikayetGoruntule";
-            this.btnSikayetGoruntule.Size = new System.Drawing.Size(46, 40);
+            this.btnSikayetGoruntule.Size = new System.Drawing.Size(72, 72);
             this.btnSikayetGoruntule.TabIndex = 0;
             this.btnSikayetGoruntule.UseVisualStyleBackColor = false;
             this.btnSikayetGoruntule.Click += new System.EventHandler(this.btnSikayetGoruntule_Click);
@@ -626,9 +644,9 @@
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.btnSikayetGoruntule);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(1877, 79);
+            this.panel6.Location = new System.Drawing.Point(1836, 79);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(47, 941);
+            this.panel6.Size = new System.Drawing.Size(88, 941);
             this.panel6.TabIndex = 8;
             // 
             // FrmMudurAnaSayfa
@@ -668,7 +686,6 @@
         #endregion
 
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Panel mainpanel;
         private DevExpress.XtraEditors.SidePanel sidePanel1;
         private System.Windows.Forms.Label lblBaslik;
         private System.Windows.Forms.Panel panel1;
@@ -724,5 +741,8 @@
         private System.Windows.Forms.Button btnSikayetGoruntule;
         public System.Windows.Forms.Label lblTCC;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.ToolStripMenuItem memurPersonelMaaşToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem yurtÜcretiBelirlemeToolStripMenuItem;
+        public System.Windows.Forms.Panel mainpanel;
     }
 }

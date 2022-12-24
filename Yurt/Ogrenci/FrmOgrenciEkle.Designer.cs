@@ -59,6 +59,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.txtIl = new System.Windows.Forms.TextBox();
             this.btnTemizle = new System.Windows.Forms.Button();
+            this.txtYurtUcreti = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -392,12 +393,22 @@
             this.btnTemizle.UseVisualStyleBackColor = true;
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
+            // txtYurtUcreti
+            // 
+            this.txtYurtUcreti.Enabled = false;
+            this.txtYurtUcreti.Location = new System.Drawing.Point(708, 511);
+            this.txtYurtUcreti.Name = "txtYurtUcreti";
+            this.txtYurtUcreti.Size = new System.Drawing.Size(400, 30);
+            this.txtYurtUcreti.TabIndex = 28;
+            this.txtYurtUcreti.Visible = false;
+            // 
             // FrmOgrenciEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1196, 729);
+            this.Controls.Add(this.txtYurtUcreti);
             this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -416,6 +427,7 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -452,5 +464,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtIl;
         private System.Windows.Forms.Button btnTemizle;
+        private System.Windows.Forms.TextBox txtYurtUcreti;
     }
 }

@@ -252,8 +252,25 @@ namespace Yurt.Müdür
 
         private void btnSikayetGoruntule_Click(object sender, EventArgs e)
         {
-            loadform(new Sikayetler.FrmSikayet());
+            loadform(new Sikayetler.FrmMudurSikayet());
             lblBaslik.Text = "Yurt Şikayet/Öneri/Haberleşme";
         }
+
+        private void memurPersonelMaaşToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new FrmMaasİslemleri());
+            lblBaslik.Text = "Maaş İşlemleri";
+        }
+
+        private void yurtÜcretiBelirlemeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new Gelir.FrmYurtUcreti());
+            lblBaslik.Text = "Yurt Ücreti Belirleme";
+          
+
+
+        }
+
+       
     }
 }

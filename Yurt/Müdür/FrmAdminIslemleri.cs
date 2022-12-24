@@ -21,7 +21,7 @@ namespace Yurt.Müdür
 
         private void FrmYoneticiEkle_Load(object sender, EventArgs e)
         {
-            SqlDataAdapter da = new SqlDataAdapter("Select YoneticiAd,YoneticiSoyad,YoneticiTc,YoneticiEmail,YoneticiSifre from Admin",sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("Select YoneticiAdSoyad,YoneticiTc,YoneticiEmail,YoneticiSifre from Admin",sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);    
             dataGridView1.DataSource= dt;
@@ -31,10 +31,10 @@ namespace Yurt.Müdür
         {
             int secilen = dataGridView1.SelectedCells[0].RowIndex;
             txtAd.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
-            txtSoyad.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
-            mskTc.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
-            txtEmail.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
-            txtSifre.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
+            
+            mskTc.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
+            txtEmail.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
+            txtSifre.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
             SqlCommand komut = new SqlCommand("Select Yoneticiid from Admin where YoneticiTc=@p1",sql.Baglan());
             komut.Parameters.AddWithValue("@p1",mskTc.Text);
             SqlDataReader dr= komut.ExecuteReader();

@@ -61,11 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmDisiplin.cs">
+    <Compile Include="Gelir\FrmYurtUcreti.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDisiplin.Designer.cs">
-      <DependentUpon>FrmDisiplin.cs</DependentUpon>
+    <Compile Include="Gelir\FrmYurtUcreti.Designer.cs">
+      <DependentUpon>FrmYurtUcreti.cs</DependentUpon>
     </Compile>
     <Compile Include="Memur\MainForm.cs">
       <SubType>Form</SubType>
@@ -126,6 +126,12 @@
     </Compile>
     <Compile Include="Personel\FrmPersonelIzinVer.Designer.cs">
       <DependentUpon>FrmPersonelIzinVer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gider\FrmMaasİslemleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gider\FrmMaasİslemleri.Designer.cs">
+      <DependentUpon>FrmMaasİslemleri.cs</DependentUpon>
     </Compile>
     <Compile Include="Profil\FrmProfilDuzenleAdmin.cs">
       <SubType>Form</SubType>
@@ -235,23 +241,23 @@
     <Compile Include="Ogrenci\FrmOgrenciSil.Designer.cs">
       <DependentUpon>FrmOgrenciSil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personel\FrmYemekhaneGorevli.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Personel\FrmYemekhaneGorevli.Designer.cs">
-      <DependentUpon>FrmYemekhaneGorevli.cs</DependentUpon>
-    </Compile>
     <Compile Include="Personel\FrmPersonelSifreİslemleri.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Personel\FrmPersonelSifreİslemleri.Designer.cs">
       <DependentUpon>FrmPersonelSifreİslemleri.cs</DependentUpon>
     </Compile>
-    <Compile Include="Sikayetler\FrmSikayet.cs">
+    <Compile Include="Sikayetler\FrmMemurSikayet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sikayetler\FrmSikayet.Designer.cs">
-      <DependentUpon>FrmSikayet.cs</DependentUpon>
+    <Compile Include="Sikayetler\FrmMemurSikayet.Designer.cs">
+      <DependentUpon>FrmMemurSikayet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sikayetler\FrmMudurSikayet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sikayetler\FrmMudurSikayet.Designer.cs">
+      <DependentUpon>FrmMudurSikayet.cs</DependentUpon>
     </Compile>
     <Compile Include="YoneticiIslemleri\FrmPersonelDuzenle.cs">
       <SubType>Form</SubType>
@@ -299,8 +305,8 @@
     <Compile Include="YoneticiIslemleri\FrmYoneticiSifreGuncelle.Designer.cs">
       <DependentUpon>FrmYoneticiSifreGuncelle.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FrmDisiplin.resx">
-      <DependentUpon>FrmDisiplin.cs</DependentUpon>
+    <EmbeddedResource Include="Gelir\FrmYurtUcreti.resx">
+      <DependentUpon>FrmYurtUcreti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Memur\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -332,8 +338,8 @@
     <EmbeddedResource Include="Personel\FrmPersonelIzinVer.resx">
       <DependentUpon>FrmPersonelIzinVer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personel\FrmYemekhaneGorevli.resx">
-      <DependentUpon>FrmYemekhaneGorevli.cs</DependentUpon>
+    <EmbeddedResource Include="Gider\FrmMaasİslemleri.resx">
+      <DependentUpon>FrmMaasİslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Profil\FrmProfilDuzenleAdmin.resx">
       <DependentUpon>FrmProfilDuzenleAdmin.cs</DependentUpon>
@@ -393,8 +399,11 @@
       <DependentUpon>FrmPersonelSifreİslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Sikayetler\FrmSikayet.resx">
-      <DependentUpon>FrmSikayet.cs</DependentUpon>
+    <EmbeddedResource Include="Sikayetler\FrmMemurSikayet.resx">
+      <DependentUpon>FrmMemurSikayet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sikayetler\FrmMudurSikayet.resx">
+      <DependentUpon>FrmMudurSikayet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="YoneticiIslemleri\FrmPersonelDuzenle.resx">
       <DependentUpon>FrmPersonelDuzenle.cs</DependentUpon>

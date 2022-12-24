@@ -12,9 +12,9 @@ using Yurt.Müdür;
 
 namespace Yurt.Sikayetler
 {
-    public partial class FrmSikayet : Form
+    public partial class FrmMudurSikayet : Form
     {
-        public FrmSikayet()
+        public FrmMudurSikayet()
         {
             InitializeComponent();
         }
@@ -25,16 +25,25 @@ namespace Yurt.Sikayetler
         {
             //sistem tarihi alma
             DateTime date= DateTime.Now;
-            rbMudur.Visible= false;
-            rbMemur.Visible= false;
+         
             tarih=date.ToLongDateString()+date.ToLongTimeString();
+
+            //Adı otomatikmolarak getirme
+            SqlCommand komut = new SqlCommand("Select mudurAdSoyad from Mudur where mudurTc=@pp1", sql.Baglan());
+            komut.Parameters.AddWithValue("@pp1", FrmMudurGiris.tcGiris);
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                txtKimden.Text = dr[0].ToString();
+            }
+            sql.Baglan().Close();
+
             //datagridview doldurma
-            SqlDataAdapter da = new SqlDataAdapter("Select * From Sikayetler ",sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Sikayetler Where SikayetEden='" + txtKimden.Text + "' or Kime='" + txtKimden.Text + "'", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
-            dataGridView1.DataSource= dt;
-            
-            
+            dataGridView1.DataSource = dt;
+
 
             //combobox doldurma
             SqlCommand komut2 = new SqlCommand("Select YoneticiAdSoyad from Admin ", sql.Baglan());
@@ -45,21 +54,13 @@ namespace Yurt.Sikayetler
             }
             sql.Baglan();
 
-            //Adı otomatikmolarak getirme
-            SqlCommand komut = new SqlCommand("Select mudurAdSoyad from Mudur where mudurTc=@pp1",sql.Baglan());
-            komut.Parameters.AddWithValue("@pp1",FrmMudurGiris.tcGiris);
-            SqlDataReader dr = komut.ExecuteReader();
-            while (dr.Read())
-            {
-                txtKimden.Text = dr[0].ToString() ;
-            }
-            sql.Baglan().Close();
+          
            
           
         }
         public void Goster()
         {
-            SqlDataAdapter da = new SqlDataAdapter("Select * From Sikayetler ", sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Sikayetler  where SikayetEden='"+txtKimden.Text+"' or Kime='"+txtKimden.Text+"'", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -103,15 +104,27 @@ namespace Yurt.Sikayetler
         {
             int secilen = dataGridView1.SelectedCells[0].RowIndex;
             lblid.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
-            txtKimden.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
+           
             cmbKime.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
              rchMetin.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
-            cbOkundu.Checked = false;
-            cbHepsiOkundu.Checked=false;
-           
            
 
-            
+            if (cmbKime.Text == txtKimden.Text)
+            {
+                btnSil.Enabled = false;
+                btnGuncelle.Enabled = false;
+                btnEkle.Enabled = false;
+            }
+            else
+            {
+
+                btnSil.Enabled = true;
+                btnGuncelle.Enabled = true;
+                btnEkle.Enabled = true;
+            }
+
+
+
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -166,7 +179,7 @@ namespace Yurt.Sikayetler
 
         private void rbOkunanlar_CheckedChanged(object sender, EventArgs e)
         {
-            SqlDataAdapter da = new SqlDataAdapter("Select * From Sikayetler Where Okundu= 1", sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Sikayetler Where Okundu= 1 and Kime='"+txtKimden.Text+"'", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -174,7 +187,7 @@ namespace Yurt.Sikayetler
 
         private void rbOkunmayanlar_CheckedChanged(object sender, EventArgs e)
         {
-            SqlDataAdapter da = new SqlDataAdapter("Select * From Sikayetler Where Okundu= 0", sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("Select * From Sikayetler Where Okundu= 0 and Kime='"+txtKimden.Text+"'", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -184,18 +197,20 @@ namespace Yurt.Sikayetler
         {
             if(cbOkundu.Checked)
             {
-                SqlCommand komut= new SqlCommand("Update Sikayetler set Okundu=1 where Sikayetid=@p1",sql.Baglan());
-                komut.Parameters.AddWithValue("@p1",lblid.Text);
+                SqlCommand komut = new SqlCommand("Update Sikayetler set Okundu=1 where Sikayetid=@p1 and Kime=@p2", sql.Baglan());
+                komut.Parameters.AddWithValue("@p1", lblid.Text);
+                komut.Parameters.AddWithValue("@p2", txtKimden.Text);
                 komut.ExecuteNonQuery();
                 Goster();
                 sql.Baglan().Close();
-              
+
 
             }
             else
             {
-                SqlCommand komut = new SqlCommand("Update Sikayetler set Okundu=0 where Sikayetid=@p1", sql.Baglan());
+                SqlCommand komut = new SqlCommand("Update Sikayetler set Okundu=0 where Sikayetid=@p1 and Kime=@p2", sql.Baglan());
                 komut.Parameters.AddWithValue("@p1", lblid.Text);
+                komut.Parameters.AddWithValue("@p2", txtKimden.Text);
                 komut.ExecuteNonQuery();
                 Goster();
                 sql.Baglan().Close();
@@ -208,23 +223,34 @@ namespace Yurt.Sikayetler
         {
             if(cbHepsiOkundu.Checked)
             {
-                SqlCommand komut = new SqlCommand("Update Sikayetler set Okundu=1 where SikayetEden=@p1 ",sql.Baglan());
+                SqlCommand komut = new SqlCommand("Update Sikayetler set Okundu=1 where SikayetEden=@p1 or Kime=@p2 ",sql.Baglan());
                 komut.Parameters.AddWithValue("@p1",txtKimden.Text);
+                komut.Parameters.AddWithValue("@p2",txtKimden.Text);
                 komut.ExecuteNonQuery();
                 Goster();
                 sql.Baglan().Close();
            
             }
-            else
-            {
-                SqlCommand komut = new SqlCommand("Update Sikayetler set Okundu=0 where SikayetEden=@p1 ", sql.Baglan());
-                komut.Parameters.AddWithValue("@p1", txtKimden.Text);
-                komut.ExecuteNonQuery();
-                Goster();
-                sql.Baglan().Close();
+          
 
-            }
             
+        }
+
+        private void FrmMudurSikayet_Click(object sender, EventArgs e)
+        {
+            Goster();
+      
+            cmbKime.Text = "";
+            rchMetin.Clear();
+            btnGuncelle.Enabled = true;
+            btnSil.Enabled = true;
+
+
+        }
+
+        private void rbHepsi_CheckedChanged(object sender, EventArgs e)
+        {
+            Goster();
         }
     }
 }

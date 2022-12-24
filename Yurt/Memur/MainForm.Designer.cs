@@ -68,17 +68,18 @@
             this.giderEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giderGüncelleSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giderListesiGösterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yöneticiİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yöneticiŞifreGüncellemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.mainpanel = new System.Windows.Forms.Panel();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.sidePanel1 = new DevExpress.XtraEditors.SidePanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnSikayetGoruntule = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbMain)).BeginInit();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.sidePanel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -195,7 +196,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(240, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1684, 30);
+            this.panel2.Size = new System.Drawing.Size(1411, 30);
             this.panel2.TabIndex = 1;
             // 
             // menuStrip1
@@ -206,11 +207,10 @@
             this.öğrenciİşlemleriToolStripMenuItem,
             this.personelİşlemleriToolStripMenuItem,
             this.gelirİşlemleriToolStripMenuItem,
-            this.giderİşlemleriToolStripMenuItem,
-            this.yöneticiİşlemleriToolStripMenuItem});
+            this.giderİşlemleriToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1684, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1411, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -426,21 +426,6 @@
             this.giderListesiGösterToolStripMenuItem.Text = "Gider Listesi Göster";
             this.giderListesiGösterToolStripMenuItem.Click += new System.EventHandler(this.giderListesiGösterToolStripMenuItem_Click);
             // 
-            // yöneticiİşlemleriToolStripMenuItem
-            // 
-            this.yöneticiİşlemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.yöneticiŞifreGüncellemeToolStripMenuItem});
-            this.yöneticiİşlemleriToolStripMenuItem.Name = "yöneticiİşlemleriToolStripMenuItem";
-            this.yöneticiİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
-            this.yöneticiİşlemleriToolStripMenuItem.Text = "Yönetici İşlemleri";
-            // 
-            // yöneticiŞifreGüncellemeToolStripMenuItem
-            // 
-            this.yöneticiŞifreGüncellemeToolStripMenuItem.Name = "yöneticiŞifreGüncellemeToolStripMenuItem";
-            this.yöneticiŞifreGüncellemeToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
-            this.yöneticiŞifreGüncellemeToolStripMenuItem.Text = "Yönetici Şifre Güncelleme";
-            this.yöneticiŞifreGüncellemeToolStripMenuItem.Click += new System.EventHandler(this.yöneticiŞifreGüncellemeToolStripMenuItem_Click);
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -451,7 +436,7 @@
             this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainpanel.Location = new System.Drawing.Point(240, 76);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(1684, 944);
+            this.mainpanel.Size = new System.Drawing.Size(1411, 944);
             this.mainpanel.TabIndex = 3;
             // 
             // lblBaslik
@@ -472,15 +457,37 @@
             this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.sidePanel1.Location = new System.Drawing.Point(240, 30);
             this.sidePanel1.Name = "sidePanel1";
-            this.sidePanel1.Size = new System.Drawing.Size(1684, 46);
+            this.sidePanel1.Size = new System.Drawing.Size(1411, 46);
             this.sidePanel1.TabIndex = 2;
             this.sidePanel1.Text = "sidePanel1";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.btnSikayetGoruntule);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(1557, 76);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(94, 944);
+            this.panel3.TabIndex = 4;
+            // 
+            // btnSikayetGoruntule
+            // 
+            this.btnSikayetGoruntule.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSikayetGoruntule.Image = ((System.Drawing.Image)(resources.GetObject("btnSikayetGoruntule.Image")));
+            this.btnSikayetGoruntule.Location = new System.Drawing.Point(10, 847);
+            this.btnSikayetGoruntule.Name = "btnSikayetGoruntule";
+            this.btnSikayetGoruntule.Size = new System.Drawing.Size(72, 72);
+            this.btnSikayetGoruntule.TabIndex = 1;
+            this.btnSikayetGoruntule.UseVisualStyleBackColor = false;
+            this.btnSikayetGoruntule.Click += new System.EventHandler(this.btnSikayetGoruntule_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1020);
+            this.ClientSize = new System.Drawing.Size(1651, 1020);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.sidePanel1);
             this.Controls.Add(this.panel2);
@@ -502,6 +509,7 @@
             this.menuStrip1.PerformLayout();
             this.sidePanel1.ResumeLayout(false);
             this.sidePanel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -524,7 +532,6 @@
         private System.Windows.Forms.ToolStripMenuItem izinleriGösterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem izinDüzenleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ödemeAlToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem personelİşlemleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personelEkleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personelGüncelleSilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personelListesiGösterToolStripMenuItem;
@@ -532,13 +539,9 @@
         private System.Windows.Forms.ToolStripMenuItem izinVerToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem izinGösterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personelŞifreİşlemleriToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem giderİşlemleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem giderEkleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem giderGüncelleSilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem giderListesiGösterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem yöneticiİşlemleriToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem yöneticiŞifreGüncellemeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gelirİşlemleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gelirEkleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gelirDüzenleSilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gelirListesiGösterToolStripMenuItem;
@@ -552,5 +555,10 @@
         private System.Windows.Forms.ToolStripMenuItem izinDüzenleSilToolStripMenuItem;
         private System.Windows.Forms.Label lblSayi;
         private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.ToolStripMenuItem personelİşlemleriToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem giderİşlemleriToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem gelirİşlemleriToolStripMenuItem;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnSikayetGoruntule;
     }
 }

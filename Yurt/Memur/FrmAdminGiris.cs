@@ -49,7 +49,7 @@ namespace Yurt
             AnaGiris a = new AnaGiris();
             a.Show();
         }
-
+        public static string tc_memur;
         private void btnGirisYap_Click_1(object sender, EventArgs e)
         {
             SqlCommand komut = new SqlCommand("Select * From Admin Where YoneticiTc=@p1 and YoneticiSifre =@p2", sql.Baglan());
@@ -65,6 +65,7 @@ namespace Yurt
                 frm.lblTc.Text = dr[3].ToString();
                 //frm.ad = dr[1].ToString();
                 frm.Show();
+                tc_memur = TxtKullaniciAd.Text;
                 //FrmAdmin a = new FrmAdmin();
                 //a.Show();
                 this.Hide();

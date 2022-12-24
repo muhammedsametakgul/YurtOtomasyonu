@@ -42,8 +42,8 @@ namespace Yurt
                 komut.Parameters.AddWithValue("@p1", MskTc.Text);
                 komut.Parameters.AddWithValue("@p2", TxtAd.Text);
                 komut.Parameters.AddWithValue("@p3", TxtSebep.Text);
-                komut.Parameters.AddWithValue("@p4", DateBas.Text);
-                komut.Parameters.AddWithValue("@p5", DateBit.Text);
+                komut.Parameters.AddWithValue("@p4", DateBas.Value.Date);
+                komut.Parameters.AddWithValue("@p5", DateBit.Value.Date);
                 komut.Parameters.AddWithValue("@p6", MskOgrenciTel.Text);
                 komut.Parameters.AddWithValue("@p7", MskVeliTel.Text);
                 komut.ExecuteNonQuery();

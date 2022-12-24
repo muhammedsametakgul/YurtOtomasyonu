@@ -1,6 +1,6 @@
 ﻿namespace Yurt.Sikayetler
 {
-    partial class FrmSikayet
+    partial class FrmMudurSikayet
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rbMudur = new System.Windows.Forms.RadioButton();
-            this.rbMemur = new System.Windows.Forms.RadioButton();
             this.cmbKime = new System.Windows.Forms.ComboBox();
             this.rchMetin = new System.Windows.Forms.RichTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -47,44 +45,22 @@
             this.lblid = new System.Windows.Forms.Label();
             this.cbOkundu = new System.Windows.Forms.CheckBox();
             this.cbHepsiOkundu = new System.Windows.Forms.CheckBox();
+            this.rbHepsi = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // rbMudur
-            // 
-            this.rbMudur.AutoSize = true;
-            this.rbMudur.Location = new System.Drawing.Point(219, 86);
-            this.rbMudur.Name = "rbMudur";
-            this.rbMudur.Size = new System.Drawing.Size(65, 20);
-            this.rbMudur.TabIndex = 0;
-            this.rbMudur.TabStop = true;
-            this.rbMudur.Text = "Müdür";
-            this.rbMudur.UseVisualStyleBackColor = true;
-            this.rbMudur.CheckedChanged += new System.EventHandler(this.rbMudur_CheckedChanged);
-            // 
-            // rbMemur
-            // 
-            this.rbMemur.AutoSize = true;
-            this.rbMemur.Location = new System.Drawing.Point(331, 86);
-            this.rbMemur.Name = "rbMemur";
-            this.rbMemur.Size = new System.Drawing.Size(69, 20);
-            this.rbMemur.TabIndex = 1;
-            this.rbMemur.TabStop = true;
-            this.rbMemur.Text = "Memur";
-            this.rbMemur.UseVisualStyleBackColor = true;
-            this.rbMemur.CheckedChanged += new System.EventHandler(this.rbMemur_CheckedChanged);
             // 
             // cmbKime
             // 
             this.cmbKime.FormattingEnabled = true;
-            this.cmbKime.Location = new System.Drawing.Point(188, 131);
+            this.cmbKime.Location = new System.Drawing.Point(138, 131);
             this.cmbKime.Name = "cmbKime";
             this.cmbKime.Size = new System.Drawing.Size(266, 24);
             this.cmbKime.TabIndex = 2;
             // 
             // rchMetin
             // 
-            this.rchMetin.Location = new System.Drawing.Point(156, 216);
+            this.rchMetin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rchMetin.Location = new System.Drawing.Point(138, 213);
             this.rchMetin.Name = "rchMetin";
             this.rchMetin.Size = new System.Drawing.Size(368, 325);
             this.rchMetin.TabIndex = 3;
@@ -97,18 +73,18 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(543, 83);
+            this.dataGridView1.Location = new System.Drawing.Point(526, 80);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 20;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1013, 458);
+            this.dataGridView1.Size = new System.Drawing.Size(1039, 458);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // txtKimden
             // 
             this.txtKimden.Enabled = false;
-            this.txtKimden.Location = new System.Drawing.Point(188, 38);
+            this.txtKimden.Location = new System.Drawing.Point(138, 38);
             this.txtKimden.Name = "txtKimden";
             this.txtKimden.Size = new System.Drawing.Size(266, 22);
             this.txtKimden.TabIndex = 5;
@@ -176,7 +152,7 @@
             // rbGelen
             // 
             this.rbGelen.AutoSize = true;
-            this.rbGelen.Location = new System.Drawing.Point(794, 571);
+            this.rbGelen.Location = new System.Drawing.Point(908, 575);
             this.rbGelen.Name = "rbGelen";
             this.rbGelen.Size = new System.Drawing.Size(64, 20);
             this.rbGelen.TabIndex = 13;
@@ -188,7 +164,7 @@
             // rbGonderilen
             // 
             this.rbGonderilen.AutoSize = true;
-            this.rbGonderilen.Location = new System.Drawing.Point(604, 571);
+            this.rbGonderilen.Location = new System.Drawing.Point(731, 575);
             this.rbGonderilen.Name = "rbGonderilen";
             this.rbGonderilen.Size = new System.Drawing.Size(94, 20);
             this.rbGonderilen.TabIndex = 12;
@@ -200,7 +176,7 @@
             // rbOkunmayanlar
             // 
             this.rbOkunmayanlar.AutoSize = true;
-            this.rbOkunmayanlar.Location = new System.Drawing.Point(1104, 571);
+            this.rbOkunmayanlar.Location = new System.Drawing.Point(1212, 575);
             this.rbOkunmayanlar.Name = "rbOkunmayanlar";
             this.rbOkunmayanlar.Size = new System.Drawing.Size(115, 20);
             this.rbOkunmayanlar.TabIndex = 15;
@@ -212,7 +188,7 @@
             // rbOkunanlar
             // 
             this.rbOkunanlar.AutoSize = true;
-            this.rbOkunanlar.Location = new System.Drawing.Point(981, 571);
+            this.rbOkunanlar.Location = new System.Drawing.Point(1055, 575);
             this.rbOkunanlar.Name = "rbOkunanlar";
             this.rbOkunanlar.Size = new System.Drawing.Size(74, 20);
             this.rbOkunanlar.TabIndex = 14;
@@ -252,12 +228,25 @@
             this.cbHepsiOkundu.UseVisualStyleBackColor = true;
             this.cbHepsiOkundu.CheckedChanged += new System.EventHandler(this.cbHepsiOkundu_CheckedChanged);
             // 
-            // FrmSikayet
+            // rbHepsi
+            // 
+            this.rbHepsi.AutoSize = true;
+            this.rbHepsi.Location = new System.Drawing.Point(584, 579);
+            this.rbHepsi.Name = "rbHepsi";
+            this.rbHepsi.Size = new System.Drawing.Size(64, 20);
+            this.rbHepsi.TabIndex = 19;
+            this.rbHepsi.TabStop = true;
+            this.rbHepsi.Text = "Hepsi";
+            this.rbHepsi.UseVisualStyleBackColor = true;
+            this.rbHepsi.CheckedChanged += new System.EventHandler(this.rbHepsi_CheckedChanged);
+            // 
+            // FrmMudurSikayet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1568, 630);
+            this.ClientSize = new System.Drawing.Size(1623, 769);
+            this.Controls.Add(this.rbHepsi);
             this.Controls.Add(this.cbHepsiOkundu);
             this.Controls.Add(this.cbOkundu);
             this.Controls.Add(this.lblid);
@@ -275,12 +264,11 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.rchMetin);
             this.Controls.Add(this.cmbKime);
-            this.Controls.Add(this.rbMemur);
-            this.Controls.Add(this.rbMudur);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmSikayet";
+            this.Name = "FrmMudurSikayet";
             this.Text = "FrmSikayet";
             this.Load += new System.EventHandler(this.FrmSikayet_Load);
+            this.Click += new System.EventHandler(this.FrmMudurSikayet_Click);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -288,9 +276,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.RadioButton rbMudur;
-        private System.Windows.Forms.RadioButton rbMemur;
         private System.Windows.Forms.ComboBox cmbKime;
         private System.Windows.Forms.RichTextBox rchMetin;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -308,5 +293,6 @@
         private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.CheckBox cbOkundu;
         private System.Windows.Forms.CheckBox cbHepsiOkundu;
+        private System.Windows.Forms.RadioButton rbHepsi;
     }
 }

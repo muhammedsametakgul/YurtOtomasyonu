@@ -29,6 +29,15 @@ namespace Yurt
                 CmbOda.Items.Add(dr2[0].ToString());
             }
 
+            //Yurt Ucreti  Çekme
+            string ucret;
+            SqlCommand komutCekme = new SqlCommand("Select YurtUcreti From YurtUcreti where Aktifmi=1 ",sql.Baglan());
+            SqlDataReader dr = komutCekme.ExecuteReader();
+            if (dr.Read())
+            {
+                txtYurtUcreti.Text = dr[0].ToString();
+            }
+
         }
 
       
@@ -79,6 +88,7 @@ namespace Yurt
                     komut.Parameters.AddWithValue("@p11", cmbYakin.Text);
                     komut.Parameters.AddWithValue("@p12", txtIl.Text.ToUpper());
                     komut.Parameters.AddWithValue("@p13", txtDogum.Text.ToUpper());
+
                     komut.ExecuteNonQuery();
 
 
@@ -88,13 +98,16 @@ namespace Yurt
                     komut2.ExecuteNonQuery();
                     MessageBox.Show("Öğrenci Eklendi");
 
-                    SqlCommand komut3 = new SqlCommand("insert into Borclar1 (OgrenciTc,OgrenciAd,OgrenciMail,OgrenciTel) " +
-                        "values (@b1,@b2,@b3,@b4)", sql.Baglan());
+                 
+
+                    SqlCommand komut3 = new SqlCommand("insert into Borclar1 (OgrenciTc,OgrenciAd,OgrenciMail,OgrenciTel,OgrenciKalanBorc) " +
+                        "values (@b1,@b2,@b3,@b4,@b5)", sql.Baglan());
                     komut3.Parameters.AddWithValue("@b1", MskTc.Text);
                     komut3.Parameters.AddWithValue("@b2", TxtAd.Text);
 
                     komut3.Parameters.AddWithValue("b3", TxtMail.Text);
                     komut3.Parameters.AddWithValue("@b4", MskTel.Text);
+                    komut3.Parameters.AddWithValue("b5",txtYurtUcreti.Text);
                     komut3.ExecuteNonQuery();
 
 

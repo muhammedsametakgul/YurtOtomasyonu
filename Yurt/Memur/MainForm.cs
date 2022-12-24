@@ -268,6 +268,11 @@ namespace Yurt.Admin
         {
 
         }
+
+        private void btnSikayetGoruntule_Click(object sender, EventArgs e)
+        {
+            loadform(new Sikayetler.FrmMemurSikayet());
+        }
     }
     
 }

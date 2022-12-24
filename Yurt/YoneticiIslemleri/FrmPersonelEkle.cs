@@ -35,7 +35,7 @@ namespace Yurt.YoneticiIslemleri
             d = MessageBox.Show("Eklemek istediğinize emin misiniz?","Uyarı",MessageBoxButtons.YesNo);
             if(d == DialogResult.Yes)
             {
-                SqlCommand komut = new SqlCommand("insert into Personel (PersonelTc,PersonelAdSoyad,PersonelDepartman,PersonelTelefon,PersonelMail,PersonelAdres,PersonelDogumTarihi) values(@p1,@p2,@p3,@p4,@p5,@p6,@p7)", sql.Baglan());
+                SqlCommand komut = new SqlCommand("insert into Personel (PersonelTc,PersonelAdSoyad,PersonelDepartman,PersonelTelefon,PersonelMail,PersonelAdres,PersonelDogumTarihi,PersonelMaas) values(@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8)", sql.Baglan());
                 komut.Parameters.AddWithValue("@p1", MskTc.Text);
                 komut.Parameters.AddWithValue("@p2", TxtAd.Text.ToUpper());
                 komut.Parameters.AddWithValue("@p3", CmbDep.Text);
@@ -43,6 +43,7 @@ namespace Yurt.YoneticiIslemleri
                 komut.Parameters.AddWithValue("@p5", txtMail.Text);
                 komut.Parameters.AddWithValue("@p6", TxtAdres.Text);
                 komut.Parameters.AddWithValue("@p7", mskDogum.Text);
+                komut.Parameters.AddWithValue("@p8",mskMaas.Text);
                 komut.ExecuteNonQuery();
                 MessageBox.Show("Başarıyla eklendi");
                 sql.Baglan().Close();

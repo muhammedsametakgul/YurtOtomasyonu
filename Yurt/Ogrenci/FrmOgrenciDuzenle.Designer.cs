@@ -111,6 +111,7 @@
             this.label10.Size = new System.Drawing.Size(14, 16);
             this.label10.TabIndex = 41;
             this.label10.Text = "1";
+            this.label10.Visible = false;
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // groupBox3
