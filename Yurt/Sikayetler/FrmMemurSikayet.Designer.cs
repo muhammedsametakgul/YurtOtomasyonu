@@ -225,6 +225,7 @@
             // 
             // cmbKime
             // 
+            this.cmbKime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKime.FormattingEnabled = true;
             this.cmbKime.Location = new System.Drawing.Point(199, 148);
             this.cmbKime.Name = "cmbKime";

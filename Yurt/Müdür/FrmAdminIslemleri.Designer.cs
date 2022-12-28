@@ -125,7 +125,7 @@
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(320, 353);
+            this.btnEkle.Location = new System.Drawing.Point(297, 355);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(165, 30);
             this.btnEkle.TabIndex = 10;

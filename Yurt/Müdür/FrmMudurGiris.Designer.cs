@@ -122,7 +122,6 @@
             this.TxtSifre.Name = "TxtSifre";
             this.TxtSifre.Size = new System.Drawing.Size(453, 41);
             this.TxtSifre.TabIndex = 26;
-            this.TxtSifre.Text = "admin123";
             this.TxtSifre.UseSystemPasswordChar = true;
             // 
             // pictureBox1
@@ -144,7 +143,6 @@
             this.mskTc.Name = "mskTc";
             this.mskTc.Size = new System.Drawing.Size(453, 41);
             this.mskTc.TabIndex = 34;
-            this.mskTc.Text = "41526327896";
             this.mskTc.ValidatingType = typeof(int);
             // 
             // linkLabel1

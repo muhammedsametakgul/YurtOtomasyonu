@@ -10,7 +10,7 @@ namespace Yurt
     internal class Sql
     {
         public SqlConnection Baglan() {
-            SqlConnection sqlConnection = new SqlConnection("Data Source=DESKTOP-8PJ34AJ;Initial Catalog=YurtOtomasyonu;Integrated Security=True");
+            SqlConnection sqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + AppDomain.CurrentDomain.BaseDirectory + "YurtOtomasyonu.mdf;Integrated Security=True");
             sqlConnection.Open();
             return sqlConnection;
         

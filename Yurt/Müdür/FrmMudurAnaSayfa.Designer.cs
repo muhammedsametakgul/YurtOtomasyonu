@@ -333,7 +333,7 @@
             this.personelGüncelleSilToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("personelGüncelleSilToolStripMenuItem.Image")));
             this.personelGüncelleSilToolStripMenuItem.Name = "personelGüncelleSilToolStripMenuItem";
             this.personelGüncelleSilToolStripMenuItem.Size = new System.Drawing.Size(262, 28);
-            this.personelGüncelleSilToolStripMenuItem.Text = "Personel Güncelle/Sil";
+            this.personelGüncelleSilToolStripMenuItem.Text = "Personel Düzenle";
             this.personelGüncelleSilToolStripMenuItem.Click += new System.EventHandler(this.personelGüncelleSilToolStripMenuItem_Click);
             // 
             // personelListesiGösterToolStripMenuItem
@@ -389,7 +389,7 @@
             this.yöneticiListesiToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("yöneticiListesiToolStripMenuItem.Image")));
             this.yöneticiListesiToolStripMenuItem.Name = "yöneticiListesiToolStripMenuItem";
             this.yöneticiListesiToolStripMenuItem.Size = new System.Drawing.Size(281, 28);
-            this.yöneticiListesiToolStripMenuItem.Text = "Memur Listesi ";
+            this.yöneticiListesiToolStripMenuItem.Text = "Memur Listesi Göster";
             this.yöneticiListesiToolStripMenuItem.Click += new System.EventHandler(this.yöneticiListesiToolStripMenuItem_Click);
             // 
             // yöneticiŞifreGüncellemeToolStripMenuItem
@@ -555,7 +555,7 @@
             this.izinVerToolStripMenuItem3.BackColor = System.Drawing.Color.White;
             this.izinVerToolStripMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("izinVerToolStripMenuItem3.Image")));
             this.izinVerToolStripMenuItem3.Name = "izinVerToolStripMenuItem3";
-            this.izinVerToolStripMenuItem3.Size = new System.Drawing.Size(196, 28);
+            this.izinVerToolStripMenuItem3.Size = new System.Drawing.Size(245, 28);
             this.izinVerToolStripMenuItem3.Text = "İzin Ver";
             this.izinVerToolStripMenuItem3.Click += new System.EventHandler(this.izinVerToolStripMenuItem3_Click);
             // 
@@ -564,7 +564,7 @@
             this.izinDüzenleToolStripMenuItem1.BackColor = System.Drawing.Color.White;
             this.izinDüzenleToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("izinDüzenleToolStripMenuItem1.Image")));
             this.izinDüzenleToolStripMenuItem1.Name = "izinDüzenleToolStripMenuItem1";
-            this.izinDüzenleToolStripMenuItem1.Size = new System.Drawing.Size(196, 28);
+            this.izinDüzenleToolStripMenuItem1.Size = new System.Drawing.Size(245, 28);
             this.izinDüzenleToolStripMenuItem1.Text = "İzin Düzenle";
             this.izinDüzenleToolStripMenuItem1.Click += new System.EventHandler(this.izinDüzenleToolStripMenuItem1_Click);
             // 
@@ -573,8 +573,8 @@
             this.izinListeleToolStripMenuItem.BackColor = System.Drawing.Color.White;
             this.izinListeleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("izinListeleToolStripMenuItem.Image")));
             this.izinListeleToolStripMenuItem.Name = "izinListeleToolStripMenuItem";
-            this.izinListeleToolStripMenuItem.Size = new System.Drawing.Size(196, 28);
-            this.izinListeleToolStripMenuItem.Text = "İzinleri Listele";
+            this.izinListeleToolStripMenuItem.Size = new System.Drawing.Size(245, 28);
+            this.izinListeleToolStripMenuItem.Text = "İzinler Listesi Göster";
             this.izinListeleToolStripMenuItem.Click += new System.EventHandler(this.izinListeleToolStripMenuItem_Click);
             // 
             // memurPersonelİzinİşlemleriToolStripMenuItem
@@ -595,7 +595,7 @@
             this.izinVerToolStripMenuItem4.BackColor = System.Drawing.Color.White;
             this.izinVerToolStripMenuItem4.Image = ((System.Drawing.Image)(resources.GetObject("izinVerToolStripMenuItem4.Image")));
             this.izinVerToolStripMenuItem4.Name = "izinVerToolStripMenuItem4";
-            this.izinVerToolStripMenuItem4.Size = new System.Drawing.Size(196, 28);
+            this.izinVerToolStripMenuItem4.Size = new System.Drawing.Size(245, 28);
             this.izinVerToolStripMenuItem4.Text = "İzin Ver";
             this.izinVerToolStripMenuItem4.Click += new System.EventHandler(this.izinVerToolStripMenuItem4_Click);
             // 
@@ -604,7 +604,7 @@
             this.izinDüzenleToolStripMenuItem2.BackColor = System.Drawing.Color.White;
             this.izinDüzenleToolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("izinDüzenleToolStripMenuItem2.Image")));
             this.izinDüzenleToolStripMenuItem2.Name = "izinDüzenleToolStripMenuItem2";
-            this.izinDüzenleToolStripMenuItem2.Size = new System.Drawing.Size(196, 28);
+            this.izinDüzenleToolStripMenuItem2.Size = new System.Drawing.Size(245, 28);
             this.izinDüzenleToolStripMenuItem2.Text = "İzin Düzenle";
             this.izinDüzenleToolStripMenuItem2.Click += new System.EventHandler(this.izinDüzenleToolStripMenuItem2_Click);
             // 
@@ -613,8 +613,8 @@
             this.izinListeleToolStripMenuItem1.BackColor = System.Drawing.Color.White;
             this.izinListeleToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("izinListeleToolStripMenuItem1.Image")));
             this.izinListeleToolStripMenuItem1.Name = "izinListeleToolStripMenuItem1";
-            this.izinListeleToolStripMenuItem1.Size = new System.Drawing.Size(196, 28);
-            this.izinListeleToolStripMenuItem1.Text = "İzinleri Listele";
+            this.izinListeleToolStripMenuItem1.Size = new System.Drawing.Size(245, 28);
+            this.izinListeleToolStripMenuItem1.Text = "İzinler Listesi Göster";
             this.izinListeleToolStripMenuItem1.Click += new System.EventHandler(this.izinListeleToolStripMenuItem1_Click);
             // 
             // popupMenu1

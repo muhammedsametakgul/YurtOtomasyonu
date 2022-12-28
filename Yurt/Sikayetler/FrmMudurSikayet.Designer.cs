@@ -51,10 +51,11 @@
             // 
             // cmbKime
             // 
+            this.cmbKime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKime.FormattingEnabled = true;
             this.cmbKime.Location = new System.Drawing.Point(138, 131);
             this.cmbKime.Name = "cmbKime";
-            this.cmbKime.Size = new System.Drawing.Size(266, 24);
+            this.cmbKime.Size = new System.Drawing.Size(368, 24);
             this.cmbKime.TabIndex = 2;
             // 
             // rchMetin
@@ -86,7 +87,7 @@
             this.txtKimden.Enabled = false;
             this.txtKimden.Location = new System.Drawing.Point(138, 38);
             this.txtKimden.Name = "txtKimden";
-            this.txtKimden.Size = new System.Drawing.Size(266, 22);
+            this.txtKimden.Size = new System.Drawing.Size(368, 22);
             this.txtKimden.TabIndex = 5;
             // 
             // label1

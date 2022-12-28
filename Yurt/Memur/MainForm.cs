@@ -77,8 +77,7 @@ namespace Yurt.Admin
 
         private void bToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new FrmOgrenciSil());
-            lblBaslik.Text = "Öğrenci Silme";
+           
         }
 
         private void cToolStripMenuItem_Click(object sender, EventArgs e)

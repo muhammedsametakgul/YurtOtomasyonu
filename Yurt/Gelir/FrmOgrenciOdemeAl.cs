@@ -109,7 +109,7 @@ namespace Yurt
                             }
                             catch (Exception ex)
                             {
-                                MessageBox.Show(ex.Message);
+                                MessageBox.Show("Lütfen İnternet Bağlantınızı Kontrol Ediniz!");
                             }
 
 

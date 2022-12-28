@@ -33,6 +33,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblOda = new System.Windows.Forms.Label();
+            this.txtAdres = new System.Windows.Forms.TextBox();
             this.cmbYasadigi = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,8 +64,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.txtArama = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtAdres = new System.Windows.Forms.TextBox();
-            this.lblOda = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -135,8 +135,27 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "İletişim Bilgileri";
             // 
+            // lblOda
+            // 
+            this.lblOda.AutoSize = true;
+            this.lblOda.Location = new System.Drawing.Point(120, 449);
+            this.lblOda.Name = "lblOda";
+            this.lblOda.Size = new System.Drawing.Size(51, 16);
+            this.lblOda.TabIndex = 44;
+            this.lblOda.Text = "label11";
+            this.lblOda.Visible = false;
+            // 
+            // txtAdres
+            // 
+            this.txtAdres.Location = new System.Drawing.Point(152, 98);
+            this.txtAdres.Multiline = true;
+            this.txtAdres.Name = "txtAdres";
+            this.txtAdres.Size = new System.Drawing.Size(395, 201);
+            this.txtAdres.TabIndex = 43;
+            // 
             // cmbYasadigi
             // 
+            this.cmbYasadigi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYasadigi.FormattingEnabled = true;
             this.cmbYasadigi.Items.AddRange(new object[] {
             "Adana",
@@ -309,6 +328,7 @@
             // 
             // cmbYakin
             // 
+            this.cmbYakin.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbYakin.FormattingEnabled = true;
             this.cmbYakin.Items.AddRange(new object[] {
             "Baba",
@@ -387,6 +407,7 @@
             // 
             // cmbDogdugu
             // 
+            this.cmbDogdugu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDogdugu.FormattingEnabled = true;
             this.cmbDogdugu.Items.AddRange(new object[] {
             "Adana",
@@ -534,6 +555,7 @@
             // 
             // CmbOda
             // 
+            this.CmbOda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmbOda.FormattingEnabled = true;
             this.CmbOda.Location = new System.Drawing.Point(198, 257);
             this.CmbOda.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -596,24 +618,6 @@
             this.label16.Size = new System.Drawing.Size(87, 16);
             this.label16.TabIndex = 46;
             this.label16.Text = "Ad İle Arama:";
-            // 
-            // txtAdres
-            // 
-            this.txtAdres.Location = new System.Drawing.Point(152, 98);
-            this.txtAdres.Multiline = true;
-            this.txtAdres.Name = "txtAdres";
-            this.txtAdres.Size = new System.Drawing.Size(395, 201);
-            this.txtAdres.TabIndex = 43;
-            // 
-            // lblOda
-            // 
-            this.lblOda.AutoSize = true;
-            this.lblOda.Location = new System.Drawing.Point(120, 449);
-            this.lblOda.Name = "lblOda";
-            this.lblOda.Size = new System.Drawing.Size(51, 16);
-            this.lblOda.TabIndex = 44;
-            this.lblOda.Text = "label11";
-            this.lblOda.Visible = false;
             // 
             // FrmOgrenciDuzenle
             // 

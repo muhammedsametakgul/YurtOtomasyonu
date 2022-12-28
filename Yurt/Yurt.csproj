@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -163,12 +178,6 @@
     <Compile Include="Gider\FrmMaasİslemleri.Designer.cs">
       <DependentUpon>FrmMaasİslemleri.cs</DependentUpon>
     </Compile>
-    <Compile Include="Profil\FrmProfilDuzenleAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Profil\FrmProfilDuzenleAdmin.Designer.cs">
-      <DependentUpon>FrmProfilDuzenleAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Gelir\FrmGelirDuzenle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,12 +226,6 @@
     <Compile Include="Izin\FrmOgrenciIzinGoster.Designer.cs">
       <DependentUpon>FrmOgrenciIzinGoster.cs</DependentUpon>
     </Compile>
-    <Compile Include="Odeme\FrmOgrenciBorcListesi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Odeme\FrmOgrenciBorcListesi.Designer.cs">
-      <DependentUpon>FrmOgrenciBorcListesi.cs</DependentUpon>
-    </Compile>
     <Compile Include="Ogrenci\FrmOgrenciDuzenle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,12 +237,6 @@
     </Compile>
     <Compile Include="Ogrenci\FrmOgrenciEkle.Designer.cs">
       <DependentUpon>FrmOgrenciEkle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Memur\FrmAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Memur\FrmAdmin.Designer.cs">
-      <DependentUpon>FrmAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Memur\FrmAdminGiris.cs">
       <SubType>Form</SubType>
@@ -258,12 +255,6 @@
     </Compile>
     <Compile Include="Gelir\FrmOgrenciOdemeAl.Designer.cs">
       <DependentUpon>FrmOgrenciOdemeAl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Ogrenci\FrmOgrenciSil.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ogrenci\FrmOgrenciSil.Designer.cs">
-      <DependentUpon>FrmOgrenciSil.cs</DependentUpon>
     </Compile>
     <Compile Include="SifremiUnuttum\FrmSifreUnuttum.cs">
       <SubType>Form</SubType>
@@ -368,9 +359,6 @@
     <EmbeddedResource Include="Gider\FrmMaasİslemleri.resx">
       <DependentUpon>FrmMaasİslemleri.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Profil\FrmProfilDuzenleAdmin.resx">
-      <DependentUpon>FrmProfilDuzenleAdmin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Gelir\FrmGelirDuzenle.resx">
       <DependentUpon>FrmGelirDuzenle.cs</DependentUpon>
     </EmbeddedResource>
@@ -395,17 +383,11 @@
     <EmbeddedResource Include="Izin\FrmOgrenciIzinGoster.resx">
       <DependentUpon>FrmOgrenciIzinGoster.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Odeme\FrmOgrenciBorcListesi.resx">
-      <DependentUpon>FrmOgrenciBorcListesi.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Ogrenci\FrmOgrenciDuzenle.resx">
       <DependentUpon>FrmOgrenciDuzenle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ogrenci\FrmOgrenciEkle.resx">
       <DependentUpon>FrmOgrenciEkle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Memur\FrmAdmin.resx">
-      <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Memur\FrmAdminGiris.resx">
       <DependentUpon>FrmAdminGiris.cs</DependentUpon>
@@ -415,9 +397,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gelir\FrmOgrenciOdemeAl.resx">
       <DependentUpon>FrmOgrenciOdemeAl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Ogrenci\FrmOgrenciSil.resx">
-      <DependentUpon>FrmOgrenciSil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="SifremiUnuttum\FrmSifreUnuttum.resx">
@@ -467,6 +446,26 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="YurtOtomasyonu.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="YurtOtomasyonu_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>YurtOtomasyonu.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
