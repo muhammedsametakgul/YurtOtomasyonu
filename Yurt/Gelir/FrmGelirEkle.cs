@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using DevExpress.Utils.DirectXPaint;
 
 
 namespace Yurt.Gelir
@@ -23,6 +24,7 @@ namespace Yurt.Gelir
         {
             txtFirma.Visible = false;
             lblFirma.Visible = false;
+            txtFirma.Text = "Bireysel";
         }
 
         private void rbFirma_CheckedChanged(object sender, EventArgs e)
@@ -39,20 +41,50 @@ namespace Yurt.Gelir
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("Insert into Gelir (Odeyen,OdeyenTelefon,OdeyenMail,OdemeTarih,OdemeMiktar,FirmaAdi) Values (@p1,@p2,@p3,@p4,@p5,@p6)",sql.Baglan() );
-            komut.Parameters.AddWithValue("@p1",txtOdeyen.Text);
-            komut.Parameters.AddWithValue("@p2",mskTel.Text);
-            komut.Parameters.AddWithValue("@p3",txtEmail.Text);
-            komut.Parameters.AddWithValue("@p4",mskTarih.Text);
-            komut.Parameters.AddWithValue("@p5",txtOdenen.Text);
-            if (rbFirma.Checked)
+      
+            try
             {
-                komut.Parameters.AddWithValue("@p6",txtFirma.Text);
+                if(txtOdeyen.Text !="" && mskTel.Text !="" && txtEmail.Text!="" && mskOdenenMiktar.Text != "")
+                {
+                    DialogResult d = new DialogResult();
+                    d = MessageBox.Show("Eklemek İstediğinize Emin Misiniz?", "Uyarı", MessageBoxButtons.YesNo);
+                    if (d == DialogResult.Yes)
+                    {
+                       
+                            SqlCommand komut = new SqlCommand("Insert into Gelir (Odeyen,OdeyenTelefon,OdeyenMail,OdemeTarih,OdemeMiktar,FirmaAdi) Values (@p1,@p2,@p3,@p4,@p5,@p6)", sql.Baglan());
+                            komut.Parameters.AddWithValue("@p1", txtOdeyen.Text);
+                            komut.Parameters.AddWithValue("@p2", mskTel.Text);
+                            komut.Parameters.AddWithValue("@p3", txtEmail.Text);
+                            komut.Parameters.AddWithValue("@p4", dtTarih.Value.Date);
+                            komut.Parameters.AddWithValue("@p5", mskOdenenMiktar.Text);
+
+
+                            komut.Parameters.AddWithValue("@p6", txtFirma.Text);
+
+                            MessageBox.Show("Başarıyla Eklendi");
+                            komut.ExecuteNonQuery();
+                            sql.Baglan().Close();
+                            txtOdeyen.Clear();
+                            mskTel.Clear();
+                            txtEmail.Clear();
+                            mskOdenenMiktar.Clear();
+                            txtFirma.Clear();
+                            txtFirma.Text = "";
+        
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen Tüm Alanları Doldurduğunuza Emin Olunuz");
+                } 
+              
             }
-            MessageBox.Show("başarıyla eklendi");
-            komut.ExecuteNonQuery();
-            sql.Baglan().Close();
-            
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bir Hata Oldu !  Lütfen Tekrar Deneyiniz");
+         
+            }
         }
 
         private void mskTarih_Click(object sender, EventArgs e)

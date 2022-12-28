@@ -32,24 +32,38 @@ namespace Yurt
         private void TxtAra_TextChanged(object sender, EventArgs e)
         {
             string ara = TxtAra.Text;
-            SqlDataAdapter da = new SqlDataAdapter("select OgrenciTc,OgrenciAdSoyad,Sebep,Baslangic,Bitis from OgrenciIzin where  OgrenciAdSoyad LIKE '%" + ara + "%' or OgrenciTc LIKE '%" + ara + "%'", sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("select OgrenciTc,OgrenciAdSoyad,Sebep,Baslangic,Bitis from OgrenciIzin where  OgrenciAdSoyad LIKE '%" + ara + "%' or OgrenciTc LIKE '%" + ara + "%'  ORDER BY Baslangic ASC", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+            dataGridView1.RowHeadersVisible = false;
+           
+            dataGridView1.Columns[0].HeaderText = "TC";
+            dataGridView1.Columns[1].HeaderText = "Ad-Soyad";
+            dataGridView1.Columns[2].HeaderText = "Sebep";
+            dataGridView1.Columns[3].HeaderText = "Başlangıç";
+            dataGridView1.Columns[4].HeaderText = "Bitiş";
+
         }
-      
+
         private void FrmOgrenciIzinGoster_Load(object sender, EventArgs e)
         {
-            SqlDataAdapter da = new SqlDataAdapter("Select OgrenciTc,OgrenciAdSoyad,Sebep,Baslangic,Bitis From OgrenciIzin", sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("Select OgrenciTc,OgrenciAdSoyad,Sebep,Baslangic,Bitis From OgrenciIzin  ORDER BY Baslangic DESC", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
-            
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Columns[0].HeaderText = "TC";
+            dataGridView1.Columns[1].HeaderText = "Ad-Soyad";
+            dataGridView1.Columns[2].HeaderText = "Sebep";
+            dataGridView1.Columns[3].HeaderText = "Başlangıç";
+            dataGridView1.Columns[4].HeaderText = "Bitiş";
 
-           
-            
-            
-        
+
+
+
+
+
         }
 
     
@@ -60,13 +74,7 @@ namespace Yurt
 
             lblTc.Text = dataGridView1.Rows[secilen].Cells["OgrenciTc"].Value.ToString();
 
-            SqlCommand komut = new SqlCommand("Select Aktifmi From OgrenciIzin Where OgrenciTc=@p1",sql.Baglan());
-            komut.Parameters.AddWithValue("@p1",lblTc.Text);
-            SqlDataReader dr = komut.ExecuteReader();
-            while(dr.Read())
-            {
-                lblAktif.Text = dr[0].ToString();
-            }
+           
         }
 
         
@@ -85,6 +93,12 @@ namespace Yurt
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Columns[0].HeaderText = "TC";
+            dataGridView1.Columns[1].HeaderText = "Ad-Soyad";
+            dataGridView1.Columns[2].HeaderText = "Sebep";
+            dataGridView1.Columns[3].HeaderText = "Başlangıç";
+            dataGridView1.Columns[4].HeaderText = "Bitiş";
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -99,20 +113,32 @@ namespace Yurt
             if(rbey.Checked)
             {
                 string ara = TxtAra.Text;
-                SqlDataAdapter da = new SqlDataAdapter("select OgrenciTc,OgrenciAdSoyad,Sebep,Baslangic,Bitis from OgrenciIzin where Aktifmi=0 and  OgrenciAdSoyad LIKE '%" + ara + "%' or OgrenciTc LIKE '%" + ara + "%' ORDER BY BİTİS ASC", sql.Baglan());
+                SqlDataAdapter da = new SqlDataAdapter("select OgrenciTc,OgrenciAdSoyad,Sebep,Baslangic,Bitis from OgrenciIzin where   OgrenciAdSoyad LIKE '%" + ara + "%' or OgrenciTc LIKE '%" + ara + "%' ORDER BY Baslangic ASC", sql.Baglan());
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
+                dataGridView1.RowHeadersVisible = false;
+                dataGridView1.Columns[0].HeaderText = "TC";
+                dataGridView1.Columns[1].HeaderText = "Ad-Soyad";
+                dataGridView1.Columns[2].HeaderText = "Sebep";
+                dataGridView1.Columns[3].HeaderText = "Başlangıç";
+                dataGridView1.Columns[4].HeaderText = "Bitiş";
             }
         }
 
         private void rbye_CheckedChanged(object sender, EventArgs e)
         {
             string ara = TxtAra.Text;
-            SqlDataAdapter da = new SqlDataAdapter("select OgrenciTc,OgrenciAdSoyad,Sebep,Baslangic,Bitis from OgrenciIzin where    OgrenciAdSoyad LIKE '%" + ara + "%' or OgrenciTc LIKE '%" + ara + "%' ORDER BY BİTİS DESC", sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("select OgrenciTc,OgrenciAdSoyad,Sebep,Baslangic,Bitis from OgrenciIzin where    OgrenciAdSoyad LIKE '%" + ara + "%' or OgrenciTc LIKE '%" + ara + "%' ORDER BY Baslangic DESC", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Columns[0].HeaderText = "TC";
+            dataGridView1.Columns[1].HeaderText = "Ad-Soyad";
+            dataGridView1.Columns[2].HeaderText = "Sebep";
+            dataGridView1.Columns[3].HeaderText = "Başlangıç";
+            dataGridView1.Columns[4].HeaderText = "Bitiş";
         }
 
     }

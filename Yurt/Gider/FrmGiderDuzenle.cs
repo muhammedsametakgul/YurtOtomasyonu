@@ -20,28 +20,59 @@ namespace Yurt
         Sql sql = new Sql();
         private void BtnEkle_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("Update Giderler set Elektrik=@p1,Dogalgaz=@p2,Internet=@p3,Gida=@p4," +
-                "Personel=@p5,Su=@p6,Diger=@p7,GiderAy=@p8 where Odemeid=@p9",sql.Baglan());
-            komut.Parameters.AddWithValue("@p1",MskElektrik.Text);
-            komut.Parameters.AddWithValue("@p2", MskDogalgaz.Text);
-            komut.Parameters.AddWithValue("@p3", MskInternet.Text);
-            komut.Parameters.AddWithValue("@p4", MskGida.Text);
-            komut.Parameters.AddWithValue("@p5", MskPersonel.Text);
-            komut.Parameters.AddWithValue("@p6", MskSu.Text);
-            komut.Parameters.AddWithValue("@p7", MskDiger.Text);
-            komut.Parameters.AddWithValue("@p8", MskTarih.Text);
-            komut.Parameters.AddWithValue("@p9",lblid.Text);
+            try
+            {
 
-            komut.ExecuteNonQuery();
+                DialogResult d = new DialogResult();
+                d = MessageBox.Show("Güncellemek İstediğinize Emin Misiniz?","UYARI",MessageBoxButtons.YesNo);
+                if (d == DialogResult.Yes)
+                {
+                    if (MskElektrik.Text != "" && MskDogalgaz.Text != "" && MskInternet.Text != "" && MskGida.Text != "" && MskPersonel.Text != "" && MskSu.Text != "" && MskDiger.Text != "" && MskTarih.Text != "")
+                    {
+                        SqlCommand komut = new SqlCommand("Update Giderler set Elektrik=@p1,Dogalgaz=@p2,Internet=@p3,Gida=@p4," +
+                  "Personel=@p5,Su=@p6,Diger=@p7,GiderAy=@p8 where Odemeid=@p9", sql.Baglan());
+                        komut.Parameters.AddWithValue("@p1", MskElektrik.Text);
+                        komut.Parameters.AddWithValue("@p2", MskDogalgaz.Text);
+                        komut.Parameters.AddWithValue("@p3", MskInternet.Text);
+                        komut.Parameters.AddWithValue("@p4", MskGida.Text);
+                        komut.Parameters.AddWithValue("@p5", MskPersonel.Text);
+                        komut.Parameters.AddWithValue("@p6", MskSu.Text);
+                        komut.Parameters.AddWithValue("@p7", MskDiger.Text);
+                        komut.Parameters.AddWithValue("@p8", MskTarih.Text);
+                        komut.Parameters.AddWithValue("@p9", lblid.Text);
+                        MskElektrik.Text = "";
+                        MskDogalgaz.Text = "";
+                        MskInternet.Text = "";
+                        MskGida.Text = "";
+                        MskPersonel.Text = "";
+                        MskSu.Text = "";
+                        MskDiger.Text = "";
+                        MskTarih.Text = "";
 
-            MessageBox.Show("Başarıyla güncellendi");
-            //Güncellendikten sonra tabloyu güncelliyor
-            SqlDataAdapter da = new SqlDataAdapter("Select * From Giderler", sql.Baglan());
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView1.DataSource = dt;
+                        komut.ExecuteNonQuery();
 
-            sql.Baglan().Close();
+                        MessageBox.Show("Başarıyla Güncellendi");
+                        //Güncellendikten sonra tabloyu güncelliyor
+                        SqlDataAdapter da = new SqlDataAdapter("Select * From Giderler", sql.Baglan());
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        dataGridView1.DataSource = dt;
+                        dataGridView1.RowHeadersVisible = false;
+                        dataGridView1.Columns[8].HeaderText = "Tarih";
+
+                        sql.Baglan().Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lütfen Tüm Alanları Doldurduğunuza Emin Olunuz");
+                    }
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bir Hata Oldu !  Lütfen Tekrar Deneyiniz");
+            }
 
         }
 
@@ -53,6 +84,10 @@ namespace Yurt
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Columns[8].HeaderText = "Tarih";
+
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -70,100 +105,52 @@ namespace Yurt
             MskTarih.Text = dataGridView1.Rows[secilen].Cells[8].Value.ToString();
         }
 
-        private void MskTarih_Click(object sender, EventArgs e)
+        private void btnSil_Click(object sender, EventArgs e)
         {
-            MaskedTextBox textBox = sender as MaskedTextBox;
-            textBox.Focus();
-            if (textBox != null)
+            try
             {
-
-                textBox.Select(0, 0);
-
+                if (lblid.Text != "")
+                {
+                    DialogResult d = new DialogResult();
+                    d = MessageBox.Show("Silmek İstediğinize Emin Misiniz? ", "UYARI", MessageBoxButtons.YesNo);
+                    if (d == DialogResult.Yes)
+                    {
+                        SqlCommand komut = new SqlCommand("Delete  Giderler Where Odemeid=@p1", sql.Baglan());
+                        komut.Parameters.AddWithValue("@p1", lblid.Text);
+                        komut.ExecuteNonQuery();
+                        MessageBox.Show("Başarıyla Silindi");
+                        SqlDataAdapter da = new SqlDataAdapter("Select * From Giderler", sql.Baglan());
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        dataGridView1.DataSource = dt;
+                        dataGridView1.RowHeadersVisible = false;
+                        dataGridView1.Columns[8].HeaderText = "Tarih";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Silme İşlemi Yapılamadı.Lütfen Birini Seçtiğinize Emin Olunuz.");
             }
         }
 
-        private void MskElektrik_Click(object sender, EventArgs e)
+        private void btnDogrula_Click(object sender, EventArgs e)
         {
-            MaskedTextBox textBox = sender as MaskedTextBox;
-            textBox.Focus();
-            if (textBox != null)
+            SqlCommand komut = new SqlCommand("Select * From Mudur Where mudurTc=@p1 and mudurSifre=@p2 ", sql.Baglan());
+            komut.Parameters.AddWithValue("@p1", mskTc.Text);
+            komut.Parameters.AddWithValue("@p2", txtSifre.Text);
+            SqlDataReader dr = komut.ExecuteReader();
+
+            if (dr.Read())
             {
-
-                textBox.Select(0, 0);
-
+                btnSil.Visible = true;
+                groupBox1.Visible = false;
+                lblUyari.Text = "Silme İşlemi Yapabilirsiniz";
+                lblUyari.ForeColor = Color.Green;
             }
-        }
-
-        private void MskDogalgaz_Click(object sender, EventArgs e)
-        {
-            MaskedTextBox textBox = sender as MaskedTextBox;
-            textBox.Focus();
-            if (textBox != null)
+            else
             {
-
-                textBox.Select(0, 0);
-
-            }
-        }
-
-        private void MskInternet_Click(object sender, EventArgs e)
-        {
-            MaskedTextBox textBox = sender as MaskedTextBox;
-            textBox.Focus();
-            if (textBox != null)
-            {
-
-                textBox.Select(0, 0);
-
-            }
-        }
-
-        private void MskGida_Click(object sender, EventArgs e)
-        {
-            MaskedTextBox textBox = sender as MaskedTextBox;
-            textBox.Focus();
-            if (textBox != null)
-            {
-
-                textBox.Select(0, 0);
-
-            }
-        }
-
-        
-        private void MskPersonel_Click(object sender, EventArgs e)
-        {
-            MaskedTextBox textBox = sender as MaskedTextBox;
-            textBox.Focus();
-            if (textBox != null)
-            {
-
-                textBox.Select(0, 0);
-
-            }
-        }
-
-        private void MskSu_Click(object sender, EventArgs e)
-        {
-            MaskedTextBox textBox = sender as MaskedTextBox;
-            textBox.Focus();
-            if (textBox != null)
-            {
-
-                textBox.Select(0, 0);
-
-            }
-        }
-
-        private void MskDiger_Click(object sender, EventArgs e)
-        {
-            MaskedTextBox textBox = sender as MaskedTextBox;
-            textBox.Focus();
-            if (textBox != null)
-            {
-
-                textBox.Select(0, 0);
-
+                MessageBox.Show("Yanlış Doğrulama Yaptınız veya Yetkiniz Yok!");
             }
         }
     }

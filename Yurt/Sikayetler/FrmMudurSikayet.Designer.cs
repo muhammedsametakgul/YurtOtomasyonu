@@ -205,6 +205,7 @@
             this.lblid.Size = new System.Drawing.Size(44, 16);
             this.lblid.TabIndex = 16;
             this.lblid.Text = "label4";
+            this.lblid.Visible = false;
             // 
             // cbOkundu
             // 

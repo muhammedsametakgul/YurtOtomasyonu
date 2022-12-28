@@ -30,21 +30,21 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbPersonel = new System.Windows.Forms.RadioButton();
             this.btnGuncelle = new System.Windows.Forms.Button();
+            this.rbMemur = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtAd = new System.Windows.Forms.TextBox();
             this.mskMaas = new System.Windows.Forms.MaskedTextBox();
             this.mskTc = new System.Windows.Forms.MaskedTextBox();
-            this.rbMemur = new System.Windows.Forms.RadioButton();
-            this.rbPersonel = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtKullanici = new System.Windows.Forms.TextBox();
-            this.txtSifre = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.mskTCMudur = new System.Windows.Forms.MaskedTextBox();
             this.btnDogrula = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtSifre = new System.Windows.Forms.TextBox();
             this.lblUyari = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -89,6 +89,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = " Maaş";
             // 
+            // rbPersonel
+            // 
+            this.rbPersonel.AutoSize = true;
+            this.rbPersonel.Location = new System.Drawing.Point(348, 29);
+            this.rbPersonel.Name = "rbPersonel";
+            this.rbPersonel.Size = new System.Drawing.Size(82, 20);
+            this.rbPersonel.TabIndex = 3;
+            this.rbPersonel.TabStop = true;
+            this.rbPersonel.Text = "Personel";
+            this.rbPersonel.UseVisualStyleBackColor = true;
+            this.rbPersonel.CheckedChanged += new System.EventHandler(this.rbPersonel_CheckedChanged);
+            // 
             // btnGuncelle
             // 
             this.btnGuncelle.Location = new System.Drawing.Point(206, 347);
@@ -98,6 +110,18 @@
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
+            // rbMemur
+            // 
+            this.rbMemur.AutoSize = true;
+            this.rbMemur.Location = new System.Drawing.Point(73, 30);
+            this.rbMemur.Name = "rbMemur";
+            this.rbMemur.Size = new System.Drawing.Size(69, 20);
+            this.rbMemur.TabIndex = 2;
+            this.rbMemur.TabStop = true;
+            this.rbMemur.Text = "Memur";
+            this.rbMemur.UseVisualStyleBackColor = true;
+            this.rbMemur.CheckedChanged += new System.EventHandler(this.rbMemur_CheckedChanged);
             // 
             // label3
             // 
@@ -147,6 +171,7 @@
             this.mskMaas.Size = new System.Drawing.Size(253, 30);
             this.mskMaas.TabIndex = 8;
             this.mskMaas.ValidatingType = typeof(int);
+//            this.mskMaas.Click += new System.EventHandler(this.mskMaas_Click);
             // 
             // mskTc
             // 
@@ -159,70 +184,40 @@
             this.mskTc.TabIndex = 7;
             this.mskTc.ValidatingType = typeof(int);
             // 
-            // rbMemur
-            // 
-            this.rbMemur.AutoSize = true;
-            this.rbMemur.Location = new System.Drawing.Point(73, 30);
-            this.rbMemur.Name = "rbMemur";
-            this.rbMemur.Size = new System.Drawing.Size(69, 20);
-            this.rbMemur.TabIndex = 2;
-            this.rbMemur.TabStop = true;
-            this.rbMemur.Text = "Memur";
-            this.rbMemur.UseVisualStyleBackColor = true;
-            this.rbMemur.CheckedChanged += new System.EventHandler(this.rbMemur_CheckedChanged);
-            // 
-            // rbPersonel
-            // 
-            this.rbPersonel.AutoSize = true;
-            this.rbPersonel.Location = new System.Drawing.Point(348, 29);
-            this.rbPersonel.Name = "rbPersonel";
-            this.rbPersonel.Size = new System.Drawing.Size(82, 20);
-            this.rbPersonel.TabIndex = 3;
-            this.rbPersonel.TabStop = true;
-            this.rbPersonel.Text = "Personel";
-            this.rbPersonel.UseVisualStyleBackColor = true;
-            this.rbPersonel.CheckedChanged += new System.EventHandler(this.rbPersonel_CheckedChanged);
-            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.mskTCMudur);
             this.groupBox2.Controls.Add(this.btnDogrula);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txtSifre);
-            this.groupBox2.Controls.Add(this.txtKullanici);
-            this.groupBox2.Location = new System.Drawing.Point(619, 136);
+            this.groupBox2.Location = new System.Drawing.Point(619, 130);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(537, 398);
+            this.groupBox2.Size = new System.Drawing.Size(537, 404);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Doğrulama";
             // 
-            // txtKullanici
+            // mskTCMudur
             // 
-            this.txtKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtKullanici.Location = new System.Drawing.Point(215, 52);
-            this.txtKullanici.Name = "txtKullanici";
-            this.txtKullanici.Size = new System.Drawing.Size(246, 34);
-            this.txtKullanici.TabIndex = 0;
+            this.mskTCMudur.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mskTCMudur.Location = new System.Drawing.Point(215, 52);
+            this.mskTCMudur.Mask = "00000000000";
+            this.mskTCMudur.Name = "mskTCMudur";
+            this.mskTCMudur.Size = new System.Drawing.Size(246, 34);
+            this.mskTCMudur.TabIndex = 5;
+            this.mskTCMudur.ValidatingType = typeof(int);
+        //    this.mskTCMudur.Click += new System.EventHandler(this.mskTCMudur_Click);
             // 
-            // txtSifre
+            // btnDogrula
             // 
-            this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSifre.Location = new System.Drawing.Point(215, 128);
-            this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(246, 34);
-            this.txtSifre.TabIndex = 1;
-            this.txtSifre.UseSystemPasswordChar = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(23, 52);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 29);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Kullanıcı Adı:";
+            this.btnDogrula.Location = new System.Drawing.Point(255, 205);
+            this.btnDogrula.Name = "btnDogrula";
+            this.btnDogrula.Size = new System.Drawing.Size(126, 38);
+            this.btnDogrula.TabIndex = 4;
+            this.btnDogrula.Text = "Doğrula";
+            this.btnDogrula.UseVisualStyleBackColor = true;
+            this.btnDogrula.Click += new System.EventHandler(this.btnDogrula_Click);
             // 
             // label5
             // 
@@ -234,15 +229,24 @@
             this.label5.TabIndex = 3;
             this.label5.Text = "Şifre:";
             // 
-            // btnDogrula
+            // label4
             // 
-            this.btnDogrula.Location = new System.Drawing.Point(255, 205);
-            this.btnDogrula.Name = "btnDogrula";
-            this.btnDogrula.Size = new System.Drawing.Size(126, 38);
-            this.btnDogrula.TabIndex = 4;
-            this.btnDogrula.Text = "Doğrula";
-            this.btnDogrula.UseVisualStyleBackColor = true;
-            this.btnDogrula.Click += new System.EventHandler(this.btnDogrula_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(23, 52);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(151, 29);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Kullanıcı Adı:";
+            // 
+            // txtSifre
+            // 
+            this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSifre.Location = new System.Drawing.Point(215, 128);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Size = new System.Drawing.Size(246, 34);
+            this.txtSifre.TabIndex = 1;
+            this.txtSifre.UseSystemPasswordChar = true;
             // 
             // lblUyari
             // 
@@ -296,7 +300,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtSifre;
-        private System.Windows.Forms.TextBox txtKullanici;
         private System.Windows.Forms.Label lblUyari;
+        private System.Windows.Forms.MaskedTextBox mskTCMudur;
     }
 }

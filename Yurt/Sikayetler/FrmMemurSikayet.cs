@@ -28,7 +28,7 @@ namespace Yurt.Sikayetler
      
             tarih = date.ToLongDateString() + date.ToLongTimeString();
 
-
+          
 
             SqlCommand komut = new SqlCommand("Select YoneticiAdSoyad From Admin where YoneticiTc=@p1 ",sql.Baglan());
             komut.Parameters.AddWithValue("@p1",FrmAdminGiris.tc_memur);
@@ -59,6 +59,7 @@ namespace Yurt.Sikayetler
                 while (dr2.Read())
                 {
                     cmbKime.Items.Add(dr2[0]);
+                  
                 }
                 sql.Baglan();
 

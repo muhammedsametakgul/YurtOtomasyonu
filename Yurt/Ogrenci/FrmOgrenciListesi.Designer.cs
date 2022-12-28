@@ -61,6 +61,7 @@
             this.MskTel = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.lblTc = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -77,12 +78,12 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.InactiveCaption;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 34);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 55);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(437, 675);
+            this.dataGridView1.Size = new System.Drawing.Size(394, 675);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -90,7 +91,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(121, 712);
+            this.label1.Location = new System.Drawing.Point(121, 738);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(153, 29);
             this.label1.TabIndex = 4;
@@ -99,7 +100,7 @@
             // txtAra
             // 
             this.txtAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAra.Location = new System.Drawing.Point(12, 764);
+            this.txtAra.Location = new System.Drawing.Point(12, 790);
             this.txtAra.Name = "txtAra";
             this.txtAra.Size = new System.Drawing.Size(384, 30);
             this.txtAra.TabIndex = 3;
@@ -119,7 +120,7 @@
             this.groupBox1.Controls.Add(this.MskDogum);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.MskTc);
-            this.groupBox1.Location = new System.Drawing.Point(581, 34);
+            this.groupBox1.Location = new System.Drawing.Point(644, 33);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(563, 295);
             this.groupBox1.TabIndex = 5;
@@ -251,7 +252,7 @@
             this.groupBox2.Controls.Add(this.txtVeliAd);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.MskVeliTel);
-            this.groupBox2.Location = new System.Drawing.Point(581, 335);
+            this.groupBox2.Location = new System.Drawing.Point(644, 334);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(563, 352);
             this.groupBox2.TabIndex = 6;
@@ -312,7 +313,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(-4, 231);
+            this.label4.Location = new System.Drawing.Point(19, 233);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(163, 20);
             this.label4.TabIndex = 33;
@@ -338,7 +339,7 @@
             this.groupBox3.Controls.Add(this.TxtMail);
             this.groupBox3.Controls.Add(this.MskTel);
             this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Location = new System.Drawing.Point(1150, 34);
+            this.groupBox3.Location = new System.Drawing.Point(1213, 33);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(561, 467);
             this.groupBox3.TabIndex = 7;
@@ -425,12 +426,22 @@
             // lblTc
             // 
             this.lblTc.AutoSize = true;
-            this.lblTc.Location = new System.Drawing.Point(1225, 576);
+            this.lblTc.Location = new System.Drawing.Point(1271, 575);
             this.lblTc.Name = "lblTc";
             this.lblTc.Size = new System.Drawing.Size(51, 16);
             this.lblTc.TabIndex = 8;
             this.lblTc.Text = "label15";
             this.lblTc.Visible = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label15.Location = new System.Drawing.Point(12, 13);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(618, 25);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Lütfen Bilgisini Görmek İstediğiniz Öğrencinin Üstüne Tıklayınız";
             // 
             // FrmOgrenciListesi
             // 
@@ -438,6 +449,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1776, 832);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.lblTc);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -496,5 +508,6 @@
         private System.Windows.Forms.MaskedTextBox MskTel;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblTc;
+        private System.Windows.Forms.Label label15;
     }
 }

@@ -56,6 +56,7 @@
             this.lblOdaSayisi = new System.Windows.Forms.Label();
             this.lblBosOdaSyisi = new System.Windows.Forms.Label();
             this.lbl145 = new System.Windows.Forms.Label();
+            this.lblUyari = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox5.SuspendLayout();
@@ -147,7 +148,7 @@
             this.groupBox5.Controls.Add(this.dataGridView1);
             this.groupBox5.Controls.Add(this.btnGeriGel);
             this.groupBox5.Controls.Add(this.dataGridView2);
-            this.groupBox5.Location = new System.Drawing.Point(1, 12);
+            this.groupBox5.Location = new System.Drawing.Point(12, 95);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(633, 676);
             this.groupBox5.TabIndex = 21;
@@ -367,12 +368,23 @@
             this.lbl145.TabIndex = 26;
             this.lbl145.Text = "Boş Oda Sayısı";
             // 
+            // lblUyari
+            // 
+            this.lblUyari.AutoSize = true;
+            this.lblUyari.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUyari.Location = new System.Drawing.Point(13, 42);
+            this.lblUyari.Name = "lblUyari";
+            this.lblUyari.Size = new System.Drawing.Size(439, 25);
+            this.lblUyari.TabIndex = 28;
+            this.lblUyari.Text = "Odada Kalan Kişileri Görmek İçin Bir Oda Seçiniz";
+            // 
             // FrmOdaListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1477, 714);
+            this.ClientSize = new System.Drawing.Size(1477, 825);
+            this.Controls.Add(this.lblUyari);
             this.Controls.Add(this.lblBosOdaSyisi);
             this.Controls.Add(this.lbl145);
             this.Controls.Add(this.lblOdaSayisi);
@@ -427,5 +439,6 @@
         private System.Windows.Forms.Label lblOdaSayisi;
         private System.Windows.Forms.Label lblBosOdaSyisi;
         private System.Windows.Forms.Label lbl145;
+        private System.Windows.Forms.Label lblUyari;
     }
 }

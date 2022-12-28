@@ -61,6 +61,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Profil\FrmProfilDuzenle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profil\FrmProfilDuzenle.Designer.cs">
+      <DependentUpon>FrmProfilDuzenle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeciciFormlar\FrmAnimsyonluGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeciciFormlar\FrmAnimsyonluGiris.Designer.cs">
+      <DependentUpon>FrmAnimsyonluGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeciciFormlar\FrmGeciciAnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeciciFormlar\FrmGeciciAnaSayfa.Designer.cs">
+      <DependentUpon>FrmGeciciAnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GeciciFormlar\FrmHakkimizda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeciciFormlar\FrmHakkimizda.Designer.cs">
+      <DependentUpon>FrmHakkimizda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gelir\FrmYurtUcreti.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +102,12 @@
     </Compile>
     <Compile Include="Ana Giriş\AnaGiris.Designer.cs">
       <DependentUpon>AnaGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Müdür\FrmAdminİslemleriGuncelleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Müdür\FrmAdminİslemleriGuncelleme.Designer.cs">
+      <DependentUpon>FrmAdminİslemleriGuncelleme.cs</DependentUpon>
     </Compile>
     <Compile Include="Müdür\FrmMudurAnaSayfa.cs">
       <SubType>Form</SubType>
@@ -181,12 +211,6 @@
     <Compile Include="Gider\FrmGiderlerListesi.Designer.cs">
       <DependentUpon>FrmGiderlerListesi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gider\FrmGiderListesi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gider\FrmGiderListesi.Designer.cs">
-      <DependentUpon>FrmGiderListesi.cs</DependentUpon>
-    </Compile>
     <Compile Include="Izin\FrmOgrenciIzinGoster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -241,11 +265,11 @@
     <Compile Include="Ogrenci\FrmOgrenciSil.Designer.cs">
       <DependentUpon>FrmOgrenciSil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Personel\FrmPersonelSifreİslemleri.cs">
+    <Compile Include="SifremiUnuttum\FrmSifreUnuttum.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Personel\FrmPersonelSifreİslemleri.Designer.cs">
-      <DependentUpon>FrmPersonelSifreİslemleri.cs</DependentUpon>
+    <Compile Include="SifremiUnuttum\FrmSifreUnuttum.Designer.cs">
+      <DependentUpon>FrmSifreUnuttum.cs</DependentUpon>
     </Compile>
     <Compile Include="Sikayetler\FrmMemurSikayet.cs">
       <SubType>Form</SubType>
@@ -277,18 +301,6 @@
     <Compile Include="YoneticiIslemleri\FrmPersonelListesi.Designer.cs">
       <DependentUpon>FrmPersonelListesi.cs</DependentUpon>
     </Compile>
-    <Compile Include="YoneticiIslemleri\FrmYoneticiKodDogrulama.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="YoneticiIslemleri\FrmYoneticiKodDogrulama.Designer.cs">
-      <DependentUpon>FrmYoneticiKodDogrulama.cs</DependentUpon>
-    </Compile>
-    <Compile Include="YoneticiIslemleri\FrmYoneticiSifreİslemleri.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="YoneticiIslemleri\FrmYoneticiSifreİslemleri.Designer.cs">
-      <DependentUpon>FrmYoneticiSifreİslemleri.cs</DependentUpon>
-    </Compile>
     <Compile Include="Izin\FrmOgrenciIzinEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -305,6 +317,18 @@
     <Compile Include="YoneticiIslemleri\FrmYoneticiSifreGuncelle.Designer.cs">
       <DependentUpon>FrmYoneticiSifreGuncelle.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Profil\FrmProfilDuzenle.resx">
+      <DependentUpon>FrmProfilDuzenle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeciciFormlar\FrmAnimsyonluGiris.resx">
+      <DependentUpon>FrmAnimsyonluGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeciciFormlar\FrmGeciciAnaSayfa.resx">
+      <DependentUpon>FrmGeciciAnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeciciFormlar\FrmHakkimizda.resx">
+      <DependentUpon>FrmHakkimizda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gelir\FrmYurtUcreti.resx">
       <DependentUpon>FrmYurtUcreti.cs</DependentUpon>
     </EmbeddedResource>
@@ -313,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ana Giriş\AnaGiris.resx">
       <DependentUpon>AnaGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Müdür\FrmAdminİslemleriGuncelleme.resx">
+      <DependentUpon>FrmAdminİslemleriGuncelleme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Müdür\FrmMudurAnaSayfa.resx">
       <DependentUpon>FrmMudurAnaSayfa.cs</DependentUpon>
@@ -365,9 +392,6 @@
     <EmbeddedResource Include="Gider\FrmGiderlerListesi.resx">
       <DependentUpon>FrmGiderlerListesi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gider\FrmGiderListesi.resx">
-      <DependentUpon>FrmGiderListesi.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Izin\FrmOgrenciIzinGoster.resx">
       <DependentUpon>FrmOgrenciIzinGoster.cs</DependentUpon>
     </EmbeddedResource>
@@ -395,10 +419,10 @@
     <EmbeddedResource Include="Ogrenci\FrmOgrenciSil.resx">
       <DependentUpon>FrmOgrenciSil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Personel\FrmPersonelSifreİslemleri.resx">
-      <DependentUpon>FrmPersonelSifreİslemleri.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="SifremiUnuttum\FrmSifreUnuttum.resx">
+      <DependentUpon>FrmSifreUnuttum.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sikayetler\FrmMemurSikayet.resx">
       <DependentUpon>FrmMemurSikayet.cs</DependentUpon>
     </EmbeddedResource>
@@ -413,12 +437,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="YoneticiIslemleri\FrmPersonelListesi.resx">
       <DependentUpon>FrmPersonelListesi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="YoneticiIslemleri\FrmYoneticiKodDogrulama.resx">
-      <DependentUpon>FrmYoneticiKodDogrulama.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="YoneticiIslemleri\FrmYoneticiSifreİslemleri.resx">
-      <DependentUpon>FrmYoneticiSifreİslemleri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Izin\FrmOgrenciIzinEkle.resx">
       <DependentUpon>FrmOgrenciIzinEkle.cs</DependentUpon>

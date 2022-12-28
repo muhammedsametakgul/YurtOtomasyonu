@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmYoneticiSifreGuncelle));
             this.TxtSifre = new System.Windows.Forms.TextBox();
             this.TxtSifre2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -113,11 +114,13 @@
             this.MskTcSifreGuncelleme.Size = new System.Drawing.Size(232, 41);
             this.MskTcSifreGuncelleme.TabIndex = 8;
             this.MskTcSifreGuncelleme.ValidatingType = typeof(int);
+            this.MskTcSifreGuncelleme.Click += new System.EventHandler(this.MskTcSifreGuncelleme_Click);
             // 
             // FrmYoneticiSifreGuncelle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(564, 392);
             this.Controls.Add(this.MskTcSifreGuncelleme);
             this.Controls.Add(this.label4);
@@ -127,7 +130,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtSifre2);
             this.Controls.Add(this.TxtSifre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmYoneticiSifreGuncelle";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "YoneticiSifreGuncelle";
             this.Load += new System.EventHandler(this.YoneticiSifreGuncelle_Load);
             this.ResumeLayout(false);

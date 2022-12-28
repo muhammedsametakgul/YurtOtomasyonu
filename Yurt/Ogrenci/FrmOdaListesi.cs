@@ -31,6 +31,7 @@ namespace Yurt.Ogrenci
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource= dt;
+            dataGridView1.RowHeadersVisible = false;
 
 
             #region oda sayisi
@@ -59,6 +60,7 @@ namespace Yurt.Ogrenci
 
             int secilen = dataGridView1.SelectedCells[0].RowIndex;
             lblOda.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
+            lblUyari.Text = "Öğrenciler Hakkında Bilgi Almak İçin Tıklayınız";
           
 
           
@@ -73,6 +75,7 @@ namespace Yurt.Ogrenci
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView2.DataSource = dt;
+            dataGridView2.RowHeadersVisible = false;
             this.dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             txtAra.Clear();
 
@@ -90,6 +93,7 @@ namespace Yurt.Ogrenci
             dataGridView2.Visible = false;
             gbKisisel.Visible= false;
             txtAra.Clear();
+            lblUyari.Text = "Odada Kalan Kişileri Görmek İçin Bir Oda Seçiniz";
 
         }
         //öğrenci bilgilerini alma
@@ -121,6 +125,7 @@ namespace Yurt.Ogrenci
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+            dataGridView1.RowHeadersVisible = false;
         }
 
       

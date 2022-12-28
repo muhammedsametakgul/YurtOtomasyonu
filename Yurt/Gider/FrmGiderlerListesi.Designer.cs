@@ -33,20 +33,28 @@
             this.label1 = new System.Windows.Forms.Label();
             this.rbAylik = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbPersonelMaas = new System.Windows.Forms.RadioButton();
             this.rbMemurMaas = new System.Windows.Forms.RadioButton();
+            this.rbPersonelMaas = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(1, 1);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1287, 435);
+            this.dataGridView1.Size = new System.Drawing.Size(1123, 435);
             this.dataGridView1.TabIndex = 0;
             // 
             // txtTarihAra
@@ -90,7 +98,19 @@
             this.groupBox1.Size = new System.Drawing.Size(280, 150);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "FİLTRELEME";
+            // 
+            // rbMemurMaas
+            // 
+            this.rbMemurMaas.AutoSize = true;
+            this.rbMemurMaas.Location = new System.Drawing.Point(21, 104);
+            this.rbMemurMaas.Name = "rbMemurMaas";
+            this.rbMemurMaas.Size = new System.Drawing.Size(106, 20);
+            this.rbMemurMaas.TabIndex = 5;
+            this.rbMemurMaas.TabStop = true;
+            this.rbMemurMaas.Text = "Memur Maaş";
+            this.rbMemurMaas.UseVisualStyleBackColor = true;
+            this.rbMemurMaas.CheckedChanged += new System.EventHandler(this.rbMemurMaas_CheckedChanged);
             // 
             // rbPersonelMaas
             // 
@@ -103,18 +123,6 @@
             this.rbPersonelMaas.Text = "Personel Maaşları";
             this.rbPersonelMaas.UseVisualStyleBackColor = true;
             this.rbPersonelMaas.CheckedChanged += new System.EventHandler(this.rbPersonelMaas_CheckedChanged);
-            // 
-            // rbMemurMaas
-            // 
-            this.rbMemurMaas.AutoSize = true;
-            this.rbMemurMaas.Location = new System.Drawing.Point(19, 103);
-            this.rbMemurMaas.Name = "rbMemurMaas";
-            this.rbMemurMaas.Size = new System.Drawing.Size(106, 20);
-            this.rbMemurMaas.TabIndex = 5;
-            this.rbMemurMaas.TabStop = true;
-            this.rbMemurMaas.Text = "Memur Maaş";
-            this.rbMemurMaas.UseVisualStyleBackColor = true;
-            this.rbMemurMaas.CheckedChanged += new System.EventHandler(this.rbMemurMaas_CheckedChanged);
             // 
             // FrmGiderlerListesi
             // 

@@ -34,15 +34,10 @@
             this.rbMemur = new System.Windows.Forms.RadioButton();
             this.rbPersonel = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbGecmis = new System.Windows.Forms.RadioButton();
-            this.rbAktif = new System.Windows.Forms.RadioButton();
-            this.rbHepsi = new System.Windows.Forms.RadioButton();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnTemizle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,57 +115,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Arama";
             // 
-            // rbGecmis
-            // 
-            this.rbGecmis.AutoSize = true;
-            this.rbGecmis.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rbGecmis.Location = new System.Drawing.Point(41, 38);
-            this.rbGecmis.Name = "rbGecmis";
-            this.rbGecmis.Size = new System.Drawing.Size(186, 33);
-            this.rbGecmis.TabIndex = 7;
-            this.rbGecmis.TabStop = true;
-            this.rbGecmis.Text = "Geçmiş İzinler";
-            this.rbGecmis.UseVisualStyleBackColor = true;
-            this.rbGecmis.CheckedChanged += new System.EventHandler(this.rbGecmis_CheckedChanged);
-            // 
-            // rbAktif
-            // 
-            this.rbAktif.AutoSize = true;
-            this.rbAktif.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rbAktif.Location = new System.Drawing.Point(41, 92);
-            this.rbAktif.Name = "rbAktif";
-            this.rbAktif.Size = new System.Drawing.Size(149, 33);
-            this.rbAktif.TabIndex = 8;
-            this.rbAktif.TabStop = true;
-            this.rbAktif.Text = "Aktif İzinler";
-            this.rbAktif.UseVisualStyleBackColor = true;
-            this.rbAktif.CheckedChanged += new System.EventHandler(this.rbAktif_CheckedChanged);
-            // 
-            // rbHepsi
-            // 
-            this.rbHepsi.AutoSize = true;
-            this.rbHepsi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rbHepsi.Location = new System.Drawing.Point(41, 151);
-            this.rbHepsi.Name = "rbHepsi";
-            this.rbHepsi.Size = new System.Drawing.Size(97, 33);
-            this.rbHepsi.TabIndex = 9;
-            this.rbHepsi.TabStop = true;
-            this.rbHepsi.Text = "Hepsi";
-            this.rbHepsi.UseVisualStyleBackColor = true;
-            this.rbHepsi.CheckedChanged += new System.EventHandler(this.rbHepsi_CheckedChanged);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.rbHepsi);
-            this.groupBox2.Controls.Add(this.rbGecmis);
-            this.groupBox2.Controls.Add(this.rbAktif);
-            this.groupBox2.Location = new System.Drawing.Point(812, 410);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(309, 222);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Tarih";
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.rbPersonel);
@@ -184,7 +128,7 @@
             // 
             // btnTemizle
             // 
-            this.btnTemizle.Location = new System.Drawing.Point(1148, 474);
+            this.btnTemizle.Location = new System.Drawing.Point(825, 410);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(133, 37);
             this.btnTemizle.TabIndex = 8;
@@ -200,7 +144,6 @@
             this.ClientSize = new System.Drawing.Size(1543, 640);
             this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -211,8 +154,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -227,10 +168,6 @@
         private System.Windows.Forms.RadioButton rbMemur;
         private System.Windows.Forms.RadioButton rbPersonel;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rbHepsi;
-        private System.Windows.Forms.RadioButton rbAktif;
-        private System.Windows.Forms.RadioButton rbGecmis;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnTemizle;
     }

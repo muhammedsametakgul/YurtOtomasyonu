@@ -51,6 +51,10 @@ namespace Yurt.Personel
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     dataGridView1.DataSource = dt;
+                    MessageBox.Show("Başarıyla Güncellendi");
+                    mskMaas.Text = "";
+                    mskTc.Text = "";
+                    txtAd.Text = "";
                 }
                 if (rbPersonel.Checked)
                 {
@@ -62,6 +66,10 @@ namespace Yurt.Personel
                     DataTable dt = new DataTable();
                     da.Fill(dt);
                     dataGridView1.DataSource = dt;
+                    MessageBox.Show("Başarıyla Güncellendi");
+                    mskMaas.Text = "";
+                    mskTc.Text = "";
+                    txtAd.Text = "";
 
                 }
                 sql.Baglan().Close();
@@ -76,6 +84,10 @@ namespace Yurt.Personel
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
+                dataGridView1.RowHeadersVisible = false;
+                dataGridView1.Columns[0].HeaderText = "TC";
+                dataGridView1.Columns[1].HeaderText = "Ad-Soyad";
+                dataGridView1.Columns[2].HeaderText = "Maaş";
             }
         }
 
@@ -86,13 +98,17 @@ namespace Yurt.Personel
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
+                dataGridView1.RowHeadersVisible = false;
+                dataGridView1.Columns[0].HeaderText = "TC";
+                dataGridView1.Columns[1].HeaderText = "Ad-Soyad";
+                dataGridView1.Columns[2].HeaderText = "Maaş";
             }
         }
 
         private void btnDogrula_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("Select * From Mudur Where mudurKullaniciAdi=@p1 and mudurSifre=@p2 ",sql.Baglan());
-            komut.Parameters.AddWithValue("@p1",txtKullanici.Text);
+            SqlCommand komut = new SqlCommand("Select * From Mudur Where mudurTc=@p1 and mudurSifre=@p2 ",sql.Baglan());
+            komut.Parameters.AddWithValue("@p1",mskTCMudur.Text);
             komut.Parameters.AddWithValue("@p2",txtSifre.Text);
             SqlDataReader dr = komut.ExecuteReader();
             if (dr.Read())
@@ -109,5 +125,7 @@ namespace Yurt.Personel
 
            
         }
+
+      
     }
 }

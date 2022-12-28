@@ -48,16 +48,25 @@
             this.MskTarih = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.GiderDuzenleGroupBox = new System.Windows.Forms.GroupBox();
+            this.btnSil = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.mskTc = new System.Windows.Forms.MaskedTextBox();
+            this.btnDogrula = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtSifre = new System.Windows.Forms.TextBox();
+            this.lblUyari = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.GiderDuzenleGroupBox.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnGuncelle
             // 
             this.BtnGuncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnGuncelle.Location = new System.Drawing.Point(194, 423);
+            this.BtnGuncelle.Location = new System.Drawing.Point(92, 423);
             this.BtnGuncelle.Name = "BtnGuncelle";
-            this.BtnGuncelle.Size = new System.Drawing.Size(259, 46);
+            this.BtnGuncelle.Size = new System.Drawing.Size(153, 46);
             this.BtnGuncelle.TabIndex = 29;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
@@ -71,7 +80,6 @@
             this.MskDiger.Name = "MskDiger";
             this.MskDiger.Size = new System.Drawing.Size(267, 34);
             this.MskDiger.TabIndex = 8;
-            this.MskDiger.Click += new System.EventHandler(this.MskDiger_Click);
             // 
             // MskSu
             // 
@@ -81,7 +89,6 @@
             this.MskSu.Name = "MskSu";
             this.MskSu.Size = new System.Drawing.Size(267, 34);
             this.MskSu.TabIndex = 7;
-            this.MskSu.Click += new System.EventHandler(this.MskSu_Click);
             // 
             // MskPersonel
             // 
@@ -91,7 +98,6 @@
             this.MskPersonel.Name = "MskPersonel";
             this.MskPersonel.Size = new System.Drawing.Size(267, 34);
             this.MskPersonel.TabIndex = 6;
-            this.MskPersonel.Click += new System.EventHandler(this.MskPersonel_Click);
             // 
             // MskGida
             // 
@@ -101,7 +107,6 @@
             this.MskGida.Name = "MskGida";
             this.MskGida.Size = new System.Drawing.Size(267, 34);
             this.MskGida.TabIndex = 5;
-            this.MskGida.Click += new System.EventHandler(this.MskGida_Click);
             // 
             // MskInternet
             // 
@@ -111,7 +116,6 @@
             this.MskInternet.Name = "MskInternet";
             this.MskInternet.Size = new System.Drawing.Size(267, 34);
             this.MskInternet.TabIndex = 4;
-            this.MskInternet.Click += new System.EventHandler(this.MskInternet_Click);
             // 
             // MskDogalgaz
             // 
@@ -122,7 +126,6 @@
             this.MskDogalgaz.Size = new System.Drawing.Size(267, 34);
             this.MskDogalgaz.TabIndex = 3;
             this.MskDogalgaz.ValidatingType = typeof(int);
-            this.MskDogalgaz.Click += new System.EventHandler(this.MskDogalgaz_Click);
             // 
             // MskElektrik
             // 
@@ -133,7 +136,6 @@
             this.MskElektrik.Size = new System.Drawing.Size(267, 34);
             this.MskElektrik.TabIndex = 2;
             this.MskElektrik.ValidatingType = typeof(int);
-            this.MskElektrik.Click += new System.EventHandler(this.MskElektrik_Click);
             // 
             // label7
             // 
@@ -221,9 +223,17 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(505, 26);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(900, 475);
@@ -233,7 +243,7 @@
             // lblid
             // 
             this.lblid.AutoSize = true;
-            this.lblid.Location = new System.Drawing.Point(40, 442);
+            this.lblid.Location = new System.Drawing.Point(5, 375);
             this.lblid.Name = "lblid";
             this.lblid.Size = new System.Drawing.Size(44, 16);
             this.lblid.TabIndex = 32;
@@ -249,7 +259,6 @@
             this.MskTarih.Size = new System.Drawing.Size(267, 34);
             this.MskTarih.TabIndex = 1;
             this.MskTarih.ValidatingType = typeof(System.DateTime);
-            this.MskTarih.Click += new System.EventHandler(this.MskTarih_Click);
             // 
             // label8
             // 
@@ -265,8 +274,9 @@
             // 
             // GiderDuzenleGroupBox
             // 
-            this.GiderDuzenleGroupBox.BackColor = System.Drawing.Color.SteelBlue;
+            this.GiderDuzenleGroupBox.BackColor = System.Drawing.Color.White;
             this.GiderDuzenleGroupBox.Controls.Add(this.label8);
+            this.GiderDuzenleGroupBox.Controls.Add(this.btnSil);
             this.GiderDuzenleGroupBox.Controls.Add(this.lblid);
             this.GiderDuzenleGroupBox.Controls.Add(this.MskTarih);
             this.GiderDuzenleGroupBox.Controls.Add(this.label1);
@@ -291,13 +301,101 @@
             this.GiderDuzenleGroupBox.TabStop = false;
             this.GiderDuzenleGroupBox.Text = "Giderler";
             // 
+            // btnSil
+            // 
+            this.btnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSil.Location = new System.Drawing.Point(300, 423);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(153, 46);
+            this.btnSil.TabIndex = 34;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Visible = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.mskTc);
+            this.groupBox1.Controls.Add(this.btnDogrula);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.txtSifre);
+            this.groupBox1.Location = new System.Drawing.Point(20, 565);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(587, 205);
+            this.groupBox1.TabIndex = 35;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Doğrulama";
+            // 
+            // mskTc
+            // 
+            this.mskTc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mskTc.Location = new System.Drawing.Point(182, 66);
+            this.mskTc.Mask = "00000000000";
+            this.mskTc.Name = "mskTc";
+            this.mskTc.Size = new System.Drawing.Size(297, 30);
+            this.mskTc.TabIndex = 37;
+            this.mskTc.ValidatingType = typeof(int);
+            // 
+            // btnDogrula
+            // 
+            this.btnDogrula.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDogrula.Location = new System.Drawing.Point(319, 152);
+            this.btnDogrula.Name = "btnDogrula";
+            this.btnDogrula.Size = new System.Drawing.Size(129, 47);
+            this.btnDogrula.TabIndex = 36;
+            this.btnDogrula.Text = "Doğrula";
+            this.btnDogrula.UseVisualStyleBackColor = true;
+            this.btnDogrula.Click += new System.EventHandler(this.btnDogrula_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.Location = new System.Drawing.Point(87, 110);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 25);
+            this.label10.TabIndex = 3;
+            this.label10.Text = "Şifre";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(39, 66);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(125, 25);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "Kullanıcı Adı:";
+            // 
+            // txtSifre
+            // 
+            this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSifre.Location = new System.Drawing.Point(182, 113);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Size = new System.Drawing.Size(297, 30);
+            this.txtSifre.TabIndex = 1;
+            // 
+            // lblUyari
+            // 
+            this.lblUyari.AutoSize = true;
+            this.lblUyari.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUyari.ForeColor = System.Drawing.Color.Red;
+            this.lblUyari.Location = new System.Drawing.Point(15, 519);
+            this.lblUyari.Name = "lblUyari";
+            this.lblUyari.Size = new System.Drawing.Size(577, 29);
+            this.lblUyari.TabIndex = 36;
+            this.lblUyari.Text = "Silme İşlemi Yapabilmek İçin Doğrulama Yapınız";
+            // 
             // FrmGiderDuzenle
             // 
             this.AcceptButton = this.BtnGuncelle;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1477, 572);
+            this.ClientSize = new System.Drawing.Size(1477, 799);
+            this.Controls.Add(this.lblUyari);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.GiderDuzenleGroupBox);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -307,7 +405,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.GiderDuzenleGroupBox.ResumeLayout(false);
             this.GiderDuzenleGroupBox.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -333,5 +434,13 @@
         private System.Windows.Forms.MaskedTextBox MskTarih;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox GiderDuzenleGroupBox;
+        private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnDogrula;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtSifre;
+        private System.Windows.Forms.Label lblUyari;
+        private System.Windows.Forms.MaskedTextBox mskTc;
     }
 }

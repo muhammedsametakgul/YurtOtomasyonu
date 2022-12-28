@@ -47,6 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.TxtAdres = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.lblBilgi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.gbPersonelEkle.SuspendLayout();
             this.gbIletisim.SuspendLayout();
@@ -58,7 +59,7 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-3, -1);
+            this.dataGridView1.Location = new System.Drawing.Point(17, 70);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -69,7 +70,7 @@
             // TxtAdAra
             // 
             this.TxtAdAra.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtAdAra.Location = new System.Drawing.Point(115, 538);
+            this.TxtAdAra.Location = new System.Drawing.Point(118, 631);
             this.TxtAdAra.Name = "TxtAdAra";
             this.TxtAdAra.Size = new System.Drawing.Size(333, 38);
             this.TxtAdAra.TabIndex = 1;
@@ -78,9 +79,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(233, 493);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(219, 591);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 16);
+            this.label1.Size = new System.Drawing.Size(136, 25);
             this.label1.TabIndex = 3;
             this.label1.Text = "Ad ile Arama";
             // 
@@ -94,7 +96,7 @@
             this.gbPersonelEkle.Controls.Add(this.CmbDep);
             this.gbPersonelEkle.Controls.Add(this.label3);
             this.gbPersonelEkle.Controls.Add(this.label5);
-            this.gbPersonelEkle.Location = new System.Drawing.Point(608, 12);
+            this.gbPersonelEkle.Location = new System.Drawing.Point(823, 12);
             this.gbPersonelEkle.Name = "gbPersonelEkle";
             this.gbPersonelEkle.Size = new System.Drawing.Size(597, 386);
             this.gbPersonelEkle.TabIndex = 13;
@@ -105,7 +107,7 @@
             // 
             this.mskDogum.Enabled = false;
             this.mskDogum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mskDogum.Location = new System.Drawing.Point(200, 250);
+            this.mskDogum.Location = new System.Drawing.Point(203, 278);
             this.mskDogum.Mask = "00/00/0000";
             this.mskDogum.Name = "mskDogum";
             this.mskDogum.Size = new System.Drawing.Size(382, 30);
@@ -116,7 +118,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(12, 255);
+            this.label4.Location = new System.Drawing.Point(15, 283);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(135, 25);
             this.label4.TabIndex = 7;
@@ -126,7 +128,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(101, 30);
+            this.label2.Location = new System.Drawing.Point(104, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 25);
             this.label2.TabIndex = 0;
@@ -136,7 +138,7 @@
             // 
             this.TxtAd.Enabled = false;
             this.TxtAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtAd.Location = new System.Drawing.Point(200, 102);
+            this.TxtAd.Location = new System.Drawing.Point(203, 130);
             this.TxtAd.Name = "TxtAd";
             this.TxtAd.Size = new System.Drawing.Size(382, 30);
             this.TxtAd.TabIndex = 2;
@@ -145,7 +147,7 @@
             // 
             this.MskTc.Enabled = false;
             this.MskTc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.MskTc.Location = new System.Drawing.Point(200, 30);
+            this.MskTc.Location = new System.Drawing.Point(203, 58);
             this.MskTc.Mask = "00000000000";
             this.MskTc.Name = "MskTc";
             this.MskTc.Size = new System.Drawing.Size(382, 30);
@@ -162,7 +164,7 @@
             "Yemekhane",
             "Kat Görevlisi",
             "Güvenlik"});
-            this.CmbDep.Location = new System.Drawing.Point(200, 172);
+            this.CmbDep.Location = new System.Drawing.Point(203, 200);
             this.CmbDep.Name = "CmbDep";
             this.CmbDep.Size = new System.Drawing.Size(382, 33);
             this.CmbDep.TabIndex = 3;
@@ -171,7 +173,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(40, 105);
+            this.label3.Location = new System.Drawing.Point(43, 133);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 25);
             this.label3.TabIndex = 5;
@@ -181,7 +183,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(33, 180);
+            this.label5.Location = new System.Drawing.Point(36, 208);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(114, 25);
             this.label5.TabIndex = 6;
@@ -195,7 +197,7 @@
             this.gbIletisim.Controls.Add(this.label6);
             this.gbIletisim.Controls.Add(this.TxtAdres);
             this.gbIletisim.Controls.Add(this.label8);
-            this.gbIletisim.Location = new System.Drawing.Point(608, 404);
+            this.gbIletisim.Location = new System.Drawing.Point(823, 404);
             this.gbIletisim.Name = "gbIletisim";
             this.gbIletisim.Size = new System.Drawing.Size(597, 386);
             this.gbIletisim.TabIndex = 14;
@@ -261,12 +263,24 @@
             this.label8.TabIndex = 11;
             this.label8.Text = "Adres:";
             // 
+            // lblBilgi
+            // 
+            this.lblBilgi.AutoSize = true;
+            this.lblBilgi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBilgi.Location = new System.Drawing.Point(12, 42);
+            this.lblBilgi.Name = "lblBilgi";
+            this.lblBilgi.Size = new System.Drawing.Size(678, 25);
+            this.lblBilgi.TabIndex = 15;
+            this.lblBilgi.Text = "Personel Bilgisi Görmek İçin Görmek İstediğiniz Kişi Üstüne Tıklayınız";
+            this.lblBilgi.Click += new System.EventHandler(this.lblBilgi_Click);
+            // 
             // FrmPersonelListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1855, 921);
+            this.Controls.Add(this.lblBilgi);
             this.Controls.Add(this.gbIletisim);
             this.Controls.Add(this.gbPersonelEkle);
             this.Controls.Add(this.label1);
@@ -308,5 +322,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RichTextBox TxtAdres;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblBilgi;
     }
 }

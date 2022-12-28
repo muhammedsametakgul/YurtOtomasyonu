@@ -54,7 +54,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(913, 480);
+            this.dataGridView1.Size = new System.Drawing.Size(769, 480);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -115,7 +115,7 @@
             this.groupBox1.Controls.Add(this.rbey);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.TxtAra);
-            this.groupBox1.Location = new System.Drawing.Point(940, 12);
+            this.groupBox1.Location = new System.Drawing.Point(821, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(358, 290);
             this.groupBox1.TabIndex = 12;

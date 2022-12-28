@@ -21,10 +21,18 @@ namespace Yurt.Gelir
 
         private void FrmGelirDuzenle_Load(object sender, EventArgs e)
         {
-            SqlDataAdapter adapter = new SqlDataAdapter("Select * From Gelir",sql.Baglan());
+            SqlDataAdapter adapter = new SqlDataAdapter("Select * From Gelir ORDER BY OdemeTarih DESC",sql.Baglan());
             DataTable dt= new DataTable();
             adapter.Fill(dt);
             dataGridView1.DataSource = dt;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Columns[0].HeaderText = "Ödeme ID";
+            dataGridView1.Columns[1].HeaderText = "Ödeyen Kişi";
+            dataGridView1.Columns[2].HeaderText = "Telefon Numarası";
+            dataGridView1.Columns[3].HeaderText = "Mail";
+            dataGridView1.Columns[4].HeaderText = "Tarih";
+            dataGridView1.Columns[5].HeaderText = "Ödeme Miktar";
+            dataGridView1.Columns[6].HeaderText = "Firma Adı";
 
 
         }
@@ -34,6 +42,7 @@ namespace Yurt.Gelir
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             dataGridView1.DataSource = dt;
+            dataGridView1.RowHeadersVisible = false;
         }
 
         
@@ -51,18 +60,46 @@ namespace Yurt.Gelir
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("Update Gelir set Odeyen=@p1,OdeyenTelefon=@p2,OdeyenMail=@p3,OdemeTarih=@p4,OdemeMiktar=@p5,FirmaAdi=@p6 where Odemeid=@p7", sql.Baglan()); ;
-            komut.Parameters.AddWithValue("@p1",txtOdeyenKisi.Text);
-            komut.Parameters.AddWithValue("@p2",mskTel.Text);
-            komut.Parameters.AddWithValue("@p3",txtEmail.Text);
-            komut.Parameters.AddWithValue("@p4",dtTarih.Text);
-            komut.Parameters.AddWithValue("@p5",txtOdenen.Text);
-            komut.Parameters.AddWithValue("@p6",txtFirma.Text);
-            komut.Parameters.AddWithValue("@p7",lblid.Text);
-            komut.ExecuteNonQuery();
-            MessageBox.Show("Başarıyla güncellendi");
-            Goster();
-            sql.Baglan().Close();
+            try
+            {
+                if (txtOdeyenKisi.Text != "" && mskTel.Text != "" && txtEmail.Text != "" && dtTarih.Text != "" && txtOdenen.Text != "" && txtFirma.Text != "" && lblid.Text != "")
+                {
+                    DialogResult d = new DialogResult();
+                d = MessageBox.Show("Güncellemek İstediğinize Emin Misiniz?","Uyarı",MessageBoxButtons.YesNo);
+                if(d == DialogResult.Yes)
+                {
+                    
+                        SqlCommand komut = new SqlCommand("Update Gelir set Odeyen=@p1,OdeyenTelefon=@p2,OdeyenMail=@p3,OdemeTarih=@p4,OdemeMiktar=@p5,FirmaAdi=@p6 where Odemeid=@p7", sql.Baglan()); ;
+                        komut.Parameters.AddWithValue("@p1", txtOdeyenKisi.Text);
+                        komut.Parameters.AddWithValue("@p2", mskTel.Text);
+                        komut.Parameters.AddWithValue("@p3", txtEmail.Text);
+                        komut.Parameters.AddWithValue("@p4", dtTarih.Value.Date);
+                        komut.Parameters.AddWithValue("@p5", txtOdenen.Text);
+                        komut.Parameters.AddWithValue("@p6", txtFirma.Text);
+                        komut.Parameters.AddWithValue("@p7", lblid.Text);
+                        komut.ExecuteNonQuery();
+                        MessageBox.Show("Başarıyla güncellendi");
+                        Goster();
+                        txtOdeyenKisi.Clear();
+                        mskTel.Clear();
+                        txtEmail.Clear();
+                        txtOdenen.Clear();
+                        txtFirma.Clear();
+                        sql.Baglan().Close();
+                    }else
+                    {
+                        MessageBox.Show("Lütfen Tüm Bilgileri Eksiksiz Giriniz");
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen Tüm Alanları Doldurduğunuza Emin Olunuz");
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Bir Hata Oldu Sanırım! Tekrar Deneyiniz");
+            }
             
         }
 
@@ -103,15 +140,41 @@ namespace Yurt.Gelir
 
         }
 
-        private void mskTel_Click(object sender, EventArgs e)
+        
+        private void btnSil_Click(object sender, EventArgs e)
         {
-            MaskedTextBox textBox = sender as MaskedTextBox;
-            textBox.Focus();
-            if (textBox != null)
+            try
+            {   
+                if(lblid.Text != "")
+                {
+                    DialogResult d = new DialogResult();
+                    d = MessageBox.Show("Silmek İstediğinize Emin Misiniz?","Uyarı",MessageBoxButtons.YesNo);
+                    if (d == DialogResult.Yes)
+                    {
+                        SqlCommand komut = new SqlCommand("Delete Gelir Where Odemeid=@p1", sql.Baglan());
+                        komut.Parameters.AddWithValue("@p1", lblid.Text);
+                        komut.ExecuteNonQuery();
+                        sql.Baglan().Close();
+                        MessageBox.Show("Silme İşlemi Başarılı");
+                        txtOdeyenKisi.Clear();
+                        mskTel.Clear();
+                        txtEmail.Clear();
+                        txtOdenen.Clear();
+                        txtFirma.Clear();
+                       DateTime simdi =DateTime.Now;
+                        dtTarih.Text = simdi.ToShortDateString();
+                        Goster();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen Bir Kişi Seçtiğinize Emin Olunuz");
+                }
+
+            }catch(Exception ex)
             {
 
-                textBox.Select(0, 0);
-
+                MessageBox.Show("Lütfen Bir Kişi Seçtiğinize Emin Olunuz");
             }
         }
     }

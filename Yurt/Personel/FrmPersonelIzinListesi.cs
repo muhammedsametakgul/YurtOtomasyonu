@@ -19,22 +19,40 @@ namespace Yurt.Personel
         }
 
         Sql sql = new Sql();
+        
         private void FrmPersonelIzinListesi_Load(object sender, EventArgs e)
         {
-            SqlDataAdapter da = new SqlDataAdapter("Select PersonelTc,PersonelAdSoyad,Sebep,Baslangic,Bitis,Departman From PersonelIzin",sql.Baglan());   
+            SqlDataAdapter da = new SqlDataAdapter("Select PersonelTc,PersonelAdSoyad,Sebep,Baslangic,Bitis,Departman From PersonelIzin ORDER BY Baslangic DESC",sql.Baglan());   
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource= dt;
+            dataGridView1.RowHeadersVisible = false;
         
+            dataGridView1.Columns[1].HeaderText = "Ad-Soyad";
+            dataGridView1.Columns[0].HeaderText = "TC";
+            dataGridView1.Columns[2].HeaderText = "Sebep";
+            dataGridView1.Columns[3].HeaderText = "Başlangıç";
+            dataGridView1.Columns[4].HeaderText = "Bitiş";
+            dataGridView1.Columns[5].HeaderText = "Departman";
+
+
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             string ara = txtArama.Text;
-            SqlDataAdapter da = new SqlDataAdapter("select PersonelTc,PersonelAdSoyad,Sebep,Baslangic,Bitis,Departman from PersonelIzin where PersonelAdSoyad LIKE '%" + ara + "%' or Baslangic LIKE '%"+ara+"%'", sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("select PersonelTc,PersonelAdSoyad,Sebep,Baslangic,Bitis,Departman from PersonelIzin where PersonelAdSoyad LIKE '%" + ara + "%' or Baslangic LIKE '%"+ara+"%' ORDER BY Baslangic DESC", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Columns[1].HeaderText = "Ad-Soyad";
+            dataGridView1.Columns[0].HeaderText = "TC";
+            dataGridView1.Columns[2].HeaderText = "Sebep";
+            dataGridView1.Columns[3].HeaderText = "Başlangıç";
+            dataGridView1.Columns[4].HeaderText = "Bitiş";
+            dataGridView1.Columns[5].HeaderText = "Departman";
         }
 
         private void rbMemur_CheckedChanged(object sender, EventArgs e)
@@ -46,6 +64,13 @@ namespace Yurt.Personel
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                     dataGridView1.DataSource = dt;
+                dataGridView1.RowHeadersVisible = false;
+                dataGridView1.Columns[1].HeaderText = "Ad-Soyad";
+                dataGridView1.Columns[0].HeaderText = "TC";
+                dataGridView1.Columns[2].HeaderText = "Sebep";
+                dataGridView1.Columns[3].HeaderText = "Başlangıç";
+                dataGridView1.Columns[4].HeaderText = "Bitiş";
+                dataGridView1.Columns[5].HeaderText = "Departman";
             }
         }
 
@@ -58,77 +83,35 @@ namespace Yurt.Personel
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
+                dataGridView1.RowHeadersVisible = false;
+                dataGridView1.Columns[1].HeaderText = "Ad-Soyad";
+                dataGridView1.Columns[0].HeaderText = "TC";
+                dataGridView1.Columns[2].HeaderText = "Sebep";
+                dataGridView1.Columns[3].HeaderText = "Başlangıç";
+                dataGridView1.Columns[4].HeaderText = "Bitiş";
+                dataGridView1.Columns[5].HeaderText = "Departman";
             }
         }
 
-        private void rbGecmis_CheckedChanged(object sender, EventArgs e)
-        {
-            if(rbGecmis.Checked)
-            {
-                SqlDataAdapter da = new SqlDataAdapter("Select PersonelTc,PersonelAdSoyad,Sebep,Baslangic,Bitis,Departman from PersonelIzin where Aktifmi=0", sql.Baglan());
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dataGridView1.DataSource = dt;
-            }
-        }
-
-        private void rbAktif_CheckedChanged(object sender, EventArgs e)
-        {
-            if(rbAktif.Checked)
-            {
-                SqlDataAdapter da = new SqlDataAdapter("Select PersonelTc,PersonelAdSoyad,Sebep,Baslangic,Bitis,Departman from PersonelIzin where Aktifmi=1", sql.Baglan());
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dataGridView1.DataSource = dt;
-            }
-        }
-
-        private void rbHepsi_CheckedChanged(object sender, EventArgs e)
-        {
-            if(rbHepsi.Checked) {
-               
-
-                if(rbMemur.Checked)
-                {
-                    string a = "Memur";
-                    SqlDataAdapter da2 = new SqlDataAdapter("Select PersonelTc,PersonelAdSoyad,Sebep,Baslangic,Bitis,Departman from PersonelIzin where Departman= '" + a + "'", sql.Baglan());
-                    DataTable dt2 = new DataTable();
-                    da2.Fill(dt2);
-                    dataGridView1.DataSource = dt2;
-
-                }
-                else if(rbPersonel.Checked)
-                {
-                    string a = "Personel";
-                    SqlDataAdapter da3 = new SqlDataAdapter("Select PersonelTc,PersonelAdSoyad,Sebep,Baslangic,Bitis,Departman from PersonelIzin where Departman= '" + a + "'", sql.Baglan());
-                    DataTable dt3 = new DataTable();
-                    da3.Fill(dt3);
-                    dataGridView1.DataSource = dt3;
-
-                }
-                else
-                {
-                    SqlDataAdapter da = new SqlDataAdapter("Select PersonelTc,PersonelAdSoyad,Sebep,Baslangic,Bitis,Departman from PersonelIzin ", sql.Baglan());
-                    DataTable dt = new DataTable();
-                    da.Fill(dt);
-                    dataGridView1.DataSource = dt;
-                }
-            }
-        }
-
+       
         private void btnTemizle_Click(object sender, EventArgs e)
         {
             rbPersonel.Checked = false;
             rbMemur.Checked = false;
-            rbHepsi.Checked = false;
-            rbGecmis.Checked = false;
-            rbGecmis.Checked = false;
+           
             txtArama.Clear();
             SqlDataAdapter da = new SqlDataAdapter("Select PersonelTc,PersonelAdSoyad,Sebep,Baslangic,Bitis,Departman from PersonelIzin ", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
-           
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Columns[1].HeaderText = "Ad-Soyad";
+            dataGridView1.Columns[0].HeaderText = "TC";
+            dataGridView1.Columns[2].HeaderText = "Sebep";
+            dataGridView1.Columns[3].HeaderText = "Başlangıç";
+            dataGridView1.Columns[4].HeaderText = "Bitiş";
+            dataGridView1.Columns[5].HeaderText = "Departman";
+
         }
     }
 }

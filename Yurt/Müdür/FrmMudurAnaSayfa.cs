@@ -39,31 +39,31 @@ namespace Yurt.Müdür
         }
         private void menu_ogrenci_ekle_Click(object sender, EventArgs e)
         {
-           
-            loadform(new FrmOgrenciEkle());
             lblBaslik.Text = "Öğrenci Ekleme";
+            loadform(new FrmOgrenciEkle());
+           
         }
 
         private void bToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
-
-            loadform(new FrmOgrenciDuzenle());
             lblBaslik.Text = "Öğrenci Silme";
+            loadform(new FrmOgrenciDuzenle());
+            
             
         }
 
         private void cToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
-            loadform(new FrmOgrenciDuzenle());
             lblBaslik.Text = "Öğrenci Düzenleme";
+            loadform(new FrmOgrenciDuzenle());
+        
         }
 
         private void dToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new FrmOgrenciListesi());
             lblBaslik.Text = "Öğrenci Listesi";
+            loadform(new FrmOgrenciListesi());
+           
         }
 
         private void öğrenciİzinToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,124 +73,135 @@ namespace Yurt.Müdür
 
         private void izinVerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
-            loadform(new FrmOgrenciIzinEkle());
             lblBaslik.Text = "Öğrenci İzin Verme";
+            loadform(new FrmOgrenciIzinEkle());
+       
            
         }
 
         private void izinleriGösterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new FrmOgrenciIzinGoster());
             lblBaslik.Text = "Öğrenci İzin Gösterme";
+            loadform(new FrmOgrenciIzinGoster());
+         
         }
 
         private void izinDüzenleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new FrmOgrenciIzinDuzenle());
             lblBaslik.Text = "Öğrenci İzin Düzenleme";
+            loadform(new FrmOgrenciIzinDuzenle());
+         
         }
 
         private void personelEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new FrmPersonelEkle());
             lblBaslik.Text = "Personel Ekleme";
+            loadform(new FrmPersonelEkle());
+           
         }
 
         private void personelGüncelleSilToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new FrmPersonelDuzenle());
             lblBaslik.Text = "Personel Güncelleme";
+            loadform(new FrmPersonelDuzenle());
+          
         }
 
         private void personelListesiGösterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new FrmPersonelListesi());
             lblBaslik.Text = "Personel Listeleme";
+            loadform(new FrmPersonelListesi());
+           
         }
 
         private void izinVerToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            loadform(new FrmPersonelIzinVer());
             lblBaslik.Text = "Personel İzin Verme";
+            loadform(new FrmPersonelIzinVer());
+           
         }
 
         private void izinGösterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new FrmPersonelIzinListesi());
             lblBaslik.Text = "Personel İzin Listesi";
+            loadform(new FrmPersonelIzinListesi());
+        
         }
 
         private void izinDüzenleSilToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new FrmPersonelIzinDuzenle());
             lblBaslik.Text = "Personel İzin Düzenle";
+            loadform(new FrmPersonelIzinDuzenle());
+      
         }
 
-        private void personelŞifreİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            loadform(new FrmPersonelSifreİslemleri ());
-            lblBaslik.Text = "Personel Şifre İşlemleri";
-        }
+       
+       
 
         private void gelirEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new Gelir.FrmGelirEkle() );
             lblBaslik.Text = "Gelir Ekleme";
+            loadform(new Gelir.FrmGelirEkle() );
+          
         }
 
         private void gelirDüzenleSilToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            lblBaslik.Text = "Gelir Güncelleme";
             loadform(new Gelir.FrmGelirDuzenle());
-            lblBaslik.Text = "Gelir Düzenleme";
+           
         }
 
         private void gelirListesiGösterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new FrmGelirListesi());
             lblBaslik.Text = "Gelir Listesi";
+            loadform(new FrmGelirListesi());
+           
         }
 
         private void giderEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new FrmGiderEkle());
             lblBaslik.Text = "Gider Ekleme";
+           
+            loadform(new FrmGiderEkle());
+           
         }
 
         private void giderGüncelleSilToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new FrmGiderDuzenle());
             lblBaslik.Text = "Gider  Düzenleme";
+            loadform(new FrmGiderDuzenle());
+        
         }
 
         private void giderListesiGösterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new FrmGiderlerListesi());
             lblBaslik.Text = "Gider Listesi";
+            loadform(new FrmGiderlerListesi());
+            
         }
 
         private void yöneticiŞifreGüncellemeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new FrmYoneticiSifreİslemleri());
-            lblBaslik.Text = "Yönetici Şifre İşlemleri";
+            FrmYoneticiSifreGuncelle frm = new FrmYoneticiSifreGuncelle();
+            frm.ShowDialog();
+           
         }
 
         private void ödemeAlToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new FrmOgrenciOdemeAl());
             lblBaslik.Text = "Ödeme Alma";
+            loadform(new FrmOgrenciOdemeAl());
+            
         }
-
+        public static string tcAna;
         private void FrmMudurAnaSayfa_Load(object sender, EventArgs e)
         {
              WindowState = FormWindowState.Maximized;
-            SqlCommand komut = new SqlCommand("Select Count(*) From Ogrenci",sql.Baglan());
-            SqlDataReader dr = komut.ExecuteReader();
+            btnSikayetGoruntule.Focus();
+            loadform(new GeciciFormlar.FrmGeciciAnaSayfa());
+            tcAna = lblTCC.Text;
 
-            while (dr.Read())
-            {
-                lblSayi.Text = dr[0].ToString();
-            }
            
         }
 
@@ -201,20 +212,23 @@ namespace Yurt.Müdür
 
         private void yöneticiEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            lblBaslik.Text = "Memur Ekle";
             loadform(new FrmAdminIslemleri());
-            lblBaslik.Text = "Yönetici Ekle";
+           
         }
 
         private void yöneticiDüzenleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new FrmAdminIslemleri());
-            lblBaslik.Text = "Yönetici Düzenle";
+            lblBaslik.Text = "Memur Düzenle";
+            loadform(new FrmAdminİslemleriGuncelleme());
+            
         }
 
         private void yöneticiListesiToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            lblBaslik.Text = "Memur Listesi";
             loadform(new FrmYoneticiListesi());
-            lblBaslik.Text = "Yönetici Listesi";
+            
         }
 
         private void FrmMudurAnaSayfa_FormClosed_1(object sender, FormClosedEventArgs e)
@@ -224,7 +238,7 @@ namespace Yurt.Müdür
 
         private void btnCikis_Click(object sender, EventArgs e)
         {
-           FrmMudurGiris frm = new FrmMudurGiris();
+           AnaGiris frm = new AnaGiris();
             frm.Show();
             this.Hide();
         }
@@ -236,41 +250,204 @@ namespace Yurt.Müdür
 
         private void öğrenciÖdemeAlToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            lblBaslik.Text = "Öğrenci Ödeme Alma";
             loadform(new FrmOgrenciOdemeAl());
         }
 
         private void odaListesiGörmeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new FrmOdaListesi());
             lblBaslik.Text = "Oda Listesi";
+            loadform(new FrmOdaListesi());
+          
         }
 
         private void btnHesapMakina_Click(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Process.Start("calc.exe");
         }
-
+            int sayac = 0;
         private void btnSikayetGoruntule_Click(object sender, EventArgs e)
         {
-            loadform(new Sikayetler.FrmMudurSikayet());
-            lblBaslik.Text = "Yurt Şikayet/Öneri/Haberleşme";
+            sayac++;
+            if(sayac %2 == 0)
+            {
+                lblBaslik.Text = "HOŞGELDİNİZ";
+                mainpanel.Controls.Clear();
+            }
+            else
+            {
+
+                lblBaslik.Text = "Yurt Şikayet/Öneri/Haberleşme";
+                loadform(new Sikayetler.FrmMudurSikayet());
+            }
+           
+
+          
         }
 
         private void memurPersonelMaaşToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new FrmMaasİslemleri());
             lblBaslik.Text = "Maaş İşlemleri";
+            loadform(new FrmMaasİslemleri());
+           
         }
 
         private void yurtÜcretiBelirlemeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            loadform(new Gelir.FrmYurtUcreti());
             lblBaslik.Text = "Yurt Ücreti Belirleme";
+            loadform(new Gelir.FrmYurtUcreti());
+           
           
 
 
         }
 
-       
+        private void yöneticiİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void izinVerToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            lblBaslik.Text = "Öğrenci İzin Ekleme";
+            loadform(new FrmOgrenciIzinEkle());
+            
+        }
+
+        private void izinDüzenleToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            lblBaslik.Text = "Öğrenci İzin Düzenleme";
+            loadform(new FrmOgrenciIzinDuzenle());
+         
+        }
+
+        private void izinListeleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblBaslik.Text = "Öğrenci İzin Listeleme";
+            loadform(new FrmOgrenciIzinGoster());
+          
+        }
+
+        private void izinVerToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            lblBaslik.Text = "Memur/Personel İzin Verme";
+            loadform(new FrmPersonelIzinVer());
+           
+        }
+
+        private void izinDüzenleToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            lblBaslik.Text = "Memur/Personel İzin Düzenle";
+            loadform(new FrmPersonelIzinDuzenle());
+           
+        }
+
+        private void izinListeleToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            lblBaslik.Text = "Memur/Personel İzin Listesi";
+            loadform(new FrmPersonelIzinListesi());
+           
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void öğrenciİşlemleriToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
+        {
+            öğrenciİzinİşlemleriToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void öğrenciİşlemleriToolStripMenuItem_DropDownOpening(object sender, EventArgs e)
+        {
+            öğrenciİzinİşlemleriToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void öğrenciİşlemleriToolStripMenuItem_DropDownOpened_1(object sender, EventArgs e)
+        {
+            öğrenciİşlemleriToolStripMenuItem.ForeColor= Color.Black;
+         
+
+
+        }
+
+        private void öğrenciİşlemleriToolStripMenuItem_DropDownClosed(object sender, EventArgs e)
+        {
+            öğrenciİşlemleriToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void personelİşlemleriToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
+        {
+            personelİşlemleriToolStripMenuItem.ForeColor = Color.Black;
+           
+        }
+
+        private void personelİşlemleriToolStripMenuItem_DropDownClosed(object sender, EventArgs e)
+        {
+            personelİşlemleriToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void yöneticiİşlemleriToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
+        {
+            yöneticiİşlemleriToolStripMenuItem.ForeColor=Color.Black;
+        }
+
+        private void yöneticiİşlemleriToolStripMenuItem_DropDownClosed(object sender, EventArgs e)
+        {
+            yöneticiİşlemleriToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void gelirİşlemleriToolStripMenuItem_DropDownClosed(object sender, EventArgs e)
+        {
+            gelirİşlemleriToolStripMenuItem.ForeColor
+                = Color.Black;
+        }
+
+        private void gelirİşlemleriToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
+        {
+            gelirİşlemleriToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void giderİşlemleriToolStripMenuItem_DropDownClosed(object sender, EventArgs e)
+        {
+            giderİşlemleriToolStripMenuItem.ForeColor=Color.Black;
+        }
+
+        private void giderİşlemleriToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
+        {
+            giderİşlemleriToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void izinİşlemleriToolStripMenuItem_DropDownOpened(object sender, EventArgs e)
+        {
+            izinİşlemleriToolStripMenuItem.ForeColor = Color.Black;
+        }
+
+        private void izinİşlemleriToolStripMenuItem_DropDownClosed(object sender, EventArgs e)
+        {
+            izinİşlemleriToolStripMenuItem.ForeColor=Color.Black;
+        }
+
+        private void FrmMudurAnaSayfa_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                MessageBox.Show("a");
+            }
+        }
+
+        private void btnHakkimizda_Click(object sender, EventArgs e)
+        {
+            lblBaslik.Text = "Hakkımızda";
+            loadform(new GeciciFormlar.FrmHakkimizda());
+        }
+
+        private void btnProfilDuzenle_Click(object sender, EventArgs e)
+        {
+            lblBaslik.Text = "Profili Düzenle";
+            loadform(new FrmProfilDuzenle());
+        }
     }
-}
+    }
+

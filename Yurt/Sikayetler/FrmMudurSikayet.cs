@@ -30,7 +30,7 @@ namespace Yurt.Sikayetler
 
             //Adı otomatikmolarak getirme
             SqlCommand komut = new SqlCommand("Select mudurAdSoyad from Mudur where mudurTc=@pp1", sql.Baglan());
-            komut.Parameters.AddWithValue("@pp1", FrmMudurGiris.tcGiris);
+            komut.Parameters.AddWithValue("@pp1", FrmMudurAnaSayfa.tcAna);
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
             {

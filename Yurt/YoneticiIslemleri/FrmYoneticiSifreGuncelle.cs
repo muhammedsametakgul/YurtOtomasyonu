@@ -47,5 +47,17 @@ namespace Yurt.YoneticiIslemleri
             ///MskTcSifreGuncelleme.Text = tc_sifre_guncelleme;
            
         }
+
+        private void MskTcSifreGuncelleme_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
+        }
     }
 }

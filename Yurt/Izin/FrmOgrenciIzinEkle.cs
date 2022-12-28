@@ -32,36 +32,59 @@ namespace Yurt
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult d = new DialogResult();
-            d = MessageBox.Show("Eklemek istediğinize emin misiniz?","Uyarı",MessageBoxButtons.YesNo);
-            if(d == DialogResult.Yes)
+            try
             {
+                if (MskTc.Text != "" && TxtAd.Text != "" && TxtSebep.Text != "" && MskOgrenciTel.Text != "" && MskVeliTel.Text != "")
+                {
 
-                SqlCommand komut = new SqlCommand("insert into OgrenciIzin (OgrenciTc,OgrenciAdSoyad,Sebep,Baslangic,Bitis,OgrenciTel" +
-               ",VeliTel) values(@p1,@p2,@p3,@p4,@p5,@p6,@p7)", sql.Baglan());
-                komut.Parameters.AddWithValue("@p1", MskTc.Text);
-                komut.Parameters.AddWithValue("@p2", TxtAd.Text);
-                komut.Parameters.AddWithValue("@p3", TxtSebep.Text);
-                komut.Parameters.AddWithValue("@p4", DateBas.Value.Date);
-                komut.Parameters.AddWithValue("@p5", DateBit.Value.Date);
-                komut.Parameters.AddWithValue("@p6", MskOgrenciTel.Text);
-                komut.Parameters.AddWithValue("@p7", MskVeliTel.Text);
-                komut.ExecuteNonQuery();
-                MessageBox.Show("Başarıyl eklendi");
-                txtAra.Clear();
-                SqlDataAdapter da = new SqlDataAdapter("Select OgrenciAd,OgrenciTc,OgrenciTelefon,VeliTel from Ogrenci", sql.Baglan());
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                dataGridView1.DataSource = dt;
+                    DialogResult d = new DialogResult();
+                d = MessageBox.Show("Eklemek istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo);
+                if (d == DialogResult.Yes)
+                {
 
+                    
 
-                sql.Baglan().Close();
+                        SqlCommand komut = new SqlCommand("insert into OgrenciIzin (OgrenciTc,OgrenciAdSoyad,Sebep,Baslangic,Bitis,OgrenciTel" +
+                       ",VeliTel) values(@p1,@p2,@p3,@p4,@p5,@p6,@p7)", sql.Baglan());
+                        komut.Parameters.AddWithValue("@p1", MskTc.Text);
+                        komut.Parameters.AddWithValue("@p2", TxtAd.Text);
+                        komut.Parameters.AddWithValue("@p3", TxtSebep.Text);
+                        komut.Parameters.AddWithValue("@p4", DateBas.Value.Date);
+                        komut.Parameters.AddWithValue("@p5", DateBit.Value.Date);
+                        komut.Parameters.AddWithValue("@p6", MskOgrenciTel.Text);
+                        komut.Parameters.AddWithValue("@p7", MskVeliTel.Text);
+                        komut.ExecuteNonQuery();
+                      
+
+                        txtAra.Clear();
+                        MskTc.Text = "";
+                        TxtAd.Text = "";
+                        TxtSebep.Text = "";
+                        MskOgrenciTel.Text = "";
+                        MskVeliTel.Text = "";
+                        SqlDataAdapter da = new SqlDataAdapter("Select OgrenciAd,OgrenciTc,OgrenciTelefon,VeliTel from Ogrenci", sql.Baglan());
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        dataGridView1.DataSource = dt;
+                        MessageBox.Show("İzin Başarıyla Eklendi");
+
+                        sql.Baglan().Close();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen Tüm Alanları Dolurduğunuza Emin Olunuz");
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Bir Hata Oldu !  Lütfen Tekrar Deneyiniz");
             }
         }
 
       
       
-
+        //Tıklayınca veriler getiriliyor
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int secilen = dataGridView1.SelectedCells[0].RowIndex;
@@ -72,6 +95,7 @@ namespace Yurt
             MskVeliTel.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
         }
 
+        //Arama için
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             string ara = txtAra.Text;

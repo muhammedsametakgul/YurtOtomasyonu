@@ -21,8 +21,11 @@ namespace Yurt
         private void FrmOgrenciListesi_Load(object sender, EventArgs e)
         {
             dataGridView1.Visible = true;
-           
-            SqlDataAdapter da = new SqlDataAdapter("Select OgrenciTc,OgrenciAd From Ogrenci", sql.Baglan());
+            groupBox1.Visible = false;
+            groupBox2.Visible = false;
+            groupBox3.Visible = false;
+          dataGridView1.RowHeadersVisible = false;
+            SqlDataAdapter da = new SqlDataAdapter("Select OgrenciTc,OgrenciAd From Ogrenci ORDER BY OgrenciAd ASC", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -32,15 +35,19 @@ namespace Yurt
         private void txtAra_TextChanged(object sender, EventArgs e)
         {
             string ara = txtAra.Text;
-            SqlDataAdapter da = new SqlDataAdapter("select OgrenciTc,OgrenciAd from Ogrenci where OgrenciAd LIKE '%" + ara + "%'", sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("select OgrenciTc,OgrenciAd from Ogrenci where OgrenciAd LIKE '%" + ara + "%' ORDER BY OgrenciAd ASC", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+            dataGridView1.RowHeadersVisible = false;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int secilen = dataGridView1.SelectedCells[0].RowIndex;
+            groupBox1.Visible = true;
+            groupBox2.Visible = true;
+            groupBox3.Visible = true;
 
             lblTc.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
 

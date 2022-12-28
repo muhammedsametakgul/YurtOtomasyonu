@@ -35,7 +35,7 @@ namespace Yurt
 
         private void AnaGiris_Load(object sender, EventArgs e)
         {
-            btnMudurGiris.Focus();
+          
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,6 +48,8 @@ namespace Yurt
         private void AnaGiris_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        
         }
+       
     }
 }

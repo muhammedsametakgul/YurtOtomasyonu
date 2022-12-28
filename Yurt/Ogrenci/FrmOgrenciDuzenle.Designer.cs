@@ -33,10 +33,9 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cmbYasadigi = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtIl = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.rchAdres = new System.Windows.Forms.RichTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.TxtMail = new System.Windows.Forms.TextBox();
             this.MskTel = new System.Windows.Forms.MaskedTextBox();
@@ -49,7 +48,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.MskVeliTel = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtDogum = new System.Windows.Forms.TextBox();
+            this.cmbDogdugu = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.MskTc = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtBolum = new System.Windows.Forms.TextBox();
@@ -57,12 +58,12 @@
             this.CmbOda = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtAd = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.MskDogum = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.MskTc = new System.Windows.Forms.MaskedTextBox();
             this.txtArama = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.txtAdres = new System.Windows.Forms.TextBox();
+            this.lblOda = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -81,7 +82,7 @@
             // 
             // BtnGuncelle
             // 
-            this.BtnGuncelle.Location = new System.Drawing.Point(1225, 35);
+            this.BtnGuncelle.Location = new System.Drawing.Point(1225, 30);
             this.BtnGuncelle.Name = "BtnGuncelle";
             this.BtnGuncelle.Size = new System.Drawing.Size(156, 51);
             this.BtnGuncelle.TabIndex = 39;
@@ -92,6 +93,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 541);
             this.dataGridView1.Name = "dataGridView1";
@@ -116,11 +118,12 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lblOda);
+            this.groupBox3.Controls.Add(this.txtAdres);
+            this.groupBox3.Controls.Add(this.cmbYasadigi);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.txtIl);
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.rchAdres);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.TxtMail);
             this.groupBox3.Controls.Add(this.MskTel);
@@ -132,47 +135,121 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "İletişim Bilgileri";
             // 
+            // cmbYasadigi
+            // 
+            this.cmbYasadigi.FormattingEnabled = true;
+            this.cmbYasadigi.Items.AddRange(new object[] {
+            "Adana",
+            "Adıyaman",
+            "Afyonkarahisar",
+            "Ağrı",
+            "Aksaray",
+            "Amasya",
+            "Ankara",
+            "Antalya",
+            "Ardahan",
+            "Artvin",
+            "Aydın",
+            "Balıkesir",
+            "Bartın",
+            "Batman",
+            "Bayburt",
+            "Bilecik",
+            "Bingöl",
+            "Bitlis",
+            "Bolu",
+            "Burdur",
+            "Bursa",
+            "Çanakkale",
+            "Çankırı",
+            "Çorum",
+            "Denizli",
+            "Diyarbakır",
+            "Düzce",
+            "Edirne",
+            "Elazığ",
+            "Erzincan",
+            "Erzurum",
+            "Eskişehir",
+            "Gaziantep",
+            "Giresun",
+            "Gümüşhane",
+            "Hakkâri",
+            "Hatay",
+            "Iğdır",
+            "Isparta",
+            "İstanbul",
+            "İzmir",
+            "Kahramanmaraş",
+            "Karabük",
+            "Karaman",
+            "Kars",
+            "Kastamonu",
+            "Kayseri",
+            "Kilis",
+            "Kırıkkale",
+            "Kırklareli",
+            "Kırşehir",
+            "Kocaeli",
+            "Konya",
+            "Kütahya",
+            "Malatya",
+            "Manisa",
+            "Mardin",
+            "Mersin",
+            "Muğla",
+            "Muş",
+            "Nevşehir",
+            "Niğde",
+            "Ordu",
+            "Osmaniye",
+            "Rize",
+            "Sakarya",
+            "Samsun",
+            "Şanlıurfa",
+            "Siirt",
+            "Sinop",
+            "Sivas",
+            "Şırnak",
+            "Tekirdağ",
+            "Tokat",
+            "Trabzon",
+            "Tunceli",
+            "Uşak",
+            "Van",
+            "Yalova",
+            "Yozgat",
+            "Zonguldak"});
+            this.cmbYasadigi.Location = new System.Drawing.Point(152, 50);
+            this.cmbYasadigi.Name = "cmbYasadigi";
+            this.cmbYasadigi.Size = new System.Drawing.Size(395, 24);
+            this.cmbYasadigi.TabIndex = 42;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label14.Location = new System.Drawing.Point(79, 54);
+            this.label14.Location = new System.Drawing.Point(15, 50);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(25, 20);
+            this.label14.Size = new System.Drawing.Size(102, 20);
             this.label14.TabIndex = 27;
-            this.label14.Text = "İl:";
-            // 
-            // txtIl
-            // 
-            this.txtIl.Location = new System.Drawing.Point(152, 47);
-            this.txtIl.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txtIl.Name = "txtIl";
-            this.txtIl.Size = new System.Drawing.Size(344, 22);
-            this.txtIl.TabIndex = 10;
+            this.label14.Text = "Yaşadığı İl:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(40, 98);
+            this.label2.Location = new System.Drawing.Point(53, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 20);
             this.label2.TabIndex = 20;
             this.label2.Text = "Adres:";
             // 
-            // rchAdres
-            // 
-            this.rchAdres.Location = new System.Drawing.Point(152, 91);
-            this.rchAdres.Name = "rchAdres";
-            this.rchAdres.Size = new System.Drawing.Size(395, 196);
-            this.rchAdres.TabIndex = 12;
-            this.rchAdres.Text = "";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(54, 333);
+            this.label9.Location = new System.Drawing.Point(67, 333);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 20);
             this.label9.TabIndex = 15;
@@ -194,13 +271,12 @@
             this.MskTel.Name = "MskTel";
             this.MskTel.Size = new System.Drawing.Size(395, 22);
             this.MskTel.TabIndex = 14;
-            this.MskTel.Click += new System.EventHandler(this.MskTel_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(27, 385);
+            this.label8.Location = new System.Drawing.Point(40, 385);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 20);
             this.label8.TabIndex = 16;
@@ -287,11 +363,12 @@
             this.MskVeliTel.Name = "MskVeliTel";
             this.MskVeliTel.Size = new System.Drawing.Size(344, 22);
             this.MskVeliTel.TabIndex = 9;
-            this.MskVeliTel.Click += new System.EventHandler(this.MskVeliTel_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtDogum);
+            this.groupBox1.Controls.Add(this.cmbDogdugu);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.MskTc);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtBolum);
@@ -299,10 +376,8 @@
             this.groupBox1.Controls.Add(this.CmbOda);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.TxtAd);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.MskDogum);
             this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.MskTc);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(582, 303);
@@ -310,28 +385,131 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kişisel Bilgiler";
             // 
-            // txtDogum
+            // cmbDogdugu
             // 
-            this.txtDogum.Location = new System.Drawing.Point(203, 213);
-            this.txtDogum.Name = "txtDogum";
-            this.txtDogum.Size = new System.Drawing.Size(344, 22);
-            this.txtDogum.TabIndex = 5;
+            this.cmbDogdugu.FormattingEnabled = true;
+            this.cmbDogdugu.Items.AddRange(new object[] {
+            "Adana",
+            "Adıyaman",
+            "Afyonkarahisar",
+            "Ağrı",
+            "Aksaray",
+            "Amasya",
+            "Ankara",
+            "Antalya",
+            "Ardahan",
+            "Artvin",
+            "Aydın",
+            "Balıkesir",
+            "Bartın",
+            "Batman",
+            "Bayburt",
+            "Bilecik",
+            "Bingöl",
+            "Bitlis",
+            "Bolu",
+            "Burdur",
+            "Bursa",
+            "Çanakkale",
+            "Çankırı",
+            "Çorum",
+            "Denizli",
+            "Diyarbakır",
+            "Düzce",
+            "Edirne",
+            "Elazığ",
+            "Erzincan",
+            "Erzurum",
+            "Eskişehir",
+            "Gaziantep",
+            "Giresun",
+            "Gümüşhane",
+            "Hakkâri",
+            "Hatay",
+            "Iğdır",
+            "Isparta",
+            "İstanbul",
+            "İzmir",
+            "Kahramanmaraş",
+            "Karabük",
+            "Karaman",
+            "Kars",
+            "Kastamonu",
+            "Kayseri",
+            "Kilis",
+            "Kırıkkale",
+            "Kırklareli",
+            "Kırşehir",
+            "Kocaeli",
+            "Konya",
+            "Kütahya",
+            "Malatya",
+            "Manisa",
+            "Mardin",
+            "Mersin",
+            "Muğla",
+            "Muş",
+            "Nevşehir",
+            "Niğde",
+            "Ordu",
+            "Osmaniye",
+            "Rize",
+            "Sakarya",
+            "Samsun",
+            "Şanlıurfa",
+            "Siirt",
+            "Sinop",
+            "Sivas",
+            "Şırnak",
+            "Tekirdağ",
+            "Tokat",
+            "Trabzon",
+            "Tunceli",
+            "Uşak",
+            "Van",
+            "Yalova",
+            "Yozgat",
+            "Zonguldak"});
+            this.cmbDogdugu.Location = new System.Drawing.Point(198, 208);
+            this.cmbDogdugu.Name = "cmbDogdugu";
+            this.cmbDogdugu.Size = new System.Drawing.Size(344, 24);
+            this.cmbDogdugu.TabIndex = 27;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(63, 32);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 20);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Öğrenci TC:";
+            // 
+            // MskTc
+            // 
+            this.MskTc.Location = new System.Drawing.Point(198, 30);
+            this.MskTc.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.MskTc.Mask = "00000000000";
+            this.MskTc.Name = "MskTc";
+            this.MskTc.Size = new System.Drawing.Size(344, 22);
+            this.MskTc.TabIndex = 25;
+            this.MskTc.ValidatingType = typeof(int);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.Location = new System.Drawing.Point(51, 212);
+            this.label13.Location = new System.Drawing.Point(69, 212);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(123, 20);
+            this.label13.Size = new System.Drawing.Size(105, 20);
             this.label13.TabIndex = 24;
-            this.label13.Text = "Doğduğu Yer:";
+            this.label13.Text = "Doğduğu İl:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(80, 32);
+            this.label3.Location = new System.Drawing.Point(80, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(94, 20);
             this.label3.TabIndex = 9;
@@ -339,7 +517,7 @@
             // 
             // txtBolum
             // 
-            this.txtBolum.Location = new System.Drawing.Point(203, 166);
+            this.txtBolum.Location = new System.Drawing.Point(198, 165);
             this.txtBolum.Name = "txtBolum";
             this.txtBolum.Size = new System.Drawing.Size(344, 22);
             this.txtBolum.TabIndex = 4;
@@ -357,7 +535,7 @@
             // CmbOda
             // 
             this.CmbOda.FormattingEnabled = true;
-            this.CmbOda.Location = new System.Drawing.Point(203, 260);
+            this.CmbOda.Location = new System.Drawing.Point(198, 257);
             this.CmbOda.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.CmbOda.Name = "CmbOda";
             this.CmbOda.Size = new System.Drawing.Size(344, 24);
@@ -375,53 +553,31 @@
             // 
             // TxtAd
             // 
-            this.TxtAd.Location = new System.Drawing.Point(203, 25);
+            this.TxtAd.Location = new System.Drawing.Point(198, 75);
             this.TxtAd.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.TxtAd.Name = "TxtAd";
             this.TxtAd.Size = new System.Drawing.Size(344, 22);
             this.TxtAd.TabIndex = 1;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(63, 122);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 20);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Öğrenci TC:";
-            // 
             // MskDogum
             // 
-            this.MskDogum.Location = new System.Drawing.Point(203, 72);
+            this.MskDogum.Location = new System.Drawing.Point(198, 121);
             this.MskDogum.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.MskDogum.Mask = "00/00/0000";
             this.MskDogum.Name = "MskDogum";
             this.MskDogum.Size = new System.Drawing.Size(344, 22);
             this.MskDogum.TabIndex = 2;
             this.MskDogum.ValidatingType = typeof(System.DateTime);
-            this.MskDogum.Click += new System.EventHandler(this.MskDogum_Click);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label15.Location = new System.Drawing.Point(46, 77);
+            this.label15.Location = new System.Drawing.Point(46, 122);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(128, 20);
             this.label15.TabIndex = 11;
             this.label15.Text = "Doğum Tarihi:";
-            // 
-            // MskTc
-            // 
-            this.MskTc.Location = new System.Drawing.Point(203, 119);
-            this.MskTc.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.MskTc.Mask = "00000000000";
-            this.MskTc.Name = "MskTc";
-            this.MskTc.Size = new System.Drawing.Size(344, 22);
-            this.MskTc.TabIndex = 3;
-            this.MskTc.ValidatingType = typeof(int);
-            this.MskTc.Click += new System.EventHandler(this.MskTc_Click);
             // 
             // txtArama
             // 
@@ -440,6 +596,24 @@
             this.label16.Size = new System.Drawing.Size(87, 16);
             this.label16.TabIndex = 46;
             this.label16.Text = "Ad İle Arama:";
+            // 
+            // txtAdres
+            // 
+            this.txtAdres.Location = new System.Drawing.Point(152, 98);
+            this.txtAdres.Multiline = true;
+            this.txtAdres.Name = "txtAdres";
+            this.txtAdres.Size = new System.Drawing.Size(395, 201);
+            this.txtAdres.TabIndex = 43;
+            // 
+            // lblOda
+            // 
+            this.lblOda.AutoSize = true;
+            this.lblOda.Location = new System.Drawing.Point(120, 449);
+            this.lblOda.Name = "lblOda";
+            this.lblOda.Size = new System.Drawing.Size(51, 16);
+            this.lblOda.TabIndex = 44;
+            this.lblOda.Text = "label11";
+            this.lblOda.Visible = false;
             // 
             // FrmOgrenciDuzenle
             // 
@@ -478,9 +652,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtIl;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox rchAdres;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TxtMail;
         private System.Windows.Forms.MaskedTextBox MskTel;
@@ -493,7 +665,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox MskVeliTel;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtDogum;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtBolum;
@@ -501,11 +672,15 @@
         private System.Windows.Forms.ComboBox CmbOda;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TxtAd;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox MskDogum;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.MaskedTextBox MskTc;
         private System.Windows.Forms.TextBox txtArama;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.MaskedTextBox MskTc;
+        private System.Windows.Forms.ComboBox cmbDogdugu;
+        private System.Windows.Forms.ComboBox cmbYasadigi;
+        private System.Windows.Forms.TextBox txtAdres;
+        private System.Windows.Forms.Label lblOda;
     }
 }

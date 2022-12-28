@@ -33,6 +33,11 @@ namespace Yurt.Gelir
             SqlDataAdapter da = new SqlDataAdapter("Select YurtUcreti,Tarih,Kim,Aktifmi From YurtUcreti",sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
+            //dataGridView1.Columns[0].HeaderText = "Yurt Ücreti";
+            //dataGridView1.Columns[1].HeaderText = "Tarih";
+            //dataGridView1.Columns[2].HeaderText = "Kim Yaptı?";
+            //dataGridView1.Columns[3].HeaderText = "Aktif mi?";
+            dataGridView1.RowHeadersVisible = false;
             dataGridView1.DataSource= dt;
          zamann=zaman.ToString();
            
@@ -40,8 +45,8 @@ namespace Yurt.Gelir
 
         private void btnDogrula_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("Select * From Mudur Where mudurKullaniciAdi=@p1 and mudurSifre=@p2 ",sql.Baglan());
-            komut.Parameters.AddWithValue("@p1",txtKullanici.Text);
+            SqlCommand komut = new SqlCommand("Select * From Mudur Where mudurTc=@p1 and mudurSifre=@p2 ",sql.Baglan());
+            komut.Parameters.AddWithValue("@p1",mskTc.Text);
             komut.Parameters.AddWithValue("@p2",txtSifre.Text);
             SqlDataReader dr = komut.ExecuteReader();   
 
@@ -51,7 +56,7 @@ namespace Yurt.Gelir
             
                 lblAd.Text = dr[2].ToString();
 
-                txtKullanici.Visible= false;
+                mskTc.Visible= false;
                 txtSifre.Visible=false;
                 btnDogrula.Visible= false;
                 mskUcret.Visible= true;
@@ -63,6 +68,10 @@ namespace Yurt.Gelir
                 dataGridView1.Visible = true;
                 lblUyari.Text = "Doğrulama Başarılı";
                 lblUyari.ForeColor = Color.Green;
+            }
+            else
+            {
+                MessageBox.Show("Doğrulamayı Doğru Yaptığızdan Emin Olunuz");
             }
 
         }
@@ -92,12 +101,29 @@ namespace Yurt.Gelir
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
+                dataGridView1.Columns[0].HeaderText = "Yurt Ücreti";
+                dataGridView1.Columns[1].HeaderText = "Tarih";
+                dataGridView1.Columns[2].HeaderText = "Kim Yaptı?";
+                dataGridView1.Columns[3].HeaderText = "Aktif mi?";
+
 
 
 
 
             }
 
+        }
+
+        private void mskUcret_Click(object sender, EventArgs e)
+        {
+            MaskedTextBox textBox = sender as MaskedTextBox;
+            textBox.Focus();
+            if (textBox != null)
+            {
+
+                textBox.Select(0, 0);
+
+            }
         }
     }
 }

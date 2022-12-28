@@ -26,11 +26,18 @@ namespace Yurt
         
         public  void Guncelle_Grid()
         {
-            SqlDataAdapter da = new SqlDataAdapter("Select * From OgrenciIzin", sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("Select Izinid,OgrenciTc,OgrenciAdSoyad,Sebep,Baslangic,Bitis From OgrenciIzin ORDER BY Baslangic ASC", sql.Baglan());
 
             DataTable dataTable = new DataTable();
             da.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Columns[0].HeaderText = "İzin ID";
+            dataGridView1.Columns[1].HeaderText = "TC";
+            dataGridView1.Columns[2].HeaderText = "Ad-Soyad";
+            dataGridView1.Columns[3].HeaderText = "Sebep";
+            dataGridView1.Columns[4].HeaderText = "Başlangıç";
+            dataGridView1.Columns[5].HeaderText = "Bitiş";
 
         }
 
@@ -39,6 +46,7 @@ namespace Yurt
             int secilen = dataGridView1.SelectedCells[0].RowIndex;
             lblid.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
             lblTc.Text= dataGridView1.Rows[secilen].Cells[1].Value.ToString();
+            txtAd.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
             TxtSebep.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
             DateBas.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
             DateBit.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
@@ -50,21 +58,35 @@ namespace Yurt
         {
             try
             {
-                SqlCommand komut1 = new SqlCommand("Update OgrenciIzin set Sebep=@p1,Baslangic=@p2,Bitis=@p3 where Izinid=@p4", sql.Baglan());
-                komut1.Parameters.AddWithValue("@p1", TxtSebep.Text);
-                komut1.Parameters.AddWithValue("@p2", DateBas.Text);
-                komut1.Parameters.AddWithValue("@p3", DateBit.Text);
-                komut1.Parameters.AddWithValue("@p4", lblid.Text);
-                komut1.ExecuteNonQuery();
-                MessageBox.Show("Başarıyla Güncellendi");
-             
-                Guncelle_Grid();
-                sql.Baglan().Close();
+               if(TxtSebep.Text != "")
+                {
+                    DialogResult d = new DialogResult();
+                    d = MessageBox.Show("Güncellemek İstediğinize Emin Misiniz?","UYARI",MessageBoxButtons.YesNo);
+                    if (d == DialogResult.Yes)
+                    {
+                        SqlCommand komut1 = new SqlCommand("Update OgrenciIzin set Sebep=@p1,Baslangic=@p2,Bitis=@p3 where Izinid=@p4", sql.Baglan());
+                        komut1.Parameters.AddWithValue("@p1", TxtSebep.Text);
+                        komut1.Parameters.AddWithValue("@p2", DateBas.Value.Date);
+                        komut1.Parameters.AddWithValue("@p3", DateBit.Value.Date);
+                        komut1.Parameters.AddWithValue("@p4", lblid.Text);
+                        komut1.ExecuteNonQuery();
+                        MessageBox.Show("Başarıyla Güncellendi");
+
+                        Guncelle_Grid();
+                        sql.Baglan().Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen Tüm Alanları Eksiksiz Doldurunuz");
+                }
             }
                 
             catch(Exception exp)
             {
+                MessageBox.Show("Bir Hata Oluştu ! Daha Sonra Tekrar Deneyiniz");
                 MessageBox.Show(exp.Message);
+               
             }
 
         }
@@ -72,18 +94,50 @@ namespace Yurt
         private void txtArama_TextChanged(object sender, EventArgs e)
         {
             string ara = txtArama.Text;
-            SqlDataAdapter da = new SqlDataAdapter("select * from OgrenciIzin where OgrenciAdSoyad LIKE '%" + ara + "%'", sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("select Izinid,OgrenciTc,OgrenciAdSoyad,Sebep,Baslangic,Bitis from OgrenciIzin where OgrenciAdSoyad LIKE '%" + ara + "%' ORDER BY Baslangic ASC", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Columns[0].HeaderText = "İzin ID";
+            dataGridView1.Columns[1].HeaderText = "TC";
+            dataGridView1.Columns[2].HeaderText = "Ad-Soyad";
+            dataGridView1.Columns[3].HeaderText = "Sebep";
+            dataGridView1.Columns[4].HeaderText = "Başlangıç";
+            dataGridView1.Columns[5].HeaderText = "Bitiş";
 
-            //string ara = txtArama.Text;
-          //SqlDataAdapter da = new SqlDataAdapter("select * from OgrenciIzin where OgrenciAdSoyad LIKE '%" + ara + " %'", sql.Baglan());
 
-            //DataTable dt = new DataTable();
-            //da.Fill(dt);
-            //dataGridView1.DataSource = dt;
 
+
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            DialogResult d = new DialogResult();
+            d = MessageBox.Show("Silmek İStediğinize Emin Misiniz?","UYARI",MessageBoxButtons.YesNo);
+            if (d == DialogResult.Yes)
+            {
+                try
+                {
+                    if (lblid.Text != "")
+                    {
+
+                        SqlCommand komut = new SqlCommand("Delete From OgrenciIzin Where Izinid=@p1", sql.Baglan());
+                        komut.Parameters.AddWithValue("@p1", lblid.Text);
+                        komut.ExecuteNonQuery();
+                        MessageBox.Show("Başarıyla Silindi");
+                        Guncelle_Grid();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lütfen Bir Hücre Seçiniz");
+                    }
+                }catch(Exception ex)
+                {
+                    MessageBox.Show("Lütfen Bir Hücre Seçiniz");
+
+                }
+            }
         }
     }
 }

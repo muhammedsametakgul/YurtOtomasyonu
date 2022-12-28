@@ -35,33 +35,28 @@
             this.sidePanel1 = new DevExpress.XtraEditors.SidePanel();
             this.lblBaslik = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnProfilDuzenle = new System.Windows.Forms.Button();
+            this.btnHakkimizda = new System.Windows.Forms.Button();
             this.lblTCC = new System.Windows.Forms.Label();
             this.btnHesapMakina = new System.Windows.Forms.Button();
-            this.lblSayi = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnCikis = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.öğrenciİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_ogrenci_ekle = new System.Windows.Forms.ToolStripMenuItem();
-            this.bToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.öğrenciİzinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.izinVerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.izinleriGösterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.izinDüzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.odaListesiGörmeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelGüncelleSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.personelListesiGösterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.personelİzinİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.izinVerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.izinGösterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.izinDüzenleSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yöneticiİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yöneticiEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yöneticiDüzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yöneticiListesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yöneticiŞifreGüncellemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gelirİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gelirEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gelirDüzenleSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,19 +68,15 @@
             this.giderGüncelleSilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.giderListesiGösterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.memurPersonelMaaşToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yöneticiİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yöneticiŞifreGüncellemeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yöneticiEkleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yöneticiDüzenleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yöneticiListesiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblTc = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.izinİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.öğrenciİzinİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.izinVerToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.izinDüzenleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.izinListeleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.memurPersonelİzinİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.izinVerToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.izinDüzenleToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.izinListeleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.btnSikayetGoruntule = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -93,9 +84,7 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
@@ -104,18 +93,18 @@
             // 
             this.mainpanel.BackColor = System.Drawing.Color.White;
             this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainpanel.Location = new System.Drawing.Point(190, 79);
+            this.mainpanel.Location = new System.Drawing.Point(190, 96);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(1734, 941);
+            this.mainpanel.Size = new System.Drawing.Size(1734, 924);
             this.mainpanel.TabIndex = 7;
             // 
             // sidePanel1
             // 
-            this.sidePanel1.Appearance.BackColor = System.Drawing.Color.White;
+            this.sidePanel1.Appearance.BackColor = System.Drawing.Color.FloralWhite;
             this.sidePanel1.Appearance.Options.UseBackColor = true;
             this.sidePanel1.Controls.Add(this.lblBaslik);
             this.sidePanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.sidePanel1.Location = new System.Drawing.Point(190, 30);
+            this.sidePanel1.Location = new System.Drawing.Point(190, 47);
             this.sidePanel1.Name = "sidePanel1";
             this.sidePanel1.Size = new System.Drawing.Size(1734, 49);
             this.sidePanel1.TabIndex = 6;
@@ -133,18 +122,48 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel1.Controls.Add(this.btnProfilDuzenle);
+            this.panel1.Controls.Add(this.btnHakkimizda);
             this.panel1.Controls.Add(this.lblTCC);
             this.panel1.Controls.Add(this.btnHesapMakina);
-            this.panel1.Controls.Add(this.lblSayi);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnCikis);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(0, 30);
+            this.panel1.Location = new System.Drawing.Point(0, 47);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(190, 990);
+            this.panel1.Size = new System.Drawing.Size(190, 973);
             this.panel1.TabIndex = 4;
+            // 
+            // btnProfilDuzenle
+            // 
+            this.btnProfilDuzenle.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnProfilDuzenle.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
+            this.btnProfilDuzenle.FlatAppearance.BorderSize = 0;
+            this.btnProfilDuzenle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfilDuzenle.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfilDuzenle.Location = new System.Drawing.Point(23, 642);
+            this.btnProfilDuzenle.Name = "btnProfilDuzenle";
+            this.btnProfilDuzenle.Size = new System.Drawing.Size(152, 38);
+            this.btnProfilDuzenle.TabIndex = 13;
+            this.btnProfilDuzenle.Text = "Profili Düzenle";
+            this.btnProfilDuzenle.UseVisualStyleBackColor = false;
+            this.btnProfilDuzenle.Click += new System.EventHandler(this.btnProfilDuzenle_Click);
+            // 
+            // btnHakkimizda
+            // 
+            this.btnHakkimizda.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnHakkimizda.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
+            this.btnHakkimizda.FlatAppearance.BorderSize = 0;
+            this.btnHakkimizda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHakkimizda.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHakkimizda.Location = new System.Drawing.Point(20, 748);
+            this.btnHakkimizda.Name = "btnHakkimizda";
+            this.btnHakkimizda.Size = new System.Drawing.Size(152, 38);
+            this.btnHakkimizda.TabIndex = 12;
+            this.btnHakkimizda.Text = "Hakkımızda";
+            this.btnHakkimizda.UseVisualStyleBackColor = false;
+            this.btnHakkimizda.Click += new System.EventHandler(this.btnHakkimizda_Click);
             // 
             // lblTCC
             // 
@@ -157,15 +176,16 @@
             this.lblTCC.TabIndex = 11;
             this.lblTCC.Text = "label3";
             this.lblTCC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblTCC.Visible = false;
             // 
             // btnHesapMakina
             // 
-            this.btnHesapMakina.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnHesapMakina.BackColor = System.Drawing.Color.SkyBlue;
             this.btnHesapMakina.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
             this.btnHesapMakina.FlatAppearance.BorderSize = 0;
             this.btnHesapMakina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHesapMakina.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHesapMakina.Location = new System.Drawing.Point(17, 660);
+            this.btnHesapMakina.Location = new System.Drawing.Point(20, 695);
             this.btnHesapMakina.Name = "btnHesapMakina";
             this.btnHesapMakina.Size = new System.Drawing.Size(152, 38);
             this.btnHesapMakina.TabIndex = 10;
@@ -173,32 +193,9 @@
             this.btnHesapMakina.UseVisualStyleBackColor = false;
             this.btnHesapMakina.Click += new System.EventHandler(this.btnHesapMakina_Click);
             // 
-            // lblSayi
-            // 
-            this.lblSayi.AutoSize = true;
-            this.lblSayi.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSayi.ForeColor = System.Drawing.Color.White;
-            this.lblSayi.Location = new System.Drawing.Point(45, 205);
-            this.lblSayi.Name = "lblSayi";
-            this.lblSayi.Size = new System.Drawing.Size(70, 26);
-            this.lblSayi.TabIndex = 9;
-            this.lblSayi.Text = "label3";
-            this.lblSayi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 161);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(169, 29);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Öğrenci Sayısı:";
-            // 
             // btnCikis
             // 
-            this.btnCikis.BackColor = System.Drawing.Color.RosyBrown;
+            this.btnCikis.BackColor = System.Drawing.Color.SkyBlue;
             this.btnCikis.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
             this.btnCikis.FlatAppearance.BorderSize = 0;
             this.btnCikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -212,129 +209,96 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.SkyBlue;
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1924, 30);
+            this.panel2.Size = new System.Drawing.Size(1924, 47);
             this.panel2.TabIndex = 5;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.RosyBrown;
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Controls.Add(this.menuStrip1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(76, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1924, 30);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.menuStrip1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(190, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1734, 30);
-            this.panel4.TabIndex = 3;
+            this.panel3.Size = new System.Drawing.Size(1848, 47);
+            this.panel3.TabIndex = 1;
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Teal;
+            this.menuStrip1.BackColor = System.Drawing.Color.SkyBlue;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.öğrenciİşlemleriToolStripMenuItem,
             this.personelİşlemleriToolStripMenuItem,
+            this.yöneticiİşlemleriToolStripMenuItem,
             this.gelirİşlemleriToolStripMenuItem,
             this.giderİşlemleriToolStripMenuItem,
-            this.yöneticiİşlemleriToolStripMenuItem});
+            this.izinİşlemleriToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1734, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1848, 47);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // öğrenciİşlemleriToolStripMenuItem
             // 
             this.öğrenciİşlemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_ogrenci_ekle,
-            this.bToolStripMenuItem,
             this.cToolStripMenuItem,
             this.dToolStripMenuItem,
-            this.öğrenciİzinToolStripMenuItem,
             this.odaListesiGörmeToolStripMenuItem});
             this.öğrenciİşlemleriToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.öğrenciİşlemleriToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("öğrenciİşlemleriToolStripMenuItem.Image")));
             this.öğrenciİşlemleriToolStripMenuItem.Name = "öğrenciİşlemleriToolStripMenuItem";
-            this.öğrenciİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
+            this.öğrenciİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(155, 43);
             this.öğrenciİşlemleriToolStripMenuItem.Text = "Öğrenci İşlemleri";
+            this.öğrenciİşlemleriToolStripMenuItem.DropDownClosed += new System.EventHandler(this.öğrenciİşlemleriToolStripMenuItem_DropDownClosed);
+            this.öğrenciİşlemleriToolStripMenuItem.DropDownOpened += new System.EventHandler(this.öğrenciİşlemleriToolStripMenuItem_DropDownOpened_1);
             // 
             // menu_ogrenci_ekle
             // 
+            this.menu_ogrenci_ekle.BackColor = System.Drawing.Color.White;
+            this.menu_ogrenci_ekle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.menu_ogrenci_ekle.ForeColor = System.Drawing.Color.Black;
+            this.menu_ogrenci_ekle.Image = ((System.Drawing.Image)(resources.GetObject("menu_ogrenci_ekle.Image")));
             this.menu_ogrenci_ekle.Name = "menu_ogrenci_ekle";
-            this.menu_ogrenci_ekle.Size = new System.Drawing.Size(235, 26);
+            this.menu_ogrenci_ekle.Size = new System.Drawing.Size(258, 28);
             this.menu_ogrenci_ekle.Text = "Öğrenci Ekle";
             this.menu_ogrenci_ekle.Click += new System.EventHandler(this.menu_ogrenci_ekle_Click);
             // 
-            // bToolStripMenuItem
-            // 
-            this.bToolStripMenuItem.Name = "bToolStripMenuItem";
-            this.bToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
-            this.bToolStripMenuItem.Text = "Öğrenci Sil";
-            this.bToolStripMenuItem.Click += new System.EventHandler(this.bToolStripMenuItem_Click);
-            // 
             // cToolStripMenuItem
             // 
+            this.cToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.cToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cToolStripMenuItem.Image")));
             this.cToolStripMenuItem.Name = "cToolStripMenuItem";
-            this.cToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
-            this.cToolStripMenuItem.Text = "Öğrenci Güncelle";
+            this.cToolStripMenuItem.Size = new System.Drawing.Size(258, 28);
+            this.cToolStripMenuItem.Text = "Öğrenci Düzenle";
             this.cToolStripMenuItem.Click += new System.EventHandler(this.cToolStripMenuItem_Click);
             // 
             // dToolStripMenuItem
             // 
+            this.dToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.dToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("dToolStripMenuItem.Image")));
             this.dToolStripMenuItem.Name = "dToolStripMenuItem";
-            this.dToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
+            this.dToolStripMenuItem.Size = new System.Drawing.Size(258, 28);
             this.dToolStripMenuItem.Text = "Öğrenci Listesi Göster";
             this.dToolStripMenuItem.Click += new System.EventHandler(this.dToolStripMenuItem_Click);
             // 
-            // öğrenciİzinToolStripMenuItem
-            // 
-            this.öğrenciİzinToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.izinVerToolStripMenuItem,
-            this.izinleriGösterToolStripMenuItem,
-            this.izinDüzenleToolStripMenuItem});
-            this.öğrenciİzinToolStripMenuItem.Name = "öğrenciİzinToolStripMenuItem";
-            this.öğrenciİzinToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
-            this.öğrenciİzinToolStripMenuItem.Text = "Öğrenci İzin İşlemleri";
-            this.öğrenciİzinToolStripMenuItem.Click += new System.EventHandler(this.öğrenciİzinToolStripMenuItem_Click);
-            // 
-            // izinVerToolStripMenuItem
-            // 
-            this.izinVerToolStripMenuItem.Name = "izinVerToolStripMenuItem";
-            this.izinVerToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
-            this.izinVerToolStripMenuItem.Text = "İzin Ver";
-            this.izinVerToolStripMenuItem.Click += new System.EventHandler(this.izinVerToolStripMenuItem_Click);
-            // 
-            // izinleriGösterToolStripMenuItem
-            // 
-            this.izinleriGösterToolStripMenuItem.Name = "izinleriGösterToolStripMenuItem";
-            this.izinleriGösterToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
-            this.izinleriGösterToolStripMenuItem.Text = "İzinleri Göster";
-            this.izinleriGösterToolStripMenuItem.Click += new System.EventHandler(this.izinleriGösterToolStripMenuItem_Click);
-            // 
-            // izinDüzenleToolStripMenuItem
-            // 
-            this.izinDüzenleToolStripMenuItem.Name = "izinDüzenleToolStripMenuItem";
-            this.izinDüzenleToolStripMenuItem.Size = new System.Drawing.Size(183, 26);
-            this.izinDüzenleToolStripMenuItem.Text = "İzin Düzenle";
-            this.izinDüzenleToolStripMenuItem.Click += new System.EventHandler(this.izinDüzenleToolStripMenuItem_Click);
-            // 
             // odaListesiGörmeToolStripMenuItem
             // 
+            this.odaListesiGörmeToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.odaListesiGörmeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.odaListesiGörmeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("odaListesiGörmeToolStripMenuItem.Image")));
             this.odaListesiGörmeToolStripMenuItem.Name = "odaListesiGörmeToolStripMenuItem";
-            this.odaListesiGörmeToolStripMenuItem.Size = new System.Drawing.Size(235, 26);
+            this.odaListesiGörmeToolStripMenuItem.Size = new System.Drawing.Size(258, 28);
             this.odaListesiGörmeToolStripMenuItem.Text = "Oda Listesi Görme";
             this.odaListesiGörmeToolStripMenuItem.Click += new System.EventHandler(this.odaListesiGörmeToolStripMenuItem_Click);
             // 
@@ -343,64 +307,100 @@
             this.personelİşlemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.personelEkleToolStripMenuItem,
             this.personelGüncelleSilToolStripMenuItem,
-            this.personelListesiGösterToolStripMenuItem,
-            this.personelİzinİşlemleriToolStripMenuItem});
+            this.personelListesiGösterToolStripMenuItem});
             this.personelİşlemleriToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.personelİşlemleriToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("personelİşlemleriToolStripMenuItem.Image")));
             this.personelİşlemleriToolStripMenuItem.Name = "personelİşlemleriToolStripMenuItem";
-            this.personelİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.personelİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(158, 43);
             this.personelİşlemleriToolStripMenuItem.Text = "Personel İşlemleri";
+            this.personelİşlemleriToolStripMenuItem.DropDownClosed += new System.EventHandler(this.personelİşlemleriToolStripMenuItem_DropDownClosed);
+            this.personelİşlemleriToolStripMenuItem.DropDownOpened += new System.EventHandler(this.personelİşlemleriToolStripMenuItem_DropDownOpened);
             // 
             // personelEkleToolStripMenuItem
             // 
+            this.personelEkleToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.personelEkleToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.personelEkleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("personelEkleToolStripMenuItem.Image")));
             this.personelEkleToolStripMenuItem.Name = "personelEkleToolStripMenuItem";
-            this.personelEkleToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.personelEkleToolStripMenuItem.Size = new System.Drawing.Size(262, 28);
             this.personelEkleToolStripMenuItem.Text = "Personel Ekle";
             this.personelEkleToolStripMenuItem.Click += new System.EventHandler(this.personelEkleToolStripMenuItem_Click);
             // 
             // personelGüncelleSilToolStripMenuItem
             // 
+            this.personelGüncelleSilToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.personelGüncelleSilToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.personelGüncelleSilToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("personelGüncelleSilToolStripMenuItem.Image")));
             this.personelGüncelleSilToolStripMenuItem.Name = "personelGüncelleSilToolStripMenuItem";
-            this.personelGüncelleSilToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.personelGüncelleSilToolStripMenuItem.Size = new System.Drawing.Size(262, 28);
             this.personelGüncelleSilToolStripMenuItem.Text = "Personel Güncelle/Sil";
             this.personelGüncelleSilToolStripMenuItem.Click += new System.EventHandler(this.personelGüncelleSilToolStripMenuItem_Click);
             // 
             // personelListesiGösterToolStripMenuItem
             // 
+            this.personelListesiGösterToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.personelListesiGösterToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.personelListesiGösterToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("personelListesiGösterToolStripMenuItem.Image")));
             this.personelListesiGösterToolStripMenuItem.Name = "personelListesiGösterToolStripMenuItem";
-            this.personelListesiGösterToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.personelListesiGösterToolStripMenuItem.Size = new System.Drawing.Size(262, 28);
             this.personelListesiGösterToolStripMenuItem.Text = "Personel Listesi Göster";
             this.personelListesiGösterToolStripMenuItem.Click += new System.EventHandler(this.personelListesiGösterToolStripMenuItem_Click);
             // 
-            // personelİzinİşlemleriToolStripMenuItem
+            // yöneticiİşlemleriToolStripMenuItem
             // 
-            this.personelİzinİşlemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.izinVerToolStripMenuItem1,
-            this.izinGösterToolStripMenuItem,
-            this.izinDüzenleSilToolStripMenuItem});
-            this.personelİzinİşlemleriToolStripMenuItem.Name = "personelİzinİşlemleriToolStripMenuItem";
-            this.personelİzinİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
-            this.personelİzinİşlemleriToolStripMenuItem.Text = "Personel İzin İşlemleri";
+            this.yöneticiİşlemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.yöneticiEkleToolStripMenuItem,
+            this.yöneticiDüzenleToolStripMenuItem,
+            this.yöneticiListesiToolStripMenuItem,
+            this.yöneticiŞifreGüncellemeToolStripMenuItem});
+            this.yöneticiİşlemleriToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.yöneticiİşlemleriToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("yöneticiİşlemleriToolStripMenuItem.Image")));
+            this.yöneticiİşlemleriToolStripMenuItem.Name = "yöneticiİşlemleriToolStripMenuItem";
+            this.yöneticiİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(150, 43);
+            this.yöneticiİşlemleriToolStripMenuItem.Text = "Memur İşlemleri";
+            this.yöneticiİşlemleriToolStripMenuItem.DropDownClosed += new System.EventHandler(this.yöneticiİşlemleriToolStripMenuItem_DropDownClosed);
+            this.yöneticiİşlemleriToolStripMenuItem.DropDownOpened += new System.EventHandler(this.yöneticiİşlemleriToolStripMenuItem_DropDownOpened);
+            this.yöneticiİşlemleriToolStripMenuItem.Click += new System.EventHandler(this.yöneticiİşlemleriToolStripMenuItem_Click);
             // 
-            // izinVerToolStripMenuItem1
+            // yöneticiEkleToolStripMenuItem
             // 
-            this.izinVerToolStripMenuItem1.Name = "izinVerToolStripMenuItem1";
-            this.izinVerToolStripMenuItem1.Size = new System.Drawing.Size(195, 26);
-            this.izinVerToolStripMenuItem1.Text = "İzin Ver";
-            this.izinVerToolStripMenuItem1.Click += new System.EventHandler(this.izinVerToolStripMenuItem1_Click);
+            this.yöneticiEkleToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.yöneticiEkleToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.yöneticiEkleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("yöneticiEkleToolStripMenuItem.Image")));
+            this.yöneticiEkleToolStripMenuItem.Name = "yöneticiEkleToolStripMenuItem";
+            this.yöneticiEkleToolStripMenuItem.Size = new System.Drawing.Size(281, 28);
+            this.yöneticiEkleToolStripMenuItem.Text = "Memur Ekle";
+            this.yöneticiEkleToolStripMenuItem.Click += new System.EventHandler(this.yöneticiEkleToolStripMenuItem_Click);
             // 
-            // izinGösterToolStripMenuItem
+            // yöneticiDüzenleToolStripMenuItem
             // 
-            this.izinGösterToolStripMenuItem.Name = "izinGösterToolStripMenuItem";
-            this.izinGösterToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
-            this.izinGösterToolStripMenuItem.Text = "İzinleri Listele";
-            this.izinGösterToolStripMenuItem.Click += new System.EventHandler(this.izinGösterToolStripMenuItem_Click);
+            this.yöneticiDüzenleToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.yöneticiDüzenleToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.yöneticiDüzenleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("yöneticiDüzenleToolStripMenuItem.Image")));
+            this.yöneticiDüzenleToolStripMenuItem.Name = "yöneticiDüzenleToolStripMenuItem";
+            this.yöneticiDüzenleToolStripMenuItem.Size = new System.Drawing.Size(281, 28);
+            this.yöneticiDüzenleToolStripMenuItem.Text = "Memur Düzenle";
+            this.yöneticiDüzenleToolStripMenuItem.Click += new System.EventHandler(this.yöneticiDüzenleToolStripMenuItem_Click);
             // 
-            // izinDüzenleSilToolStripMenuItem
+            // yöneticiListesiToolStripMenuItem
             // 
-            this.izinDüzenleSilToolStripMenuItem.Name = "izinDüzenleSilToolStripMenuItem";
-            this.izinDüzenleSilToolStripMenuItem.Size = new System.Drawing.Size(195, 26);
-            this.izinDüzenleSilToolStripMenuItem.Text = "İzin Düzenle/Sil";
-            this.izinDüzenleSilToolStripMenuItem.Click += new System.EventHandler(this.izinDüzenleSilToolStripMenuItem_Click);
+            this.yöneticiListesiToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.yöneticiListesiToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.yöneticiListesiToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("yöneticiListesiToolStripMenuItem.Image")));
+            this.yöneticiListesiToolStripMenuItem.Name = "yöneticiListesiToolStripMenuItem";
+            this.yöneticiListesiToolStripMenuItem.Size = new System.Drawing.Size(281, 28);
+            this.yöneticiListesiToolStripMenuItem.Text = "Memur Listesi ";
+            this.yöneticiListesiToolStripMenuItem.Click += new System.EventHandler(this.yöneticiListesiToolStripMenuItem_Click);
+            // 
+            // yöneticiŞifreGüncellemeToolStripMenuItem
+            // 
+            this.yöneticiŞifreGüncellemeToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.yöneticiŞifreGüncellemeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.yöneticiŞifreGüncellemeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("yöneticiŞifreGüncellemeToolStripMenuItem.Image")));
+            this.yöneticiŞifreGüncellemeToolStripMenuItem.Name = "yöneticiŞifreGüncellemeToolStripMenuItem";
+            this.yöneticiŞifreGüncellemeToolStripMenuItem.Size = new System.Drawing.Size(281, 28);
+            this.yöneticiŞifreGüncellemeToolStripMenuItem.Text = "Memur Şifre Güncelleme";
+            this.yöneticiŞifreGüncellemeToolStripMenuItem.Click += new System.EventHandler(this.yöneticiŞifreGüncellemeToolStripMenuItem_Click);
             // 
             // gelirİşlemleriToolStripMenuItem
             // 
@@ -411,43 +411,61 @@
             this.öğrenciÖdemeAlToolStripMenuItem,
             this.yurtÜcretiBelirlemeToolStripMenuItem});
             this.gelirİşlemleriToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.gelirİşlemleriToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gelirİşlemleriToolStripMenuItem.Image")));
             this.gelirİşlemleriToolStripMenuItem.Name = "gelirİşlemleriToolStripMenuItem";
-            this.gelirİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
+            this.gelirİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(134, 43);
             this.gelirİşlemleriToolStripMenuItem.Text = "Gelir İşlemleri";
+            this.gelirİşlemleriToolStripMenuItem.DropDownClosed += new System.EventHandler(this.gelirİşlemleriToolStripMenuItem_DropDownClosed);
+            this.gelirİşlemleriToolStripMenuItem.DropDownOpened += new System.EventHandler(this.gelirİşlemleriToolStripMenuItem_DropDownOpened);
             this.gelirİşlemleriToolStripMenuItem.Click += new System.EventHandler(this.gelirİşlemleriToolStripMenuItem_Click);
             // 
             // gelirEkleToolStripMenuItem
             // 
+            this.gelirEkleToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.gelirEkleToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gelirEkleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gelirEkleToolStripMenuItem.Image")));
             this.gelirEkleToolStripMenuItem.Name = "gelirEkleToolStripMenuItem";
-            this.gelirEkleToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
+            this.gelirEkleToolStripMenuItem.Size = new System.Drawing.Size(249, 28);
             this.gelirEkleToolStripMenuItem.Text = "Gelir Ekle";
             this.gelirEkleToolStripMenuItem.Click += new System.EventHandler(this.gelirEkleToolStripMenuItem_Click);
             // 
             // gelirDüzenleSilToolStripMenuItem
             // 
+            this.gelirDüzenleSilToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.gelirDüzenleSilToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gelirDüzenleSilToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gelirDüzenleSilToolStripMenuItem.Image")));
             this.gelirDüzenleSilToolStripMenuItem.Name = "gelirDüzenleSilToolStripMenuItem";
-            this.gelirDüzenleSilToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
-            this.gelirDüzenleSilToolStripMenuItem.Text = "Gelir Düzenle/Sil";
+            this.gelirDüzenleSilToolStripMenuItem.Size = new System.Drawing.Size(249, 28);
+            this.gelirDüzenleSilToolStripMenuItem.Text = "Gelir Düzenle";
             this.gelirDüzenleSilToolStripMenuItem.Click += new System.EventHandler(this.gelirDüzenleSilToolStripMenuItem_Click);
             // 
             // gelirListesiGösterToolStripMenuItem
             // 
+            this.gelirListesiGösterToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.gelirListesiGösterToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gelirListesiGösterToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gelirListesiGösterToolStripMenuItem.Image")));
             this.gelirListesiGösterToolStripMenuItem.Name = "gelirListesiGösterToolStripMenuItem";
-            this.gelirListesiGösterToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
+            this.gelirListesiGösterToolStripMenuItem.Size = new System.Drawing.Size(249, 28);
             this.gelirListesiGösterToolStripMenuItem.Text = "Gelir Listesi Göster";
             this.gelirListesiGösterToolStripMenuItem.Click += new System.EventHandler(this.gelirListesiGösterToolStripMenuItem_Click);
             // 
             // öğrenciÖdemeAlToolStripMenuItem
             // 
+            this.öğrenciÖdemeAlToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.öğrenciÖdemeAlToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.öğrenciÖdemeAlToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("öğrenciÖdemeAlToolStripMenuItem.Image")));
             this.öğrenciÖdemeAlToolStripMenuItem.Name = "öğrenciÖdemeAlToolStripMenuItem";
-            this.öğrenciÖdemeAlToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
+            this.öğrenciÖdemeAlToolStripMenuItem.Size = new System.Drawing.Size(249, 28);
             this.öğrenciÖdemeAlToolStripMenuItem.Text = "Öğrenci Ödeme Al";
             this.öğrenciÖdemeAlToolStripMenuItem.Click += new System.EventHandler(this.öğrenciÖdemeAlToolStripMenuItem_Click);
             // 
             // yurtÜcretiBelirlemeToolStripMenuItem
             // 
+            this.yurtÜcretiBelirlemeToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.yurtÜcretiBelirlemeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.yurtÜcretiBelirlemeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("yurtÜcretiBelirlemeToolStripMenuItem.Image")));
             this.yurtÜcretiBelirlemeToolStripMenuItem.Name = "yurtÜcretiBelirlemeToolStripMenuItem";
-            this.yurtÜcretiBelirlemeToolStripMenuItem.Size = new System.Drawing.Size(228, 26);
+            this.yurtÜcretiBelirlemeToolStripMenuItem.Size = new System.Drawing.Size(249, 28);
             this.yurtÜcretiBelirlemeToolStripMenuItem.Text = "Yurt Ücreti Belirleme";
             this.yurtÜcretiBelirlemeToolStripMenuItem.Click += new System.EventHandler(this.yurtÜcretiBelirlemeToolStripMenuItem_Click);
             // 
@@ -459,170 +477,145 @@
             this.giderListesiGösterToolStripMenuItem,
             this.memurPersonelMaaşToolStripMenuItem});
             this.giderİşlemleriToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.giderİşlemleriToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("giderİşlemleriToolStripMenuItem.Image")));
             this.giderİşlemleriToolStripMenuItem.Name = "giderİşlemleriToolStripMenuItem";
-            this.giderİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
+            this.giderİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(139, 43);
             this.giderİşlemleriToolStripMenuItem.Text = "Gider İşlemleri";
+            this.giderİşlemleriToolStripMenuItem.DropDownClosed += new System.EventHandler(this.giderİşlemleriToolStripMenuItem_DropDownClosed);
+            this.giderİşlemleriToolStripMenuItem.DropDownOpened += new System.EventHandler(this.giderİşlemleriToolStripMenuItem_DropDownOpened);
             // 
             // giderEkleToolStripMenuItem
             // 
+            this.giderEkleToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.giderEkleToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.giderEkleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("giderEkleToolStripMenuItem.Image")));
             this.giderEkleToolStripMenuItem.Name = "giderEkleToolStripMenuItem";
-            this.giderEkleToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+            this.giderEkleToolStripMenuItem.Size = new System.Drawing.Size(264, 28);
             this.giderEkleToolStripMenuItem.Text = "Gider Ekle";
             this.giderEkleToolStripMenuItem.Click += new System.EventHandler(this.giderEkleToolStripMenuItem_Click);
             // 
             // giderGüncelleSilToolStripMenuItem
             // 
+            this.giderGüncelleSilToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.giderGüncelleSilToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.giderGüncelleSilToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("giderGüncelleSilToolStripMenuItem.Image")));
             this.giderGüncelleSilToolStripMenuItem.Name = "giderGüncelleSilToolStripMenuItem";
-            this.giderGüncelleSilToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.giderGüncelleSilToolStripMenuItem.Text = "Gider Güncelle/Sil";
+            this.giderGüncelleSilToolStripMenuItem.Size = new System.Drawing.Size(264, 28);
+            this.giderGüncelleSilToolStripMenuItem.Text = "Gider Düzenle";
             this.giderGüncelleSilToolStripMenuItem.Click += new System.EventHandler(this.giderGüncelleSilToolStripMenuItem_Click);
             // 
             // giderListesiGösterToolStripMenuItem
             // 
+            this.giderListesiGösterToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.giderListesiGösterToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.giderListesiGösterToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("giderListesiGösterToolStripMenuItem.Image")));
             this.giderListesiGösterToolStripMenuItem.Name = "giderListesiGösterToolStripMenuItem";
-            this.giderListesiGösterToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+            this.giderListesiGösterToolStripMenuItem.Size = new System.Drawing.Size(264, 28);
             this.giderListesiGösterToolStripMenuItem.Text = "Gider Listesi Göster";
             this.giderListesiGösterToolStripMenuItem.Click += new System.EventHandler(this.giderListesiGösterToolStripMenuItem_Click);
             // 
             // memurPersonelMaaşToolStripMenuItem
             // 
+            this.memurPersonelMaaşToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.memurPersonelMaaşToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.memurPersonelMaaşToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("memurPersonelMaaşToolStripMenuItem.Image")));
             this.memurPersonelMaaşToolStripMenuItem.Name = "memurPersonelMaaşToolStripMenuItem";
-            this.memurPersonelMaaşToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
+            this.memurPersonelMaaşToolStripMenuItem.Size = new System.Drawing.Size(264, 28);
             this.memurPersonelMaaşToolStripMenuItem.Text = "Memur/Personel Maaş";
             this.memurPersonelMaaşToolStripMenuItem.Click += new System.EventHandler(this.memurPersonelMaaşToolStripMenuItem_Click);
             // 
-            // yöneticiİşlemleriToolStripMenuItem
+            // izinİşlemleriToolStripMenuItem
             // 
-            this.yöneticiİşlemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.yöneticiŞifreGüncellemeToolStripMenuItem,
-            this.yöneticiEkleToolStripMenuItem,
-            this.yöneticiDüzenleToolStripMenuItem,
-            this.yöneticiListesiToolStripMenuItem});
-            this.yöneticiİşlemleriToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
-            this.yöneticiİşlemleriToolStripMenuItem.Name = "yöneticiİşlemleriToolStripMenuItem";
-            this.yöneticiİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(135, 24);
-            this.yöneticiİşlemleriToolStripMenuItem.Text = "Yönetici İşlemleri";
+            this.izinİşlemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.öğrenciİzinİşlemleriToolStripMenuItem,
+            this.memurPersonelİzinİşlemleriToolStripMenuItem});
+            this.izinİşlemleriToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
+            this.izinİşlemleriToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("izinİşlemleriToolStripMenuItem.Image")));
+            this.izinİşlemleriToolStripMenuItem.Name = "izinİşlemleriToolStripMenuItem";
+            this.izinİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(126, 43);
+            this.izinİşlemleriToolStripMenuItem.Text = "İzin İşlemleri";
+            this.izinİşlemleriToolStripMenuItem.DropDownClosed += new System.EventHandler(this.izinİşlemleriToolStripMenuItem_DropDownClosed);
+            this.izinİşlemleriToolStripMenuItem.DropDownOpened += new System.EventHandler(this.izinİşlemleriToolStripMenuItem_DropDownOpened);
             // 
-            // yöneticiŞifreGüncellemeToolStripMenuItem
+            // öğrenciİzinİşlemleriToolStripMenuItem
             // 
-            this.yöneticiŞifreGüncellemeToolStripMenuItem.Name = "yöneticiŞifreGüncellemeToolStripMenuItem";
-            this.yöneticiŞifreGüncellemeToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
-            this.yöneticiŞifreGüncellemeToolStripMenuItem.Text = "Yönetici Şifre Güncelleme";
-            this.yöneticiŞifreGüncellemeToolStripMenuItem.Click += new System.EventHandler(this.yöneticiŞifreGüncellemeToolStripMenuItem_Click);
+            this.öğrenciİzinİşlemleriToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.öğrenciİzinİşlemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.izinVerToolStripMenuItem3,
+            this.izinDüzenleToolStripMenuItem1,
+            this.izinListeleToolStripMenuItem});
+            this.öğrenciİzinİşlemleriToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.öğrenciİzinİşlemleriToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("öğrenciİzinİşlemleriToolStripMenuItem.Image")));
+            this.öğrenciİzinİşlemleriToolStripMenuItem.Name = "öğrenciİzinİşlemleriToolStripMenuItem";
+            this.öğrenciİzinİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(319, 28);
+            this.öğrenciİzinİşlemleriToolStripMenuItem.Text = "Öğrenci İzin İşlemleri";
             // 
-            // yöneticiEkleToolStripMenuItem
+            // izinVerToolStripMenuItem3
             // 
-            this.yöneticiEkleToolStripMenuItem.Name = "yöneticiEkleToolStripMenuItem";
-            this.yöneticiEkleToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
-            this.yöneticiEkleToolStripMenuItem.Text = "Yönetici Ekle";
-            this.yöneticiEkleToolStripMenuItem.Click += new System.EventHandler(this.yöneticiEkleToolStripMenuItem_Click);
+            this.izinVerToolStripMenuItem3.BackColor = System.Drawing.Color.White;
+            this.izinVerToolStripMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("izinVerToolStripMenuItem3.Image")));
+            this.izinVerToolStripMenuItem3.Name = "izinVerToolStripMenuItem3";
+            this.izinVerToolStripMenuItem3.Size = new System.Drawing.Size(196, 28);
+            this.izinVerToolStripMenuItem3.Text = "İzin Ver";
+            this.izinVerToolStripMenuItem3.Click += new System.EventHandler(this.izinVerToolStripMenuItem3_Click);
             // 
-            // yöneticiDüzenleToolStripMenuItem
+            // izinDüzenleToolStripMenuItem1
             // 
-            this.yöneticiDüzenleToolStripMenuItem.Name = "yöneticiDüzenleToolStripMenuItem";
-            this.yöneticiDüzenleToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
-            this.yöneticiDüzenleToolStripMenuItem.Text = "Yönetici Düzenle";
-            this.yöneticiDüzenleToolStripMenuItem.Click += new System.EventHandler(this.yöneticiDüzenleToolStripMenuItem_Click);
+            this.izinDüzenleToolStripMenuItem1.BackColor = System.Drawing.Color.White;
+            this.izinDüzenleToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("izinDüzenleToolStripMenuItem1.Image")));
+            this.izinDüzenleToolStripMenuItem1.Name = "izinDüzenleToolStripMenuItem1";
+            this.izinDüzenleToolStripMenuItem1.Size = new System.Drawing.Size(196, 28);
+            this.izinDüzenleToolStripMenuItem1.Text = "İzin Düzenle";
+            this.izinDüzenleToolStripMenuItem1.Click += new System.EventHandler(this.izinDüzenleToolStripMenuItem1_Click);
             // 
-            // yöneticiListesiToolStripMenuItem
+            // izinListeleToolStripMenuItem
             // 
-            this.yöneticiListesiToolStripMenuItem.Name = "yöneticiListesiToolStripMenuItem";
-            this.yöneticiListesiToolStripMenuItem.Size = new System.Drawing.Size(260, 26);
-            this.yöneticiListesiToolStripMenuItem.Text = "Yönetici Listesi ";
-            this.yöneticiListesiToolStripMenuItem.Click += new System.EventHandler(this.yöneticiListesiToolStripMenuItem_Click);
+            this.izinListeleToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.izinListeleToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("izinListeleToolStripMenuItem.Image")));
+            this.izinListeleToolStripMenuItem.Name = "izinListeleToolStripMenuItem";
+            this.izinListeleToolStripMenuItem.Size = new System.Drawing.Size(196, 28);
+            this.izinListeleToolStripMenuItem.Text = "İzinleri Listele";
+            this.izinListeleToolStripMenuItem.Click += new System.EventHandler(this.izinListeleToolStripMenuItem_Click);
             // 
-            // panel5
+            // memurPersonelİzinİşlemleriToolStripMenuItem
             // 
-            this.panel5.BackColor = System.Drawing.Color.Teal;
-            this.panel5.Controls.Add(this.label1);
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.button1);
-            this.panel5.Controls.Add(this.lblTc);
-            this.panel5.Controls.Add(this.lblName);
-            this.panel5.Controls.Add(this.button2);
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(190, 30);
-            this.panel5.TabIndex = 2;
+            this.memurPersonelİzinİşlemleriToolStripMenuItem.BackColor = System.Drawing.Color.White;
+            this.memurPersonelİzinİşlemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.izinVerToolStripMenuItem4,
+            this.izinDüzenleToolStripMenuItem2,
+            this.izinListeleToolStripMenuItem1});
+            this.memurPersonelİzinİşlemleriToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.memurPersonelİzinİşlemleriToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("memurPersonelİzinİşlemleriToolStripMenuItem.Image")));
+            this.memurPersonelİzinİşlemleriToolStripMenuItem.Name = "memurPersonelİzinİşlemleriToolStripMenuItem";
+            this.memurPersonelİzinİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(319, 28);
+            this.memurPersonelİzinİşlemleriToolStripMenuItem.Text = "Memur/Personel İzin İşlemleri";
             // 
-            // label1
+            // izinVerToolStripMenuItem4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 364);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 35);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "label3";
+            this.izinVerToolStripMenuItem4.BackColor = System.Drawing.Color.White;
+            this.izinVerToolStripMenuItem4.Image = ((System.Drawing.Image)(resources.GetObject("izinVerToolStripMenuItem4.Image")));
+            this.izinVerToolStripMenuItem4.Name = "izinVerToolStripMenuItem4";
+            this.izinVerToolStripMenuItem4.Size = new System.Drawing.Size(196, 28);
+            this.izinVerToolStripMenuItem4.Text = "İzin Ver";
+            this.izinVerToolStripMenuItem4.Click += new System.EventHandler(this.izinVerToolStripMenuItem4_Click);
             // 
-            // label3
+            // izinDüzenleToolStripMenuItem2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 320);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 26);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Öğrenci Sayısı:";
+            this.izinDüzenleToolStripMenuItem2.BackColor = System.Drawing.Color.White;
+            this.izinDüzenleToolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("izinDüzenleToolStripMenuItem2.Image")));
+            this.izinDüzenleToolStripMenuItem2.Name = "izinDüzenleToolStripMenuItem2";
+            this.izinDüzenleToolStripMenuItem2.Size = new System.Drawing.Size(196, 28);
+            this.izinDüzenleToolStripMenuItem2.Text = "İzin Düzenle";
+            this.izinDüzenleToolStripMenuItem2.Click += new System.EventHandler(this.izinDüzenleToolStripMenuItem2_Click);
             // 
-            // button1
+            // izinListeleToolStripMenuItem1
             // 
-            this.button1.BackColor = System.Drawing.Color.RosyBrown;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(6, 764);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 35);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Profili Düzenle";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // lblTc
-            // 
-            this.lblTc.AutoSize = true;
-            this.lblTc.Location = new System.Drawing.Point(96, 248);
-            this.lblTc.Name = "lblTc";
-            this.lblTc.Size = new System.Drawing.Size(28, 25);
-            this.lblTc.TabIndex = 6;
-            this.lblTc.Text = "tc";
-            this.lblTc.Visible = false;
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Corbel", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblName.Location = new System.Drawing.Point(125, 192);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(33, 28);
-            this.lblName.TabIndex = 3;
-            this.lblName.Text = "...";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.RosyBrown;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.RosyBrown;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(12, 831);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(152, 35);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Çıkış Yap";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Corbel", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(12, 192);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 28);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Merhaba";
+            this.izinListeleToolStripMenuItem1.BackColor = System.Drawing.Color.White;
+            this.izinListeleToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("izinListeleToolStripMenuItem1.Image")));
+            this.izinListeleToolStripMenuItem1.Name = "izinListeleToolStripMenuItem1";
+            this.izinListeleToolStripMenuItem1.Size = new System.Drawing.Size(196, 28);
+            this.izinListeleToolStripMenuItem1.Text = "İzinleri Listele";
+            this.izinListeleToolStripMenuItem1.Click += new System.EventHandler(this.izinListeleToolStripMenuItem1_Click);
             // 
             // popupMenu1
             // 
@@ -644,9 +637,9 @@
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.btnSikayetGoruntule);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(1836, 79);
+            this.panel6.Location = new System.Drawing.Point(1836, 96);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(88, 941);
+            this.panel6.Size = new System.Drawing.Size(88, 924);
             this.panel6.TabIndex = 8;
             // 
             // FrmMudurAnaSayfa
@@ -662,21 +655,19 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmMudurAnaSayfa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Müdür Ana Sayfa";
+            this.Text = "MÜDÜR ANA SAYFA";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMudurAnaSayfa_FormClosed_1);
             this.Load += new System.EventHandler(this.FrmMudurAnaSayfa_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmMudurAnaSayfa_KeyDown);
             this.sidePanel1.ResumeLayout(false);
             this.sidePanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panel3.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -689,30 +680,17 @@
         private DevExpress.XtraEditors.SidePanel sidePanel1;
         private System.Windows.Forms.Label lblBaslik;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblSayi;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCikis;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem öğrenciİşlemleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menu_ogrenci_ekle;
-        private System.Windows.Forms.ToolStripMenuItem bToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem öğrenciİzinToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem izinVerToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem izinleriGösterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem izinDüzenleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personelİşlemleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personelEkleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personelGüncelleSilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem personelListesiGösterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem personelİzinİşlemleriToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem izinVerToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem izinGösterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem izinDüzenleSilToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gelirİşlemleriToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gelirEkleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gelirDüzenleSilToolStripMenuItem;
@@ -726,14 +704,6 @@
         private System.Windows.Forms.ToolStripMenuItem yöneticiEkleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem yöneticiDüzenleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem yöneticiListesiToolStripMenuItem;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        public System.Windows.Forms.Label lblTc;
-        public System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolStripMenuItem odaListesiGörmeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem öğrenciÖdemeAlToolStripMenuItem;
         private System.Windows.Forms.Button btnHesapMakina;
@@ -744,5 +714,17 @@
         private System.Windows.Forms.ToolStripMenuItem memurPersonelMaaşToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem yurtÜcretiBelirlemeToolStripMenuItem;
         public System.Windows.Forms.Panel mainpanel;
+        private System.Windows.Forms.ToolStripMenuItem izinİşlemleriToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem öğrenciİzinİşlemleriToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem izinVerToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem izinDüzenleToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem izinListeleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem memurPersonelİzinİşlemleriToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem izinVerToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem izinDüzenleToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem izinListeleToolStripMenuItem1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnHakkimizda;
+        private System.Windows.Forms.Button btnProfilDuzenle;
     }
 }

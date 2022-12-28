@@ -19,7 +19,7 @@ namespace Yurt
 {
     public partial class FrmAdmin : Form
     {
-        FrmYoneticiSifreİslemleri frmYonetici;
+        
         FrmPersonelEkle frmPersonelEkle;
         FrmPersonelDuzenle frmPersonelDuzenle;
         FrmPersonelListesi frmPersonelListesi;
@@ -100,12 +100,6 @@ namespace Yurt
             frm.Show();
         }
 
-        private void giderListesiToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmGiderListesi frm = new FrmGiderListesi();
-            frm.Show();
-            
-        }
 
         private void giderGüncelleToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -159,18 +153,7 @@ namespace Yurt
             frm.Show();
         }
 
-        private void yöneticiŞifreİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-             if (frmYonetici == null || frmYonetici.IsDisposed)
-             { frmYonetici=new FrmYoneticiSifreİslemleri(); frmYonetici.Show(); }//Form2 kapatılmış ise gösteriyor
-             else
-             {
-                frmYonetici.Visible = true;//Hide ile gizlemenin etkisini kaldırıyor
-             if (frmYonetici.Created) //Form oluşturulmuş ise sadece aktif ediyor
-                    frmYonetici.Activate();
-             }
-        }
+    
 
         private void personelEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -241,8 +224,7 @@ namespace Yurt
 
         private void personelŞifreİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmPersonelSifreİslemleri frm = new FrmPersonelSifreİslemleri();
-            frm.Show();
+          
         }
         //public string ad;
         private void FrmAdmin_Load(object sender, EventArgs e)

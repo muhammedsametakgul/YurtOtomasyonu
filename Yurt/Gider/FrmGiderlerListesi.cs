@@ -31,6 +31,8 @@ namespace Yurt
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource= dt;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Columns[7].HeaderText = "Tarih";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -41,6 +43,8 @@ namespace Yurt
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Columns[8].HeaderText = "Tarih";
         }
 
         private void rbAylik_CheckedChanged(object sender, EventArgs e)
@@ -50,6 +54,8 @@ namespace Yurt
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
+                dataGridView1.RowHeadersVisible = false;
+                dataGridView1.Columns[7].HeaderText = "Tarih";
             }
 
         }
@@ -62,12 +68,27 @@ namespace Yurt
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
+                dataGridView1.RowHeadersVisible = false;
+                dataGridView1.Columns[0].HeaderText = "TC";
+                dataGridView1.Columns[1].HeaderText = "Ad-Soyad";
+                dataGridView1.Columns[2].HeaderText = "Maaş";
+
             }
         }
 
         private void rbMemurMaas_CheckedChanged(object sender, EventArgs e)
         {
-
+           if(rbMemurMaas.Checked)
+            {
+                SqlDataAdapter da = new SqlDataAdapter("Select YoneticiTc,YoneticiAdSoyad,YoneticiMaas From Admin",sql.Baglan());
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+                dataGridView1.RowHeadersVisible = false;
+                dataGridView1.Columns[0].HeaderText = "TC";
+                dataGridView1.Columns[1].HeaderText = "Ad-Soyad";
+                dataGridView1.Columns[2].HeaderText = "Maaş";
+            }
         }
     }
 }

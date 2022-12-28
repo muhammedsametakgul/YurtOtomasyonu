@@ -24,7 +24,7 @@ namespace Yurt.Admin
 
         private void btnCikis_Click(object sender, EventArgs e)
         {
-            FrmAdminGiris frm = new FrmAdminGiris();
+            AnaGiris frm = new AnaGiris();
             frm.Show();
             this.Hide();
         }
@@ -48,7 +48,7 @@ namespace Yurt.Admin
 
         private void izinGösterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            loadform(new FrmPersonelIzinListesi());
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -60,13 +60,8 @@ namespace Yurt.Admin
         {
             // WindowState = FormWindowState.Maximized;
 
-            SqlCommand komut = new SqlCommand("Select Count(*) from Ogrenci ",sql.Baglan());
-            SqlDataReader dr = komut.ExecuteReader();
-            while (dr.Read())
-            {
-                lblSayi.Text = dr[0].ToString();
-            }
 
+         
             tc_main = lblTc.Text;
             timer1.Start();
 
@@ -147,12 +142,6 @@ namespace Yurt.Admin
             lblBaslik.Text = "Personel İzin Verme";
         }
 
-        private void personelŞifreİşlemleriToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            loadform(new FrmPersonelSifreİslemleri());
-            lblBaslik.Text = "Personel Şifre İşlemleri";
-        }
-
 
     
 
@@ -192,11 +181,6 @@ namespace Yurt.Admin
             lblBaslik.Text = "Gider Listeleme";
         }
 
-        private void yöneticiŞifreGüncellemeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            loadform(new FrmYoneticiSifreİslemleri());
-            lblBaslik.Text = "Yönetici  Şifre İşlemleri";
-        }
 
         private void mainpanel_Paint(object sender, PaintEventArgs e)
         {
@@ -250,12 +234,9 @@ namespace Yurt.Admin
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            DialogResult dr = new DialogResult();
-            dr = MessageBox.Show("Kapatmak istediğinize emin misiniz","Uyarı",MessageBoxButtons.YesNo);
-            if (dr == DialogResult.Yes)
-            {
+           
                 Application.Exit();
-            }
+            
 
         }
 
@@ -272,6 +253,65 @@ namespace Yurt.Admin
         private void btnSikayetGoruntule_Click(object sender, EventArgs e)
         {
             loadform(new Sikayetler.FrmMemurSikayet());
+        }
+
+        private void odaListesiGörneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadform(new FrmOdaListesi());
+            lblBaslik.Text = "Oda Listesi";
+        }
+
+        private void ödemeAlToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            loadform(new FrmOgrenciOdemeAl());
+            lblBaslik.Text = "Ödeme Al";
+        }
+
+        private void izinVerToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            lblBaslik.Text = "Öğrenci İzin Verme";
+            loadform(new FrmOgrenciIzinEkle());
+        }
+
+        private void izinDüzenleToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            lblBaslik.Text = "Öğrenci İzin Düzenleme";
+            loadform(new FrmOgrenciIzinDuzenle());
+        }
+
+        private void izinListeleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblBaslik.Text = "Öğrenci İzin Listeleme";
+            loadform(new FrmOgrenciIzinGoster());
+        }
+
+        private void izinVerToolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            lblBaslik.Text = "Memur/Personel İzin Ekleme";
+            loadform(new FrmPersonelIzinVer());
+        }
+
+        private void izinDüzenleToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            lblBaslik.Text = "Memur/Personel İzin Düzenleme";
+            loadform(new FrmPersonelIzinDuzenle());
+        }
+
+        private void izinListeleToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            lblBaslik.Text = "Memur/Personel İzin Listeleme";
+            loadform(new FrmPersonelIzinListesi());
+        }
+
+        private void button1_Click_4(object sender, EventArgs e)
+        {
+            lblBaslik.Text = "Hakkımızda";
+            loadform(new GeciciFormlar.FrmHakkimizda());
+        }
+
+        private void btnHesap_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("calc.exe");
         }
     }
     

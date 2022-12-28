@@ -297,7 +297,7 @@
             this.giderListesiToolStripMenuItem.Name = "giderListesiToolStripMenuItem";
             this.giderListesiToolStripMenuItem.Size = new System.Drawing.Size(226, 32);
             this.giderListesiToolStripMenuItem.Text = "Gider Listesi";
-            this.giderListesiToolStripMenuItem.Click += new System.EventHandler(this.giderListesiToolStripMenuItem_Click);
+         //   this.giderListesiToolStripMenuItem.Click += new System.EventHandler(this.//giderListesiToolStripMenuItem_Click);
             // 
             // gelirlerToolStripMenuItem
             // 
@@ -382,7 +382,7 @@
             this.yöneticiŞifreİşlemleriToolStripMenuItem.Name = "yöneticiŞifreİşlemleriToolStripMenuItem";
             this.yöneticiŞifreİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(292, 32);
             this.yöneticiŞifreİşlemleriToolStripMenuItem.Text = "Yönetici Şifre İşlemleri";
-            this.yöneticiŞifreİşlemleriToolStripMenuItem.Click += new System.EventHandler(this.yöneticiŞifreİşlemleriToolStripMenuItem_Click);
+          //  this.yöneticiŞifreİşlemleriToolStripMenuItem.Click += new System.EventHandler(this.yöneticiŞifreİşlemleriToolStripMenuItem_Click);
             // 
             // personelŞifreİşlemleriToolStripMenuItem
             // 

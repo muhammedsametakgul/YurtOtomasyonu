@@ -46,6 +46,7 @@
             this.MskTarih = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,7 +130,7 @@
             // MskElektrik
             // 
             this.MskElektrik.Location = new System.Drawing.Point(189, 89);
-            this.MskElektrik.Mask = "00000000";
+            this.MskElektrik.Mask = "0000000000";
             this.MskElektrik.Name = "MskElektrik";
             this.MskElektrik.Size = new System.Drawing.Size(267, 34);
             this.MskElektrik.TabIndex = 7;
@@ -138,7 +139,7 @@
             // MskDogalgaz
             // 
             this.MskDogalgaz.Location = new System.Drawing.Point(189, 138);
-            this.MskDogalgaz.Mask = "00000000";
+            this.MskDogalgaz.Mask = "0000000000";
             this.MskDogalgaz.Name = "MskDogalgaz";
             this.MskDogalgaz.Size = new System.Drawing.Size(267, 34);
             this.MskDogalgaz.TabIndex = 8;
@@ -147,7 +148,7 @@
             // MskInternet
             // 
             this.MskInternet.Location = new System.Drawing.Point(189, 187);
-            this.MskInternet.Mask = "00000000";
+            this.MskInternet.Mask = "0000000000";
             this.MskInternet.Name = "MskInternet";
             this.MskInternet.Size = new System.Drawing.Size(267, 34);
             this.MskInternet.TabIndex = 9;
@@ -156,7 +157,7 @@
             // MskGida
             // 
             this.MskGida.Location = new System.Drawing.Point(189, 236);
-            this.MskGida.Mask = "00000000";
+            this.MskGida.Mask = "0000000000";
             this.MskGida.Name = "MskGida";
             this.MskGida.Size = new System.Drawing.Size(267, 34);
             this.MskGida.TabIndex = 10;
@@ -164,8 +165,9 @@
             // 
             // MskPersonel
             // 
+            this.MskPersonel.Enabled = false;
             this.MskPersonel.Location = new System.Drawing.Point(189, 285);
-            this.MskPersonel.Mask = "00000000";
+            this.MskPersonel.Mask = "0000000000";
             this.MskPersonel.Name = "MskPersonel";
             this.MskPersonel.Size = new System.Drawing.Size(267, 34);
             this.MskPersonel.TabIndex = 11;
@@ -174,7 +176,7 @@
             // MskSu
             // 
             this.MskSu.Location = new System.Drawing.Point(189, 334);
-            this.MskSu.Mask = "00000000";
+            this.MskSu.Mask = "0000000000";
             this.MskSu.Name = "MskSu";
             this.MskSu.Size = new System.Drawing.Size(267, 34);
             this.MskSu.TabIndex = 12;
@@ -183,7 +185,7 @@
             // MskDiger
             // 
             this.MskDiger.Location = new System.Drawing.Point(189, 383);
-            this.MskDiger.Mask = "00000000";
+            this.MskDiger.Mask = "0000000000";
             this.MskDiger.Name = "MskDiger";
             this.MskDiger.Size = new System.Drawing.Size(267, 34);
             this.MskDiger.TabIndex = 13;
@@ -191,9 +193,9 @@
             // 
             // BtnEkle
             // 
-            this.BtnEkle.Location = new System.Drawing.Point(189, 455);
+            this.BtnEkle.Location = new System.Drawing.Point(259, 446);
             this.BtnEkle.Name = "BtnEkle";
-            this.BtnEkle.Size = new System.Drawing.Size(259, 46);
+            this.BtnEkle.Size = new System.Drawing.Size(123, 41);
             this.BtnEkle.TabIndex = 14;
             this.BtnEkle.Text = "Ekle";
             this.BtnEkle.UseVisualStyleBackColor = true;
@@ -239,25 +241,34 @@
             this.groupBox1.Controls.Add(this.MskInternet);
             this.groupBox1.Controls.Add(this.MskElektrik);
             this.groupBox1.Controls.Add(this.MskDogalgaz);
-            this.groupBox1.Location = new System.Drawing.Point(48, 99);
+            this.groupBox1.Location = new System.Drawing.Point(33, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(488, 528);
+            this.groupBox1.Size = new System.Drawing.Size(488, 544);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Giderler";
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(2, 1);
+            this.monthCalendar1.Location = new System.Drawing.Point(549, 52);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 18;
             // 
             // FrmGiderEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(584, 764);
+            this.ClientSize = new System.Drawing.Size(1478, 764);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FrmGiderEkle";
             this.Text = "FrmGiderler";
+            this.Load += new System.EventHandler(this.FrmGiderEkle_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -284,5 +295,6 @@
         private System.Windows.Forms.MaskedTextBox MskTarih;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }

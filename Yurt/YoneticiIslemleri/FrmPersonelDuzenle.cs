@@ -23,11 +23,21 @@ namespace Yurt.YoneticiIslemleri
         //datagridviewi güncel tutuyor
         public void Goster()
         {
-            SqlDataAdapter da = new SqlDataAdapter("Select PersonelTc,PersonelAdSoyad,PersonelDepartman,PersonelTelefon,PersonelMail,PersonelAdres,PersonelDogumTarihi From Personel", sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("Select PersonelTc,PersonelAdSoyad,PersonelDepartman,PersonelTelefon,PersonelMail,PersonelAdres,PersonelDogumTarihi From Personel ORDER BY PersonelAdSoyad ASC", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
            
             dataGridView1.DataSource = dt;
+            dataGridView1.RowHeadersVisible = false;
+
+            dataGridView1.Columns[1].HeaderText = "Ad-Soyad";
+            dataGridView1.Columns[0].HeaderText = "TC";
+            dataGridView1.Columns[2].HeaderText = "Departman";
+            dataGridView1.Columns[3].HeaderText = "Telefon";
+            dataGridView1.Columns[4].HeaderText = "E-Mail";
+            dataGridView1.Columns[5].HeaderText = "Adres";
+            dataGridView1.Columns[6].HeaderText = "Doğum Tarihi";
+
         }
         private void FrmPersonelDuzenle_Load(object sender, EventArgs e)
         {
@@ -46,49 +56,108 @@ namespace Yurt.YoneticiIslemleri
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Columns[1].HeaderText = "Ad-Soyad";
+            dataGridView1.Columns[0].HeaderText = "TC";
+            dataGridView1.Columns[2].HeaderText = "Departman";
+            dataGridView1.Columns[3].HeaderText = "Telefon";
+            dataGridView1.Columns[4].HeaderText = "E-Mail";
+            dataGridView1.Columns[5].HeaderText = "Adres";
+            dataGridView1.Columns[6].HeaderText = "Doğum Tarihi";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("Update Personel set  PersonelTc=@p1,PersonelAdSoyad=@p2," +
-                "PersonelDepartman=@p3,PersonelTelefon=@p4,PersonelMail=@p5,PersonelAdres=@p6 where Personelid=@p7", sql.Baglan());
-            komut.Parameters.AddWithValue("@p1",MskTc.Text);
-            komut.Parameters.AddWithValue("@p2",TxtAd.Text.ToUpper());
-            komut.Parameters.AddWithValue("@p3",CmbDep.Text);
-            komut.Parameters.AddWithValue("@p4",mskTel.Text);
-            komut.Parameters.AddWithValue("@p5",txtMail.Text);
-           
-            komut.Parameters.AddWithValue("@p6",TxtAdres.Text);
-           
-            komut.Parameters.AddWithValue("@p7",lblid.Text);
+            try
+            {
+                if (MskTc.Text!="" && TxtAd.Text!="" && CmbDep.Text!="" && mskTel.Text!="" && TxtAdres.Text!="" )
+                {
 
-          
+                    DialogResult d = new DialogResult();
+                    d = MessageBox.Show("Güncelleme Yapmak İstediğinize Emin Misiniz?","UYARI",MessageBoxButtons.YesNo);
+                    if (d == DialogResult.Yes)
+                    {
+                        SqlCommand komut = new SqlCommand("Update Personel set  PersonelTc=@p1,PersonelAdSoyad=@p2," +
+                 "PersonelDepartman=@p3,PersonelTelefon=@p4,PersonelMail=@p5,PersonelAdres=@p6,PersonelDogumTarihi=@p7 where Personelid=@p8", sql.Baglan());
+                        komut.Parameters.AddWithValue("@p1", MskTc.Text);
+                        komut.Parameters.AddWithValue("@p2", TxtAd.Text.ToUpper());
+                        komut.Parameters.AddWithValue("@p3", CmbDep.Text);
+                        komut.Parameters.AddWithValue("@p4", mskTel.Text);
+                        komut.Parameters.AddWithValue("@p5", txtMail.Text);
 
-            komut.ExecuteNonQuery();
-            MessageBox.Show("Başarıyla güncellendi");
-            Goster();
-            sql.Baglan().Close();
+                        komut.Parameters.AddWithValue("@p6", TxtAdres.Text);
+                        komut.Parameters.AddWithValue("@p7",mskDogum.Text);
+                        komut.Parameters.AddWithValue("@p8", lblid.Text);
+
+                        TxtAd.Text = "";
+                        MskTc.Text = "";
+                        CmbDep.Text = "";
+
+                        mskDogum.Text = "";
+                        mskTel.Text = "";
+                        TxtAdres.Text = "";
+                        txtMail.Text = "";
+
+                        komut.ExecuteNonQuery();
+                        MessageBox.Show("Başarıyla güncellendi");
+                        Goster();
+                        sql.Baglan().Close();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Lütfen Tüm Alanları Doldurduğunuza Emin Olunuz");
+                }
+
+                
+               
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Bir Hata Oluştu! Tekrar Deneyiniz");
+            }
         
         
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("Delete Personel  where PersonelTc =@p1", sql.Baglan());
-            komut.Parameters.AddWithValue("@p1",MskTc.Text);
-            komut.ExecuteNonQuery();
-            MessageBox.Show("Başarıyla silindi");
-            TxtAd.Text = "";
-            MskTc.Text = "";
-            CmbDep.Text= "";
-            
-            mskDogum.Text = "";
-            mskTel.Text = "";
-            TxtAdres.Text = "";
-            txtMail.Text = "";
-            Goster();
+            try
+            {
+                if (MskTc.Text != "")
+                {
+                    DialogResult d = new DialogResult();
+                    d = MessageBox.Show("Silmek İstediğinize Emin Misiniz?","UYARI",MessageBoxButtons.YesNo);
+                    if (d == DialogResult.Yes)
+                    {
+                        SqlCommand komut = new SqlCommand("Delete Personel  where PersonelTc =@p1", sql.Baglan());
+                        komut.Parameters.AddWithValue("@p1", MskTc.Text);
+                        komut.ExecuteNonQuery();
+                        MessageBox.Show("Başarıyla silindi");
+                        TxtAd.Text = "";
+                        MskTc.Text = "";
+                        CmbDep.Text = "";
 
-            sql.Baglan().Close();
+                        mskDogum.Text = "";
+                        mskTel.Text = "";
+                        TxtAdres.Text = "";
+                        txtMail.Text = "";
+                        Goster();
+
+                        sql.Baglan().Close();
+                    }
+
+                }
+                else
+                {
+                   MessageBox.Show("Lütfen Bir Kişi Seçtiğinize Emin Olunuz!! ");
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bir Hata Oluştu! Lütfen Tekrar Deneyiniz");
+            }
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -145,8 +214,7 @@ namespace Yurt.YoneticiIslemleri
             }
         }
 
-     
-       
-        }
+   
+    }
     }
 

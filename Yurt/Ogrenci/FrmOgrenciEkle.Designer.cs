@@ -48,7 +48,7 @@
             this.MskVeliTel = new System.Windows.Forms.MaskedTextBox();
             this.txtBolum = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtDogum = new System.Windows.Forms.TextBox();
+            this.cmbDogdugu = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -56,8 +56,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtVeliAd = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cmbYasadigi = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtIl = new System.Windows.Forms.TextBox();
             this.btnTemizle = new System.Windows.Forms.Button();
             this.txtYurtUcreti = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
@@ -82,7 +82,7 @@
             this.MskDogum.Size = new System.Drawing.Size(344, 30);
             this.MskDogum.TabIndex = 1;
             this.MskDogum.ValidatingType = typeof(System.DateTime);
-            this.MskDogum.Click += new System.EventHandler(this.MskDogum_Click);
+            this.MskDogum.Click += new System.EventHandler(this.MskDogum_Click_1);
             // 
             // MskTc
             // 
@@ -93,7 +93,7 @@
             this.MskTc.Size = new System.Drawing.Size(344, 30);
             this.MskTc.TabIndex = 2;
             this.MskTc.ValidatingType = typeof(int);
-            this.MskTc.Click += new System.EventHandler(this.MskTc_Click);
+            this.MskTc.Click += new System.EventHandler(this.MskTc_Click_1);
             // 
             // TxtMail
             // 
@@ -111,7 +111,7 @@
             this.MskTel.Name = "MskTel";
             this.MskTel.Size = new System.Drawing.Size(395, 30);
             this.MskTel.TabIndex = 13;
-            this.MskTel.Click += new System.EventHandler(this.MskTel_Click);
+            this.MskTel.Click += new System.EventHandler(this.MskTel_Click_1);
             // 
             // CmbOda
             // 
@@ -120,7 +120,7 @@
             this.CmbOda.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.CmbOda.Name = "CmbOda";
             this.CmbOda.Size = new System.Drawing.Size(344, 33);
-            this.CmbOda.TabIndex = 5;
+            this.CmbOda.TabIndex = 6;
             // 
             // label1
             // 
@@ -194,7 +194,7 @@
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(663, 657);
+            this.btnEkle.Location = new System.Drawing.Point(658, 582);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(131, 41);
             this.btnEkle.TabIndex = 18;
@@ -237,8 +237,9 @@
             this.MskVeliTel.Mask = "(999) 000-0000";
             this.MskVeliTel.Name = "MskVeliTel";
             this.MskVeliTel.Size = new System.Drawing.Size(344, 30);
-            this.MskVeliTel.TabIndex = 8;
-            this.MskVeliTel.Click += new System.EventHandler(this.MskVeliTel_Click);
+            this.MskVeliTel.TabIndex = 9;
+            this.MskVeliTel.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.MskVeliTel_MaskInputRejected);
+            this.MskVeliTel.Click += new System.EventHandler(this.MskVeliTel_Click_1);
             // 
             // txtBolum
             // 
@@ -249,7 +250,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtDogum);
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.cmbDogdugu);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtBolum);
@@ -268,12 +270,95 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kişisel Bilgiler";
             // 
-            // txtDogum
+            // cmbDogdugu
             // 
-            this.txtDogum.Location = new System.Drawing.Point(205, 242);
-            this.txtDogum.Name = "txtDogum";
-            this.txtDogum.Size = new System.Drawing.Size(344, 30);
-            this.txtDogum.TabIndex = 4;
+            this.cmbDogdugu.FormattingEnabled = true;
+            this.cmbDogdugu.Items.AddRange(new object[] {
+            "Adana",
+            "Adıyaman",
+            "Afyonkarahisar",
+            "Ağrı",
+            "Aksaray",
+            "Amasya",
+            "Ankara",
+            "Antalya",
+            "Ardahan",
+            "Artvin",
+            "Aydın",
+            "Balıkesir",
+            "Bartın",
+            "Batman",
+            "Bayburt",
+            "Bilecik",
+            "Bingöl",
+            "Bitlis",
+            "Bolu",
+            "Burdur",
+            "Bursa",
+            "Çanakkale",
+            "Çankırı",
+            "Çorum",
+            "Denizli",
+            "Diyarbakır",
+            "Düzce",
+            "Edirne",
+            "Elazığ",
+            "Erzincan",
+            "Erzurum",
+            "Eskişehir",
+            "Gaziantep",
+            "Giresun",
+            "Gümüşhane",
+            "Hakkâri",
+            "Hatay",
+            "Iğdır",
+            "Isparta",
+            "İstanbul",
+            "İzmir",
+            "Kahramanmaraş",
+            "Karabük",
+            "Karaman",
+            "Kars",
+            "Kastamonu",
+            "Kayseri",
+            "Kilis",
+            "Kırıkkale",
+            "Kırklareli",
+            "Kırşehir",
+            "Kocaeli",
+            "Konya",
+            "Kütahya",
+            "Malatya",
+            "Manisa",
+            "Mardin",
+            "Mersin",
+            "Muğla",
+            "Muş",
+            "Nevşehir",
+            "Niğde",
+            "Ordu",
+            "Osmaniye",
+            "Rize",
+            "Sakarya",
+            "Samsun",
+            "Şanlıurfa",
+            "Siirt",
+            "Sinop",
+            "Sivas",
+            "Şırnak",
+            "Tekirdağ",
+            "Tokat",
+            "Trabzon",
+            "Tunceli",
+            "Uşak",
+            "Van",
+            "Yalova",
+            "Yozgat",
+            "Zonguldak"});
+            this.cmbDogdugu.Location = new System.Drawing.Point(204, 241);
+            this.cmbDogdugu.Name = "cmbDogdugu";
+            this.cmbDogdugu.Size = new System.Drawing.Size(344, 33);
+            this.cmbDogdugu.TabIndex = 5;
             // 
             // label13
             // 
@@ -281,9 +366,9 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label13.Location = new System.Drawing.Point(53, 241);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(123, 20);
+            this.label13.Size = new System.Drawing.Size(105, 20);
             this.label13.TabIndex = 24;
-            this.label13.Text = "Doğduğu Yer:";
+            this.label13.Text = "Doğduğu İl:";
             // 
             // groupBox2
             // 
@@ -313,6 +398,7 @@
             // cmbYakin
             // 
             this.cmbYakin.FormattingEnabled = true;
+            this.cmbYakin.ItemHeight = 25;
             this.cmbYakin.Items.AddRange(new object[] {
             "Baba",
             "Anne",
@@ -328,7 +414,7 @@
             this.cmbYakin.Location = new System.Drawing.Point(204, 137);
             this.cmbYakin.Name = "cmbYakin";
             this.cmbYakin.Size = new System.Drawing.Size(344, 33);
-            this.cmbYakin.TabIndex = 7;
+            this.cmbYakin.TabIndex = 8;
             // 
             // label10
             // 
@@ -346,12 +432,12 @@
             this.txtVeliAd.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.txtVeliAd.Name = "txtVeliAd";
             this.txtVeliAd.Size = new System.Drawing.Size(344, 30);
-            this.txtVeliAd.TabIndex = 6;
+            this.txtVeliAd.TabIndex = 7;
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.cmbYasadigi);
             this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.txtIl);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.rchAdres);
             this.groupBox3.Controls.Add(this.label9);
@@ -365,6 +451,96 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "İletişim Bilgileri";
             // 
+            // cmbYasadigi
+            // 
+            this.cmbYasadigi.FormattingEnabled = true;
+            this.cmbYasadigi.Items.AddRange(new object[] {
+            "Adana",
+            "Adıyaman",
+            "Afyonkarahisar",
+            "Ağrı",
+            "Aksaray",
+            "Amasya",
+            "Ankara",
+            "Antalya",
+            "Ardahan",
+            "Artvin",
+            "Aydın",
+            "Balıkesir",
+            "Bartın",
+            "Batman",
+            "Bayburt",
+            "Bilecik",
+            "Bingöl",
+            "Bitlis",
+            "Bolu",
+            "Burdur",
+            "Bursa",
+            "Çanakkale",
+            "Çankırı",
+            "Çorum",
+            "Denizli",
+            "Diyarbakır",
+            "Düzce",
+            "Edirne",
+            "Elazığ",
+            "Erzincan",
+            "Erzurum",
+            "Eskişehir",
+            "Gaziantep",
+            "Giresun",
+            "Gümüşhane",
+            "Hakkâri",
+            "Hatay",
+            "Iğdır",
+            "Isparta",
+            "İstanbul",
+            "İzmir",
+            "Kahramanmaraş",
+            "Karabük",
+            "Karaman",
+            "Kars",
+            "Kastamonu",
+            "Kayseri",
+            "Kilis",
+            "Kırıkkale",
+            "Kırklareli",
+            "Kırşehir",
+            "Kocaeli",
+            "Konya",
+            "Kütahya",
+            "Malatya",
+            "Manisa",
+            "Mardin",
+            "Mersin",
+            "Muğla",
+            "Muş",
+            "Nevşehir",
+            "Niğde",
+            "Ordu",
+            "Osmaniye",
+            "Rize",
+            "Sakarya",
+            "Samsun",
+            "Şanlıurfa",
+            "Siirt",
+            "Sinop",
+            "Sivas",
+            "Şırnak",
+            "Tekirdağ",
+            "Tokat",
+            "Trabzon",
+            "Tunceli",
+            "Uşak",
+            "Van",
+            "Yalova",
+            "Yozgat",
+            "Zonguldak"});
+            this.cmbYasadigi.Location = new System.Drawing.Point(152, 41);
+            this.cmbYasadigi.Name = "cmbYasadigi";
+            this.cmbYasadigi.Size = new System.Drawing.Size(395, 33);
+            this.cmbYasadigi.TabIndex = 10;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -375,17 +551,9 @@
             this.label14.TabIndex = 27;
             this.label14.Text = "İl:";
             // 
-            // txtIl
-            // 
-            this.txtIl.Location = new System.Drawing.Point(152, 47);
-            this.txtIl.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.txtIl.Name = "txtIl";
-            this.txtIl.Size = new System.Drawing.Size(344, 30);
-            this.txtIl.TabIndex = 9;
-            // 
             // btnTemizle
             // 
-            this.btnTemizle.Location = new System.Drawing.Point(940, 657);
+            this.btnTemizle.Location = new System.Drawing.Point(945, 582);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(125, 41);
             this.btnTemizle.TabIndex = 27;
@@ -396,7 +564,7 @@
             // txtYurtUcreti
             // 
             this.txtYurtUcreti.Enabled = false;
-            this.txtYurtUcreti.Location = new System.Drawing.Point(708, 511);
+            this.txtYurtUcreti.Location = new System.Drawing.Point(53, 667);
             this.txtYurtUcreti.Name = "txtYurtUcreti";
             this.txtYurtUcreti.Size = new System.Drawing.Size(400, 30);
             this.txtYurtUcreti.TabIndex = 28;
@@ -459,11 +627,11 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtVeliAd;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtDogum;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtIl;
         private System.Windows.Forms.Button btnTemizle;
         private System.Windows.Forms.TextBox txtYurtUcreti;
+        private System.Windows.Forms.ComboBox cmbDogdugu;
+        private System.Windows.Forms.ComboBox cmbYasadigi;
     }
 }

@@ -29,7 +29,7 @@ namespace Yurt
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            lblSaat.Text = DateTime.Now.ToLongTimeString();
+          //  lblSaat.Text = DateTime.Now.ToLongTimeString();
         }
 
         private void checkboxSifreGoster_CheckedChanged(object sender, EventArgs e)
@@ -44,11 +44,7 @@ namespace Yurt
             }
         }
 
-        private void FrmAdminGiris_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            AnaGiris a = new AnaGiris();
-            a.Show();
-        }
+     
         public static string tc_memur;
         private void btnGirisYap_Click_1(object sender, EventArgs e)
         {
@@ -61,7 +57,7 @@ namespace Yurt
             if (dr.Read())
             {
                 Admin.MainForm frm = new Admin.MainForm();
-                frm.lblName.Text = dr[1].ToString();
+               
                 frm.lblTc.Text = dr[3].ToString();
                 //frm.ad = dr[1].ToString();
                 frm.Show();
@@ -80,6 +76,18 @@ namespace Yurt
                 TxtSifre.Text = "";
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AnaGiris frm = new AnaGiris();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void FrmAdminGiris_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

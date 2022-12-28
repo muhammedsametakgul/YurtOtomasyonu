@@ -79,7 +79,7 @@
             // dtBas
             // 
             this.dtBas.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtBas.Location = new System.Drawing.Point(175, 389);
+            this.dtBas.Location = new System.Drawing.Point(175, 400);
             this.dtBas.Name = "dtBas";
             this.dtBas.Size = new System.Drawing.Size(330, 34);
             this.dtBas.TabIndex = 5;
@@ -87,7 +87,7 @@
             // dtBit
             // 
             this.dtBit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtBit.Location = new System.Drawing.Point(175, 460);
+            this.dtBit.Location = new System.Drawing.Point(175, 473);
             this.dtBit.Name = "dtBit";
             this.dtBit.Size = new System.Drawing.Size(330, 34);
             this.dtBit.TabIndex = 6;
@@ -106,7 +106,7 @@
             // 
             this.lblAdSoyad.AutoSize = true;
             this.lblAdSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAdSoyad.Location = new System.Drawing.Point(25, 164);
+            this.lblAdSoyad.Location = new System.Drawing.Point(25, 162);
             this.lblAdSoyad.Name = "lblAdSoyad";
             this.lblAdSoyad.Size = new System.Drawing.Size(124, 29);
             this.lblAdSoyad.TabIndex = 8;
@@ -126,7 +126,7 @@
             // 
             this.lblBas.AutoSize = true;
             this.lblBas.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBas.Location = new System.Drawing.Point(25, 400);
+            this.lblBas.Location = new System.Drawing.Point(25, 405);
             this.lblBas.Name = "lblBas";
             this.lblBas.Size = new System.Drawing.Size(124, 29);
             this.lblBas.TabIndex = 12;
@@ -136,7 +136,7 @@
             // 
             this.lblBit.AutoSize = true;
             this.lblBit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBit.Location = new System.Drawing.Point(84, 473);
+            this.lblBit.Location = new System.Drawing.Point(84, 478);
             this.lblBit.Name = "lblBit";
             this.lblBit.Size = new System.Drawing.Size(65, 29);
             this.lblBit.TabIndex = 13;
@@ -164,6 +164,7 @@
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Personel İzin";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // rbPersonel
             // 
@@ -193,18 +194,26 @@
             // 
             // dgvGoster
             // 
+            this.dgvGoster.AllowUserToAddRows = false;
+            this.dgvGoster.AllowUserToDeleteRows = false;
+            this.dgvGoster.AllowUserToResizeColumns = false;
+            this.dgvGoster.AllowUserToResizeRows = false;
+            this.dgvGoster.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvGoster.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvGoster.BackgroundColor = System.Drawing.Color.White;
             this.dgvGoster.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGoster.Location = new System.Drawing.Point(530, 21);
+            this.dgvGoster.Location = new System.Drawing.Point(648, 21);
             this.dgvGoster.Name = "dgvGoster";
+            this.dgvGoster.ReadOnly = true;
             this.dgvGoster.RowHeadersWidth = 51;
             this.dgvGoster.RowTemplate.Height = 24;
-            this.dgvGoster.Size = new System.Drawing.Size(361, 536);
+            this.dgvGoster.Size = new System.Drawing.Size(415, 536);
             this.dgvGoster.TabIndex = 15;
             this.dgvGoster.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(175, 526);
+            this.btnEkle.Location = new System.Drawing.Point(255, 526);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(117, 31);
             this.btnEkle.TabIndex = 14;

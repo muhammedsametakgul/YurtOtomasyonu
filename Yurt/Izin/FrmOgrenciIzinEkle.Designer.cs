@@ -63,20 +63,20 @@
             // TxtAd
             // 
             this.TxtAd.Enabled = false;
-            this.TxtAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtAd.Location = new System.Drawing.Point(252, 103);
+            this.TxtAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TxtAd.Location = new System.Drawing.Point(204, 103);
             this.TxtAd.Name = "TxtAd";
-            this.TxtAd.Size = new System.Drawing.Size(222, 34);
+            this.TxtAd.Size = new System.Drawing.Size(326, 30);
             this.TxtAd.TabIndex = 2;
             // 
             // MskTc
             // 
             this.MskTc.Enabled = false;
-            this.MskTc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.MskTc.Location = new System.Drawing.Point(252, 34);
+            this.MskTc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.MskTc.Location = new System.Drawing.Point(204, 38);
             this.MskTc.Mask = "00000000000";
             this.MskTc.Name = "MskTc";
-            this.MskTc.Size = new System.Drawing.Size(222, 34);
+            this.MskTc.Size = new System.Drawing.Size(326, 30);
             this.MskTc.TabIndex = 1;
             this.MskTc.ValidatingType = typeof(int);
             this.MskTc.Click += new System.EventHandler(this.MskTc_Click);
@@ -93,10 +93,10 @@
             // 
             // TxtSebep
             // 
-            this.TxtSebep.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.TxtSebep.Location = new System.Drawing.Point(252, 172);
+            this.TxtSebep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.TxtSebep.Location = new System.Drawing.Point(204, 167);
             this.TxtSebep.Name = "TxtSebep";
-            this.TxtSebep.Size = new System.Drawing.Size(222, 34);
+            this.TxtSebep.Size = new System.Drawing.Size(326, 30);
             this.TxtSebep.TabIndex = 3;
             // 
             // label3
@@ -142,11 +142,11 @@
             // MskOgrenciTel
             // 
             this.MskOgrenciTel.Enabled = false;
-            this.MskOgrenciTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.MskOgrenciTel.Location = new System.Drawing.Point(252, 355);
+            this.MskOgrenciTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.MskOgrenciTel.Location = new System.Drawing.Point(204, 359);
             this.MskOgrenciTel.Mask = "(999) 000-0000";
             this.MskOgrenciTel.Name = "MskOgrenciTel";
-            this.MskOgrenciTel.Size = new System.Drawing.Size(222, 34);
+            this.MskOgrenciTel.Size = new System.Drawing.Size(326, 30);
             this.MskOgrenciTel.TabIndex = 6;
             this.MskOgrenciTel.Click += new System.EventHandler(this.MskOgrenciTel_Click);
             // 
@@ -162,33 +162,35 @@
             // 
             // MskVeliTel
             // 
-            this.MskVeliTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.MskVeliTel.Location = new System.Drawing.Point(252, 424);
+            this.MskVeliTel.Enabled = false;
+            this.MskVeliTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.MskVeliTel.Location = new System.Drawing.Point(204, 423);
             this.MskVeliTel.Mask = "(999) 000-0000";
             this.MskVeliTel.Name = "MskVeliTel";
-            this.MskVeliTel.Size = new System.Drawing.Size(222, 34);
+            this.MskVeliTel.Size = new System.Drawing.Size(326, 30);
             this.MskVeliTel.TabIndex = 7;
             this.MskVeliTel.Click += new System.EventHandler(this.MskVeliTel_Click);
             // 
             // DateBas
             // 
-            this.DateBas.Location = new System.Drawing.Point(252, 241);
+            this.DateBas.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.DateBas.Location = new System.Drawing.Point(204, 238);
             this.DateBas.Name = "DateBas";
-            this.DateBas.Size = new System.Drawing.Size(200, 22);
+            this.DateBas.Size = new System.Drawing.Size(326, 22);
             this.DateBas.TabIndex = 4;
             // 
             // DateBit
             // 
-            this.DateBit.Location = new System.Drawing.Point(252, 298);
+            this.DateBit.Location = new System.Drawing.Point(204, 302);
             this.DateBit.Name = "DateBit";
-            this.DateBit.Size = new System.Drawing.Size(200, 22);
+            this.DateBit.Size = new System.Drawing.Size(326, 22);
             this.DateBit.TabIndex = 5;
             // 
             // btnIzinVer
             // 
-            this.btnIzinVer.Location = new System.Drawing.Point(225, 546);
+            this.btnIzinVer.Location = new System.Drawing.Point(285, 490);
             this.btnIzinVer.Name = "btnIzinVer";
-            this.btnIzinVer.Size = new System.Drawing.Size(151, 49);
+            this.btnIzinVer.Size = new System.Drawing.Size(138, 37);
             this.btnIzinVer.TabIndex = 19;
             this.btnIzinVer.Text = "İzin Ver";
             this.btnIzinVer.UseVisualStyleBackColor = true;
@@ -202,7 +204,7 @@
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(524, 22);
+            this.dataGridView1.Location = new System.Drawing.Point(588, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -213,7 +215,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(192, 648);
+            this.label8.Location = new System.Drawing.Point(25, 511);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 16);
             this.label8.TabIndex = 21;
@@ -244,7 +246,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1384, 724);
+            this.ClientSize = new System.Drawing.Size(1526, 724);
             this.Controls.Add(this.txtAra);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);

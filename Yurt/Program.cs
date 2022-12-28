@@ -17,7 +17,7 @@ namespace Yurt
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AnaGiris());
+            Application.Run(new FrmAnimsyonluGiris());
         }
     }
 }

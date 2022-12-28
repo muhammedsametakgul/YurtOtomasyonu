@@ -23,38 +23,49 @@ namespace Yurt.YoneticiIslemleri
         private void TxtAdAra_TextChanged(object sender, EventArgs e)
         {
             //dinamik olarak arıyor
-            SqlDataAdapter da = new SqlDataAdapter("select PersonelTc,PersonelAdSoyad from Personel where PersonelAdSoyad LIKE '%" + TxtAdAra.Text + "%'", sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("select PersonelTc,PersonelAdSoyad,PersonelDepartman from Personel where PersonelAdSoyad LIKE '%" + TxtAdAra.Text + "%' ORDER BY PersonelAdSoyad ASC", sql.Baglan());
             DataTable dt = new DataTable();
             da.Fill(dt);
             dataGridView1.DataSource = dt;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Columns[1].HeaderText = "Ad-Soyad";
+            dataGridView1.Columns[0].HeaderText = "TC";
+            dataGridView1.Columns[2].HeaderText = "Departman";
+         
         }
 
    
 
         private void FrmPersonelListesi_Load(object sender, EventArgs e)
         {
-            SqlDataAdapter da = new SqlDataAdapter("Select PersonelTc,PersonelAdSoyad From Personel",sql.Baglan());
+            SqlDataAdapter da = new SqlDataAdapter("Select PersonelTc,PersonelAdSoyad,PersonelDepartman From Personel ORDER BY PersonelAdSoyad ASC",sql.Baglan());
             DataTable d = new DataTable();
             da.Fill(d);
             dataGridView1.DataSource = d;
             gbIletisim.Visible=false;
             gbPersonelEkle.Visible=false;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Columns[1].HeaderText = "Ad-Soyad";
+            dataGridView1.Columns[0].HeaderText = "TC";
+            dataGridView1.Columns[2].HeaderText = "Departman";
+          
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+          
             gbIletisim.Visible = true;
             gbPersonelEkle.Visible = true;
             int secilen = dataGridView1.SelectedCells[0].RowIndex;
 
             MskTc.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
             TxtAd.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
-
+            CmbDep.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
             SqlCommand komut = new SqlCommand("Select * From Personel Where PersonelTc= '"+MskTc.Text+"'",sql.Baglan());
             SqlDataReader dr =komut.ExecuteReader();
             while(dr.Read())
             {
-                CmbDep.Text = dr[3].ToString();
+               
                 mskTel.Text = dr[4].ToString();
                 txtMail.Text = dr[5].ToString();
                 TxtAdres.Text = dr[6].ToString();
@@ -77,6 +88,11 @@ namespace Yurt.YoneticiIslemleri
                 textBox.Select(0, 0);
 
             }
+        }
+
+        private void lblBilgi_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

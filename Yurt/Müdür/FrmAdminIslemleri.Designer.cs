@@ -29,101 +29,85 @@
         private void InitializeComponent()
         {
             this.txtAd = new System.Windows.Forms.TextBox();
-            this.txtSoyad = new System.Windows.Forms.TextBox();
             this.mskTc = new System.Windows.Forms.MaskedTextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnEkle = new System.Windows.Forms.Button();
-            this.btnGuncelle = new System.Windows.Forms.Button();
-            this.btnSil = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblid = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.mskTel = new System.Windows.Forms.MaskedTextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtAd
             // 
             this.txtAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAd.Location = new System.Drawing.Point(148, 38);
+            this.txtAd.Location = new System.Drawing.Point(266, 47);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(273, 30);
-            this.txtAd.TabIndex = 0;
-            // 
-            // txtSoyad
-            // 
-            this.txtSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSoyad.Location = new System.Drawing.Point(148, 108);
-            this.txtSoyad.Name = "txtSoyad";
-            this.txtSoyad.Size = new System.Drawing.Size(273, 30);
-            this.txtSoyad.TabIndex = 1;
+            this.txtAd.TabIndex = 1;
             // 
             // mskTc
             // 
             this.mskTc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mskTc.Location = new System.Drawing.Point(148, 178);
+            this.mskTc.Location = new System.Drawing.Point(266, 112);
             this.mskTc.Mask = "00000000000";
             this.mskTc.Name = "mskTc";
             this.mskTc.Size = new System.Drawing.Size(273, 30);
             this.mskTc.TabIndex = 2;
             this.mskTc.ValidatingType = typeof(int);
+            this.mskTc.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskTc_MaskInputRejected);
             this.mskTc.Click += new System.EventHandler(this.mskTc_Click);
             // 
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtEmail.Location = new System.Drawing.Point(148, 248);
+            this.txtEmail.Location = new System.Drawing.Point(266, 242);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(273, 30);
-            this.txtEmail.TabIndex = 3;
+            this.txtEmail.TabIndex = 4;
             // 
             // txtSifre
             // 
             this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSifre.Location = new System.Drawing.Point(148, 318);
+            this.txtSifre.Location = new System.Drawing.Point(266, 307);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(273, 30);
-            this.txtSifre.TabIndex = 4;
+            this.txtSifre.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(54, 38);
+            this.label1.Location = new System.Drawing.Point(98, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 29);
+            this.label1.Size = new System.Drawing.Size(124, 29);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Ad:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(15, 107);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 29);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Soyad:";
+            this.label1.Text = "Ad-Soyad:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(55, 176);
+            this.label3.Location = new System.Drawing.Point(60, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 29);
+            this.label3.Size = new System.Drawing.Size(162, 29);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Tc:";
+            this.label3.Text = "TC Kimlik No:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(22, 245);
+            this.label4.Location = new System.Drawing.Point(142, 242);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 29);
             this.label4.TabIndex = 8;
@@ -133,7 +117,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(33, 314);
+            this.label5.Location = new System.Drawing.Point(153, 307);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 29);
             this.label5.TabIndex = 9;
@@ -141,44 +125,32 @@
             // 
             // btnEkle
             // 
-            this.btnEkle.Location = new System.Drawing.Point(27, 393);
+            this.btnEkle.Location = new System.Drawing.Point(320, 353);
             this.btnEkle.Name = "btnEkle";
-            this.btnEkle.Size = new System.Drawing.Size(75, 30);
+            this.btnEkle.Size = new System.Drawing.Size(165, 30);
             this.btnEkle.TabIndex = 10;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = true;
             this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
-            // btnGuncelle
-            // 
-            this.btnGuncelle.Location = new System.Drawing.Point(148, 393);
-            this.btnGuncelle.Name = "btnGuncelle";
-            this.btnGuncelle.Size = new System.Drawing.Size(75, 30);
-            this.btnGuncelle.TabIndex = 11;
-            this.btnGuncelle.Text = "Güncelle";
-            this.btnGuncelle.UseVisualStyleBackColor = true;
-            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
-            // 
-            // btnSil
-            // 
-            this.btnSil.Location = new System.Drawing.Point(271, 393);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(75, 30);
-            this.btnSil.TabIndex = 12;
-            this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
-            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
-            // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(454, 25);
+            this.dataGridView1.Location = new System.Drawing.Point(665, 12);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(744, 337);
             this.dataGridView1.TabIndex = 13;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // lblid
             // 
@@ -189,33 +161,63 @@
             this.lblid.Size = new System.Drawing.Size(33, 29);
             this.lblid.TabIndex = 14;
             this.lblid.Text = "id";
+            this.lblid.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(11, 177);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(211, 29);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Telefon Numarası:";
+            // 
+            // mskTel
+            // 
+            this.mskTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mskTel.Location = new System.Drawing.Point(266, 177);
+            this.mskTel.Mask = "(999) 000-0000";
+            this.mskTel.Name = "mskTel";
+            this.mskTel.Size = new System.Drawing.Size(273, 30);
+            this.mskTel.TabIndex = 3;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.btnEkle);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtAd);
+            this.groupBox1.Controls.Add(this.mskTel);
+            this.groupBox1.Controls.Add(this.mskTc);
+            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.txtSifre);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Location = new System.Drawing.Point(27, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(570, 412);
+            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "BİLGİLER";
             // 
             // FrmAdminIslemleri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1261, 647);
+            this.ClientSize = new System.Drawing.Size(1622, 647);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblid);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnSil);
-            this.Controls.Add(this.btnGuncelle);
-            this.Controls.Add(this.btnEkle);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtSifre);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.mskTc);
-            this.Controls.Add(this.txtSoyad);
-            this.Controls.Add(this.txtAd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAdminIslemleri";
             this.Text = "FrmYoneticiEkle";
             this.Load += new System.EventHandler(this.FrmYoneticiEkle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,19 +226,18 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtAd;
-        private System.Windows.Forms.TextBox txtSoyad;
         private System.Windows.Forms.MaskedTextBox mskTc;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnEkle;
-        private System.Windows.Forms.Button btnGuncelle;
-        private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Label lblid;
         public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MaskedTextBox mskTel;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

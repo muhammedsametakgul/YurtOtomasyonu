@@ -31,13 +31,13 @@
             this.mskUcret = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblUcret = new System.Windows.Forms.Label();
-            this.txtKullanici = new System.Windows.Forms.TextBox();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.lblSifre = new System.Windows.Forms.Label();
             this.lblKullanici = new System.Windows.Forms.Label();
             this.btnDogrula = new System.Windows.Forms.Button();
             this.btnBelirle = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.mskTc = new System.Windows.Forms.MaskedTextBox();
             this.lblAd = new System.Windows.Forms.Label();
             this.lblUyari = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -47,12 +47,13 @@
             // mskUcret
             // 
             this.mskUcret.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.mskUcret.Location = new System.Drawing.Point(232, 40);
+            this.mskUcret.Location = new System.Drawing.Point(207, 40);
             this.mskUcret.Mask = "00000000";
             this.mskUcret.Name = "mskUcret";
             this.mskUcret.Size = new System.Drawing.Size(209, 34);
             this.mskUcret.TabIndex = 0;
             this.mskUcret.ValidatingType = typeof(int);
+            this.mskUcret.Click += new System.EventHandler(this.mskUcret_Click);
             // 
             // dataGridView1
             // 
@@ -70,33 +71,25 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(736, 579);
+            this.dataGridView1.Size = new System.Drawing.Size(592, 579);
             this.dataGridView1.TabIndex = 1;
             // 
             // lblUcret
             // 
             this.lblUcret.AutoSize = true;
             this.lblUcret.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUcret.Location = new System.Drawing.Point(6, 47);
+            this.lblUcret.Location = new System.Drawing.Point(6, 43);
             this.lblUcret.Name = "lblUcret";
             this.lblUcret.Size = new System.Drawing.Size(186, 29);
             this.lblUcret.TabIndex = 2;
             this.lblUcret.Text = "Yeni Yurt Ücreti:";
             // 
-            // txtKullanici
-            // 
-            this.txtKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtKullanici.Location = new System.Drawing.Point(232, 42);
-            this.txtKullanici.Name = "txtKullanici";
-            this.txtKullanici.Size = new System.Drawing.Size(161, 34);
-            this.txtKullanici.TabIndex = 3;
-            // 
             // txtSifre
             // 
             this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSifre.Location = new System.Drawing.Point(232, 104);
+            this.txtSifre.Location = new System.Drawing.Point(207, 104);
             this.txtSifre.Name = "txtSifre";
-            this.txtSifre.Size = new System.Drawing.Size(161, 34);
+            this.txtSifre.Size = new System.Drawing.Size(209, 34);
             this.txtSifre.TabIndex = 4;
             this.txtSifre.UseSystemPasswordChar = true;
             // 
@@ -114,11 +107,11 @@
             // 
             this.lblKullanici.AutoSize = true;
             this.lblKullanici.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKullanici.Location = new System.Drawing.Point(39, 45);
+            this.lblKullanici.Location = new System.Drawing.Point(138, 40);
             this.lblKullanici.Name = "lblKullanici";
-            this.lblKullanici.Size = new System.Drawing.Size(151, 29);
+            this.lblKullanici.Size = new System.Drawing.Size(52, 29);
             this.lblKullanici.TabIndex = 6;
-            this.lblKullanici.Text = "Kullanıcı Adı:";
+            this.lblKullanici.Text = "TC:";
             // 
             // btnDogrula
             // 
@@ -142,20 +135,30 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.mskTc);
             this.groupBox1.Controls.Add(this.btnBelirle);
-            this.groupBox1.Controls.Add(this.btnDogrula);
             this.groupBox1.Controls.Add(this.mskUcret);
-            this.groupBox1.Controls.Add(this.txtKullanici);
+            this.groupBox1.Controls.Add(this.btnDogrula);
             this.groupBox1.Controls.Add(this.lblUcret);
             this.groupBox1.Controls.Add(this.txtSifre);
             this.groupBox1.Controls.Add(this.lblKullanici);
             this.groupBox1.Controls.Add(this.lblSifre);
-            this.groupBox1.Location = new System.Drawing.Point(12, 111);
+            this.groupBox1.Location = new System.Drawing.Point(27, 109);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(519, 222);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Doğrulama";
+            // 
+            // mskTc
+            // 
+            this.mskTc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mskTc.Location = new System.Drawing.Point(207, 40);
+            this.mskTc.Mask = "00000000000";
+            this.mskTc.Name = "mskTc";
+            this.mskTc.Size = new System.Drawing.Size(209, 34);
+            this.mskTc.TabIndex = 12;
+            this.mskTc.ValidatingType = typeof(int);
             // 
             // lblAd
             // 
@@ -204,7 +207,6 @@
         private System.Windows.Forms.MaskedTextBox mskUcret;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblUcret;
-        private System.Windows.Forms.TextBox txtKullanici;
         private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.Label lblSifre;
         private System.Windows.Forms.Label lblKullanici;
@@ -213,5 +215,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblAd;
         private System.Windows.Forms.Label lblUyari;
+        private System.Windows.Forms.MaskedTextBox mskTc;
     }
 }
