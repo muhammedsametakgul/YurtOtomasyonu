@@ -41,7 +41,7 @@ namespace Yurt.Gelir
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
-      
+        //Ekleme yapma
             try
             {
                 if(txtOdeyen.Text !="" && mskTel.Text !="" && txtEmail.Text!="" && mskOdenenMiktar.Text != "")
@@ -89,6 +89,7 @@ namespace Yurt.Gelir
 
         private void mskTarih_Click(object sender, EventArgs e)
         {
+            //tarih masked text box tıklanınca en başın atması için yazılmış kod
             MaskedTextBox textBox = sender as MaskedTextBox;
             textBox.Focus();
             if (textBox != null)
@@ -101,6 +102,7 @@ namespace Yurt.Gelir
 
         private void mskTel_Click(object sender, EventArgs e)
         {
+            //masked text boxun başına atması için yazılmış kod
             MaskedTextBox textBox = sender as MaskedTextBox;
             textBox.Focus();
             if (textBox != null)

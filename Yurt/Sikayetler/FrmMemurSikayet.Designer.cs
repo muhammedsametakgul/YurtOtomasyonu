@@ -217,6 +217,7 @@
             // 
             // rchMetin
             // 
+            this.rchMetin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rchMetin.Location = new System.Drawing.Point(167, 233);
             this.rchMetin.Name = "rchMetin";
             this.rchMetin.Size = new System.Drawing.Size(368, 325);
@@ -262,6 +263,7 @@
             this.lblAd.Size = new System.Drawing.Size(44, 16);
             this.lblAd.TabIndex = 38;
             this.lblAd.Text = "label4";
+            this.lblAd.Visible = false;
             // 
             // rbHepsi
             // 

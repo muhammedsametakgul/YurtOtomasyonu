@@ -198,7 +198,7 @@ namespace Yurt.Admin
 
         private void btnProfilDuzenle_Click(object sender, EventArgs e)
         {
-            loadform(new FrmProfilDuzenleAdmin());
+           
         }
 
         private void timer1_Tick(object sender, EventArgs e)

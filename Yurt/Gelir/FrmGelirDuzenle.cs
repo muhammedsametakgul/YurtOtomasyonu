@@ -21,6 +21,7 @@ namespace Yurt.Gelir
 
         private void FrmGelirDuzenle_Load(object sender, EventArgs e)
         {
+            //Form yüklenince Datagridviewe bilgiler çekildi
             SqlDataAdapter adapter = new SqlDataAdapter("Select * From Gelir ORDER BY OdemeTarih DESC",sql.Baglan());
             DataTable dt= new DataTable();
             adapter.Fill(dt);
@@ -38,6 +39,7 @@ namespace Yurt.Gelir
         }
         public void Goster()
         {
+            //işlemler sonrası datagridview güncel olması için bir metot
             SqlDataAdapter adapter = new SqlDataAdapter("Select * From Gelir", sql.Baglan());
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -48,18 +50,21 @@ namespace Yurt.Gelir
         
         private void rbFirma_CheckedChanged(object sender, EventArgs e)
         {
+            //firma varsa firma text kutucuğu visible oluyor
             txtFirma.Visible = true; lblFirma.Visible = true;
             txtFirma.Text = "";
         }
 
         private void rbBireysel_CheckedChanged(object sender, EventArgs e)
         {
+            //firma seçilmeyip bireysel seçildiyse firma text kutucuğu invisible oluyor
             txtFirma.Visible = false; lblFirma.Visible = false;
             txtFirma.Text = "Bireysel";
         }
 
         private void btnEkle_Click(object sender, EventArgs e)
         {
+            //sisteme eklemek için 
             try
             {
                 if (txtOdeyenKisi.Text != "" && mskTel.Text != "" && txtEmail.Text != "" && dtTarih.Text != "" && txtOdenen.Text != "" && txtFirma.Text != "" && lblid.Text != "")
@@ -105,6 +110,7 @@ namespace Yurt.Gelir
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            //datagridviewden tıklandığında bilgileri çekmek için kullanıldı
             int secilen = dataGridView1.SelectedCells[0].RowIndex;
             lblid.Text = dataGridView1.Rows[secilen].Cells[0].Value.ToString();
             txtOdeyenKisi.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
@@ -143,6 +149,7 @@ namespace Yurt.Gelir
         
         private void btnSil_Click(object sender, EventArgs e)
         {
+            //silme işlemi
             try
             {   
                 if(lblid.Text != "")

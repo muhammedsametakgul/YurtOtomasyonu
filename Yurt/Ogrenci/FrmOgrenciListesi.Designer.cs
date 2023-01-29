@@ -120,7 +120,7 @@
             this.groupBox1.Controls.Add(this.MskDogum);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.MskTc);
-            this.groupBox1.Location = new System.Drawing.Point(644, 33);
+            this.groupBox1.Location = new System.Drawing.Point(635, 55);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(563, 295);
             this.groupBox1.TabIndex = 5;
@@ -252,7 +252,7 @@
             this.groupBox2.Controls.Add(this.txtVeliAd);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.MskVeliTel);
-            this.groupBox2.Location = new System.Drawing.Point(644, 334);
+            this.groupBox2.Location = new System.Drawing.Point(635, 356);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(563, 352);
             this.groupBox2.TabIndex = 6;
@@ -339,7 +339,7 @@
             this.groupBox3.Controls.Add(this.TxtMail);
             this.groupBox3.Controls.Add(this.MskTel);
             this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Location = new System.Drawing.Point(1213, 33);
+            this.groupBox3.Location = new System.Drawing.Point(1204, 55);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(561, 467);
             this.groupBox3.TabIndex = 7;
