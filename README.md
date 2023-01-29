@@ -1,8 +1,8 @@
-ENG
+//ENG//
 This is my project that has been made for Object Orianted Programming lecture. I have used [C#][11] and [MSSQL][21] technologies to create this Windows Form Application
 This project's aim is that making dorm officiers' process easier and get all data in a database.
 
-TR
+//TR//
 Nesne Tabanlı Programlama dersi için yaptığım projem. Bu Windows Form Uygulaması yapmak için [C#][11] ve [MSSQL][21] teknolojileri kullandım.Bu projenin amacı yurt memurlarının işlemlerini kolaylaştırmak ve bütün verileri veritabanında tutmak.
 
 
