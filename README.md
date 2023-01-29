@@ -8,15 +8,21 @@ Nesne Tabanlı Programlama dersi için yaptığım projem. Bu Windows Form Uygul
 
 
 
-![8](https://user-images.githubusercontent.com/93324656/215313129-be8ca628-74df-437c-8864-9125871d7e11.jpg)
-![1](https://user-images.githubusercontent.com/93324656/215313132-49e0d65d-966a-407c-bfe3-7c5fcbfbd095.jpg)
-![2](https://user-images.githubusercontent.com/93324656/215313134-4c5d844f-f3f5-4ee4-90a0-ff66da2dd1c6.jpg)
-![3](https://user-images.githubusercontent.com/93324656/215313135-269129a1-f272-4ccb-9d2f-7b50107f657f.jpg)
-![4](https://user-images.githubusercontent.com/93324656/215313139-4c740900-0fe9-441f-8fc8-15e5d6275ec9.jpg)
-![5](https://user-images.githubusercontent.com/93324656/215313141-ced16bb3-43c5-4530-b193-d766e94e44ed.jpg)
-![6](https://user-images.githubusercontent.com/93324656/215313142-43d401ea-69b8-422d-9a7d-193a19b7169d.jpg)
-![7](https://user-images.githubusercontent.com/93324656/215313143-a76c4930-3f36-4e3c-b8f8-83782e870b3d.jpg)
+![1](https://user-images.githubusercontent.com/93324656/215313181-fd64e504-ea65-43d4-8cf0-5788875822a4.jpg)
 
+![2](https://user-images.githubusercontent.com/93324656/215313187-158af35f-8782-4001-87ab-0edc4a3f1a2f.jpg)
+
+![3](https://user-images.githubusercontent.com/93324656/215313194-e5110f5a-d1e3-4025-a34c-8d5f39762a96.jpg)
+
+![4](https://user-images.githubusercontent.com/93324656/215313197-926963ad-0af8-49e9-8c6c-0cad2eeec395.jpg)
+
+![5](https://user-images.githubusercontent.com/93324656/215313202-f904b886-7359-4f1e-8f9a-32996ef5b5a8.jpg)
+
+![6](https://user-images.githubusercontent.com/93324656/215313207-97ab808a-a00a-4ce9-a09e-5cc226ac0a2d.jpg)
+
+![7](https://user-images.githubusercontent.com/93324656/215313209-b7bc5d35-56f5-4749-841e-2b66f289b14d.jpg)
+
+![8](https://user-images.githubusercontent.com/93324656/215313211-c21fe9c1-e7bc-4283-88e4-bd6ce533c0f4.jpg)
 
 
 [11]:https://learn.microsoft.com/en-us/dotnet/csharp/
