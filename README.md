@@ -1,11 +1,14 @@
 //ENG//
-This is my project that has been made for Object Orianted Programming lecture. I have used [C#][11] and [MSSQL][21] technologies to create this Windows Form Application
+This is my project that has been made for Object Orianted Programming lecture. I have used [C#][11] and [MSSQL][12] technologies to create this Windows Form Application
 This project's aim is that making dorm officiers' process easier and get all data in a database.
 
 //TR//
-Nesne Tabanlı Programlama dersi için yaptığım projem. Bu Windows Form Uygulaması yapmak için [C#][11] ve [MSSQL][21] teknolojileri kullandım.Bu projenin amacı yurt memurlarının işlemlerini kolaylaştırmak ve bütün verileri veritabanında tutmak.
+Nesne Tabanlı Programlama dersi için yaptığım projem. Bu Windows Form Uygulaması yapmak için [C#][11] ve [MSSQL][12] teknolojileri kullandım.Bu projenin amacı yurt memurlarının işlemlerini kolaylaştırmak ve bütün verileri veritabanında tutmak.
 
-
+## Libraries Used
+---
+* [Architecture][13]: Windows Forms is a Graphical User Interface(GUI) class library which is bundled in .Net Framework. Its main purpose is to provide an easier interface to develop the applications for desktop, tablet, PCs. It is also termed as the WinForms
+* [.NET][14]: .NET Core is a new version of .NET Framework, which is a free, open-source, general-purpose development platform maintained by Microsoft. It is a cross-platform framework that runs on Windows, macOS, and Linux operating systems.
 
 
 ![1](https://user-images.githubusercontent.com/93324656/215313181-fd64e504-ea65-43d4-8cf0-5788875822a4.jpg)
@@ -26,4 +29,7 @@ Nesne Tabanlı Programlama dersi için yaptığım projem. Bu Windows Form Uygul
 
 
 [11]:https://learn.microsoft.com/en-us/dotnet/csharp/
-[21]:https://learn.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver16
+[12]:https://learn.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver16
+[13]:https://learn.microsoft.com/en-us/visualstudio/ide/create-csharp-winform-visual-studio?view=vs-2022
+[14]:https://learn.microsoft.com/en-us/dotnet/desktop/wpf/windows/?view=netdesktop-6.0
+
